@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Declutter Checklist — deClusterize</title>
+    <meta name="description" content="A thorough phone declutter checklist for iPhone and Android. Clean up storage, apps, photos, and settings in under an hour.">
+    <link rel="canonical" href="https://declusterize.com/checklist-phone-declutter.html">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --bg: #0c1117; --text: #e4e8ee; --text-muted: #8b95a5;
+            --accent: #34D399; --accent-blue: #0EA5E9;
+            --surface: #161b22; --border: #21262d;
+        }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; }
+        .container { max-width: 780px; margin: 0 auto; padding: 2rem 1.5rem 3rem; }
+        .header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; }
+        .brand { font-size: 1.35rem; letter-spacing: -0.02em; }
+        .brand-de { font-weight: 300; color: var(--text-muted); }
+        .brand-main { font-weight: 700; color: var(--text); }
+        h1 { font-size: 1.75rem; font-weight: 700; margin: 1.25rem 0 0.25rem; letter-spacing: -0.03em; color: #fff; }
+        .subtitle { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .how-to { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 0.85rem 1rem; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 2rem; }
+        .how-to strong { color: var(--accent); font-weight: 600; }
+        .print-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, #34D399, #0EA5E9); color: #0c1117; border: none; padding: 0.6rem 1.25rem; border-radius: 6px; font-size: 0.9rem; font-weight: 600; cursor: pointer; margin-bottom: 2rem; font-family: inherit; transition: opacity 0.2s; }
+        .print-btn:hover { opacity: 0.88; }
+        .section { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem 1.5rem 1.5rem; margin-bottom: 1.25rem; }
+        .section-header { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border); }
+        .section-icon { font-size: 1.25rem; }
+        .section-title { font-size: 1.1rem; font-weight: 700; color: #fff; flex: 1; }
+        .section-count { font-size: 0.8rem; color: var(--accent); font-weight: 600; background: rgba(52,211,153,0.1); padding: 0.15rem 0.55rem; border-radius: 20px; }
+        .checklist { list-style: none; }
+        .checklist li { display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.5rem 0; border-bottom: 1px solid rgba(33,38,45,0.5); font-size: 0.92rem; }
+        .checklist li:last-child { border-bottom: none; }
+        .checklist input[type="checkbox"] { appearance: none; -webkit-appearance: none; width: 20px; height: 20px; min-width: 20px; border: 2px solid var(--border); border-radius: 4px; margin-top: 1px; cursor: pointer; position: relative; background: transparent; transition: all 0.2s; }
+        .checklist input[type="checkbox"]:checked { background: var(--accent); border-color: var(--accent); }
+        .checklist input[type="checkbox"]:checked::after { content: ''; position: absolute; left: 5px; top: 1px; width: 6px; height: 11px; border: solid #0c1117; border-width: 0 2px 2px 0; transform: rotate(45deg); }
+        .checklist label { cursor: pointer; flex: 1; }
+        .fill-blank { display: inline-block; border-bottom: 2px solid var(--text-muted); min-width: 60px; margin: 0 0.25rem; }
+        .final-check { background: var(--surface); border: 1px solid var(--accent); border-radius: 10px; padding: 1.25rem 1.5rem; margin-top: 1.5rem; }
+        .final-check-title { font-size: 1rem; font-weight: 700; color: var(--accent); margin-bottom: 0.5rem; }
+        .final-check p { font-size: 0.92rem; color: var(--text-muted); }
+        .progress-section { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem 1.5rem; margin-top: 1.25rem; text-align: center; }
+        .progress-title { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem; }
+        .progress-bar-bg { width: 100%; height: 10px; background: var(--border); border-radius: 5px; overflow: hidden; margin-bottom: 0.5rem; }
+        .progress-bar-fill { height: 100%; width: 0%; background: linear-gradient(90deg, #34D399, #0EA5E9); border-radius: 5px; transition: width 0.4s ease; }
+        .progress-text { font-size: 0.9rem; color: var(--text-muted); }
+        .progress-text span { color: var(--accent); font-weight: 700; }
+        .footer { text-align: center; padding: 2rem 0 1rem; color: var(--text-muted); font-size: 0.82rem; border-top: 1px solid var(--border); margin-top: 2rem; }
+
+        @media print {
+            :root { --bg: #fff; --text: #1a1a1a; --text-muted: #555; --surface: #fff; --border: #ddd; }
+            body { background: #fff; color: #1a1a1a; font-size: 11pt; line-height: 1.4; }
+            .container { padding: 0; max-width: 100%; }
+            .print-btn { display: none !important; }
+            .how-to { background: #f7f7f7; border-color: #ddd; }
+            .section { break-inside: avoid; page-break-inside: avoid; border-color: #ccc; background: #fff; }
+            .brand-de, .brand-main { color: #1a1a1a; }
+            .section-title { color: #1a1a1a; }
+            .section-count { background: #eee; color: #333; }
+            .checklist input[type="checkbox"] { border: 2px solid #333; background: #fff; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+            .checklist input[type="checkbox"]:checked { background: #fff; border-color: #333; }
+            .checklist input[type="checkbox"]:checked::after { border-color: #333; }
+            .fill-blank { border-bottom-color: #333; }
+            .final-check { border-color: #333; }
+            .final-check-title { color: #333; }
+            .progress-bar-bg { background: #ddd; }
+            .progress-bar-fill { background: #666; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+            .footer { border-top-color: #ccc; }
+            h1 { color: #000; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <svg width="36" height="36" viewBox="0 0 48 48" fill="none"><defs><linearGradient id="bm-stroke" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#34D399"/><stop offset="1" stop-color="#0EA5E9"/></linearGradient><linearGradient id="bm-fill" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#34D399" stop-opacity=".18"/><stop offset="1" stop-color="#0EA5E9" stop-opacity=".10"/></linearGradient></defs><polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="url(#bm-fill)"/><polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="none" stroke="url(#bm-stroke)" stroke-width="2"/><polyline points="14,25 21,32 34,17" stroke="url(#bm-stroke)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="38" cy="10" r="3" fill="#38BDF8" opacity=".9"/></svg>
+            <div class="brand"><span class="brand-de">de</span><span class="brand-main">Clusterize</span></div>
+        </div>
+
+        <h1>Phone Declutter Checklist</h1>
+        <p class="subtitle">Reclaim your phone's storage and sanity — works for iPhone and Android.</p>
+
+        <div class="how-to"><strong>How to use:</strong> Check off each task as you complete it. Print this page or save as PDF for offline use. Your progress is saved in your browser.</div>
+
+        <button class="print-btn" onclick="window.print()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+            Print / Save as PDF
+        </button>
+
+        <div class="section">
+            <div class="section-header">
+                <span class="section-icon">📋</span>
+                <span class="section-title">Before You Start</span>
+                <span class="section-count">2 items</span>
+            </div>
+            <ul class="checklist">
+                <li><input type="checkbox" id="b1"><label for="b1">Note current storage used: <span class="fill-blank">&nbsp;</span> GB of <span class="fill-blank">&nbsp;</span> GB</label></li>
+                <li><input type="checkbox" id="b2"><label for="b2">Back up your phone (iCloud / Google / computer)</label></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <span class="section-icon">📦</span>
+                <span class="section-title">Storage &amp; Apps</span>
+                <span class="section-count">8 items</span>
+            </div>
+            <ul class="checklist">
+                <li><input type="checkbox" id="s1"><label for="s1">Check storage breakdown in Settings</label></li>
+                <li><input type="checkbox" id="s2"><label for="s2">Delete apps not opened in 30+ days</label></li>
+                <li><input type="checkbox" id="s3"><label for="s3">Offload unused apps (iPhone) / disable bloatware (Android)</label></li>
+                <li><input type="checkbox" id="s4"><label for="s4">Clear cache for your top 5 largest apps</label></li>
+                <li><input type="checkbox" id="s5"><label for="s5">Delete old podcasts and offline music</label></li>
+                <li><input type="checkbox" id="s6"><label for="s6">Remove old voicemails and call recordings</label></li>
+                <li><input type="checkbox" id="s7"><label for="s7">Clear message attachments (photos/videos in threads)</label></li>
+                <li><input type="checkbox" id="s8"><label for="s8">Review and cancel unused app subscriptions</label></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <span class="section-icon">📸</span>
+                <span class="section-title">Photos &amp; Videos</span>
+                <span class="section-count">7 items</span>
+            </div>
+            <ul class="checklist">
+                <li><input type="checkbox" id="pv1"><label for="pv1">Delete duplicate photos (use built-in or Gemini Photos)</label></li>
+                <li><input type="checkbox" id="pv2"><label for="pv2">Remove blurry, accidental, and screenshot photos</label></li>
+                <li><input type="checkbox" id="pv3"><label for="pv3">Delete old screen recordings and Live Photos you won't watch</label></li>
+                <li><input type="checkbox" id="pv4"><label for="pv4">Back up photos to Google Photos / iCloud / PC</label></li>
+                <li><input type="checkbox" id="pv5"><label for="pv5">Enable "Optimise Storage" to keep only thumbnails on device</label></li>
+                <li><input type="checkbox" id="pv6"><label for="pv6">Create albums to organise what remains</label></li>
+                <li><input type="checkbox" id="pv7"><label for="pv7">Empty the "Recently Deleted" folder</label></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <span class="section-icon">⚙️</span>
+                <span class="section-title">Settings &amp; Maintenance</span>
+                <span class="section-count">5 items</span>
+            </div>
+            <ul class="checklist">
+                <li><input type="checkbox" id="m1"><label for="m1">Turn off notifications for non-essential apps</label></li>
+                <li><input type="checkbox" id="m2"><label for="m2">Disable background app refresh for apps you rarely use</label></li>
+                <li><input type="checkbox" id="m3"><label for="m3">Review location permissions — set most to "While Using"</label></li>
+                <li><input type="checkbox" id="m4"><label for="m4">Organise home screen — essentials only on page 1</label></li>
+                <li><input type="checkbox" id="m5"><label for="m5">Set up automatic photo backup going forward</label></li>
+            </ul>
+        </div>
+
+        <div class="final-check">
+            <div class="final-check-title">Final Check</div>
+            <p>Storage after cleanup: <span class="fill-blank">&nbsp;</span> GB free (target: at least 20% free)</p>
+        </div>
+
+        <div class="progress-section">
+            <div class="progress-title">Progress</div>
+            <div class="progress-bar-bg"><div class="progress-bar-fill" id="progressBar"></div></div>
+            <p class="progress-text"><span id="checkedCount">0</span> / <span id="totalCount">22</span> tasks completed</p>
+        </div>
+
+        <footer class="footer">declusterize.com — Your digital life, perfectly clear.</footer>
+    </div>
+
+    <script>
+        const STORAGE_KEY = 'dc-phone-declutter';
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        const total = checkboxes.length;
+        document.getElementById('totalCount').textContent = total;
+        function save() { const s = {}; checkboxes.forEach(cb => { s[cb.id] = cb.checked; }); try { localStorage.setItem(STORAGE_KEY, JSON.stringify(s)); } catch(e) {} }
+        function load() { try { const s = JSON.parse(localStorage.getItem(STORAGE_KEY)); if (s) checkboxes.forEach(cb => { if (s[cb.id]) cb.checked = true; }); } catch(e) {} }
+        function updateProgress() { const c = document.querySelectorAll('input[type="checkbox"]:checked').length; document.getElementById('checkedCount').textContent = c; document.getElementById('progressBar').style.width = (c / total * 100) + '%'; }
+        load(); updateProgress();
+        checkboxes.forEach(cb => cb.addEventListener('change', () => { save(); updateProgress(); }));
+    </script>
+    <!-- Cloudflare Web Analytics --><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "0f294a04c3454733a1c903185f758a89"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

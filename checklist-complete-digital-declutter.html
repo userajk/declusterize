@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Digital Declutter Checklist — deClusterize</title>
+    <meta name="description" content="The master digital declutter checklist covering phone, computer, email, photos, and cloud storage. 44 actionable tasks to reclaim your digital space.">
+    <link rel="canonical" href="https://declusterize.com/checklist-complete-digital-declutter.html">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --bg: #0c1117;
+            --text: #e4e8ee;
+            --text-muted: #8b95a5;
+            --accent: #34D399;
+            --accent-blue: #0EA5E9;
+            --surface: #161b22;
+            --border: #21262d;
+            --section-bg: #0d1218;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 3rem;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.5rem;
+        }
+        .header svg { flex-shrink: 0; }
+        .brand {
+            font-size: 1.35rem;
+            letter-spacing: -0.02em;
+        }
+        .brand-de { font-weight: 300; color: var(--text-muted); }
+        .brand-main { font-weight: 700; color: var(--text); }
+
+        h1 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin: 1.25rem 0 0.25rem;
+            letter-spacing: -0.03em;
+            color: #fff;
+        }
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .how-to {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 0.85rem 1rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            line-height: 1.5;
+        }
+        .how-to strong { color: var(--accent); font-weight: 600; }
+
+        /* Print button */
+        .print-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, #34D399, #0EA5E9);
+            color: #0c1117;
+            border: none;
+            padding: 0.6rem 1.25rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-bottom: 2rem;
+            font-family: inherit;
+            transition: opacity 0.2s;
+        }
+        .print-btn:hover { opacity: 0.88; }
+
+        /* Sections */
+        .section {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 1.25rem 1.5rem 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .section-icon { font-size: 1.25rem; }
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+            flex: 1;
+        }
+        .section-count {
+            font-size: 0.8rem;
+            color: var(--accent);
+            font-weight: 600;
+            background: rgba(52,211,153,0.1);
+            padding: 0.15rem 0.55rem;
+            border-radius: 20px;
+        }
+
+        /* Checklist items */
+        .checklist { list-style: none; }
+        .checklist li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(33,38,45,0.5);
+            font-size: 0.92rem;
+        }
+        .checklist li:last-child { border-bottom: none; }
+        .checklist input[type="checkbox"] {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            min-width: 20px;
+            border: 2px solid var(--border);
+            border-radius: 4px;
+            margin-top: 1px;
+            cursor: pointer;
+            position: relative;
+            background: transparent;
+            transition: all 0.2s;
+        }
+        .checklist input[type="checkbox"]:checked {
+            background: var(--accent);
+            border-color: var(--accent);
+        }
+        .checklist input[type="checkbox"]:checked::after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 1px;
+            width: 6px;
+            height: 11px;
+            border: solid #0c1117;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+        .checklist label {
+            cursor: pointer;
+            flex: 1;
+        }
+
+        /* Progress */
+        .progress-section {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 1.25rem 1.5rem;
+            margin-top: 1.5rem;
+            text-align: center;
+        }
+        .progress-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.75rem;
+        }
+        .progress-bar-bg {
+            width: 100%;
+            height: 10px;
+            background: var(--border);
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 0.5rem;
+        }
+        .progress-bar-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #34D399, #0EA5E9);
+            border-radius: 5px;
+            transition: width 0.4s ease;
+        }
+        .progress-text {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+        .progress-text span { color: var(--accent); font-weight: 700; }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 2rem 0 1rem;
+            color: var(--text-muted);
+            font-size: 0.82rem;
+            border-top: 1px solid var(--border);
+            margin-top: 2rem;
+        }
+
+        /* Print styles */
+        @media print {
+            :root {
+                --bg: #fff;
+                --text: #1a1a1a;
+                --text-muted: #555;
+                --surface: #fff;
+                --border: #ddd;
+                --section-bg: #fff;
+            }
+            body {
+                background: #fff;
+                color: #1a1a1a;
+                font-size: 11pt;
+                line-height: 1.4;
+            }
+            .container { padding: 0; max-width: 100%; }
+            .print-btn { display: none !important; }
+            .how-to { background: #f7f7f7; border-color: #ddd; }
+            .section {
+                break-inside: avoid;
+                border-color: #ccc;
+                background: #fff;
+                page-break-inside: avoid;
+            }
+            .brand-de, .brand-main { color: #1a1a1a; }
+            .section-title { color: #1a1a1a; }
+            .section-count { background: #eee; color: #333; }
+            .checklist input[type="checkbox"] {
+                appearance: none;
+                -webkit-appearance: none;
+                border: 2px solid #333;
+                background: #fff;
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+            .checklist input[type="checkbox"]:checked {
+                background: #fff;
+                border-color: #333;
+            }
+            .checklist input[type="checkbox"]:checked::after {
+                border-color: #333;
+            }
+            .progress-bar-bg { background: #ddd; }
+            .progress-bar-fill {
+                background: #666;
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+            .footer { border-top-color: #ccc; }
+            h1 { color: #000; }
+            a { color: inherit; text-decoration: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <svg width="36" height="36" viewBox="0 0 48 48" fill="none">
+                <defs>
+                    <linearGradient id="bm-stroke" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                        <stop offset="0" stop-color="#34D399"/>
+                        <stop offset="1" stop-color="#0EA5E9"/>
+                    </linearGradient>
+                    <linearGradient id="bm-fill" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                        <stop offset="0" stop-color="#34D399" stop-opacity=".18"/>
+                        <stop offset="1" stop-color="#0EA5E9" stop-opacity=".10"/>
+                    </linearGradient>
+                </defs>
+                <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="url(#bm-fill)"/>
+                <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="none" stroke="url(#bm-stroke)" stroke-width="2"/>
+                <polyline points="14,25 21,32 34,17" stroke="url(#bm-stroke)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="38" cy="10" r="3" fill="#38BDF8" opacity=".9"/>
+            </svg>
+            <div class="brand"><span class="brand-de">de</span><span class="brand-main">Clusterize</span></div>
+        </div>
+
+        <h1>Complete Digital Declutter Checklist</h1>
+        <p class="subtitle">The master checklist — 44 tasks across all 5 areas of your digital life.</p>
+
+        <div class="how-to">
+            <strong>How to use:</strong> Check off each task as you complete it. Print this page or save as PDF for offline use. Your progress is saved in your browser.
+        </div>
+
+        <button class="print-btn" onclick="window.print()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+            Print / Save as PDF
+        </button>
+
+        <div class="section">
+            <div class="section-header">
+                <span class="section-icon">📱</span>
+                <span class="section-title">Phone</span>
+                <span class="section-count">10 items</span>
+            </div>
+            <ul class="checklist">
+                <li><input type="checkbox" id="p1"><label for="p1">Check storage breakdown (Settings → Storage)</label></li>
+                <li><input type="checkbox" id="p2"><label for="p2">Delete duplicate photos using built-in tools</label></li>
+                <li><input type="checkbox" id="p3"><label for="p3">Remove unused apps (not opened in 30+ days)</label></li>
+                <li><input type="checkbox" id="p4"><label for="p4">Clear app cache for top 5 space-hogging apps</label></li>
+                <li><input type="checkbox" id="p5"><label for="p5">Back up photos to cloud before deleting from device</label></li>
+                <li><input type="checkbox" id="p6"><label for="p6">Review and cancel unused subscriptions</label></li>
+                <li><input type="checkbox" id="p7"><label for="p7">Turn off unnecessary notifications</label></li>
+                <li><input type="checkbox" id="p8"><label for="p8">Organise home screen — one screen of essentials</label></li>
+                <li><input type="checkbox" id="p9"><label for="p9">Set up automatic photo backup</label></li>
+                <li><input type="checkbox" id="p10"><label for="p10">Enable auto-delete for old messages</label></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <span class="section-icon">💻</span>
+                <span class="section-title">Computer</span>
+                <span class="section-count">10 items</span>
+            </div>
+            <ul class="checklist">
+                <li><input type="checkbox" id="c1"><label for="c1">Check disk usage (Storage settings or Disk Utility)</label></li>
+                <li><input type="checkbox" id="c2"><label for="c2">Empty Recycle Bin / Trash</label></li>
+                <li><input type="checkbox" id="c3"><label for="c3">Run Storage Sense (Windows) or Storage Management (Mac)</label></li>
+                <li><input type="checkbox" id="c4"><label for="c4">Clear browser cache and old downloads</label></li>
+                <li><input type="checkbox" id="c5"><label for="c5">Sort Downloads folder — delete or file everything</label></li>
+                <li><input type="checkbox" id="c6"><label for="c6">Uninstall programs not used in 6+ months</label></li>
+                <li><input type="checkbox" id="c7"><label for="c7">Remove old desktop files — clear the visual clutter</label></li>
+                <li><input type="checkbox" id="c8"><label for="c8">Delete temporary files and system caches</label></li>
+                <li><input type="checkbox" id="c9"><label for="c9">Organise documents into a simple folder structure</label></li>
+                <li><input type="checkbox" id="c10"><label for="c10">Set up automated backups</label></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <span class="section-icon">📧</span>
+                <span class="section-title">Email</span>
+                <span class="section-count">8 items</span>
+            </div>
+            <ul class="checklist">
+                <li><input type="checkbox" id="e1"><label for="e1">Archive everything older than 30 days (fresh start)</label></li>
+                <li><input type="checkbox" id="e2"><label for="e2">Mass-delete promotional emails</label></li>
+                <li><input type="checkbox" id="e3"><label for="e3">Unsubscribe from newsletters you don't read</label></li>
+                <li><input type="checkbox" id="e4"><label for="e4">Set up 3–5 key filters for incoming mail</label></li>
+                <li><input type="checkbox" id="e5"><label for="e5">Create a label/folder system (Action, Waiting, Reference)</label></li>
+                <li><input type="checkbox" id="e6"><label for="e6">Process inbox to zero using the 2-minute rule</label></li>
+                <li><input type="checkbox" id="e7"><label for="e7">Delete emails with large attachments you no longer need</label></li>
+                <li><input type="checkbox" id="e8"><label for="e8">Set a weekly 15-minute inbox maintenance slot</label></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <span class="section-icon">📸</span>
+                <span class="section-title">Photos</span>
+                <span class="section-count">8 items</span>
+            </div>
+            <ul class="checklist">
+                <li><input type="checkbox" id="ph1"><label for="ph1">Delete obvious bad shots (blurry, accidental, duplicates)</label></li>
+                <li><input type="checkbox" id="ph2"><label for="ph2">Remove screenshots older than 1 week</label></li>
+                <li><input type="checkbox" id="ph3"><label for="ph3">Back up entire library to at least 2 locations</label></li>
+                <li><input type="checkbox" id="ph4"><label for="ph4">Create albums for key events/categories</label></li>
+                <li><input type="checkbox" id="ph5"><label for="ph5">Enable smart storage/optimise photos on device</label></li>
+                <li><input type="checkbox" id="ph6"><label for="ph6">Delete downloaded memes and saved images you won't revisit</label></li>
+                <li><input type="checkbox" id="ph7"><label for="ph7">Review and clean "Recently Deleted" / Trash</label></li>
+                <li><input type="checkbox" id="ph8"><label for="ph8">Set up automatic cloud backup for new photos</label></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <span class="section-icon">☁️</span>
+                <span class="section-title">Cloud Storage</span>
+                <span class="section-count">8 items</span>
+            </div>
+            <ul class="checklist">
+                <li><input type="checkbox" id="cl1"><label for="cl1">Check storage quota across all services</label></li>
+                <li><input type="checkbox" id="cl2"><label for="cl2">Delete large files you no longer need from Google Drive / OneDrive / iCloud</label></li>
+                <li><input type="checkbox" id="cl3"><label for="cl3">Empty cloud trash/bin (it still counts toward quota)</label></li>
+                <li><input type="checkbox" id="cl4"><label for="cl4">Remove duplicate files across cloud services</label></li>
+                <li><input type="checkbox" id="cl5"><label for="cl5">Organise remaining files into a clear folder structure</label></li>
+                <li><input type="checkbox" id="cl6"><label for="cl6">Review and revoke shared file permissions you no longer need</label></li>
+                <li><input type="checkbox" id="cl7"><label for="cl7">Download important files locally as a backup</label></li>
+                <li><input type="checkbox" id="cl8"><label for="cl8">Unlink old devices from cloud sync</label></li>
+            </ul>
+        </div>
+
+        <div class="progress-section">
+            <div class="progress-title">Progress</div>
+            <div class="progress-bar-bg"><div class="progress-bar-fill" id="progressBar"></div></div>
+            <p class="progress-text"><span id="checkedCount">0</span> / 44 tasks completed</p>
+        </div>
+
+        <footer class="footer">
+            declusterize.com — Your digital life, perfectly clear.
+        </footer>
+    </div>
+
+    <script>
+        const STORAGE_KEY = 'dc-complete-declutter';
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        const total = checkboxes.length;
+
+        function save() {
+            const state = {};
+            checkboxes.forEach(cb => { state[cb.id] = cb.checked; });
+            try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch(e) {}
+        }
+
+        function load() {
+            try {
+                const state = JSON.parse(localStorage.getItem(STORAGE_KEY));
+                if (state) checkboxes.forEach(cb => { if (state[cb.id]) cb.checked = true; });
+            } catch(e) {}
+        }
+
+        function updateProgress() {
+            const checked = document.querySelectorAll('input[type="checkbox"]:checked').length;
+            document.getElementById('checkedCount').textContent = checked;
+            document.getElementById('progressBar').style.width = (checked / total * 100) + '%';
+        }
+
+        load();
+        updateProgress();
+        checkboxes.forEach(cb => cb.addEventListener('change', () => { save(); updateProgress(); }));
+    </script>
+    <!-- Cloudflare Web Analytics --><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "0f294a04c3454733a1c903185f758a89"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

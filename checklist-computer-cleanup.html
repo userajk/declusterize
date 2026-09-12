@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Cleanup Checklist — deClusterize</title>
+    <meta name="description" content="A step-by-step computer cleanup checklist for Windows and Mac. Quick wins, deep clean, and organisation tasks to free up disk space.">
+    <link rel="canonical" href="https://declusterize.com/checklist-computer-cleanup.html">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root { --bg: #0c1117; --text: #e4e8ee; --text-muted: #8b95a5; --accent: #34D399; --accent-blue: #0EA5E9; --surface: #161b22; --border: #21262d; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; }
+        .container { max-width: 780px; margin: 0 auto; padding: 2rem 1.5rem 3rem; }
+        .header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; }
+        .brand { font-size: 1.35rem; letter-spacing: -0.02em; }
+        .brand-de { font-weight: 300; color: var(--text-muted); }
+        .brand-main { font-weight: 700; color: var(--text); }
+        h1 { font-size: 1.75rem; font-weight: 700; margin: 1.25rem 0 0.25rem; letter-spacing: -0.03em; color: #fff; }
+        .subtitle { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .how-to { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 0.85rem 1rem; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 2rem; }
+        .how-to strong { color: var(--accent); font-weight: 600; }
+        .print-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, #34D399, #0EA5E9); color: #0c1117; border: none; padding: 0.6rem 1.25rem; border-radius: 6px; font-size: 0.9rem; font-weight: 600; cursor: pointer; margin-bottom: 2rem; font-family: inherit; transition: opacity 0.2s; }
+        .print-btn:hover { opacity: 0.88; }
+        .section { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem 1.5rem 1.5rem; margin-bottom: 1.25rem; }
+        .section-header { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border); }
+        .section-icon { font-size: 1.25rem; }
+        .section-title { font-size: 1.1rem; font-weight: 700; color: #fff; flex: 1; }
+        .section-count { font-size: 0.8rem; color: var(--accent); font-weight: 600; background: rgba(52,211,153,0.1); padding: 0.15rem 0.55rem; border-radius: 20px; }
+        .time-hint { font-size: 0.78rem; color: var(--text-muted); font-weight: 400; margin-left: 0.25rem; }
+        .checklist { list-style: none; }
+        .checklist li { display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.5rem 0; border-bottom: 1px solid rgba(33,38,45,0.5); font-size: 0.92rem; }
+        .checklist li:last-child { border-bottom: none; }
+        .checklist input[type="checkbox"] { appearance: none; -webkit-appearance: none; width: 20px; height: 20px; min-width: 20px; border: 2px solid var(--border); border-radius: 4px; margin-top: 1px; cursor: pointer; position: relative; background: transparent; transition: all 0.2s; }
+        .checklist input[type="checkbox"]:checked { background: var(--accent); border-color: var(--accent); }
+        .checklist input[type="checkbox"]:checked::after { content: ''; position: absolute; left: 5px; top: 1px; width: 6px; height: 11px; border: solid #0c1117; border-width: 0 2px 2px 0; transform: rotate(45deg); }
+        .checklist label { cursor: pointer; flex: 1; }
+        .fill-blank { display: inline-block; border-bottom: 2px solid var(--text-muted); min-width: 60px; margin: 0 0.25rem; }
+        .final-check { background: var(--surface); border: 1px solid var(--accent); border-radius: 10px; padding: 1.25rem 1.5rem; margin-top: 1.5rem; }
+        .final-check-title { font-size: 1rem; font-weight: 700; color: var(--accent); margin-bottom: 0.5rem; }
+        .final-check p { font-size: 0.92rem; color: var(--text-muted); }
+        .progress-section { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem 1.5rem; margin-top: 1.25rem; text-align: center; }
+        .progress-title { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem; }
+        .progress-bar-bg { width: 100%; height: 10px; background: var(--border); border-radius: 5px; overflow: hidden; margin-bottom: 0.5rem; }
+        .progress-bar-fill { height: 100%; width: 0%; background: linear-gradient(90deg, #34D399, #0EA5E9); border-radius: 5px; transition: width 0.4s ease; }
+        .progress-text { font-size: 0.9rem; color: var(--text-muted); }
+        .progress-text span { color: var(--accent); font-weight: 700; }
+        .footer { text-align: center; padding: 2rem 0 1rem; color: var(--text-muted); font-size: 0.82rem; border-top: 1px solid var(--border); margin-top: 2rem; }
+
+        @media print {
+            :root { --bg: #fff; --text: #1a1a1a; --text-muted: #555; --surface: #fff; --border: #ddd; }
+            body { background: #fff; color: #1a1a1a; font-size: 11pt; line-height: 1.4; }
+            .container { padding: 0; max-width: 100%; }
+            .print-btn { display: none !important; }
+            .how-to { background: #f7f7f7; border-color: #ddd; }
+            .section { break-inside: avoid; page-break-inside: avoid; border-color: #ccc; background: #fff; }
+            .brand-de, .brand-main { color: #1a1a1a; }
+            .section-title { color: #1a1a1a; }
+            .section-count { background: #eee; color: #333; }
+            .checklist input[type="checkbox"] { border: 2px solid #333; background: #fff; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+            .checklist input[type="checkbox"]:checked { background: #fff; border-color: #333; }
+            .checklist input[type="checkbox"]:checked::after { border-color: #333; }
+            .fill-blank { border-bottom-color: #333; }
+            .final-check { border-color: #333; }
+            .final-check-title { color: #333; }
+            .progress-bar-bg { background: #ddd; }
+            .progress-bar-fill { background: #666; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+            .footer { border-top-color: #ccc; }
+            h1 { color: #000; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <svg width="36" height="36" viewBox="0 0 48 48" fill="none"><defs><linearGradient id="bm-stroke" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#34D399"/><stop offset="1" stop-color="#0EA5E9"/></linearGradient><linearGradient id="bm-fill" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#34D399" stop-opacity=".18"/><stop offset="1" stop-color="#0EA5E9" stop-opacity=".10"/></linearGradient></defs><polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="url(#bm-fill)"/><polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="none" stroke="url(#bm-stroke)" stroke-width="2"/><polyline points="14,25 21,32 34,17" stroke="url(#bm-stroke)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="38" cy="10" r="3" fill="#38BDF8" opacity=".9"/></svg>
+            <div class="brand"><span class="brand-de">de</span><span class="brand-main">Clusterize</span></div>
+        </div>
+
+        <h1>Computer Cleanup Checklist</h1>
+        <p class="subtitle">Free up disk space and organise your computer — Windows and Mac.</p>
+
+        <div class="how-to"><strong>How to use:</strong> Check off each task as you complete it. Print this page or save as PDF for offline use. Your progress is saved in your browser.</div>
+
+        <button class="print-btn" onclick="window.print()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+            Print / Save as PDF
+        </button>
+
+        <div class="section">
+            <div class="section-header">
+                <span class="section-icon">📋</span>
+                <span class="section-title">Before You Start</span>
+                <span class="section-count">2 items</span>
+            </div>
+            <ul class="checklist">
+                <li><input type="checkbox" id="b1"><label for="b1">Note current disk usage: <span class="fill-blank">&nbsp;</span> GB free of <span class="fill-blank">&nbsp;</span> GB</label></li>
+                <li><input type="checkbox" id="b2"><label for="b2">Ensure you have a recent backup</label></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <span class="section-icon">⚡</span>
+                <span class="section-title">Quick Wins<span class="time-hint">— 15 minutes</span></span>
+                <span class="section-count">6 items</span>
+            </div>
+            <ul class="checklist">
+                <li><input type="checkbox" id="q1"><label for="q1">Empty Recycle Bin / Trash</label></li>
+                <li><input type="checkbox" id="q2"><label for="q2">Clear Downloads folder (sort by date, delete old files)</label></li>
+                <li><input type="checkbox" id="q3"><label for="q3">Clear browser cache and history</label></li>
+                <li><input type="checkbox" id="q4"><label for="q4">Delete items from Desktop you no longer need</label></li>
+                <li><input type="checkbox" id="q5"><label for="q5">Run Storage Sense (Win) or "Reduce Clutter" (Mac)</label></li>
+                <li><input type="checkbox" id="q6"><label for="q6">Clear temporary files (Win: %temp%, Mac: ~/Library/Caches)</label></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <span class="section-icon">🔍</span>
+                <span class="section-title">Deep Clean<span class="time-hint">— 30 minutes</span></span>
+                <span class="section-count">7 items</span>
+            </div>
+            <ul class="checklist">
+                <li><input type="checkbox" id="d1"><label for="d1">Uninstall programs/apps not used in 6+ months</label></li>
+                <li><input type="checkbox" id="d2"><label for="d2">Find and delete large files (Win: WinDirStat / Mac: Finder → sort by size)</label></li>
+                <li><input type="checkbox" id="d3"><label for="d3">Remove old system restore points / Time Machine snapshots</label></li>
+                <li><input type="checkbox" id="d4"><label for="d4">Clear old Windows Update files / Mac software update cache</label></li>
+                <li><input type="checkbox" id="d5"><label for="d5">Delete duplicate files (use a duplicate finder tool)</label></li>
+                <li><input type="checkbox" id="d6"><label for="d6">Clean up old user account data if applicable</label></li>
+                <li><input type="checkbox" id="d7"><label for="d7">Review and clean Startup/Login Items — disable non-essentials</label></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <span class="section-icon">📁</span>
+                <span class="section-title">Organisation<span class="time-hint">— 20 minutes</span></span>
+                <span class="section-count">5 items</span>
+            </div>
+            <ul class="checklist">
+                <li><input type="checkbox" id="o1"><label for="o1">Create a simple folder structure: Documents, Projects, Archive</label></li>
+                <li><input type="checkbox" id="o2"><label for="o2">Move loose files into the right folders</label></li>
+                <li><input type="checkbox" id="o3"><label for="o3">Set up cloud sync for important folders (OneDrive/iCloud/Dropbox)</label></li>
+                <li><input type="checkbox" id="o4"><label for="o4">Pin frequently used folders to Quick Access / Sidebar</label></li>
+                <li><input type="checkbox" id="o5"><label for="o5">Set Downloads folder to auto-sort or auto-delete after 30 days</label></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <span class="section-icon">🌐</span>
+                <span class="section-title">Browser Cleanup</span>
+                <span class="section-count">4 items</span>
+            </div>
+            <ul class="checklist">
+                <li><input type="checkbox" id="br1"><label for="br1">Remove unused browser extensions</label></li>
+                <li><input type="checkbox" id="br2"><label for="br2">Clear saved passwords for sites you no longer use</label></li>
+                <li><input type="checkbox" id="br3"><label for="br3">Delete unused bookmarks and organise the rest</label></li>
+                <li><input type="checkbox" id="br4"><label for="br4">Review and manage saved form/autofill data</label></li>
+            </ul>
+        </div>
+
+        <div class="final-check">
+            <div class="final-check-title">Final Check</div>
+            <p>Disk after cleanup: <span class="fill-blank">&nbsp;</span> GB free (target: at least 15% free)</p>
+        </div>
+
+        <div class="progress-section">
+            <div class="progress-title">Progress</div>
+            <div class="progress-bar-bg"><div class="progress-bar-fill" id="progressBar"></div></div>
+            <p class="progress-text"><span id="checkedCount">0</span> / <span id="totalCount">24</span> tasks completed</p>
+        </div>
+
+        <footer class="footer">declusterize.com — Your digital life, perfectly clear.</footer>
+    </div>
+
+    <script>
+        const STORAGE_KEY = 'dc-computer-cleanup';
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        const total = checkboxes.length;
+        document.getElementById('totalCount').textContent = total;
+        function save() { const s = {}; checkboxes.forEach(cb => { s[cb.id] = cb.checked; }); try { localStorage.setItem(STORAGE_KEY, JSON.stringify(s)); } catch(e) {} }
+        function load() { try { const s = JSON.parse(localStorage.getItem(STORAGE_KEY)); if (s) checkboxes.forEach(cb => { if (s[cb.id]) cb.checked = true; }); } catch(e) {} }
+        function updateProgress() { const c = document.querySelectorAll('input[type="checkbox"]:checked').length; document.getElementById('checkedCount').textContent = c; document.getElementById('progressBar').style.width = (c / total * 100) + '%'; }
+        load(); updateProgress();
+        checkboxes.forEach(cb => cb.addEventListener('change', () => { save(); updateProgress(); }));
+    </script>
+    <!-- Cloudflare Web Analytics --><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "0f294a04c3454733a1c903185f758a89"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
