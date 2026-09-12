@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>How to Free Up Storage on a Mac — deClusterize</title>
+<meta name="description" content="The complete guide to freeing up storage on a Mac — clear caches, remove old snapshots, uninstall apps properly, and reclaim tens of gigabytes on macOS Sonoma and Sequoia." />
+<meta name="keywords" content="how to free up storage on mac, mac storage full, free up disk space mac, clear storage mac, mac running out of space, system data mac, other storage mac, macOS storage management" />
+<link rel="canonical" href="https://declusterize.com/free-up-storage-mac.html" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://declusterize.com/free-up-storage-mac.html" />
+<meta property="og:title" content="How to Free Up Storage on a Mac — deClusterize" />
+<meta property="og:description" content="Reclaim tens of gigabytes on your Mac with free, built-in tools. Step-by-step guide covering caches, snapshots, apps, and system data." />
+<meta property="og:image" content="https://declusterize.com/og-image.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://declusterize.com/og-image.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Free Up Storage on a Mac",
+  "description": "Step-by-step guide to reclaiming Mac storage by clearing caches, removing Time Machine snapshots, uninstalling apps properly, and using macOS Storage Management tools.",
+  "image": "https://declusterize.com/og-image.jpg",
+  "totalTime": "PT30M",
+  "estimatedCost": { "@type": "MonetaryAmount", "currency": "GBP", "value": "0" },
+  "step": [
+    { "@type": "HowToStep", "position": 1, "name": "Check what is using your storage", "text": "Go to Apple menu → About This Mac → Storage (or System Settings → General → Storage on macOS Ventura and later) to see a colour-coded breakdown of disk usage." },
+    { "@type": "HowToStep", "position": 2, "name": "Use macOS Storage Management recommendations", "text": "Open Apple menu → About This Mac → Storage → Manage to access Store in iCloud, Optimise Storage, Empty Bin Automatically, and Reduce Clutter." },
+    { "@type": "HowToStep", "position": 3, "name": "Clear System Data and caches", "text": "Delete files in ~/Library/Caches, browser caches, and Xcode derived data to reclaim space consumed by temporary and cached files." },
+    { "@type": "HowToStep", "position": 4, "name": "Find and remove large files", "text": "Use Finder search with kind:other size:>500MB or the Storage Management Large Files view to locate and delete large files you no longer need." },
+    { "@type": "HowToStep", "position": 5, "name": "Delete old Time Machine snapshots", "text": "Use tmutil listlocalsnapshots and tmutil deletelocalsnapshots to remove local Time Machine snapshots that accumulate when your backup drive is disconnected." },
+    { "@type": "HowToStep", "position": 6, "name": "Uninstall apps properly", "text": "Remove the app from Applications and manually delete its leftover files in ~/Library/Application Support, ~/Library/Preferences, and ~/Library/Caches, or use AppCleaner." },
+    { "@type": "HowToStep", "position": 7, "name": "Clear mail downloads and attachments", "text": "Delete cached mail attachments from ~/Library/Mail Downloads and ~/Library/Containers/com.apple.mail/Data/Library/Mail Downloads." }
+  ]
+}
+</script>
+
+<style>
+/* ══════════════════════════════════════════════════════
+   GUIDE ARTICLE PAGE STYLES
+   ══════════════════════════════════════════════════════ */
+
+/* ── Skip link (visually hidden until focused) ────────── */
+.skip-link {
+  position: absolute; top: -100%; left: 16px;
+  background: var(--emerald); color: #fff;
+  padding: 8px 16px; border-radius: 4px;
+  font-size: .85rem; font-weight: 600; z-index: 9999;
+  text-decoration: none; transition: top .15s;
+}
+.skip-link:focus { top: 8px; }
+
+.breadcrumb {
+  padding: 100px 0 0;
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  letter-spacing: .06em;
+  color: var(--text-muted);
+}
+.breadcrumb a { color: var(--text-muted); text-decoration: none; }
+.breadcrumb a:hover { color: var(--emerald); }
+.breadcrumb span { margin: 0 6px; }
+
+.art-hero { padding: 24px 0 48px; }
+.art-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--font-mono); font-size: .72rem; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--sky-bright);
+  background: rgba(14,165,233,.1); border: 1px solid rgba(14,165,233,.2);
+  border-radius: var(--r-pill); padding: 5px 14px; margin-bottom: 20px;
+}
+.art-hero h1 {
+  font-size: clamp(1.8rem, 4.5vw, 3rem);
+  font-weight: 700; line-height: 1.15; margin-bottom: 20px;
+  max-width: 820px;
+}
+.art-hero h1 em { font-style: normal; color: var(--emerald-bright); }
+.art-meta {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 20px;
+  color: var(--text-muted); font-size: .82rem;
+  border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+  padding: 16px 0; margin: 24px 0 0;
+}
+.art-meta-item { display: flex; align-items: center; gap: 7px; }
+.art-meta-item svg { opacity: .6; }
+.art-badge {
+  display: inline-block; font-family: var(--font-mono); font-size: .65rem;
+  letter-spacing: .1em; text-transform: uppercase; padding: 3px 10px;
+  border-radius: var(--r-pill); border: 1px solid rgba(16,185,129,.3);
+  background: rgba(16,185,129,.08); color: var(--emerald);
+}
+
+.art-layout {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 48px; align-items: start;
+  padding-bottom: 100px;
+}
+@media(max-width:900px){ .art-layout { grid-template-columns: 1fr; } .art-sidebar { display: none; } }
+
+.art-sidebar { position: sticky; top: 88px; }
+.toc-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--r-panel); padding: 24px;
+}
+.toc-card h3 {
+  font-family: var(--font-mono); font-size: .72rem; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--text-muted); margin-bottom: 16px;
+}
+.toc-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 4px; }
+.toc-list a {
+  display: block; font-size: .84rem; color: var(--text-body); text-decoration: none;
+  padding: 6px 10px; border-radius: 6px; border-left: 2px solid transparent;
+  transition: all .2s;
+}
+.toc-list a:hover, .toc-list a.active {
+  color: var(--emerald); border-left-color: var(--emerald);
+  background: rgba(16,185,129,.07);
+}
+.toc-cta {
+  margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--border);
+  text-align: center;
+}
+.toc-cta p { font-size: .8rem; color: var(--text-muted); margin-bottom: 12px; line-height: 1.5; }
+
+.art-body h2 {
+  font-size: clamp(1.25rem, 2.5vw, 1.6rem); font-weight: 700;
+  margin: 52px 0 18px; padding-top: 8px;
+  border-top: 1px solid var(--border);
+  scroll-margin-top: 88px;
+}
+.art-body h2:first-child { margin-top: 0; border-top: none; }
+.art-body h3 {
+  font-size: 1.05rem; font-weight: 600; margin: 30px 0 12px;
+  color: var(--text-heading); scroll-margin-top: 88px;
+}
+.art-body p { color: var(--text-body); line-height: 1.78; margin-bottom: 18px; font-size: .97rem; }
+.art-body a { color: var(--emerald); text-decoration: underline; text-underline-offset: 3px; }
+.art-body ul, .art-body ol {
+  padding-left: 24px; margin-bottom: 20px; display: flex; flex-direction: column; gap: 8px;
+}
+.art-body li { color: var(--text-body); line-height: 1.65; font-size: .97rem; }
+.art-body strong { color: var(--text-heading); }
+
+.steps { list-style: none; padding: 0; margin: 24px 0 32px; display: flex; flex-direction: column; gap: 16px; }
+.step-item {
+  display: flex; gap: 20px; align-items: flex-start;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--r-panel); padding: 20px 22px;
+}
+.step-num {
+  flex-shrink: 0; width: 34px; height: 34px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--emerald), var(--sky));
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-mono); font-size: .8rem; font-weight: 700; color: #fff;
+}
+.step-content h4 { font-size: .97rem; font-weight: 600; margin-bottom: 6px; color: var(--text-heading); }
+.step-content p { font-size: .88rem; color: var(--text-body); line-height: 1.65; margin: 0; }
+
+.callout {
+  border-radius: var(--r-panel); padding: 18px 22px;
+  margin: 28px 0; display: flex; gap: 16px; align-items: flex-start;
+}
+.callout-icon { font-size: 1.25rem; flex-shrink: 0; line-height: 1.6; }
+.callout-body { flex: 1; }
+.callout-body strong { display: block; margin-bottom: 5px; font-size: .92rem; }
+.callout-body p { font-size: .87rem; line-height: 1.65; margin: 0; }
+.callout-tip  { background: rgba(16,185,129,.08); border: 1px solid rgba(16,185,129,.25); }
+.callout-tip  .callout-body strong, .callout-tip  .callout-body p { color: var(--text-body); }
+.callout-warn { background: rgba(251,191,36,.07); border: 1px solid rgba(251,191,36,.25); }
+.callout-warn .callout-body strong { color: #fbbf24; }
+.callout-warn .callout-body p { color: var(--text-body); }
+.callout-info { background: rgba(14,165,233,.08); border: 1px solid rgba(14,165,233,.2); }
+.callout-info .callout-body strong { color: var(--sky-bright); }
+.callout-info .callout-body p { color: var(--text-body); }
+
+.compare-table { width: 100%; border-collapse: collapse; margin: 24px 0 32px; font-size: .88rem; }
+.compare-table th {
+  font-family: var(--font-mono); font-size: .7rem; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--text-muted);
+  padding: 10px 16px; background: var(--surface-2);
+  border: 1px solid var(--border); text-align: left;
+}
+.compare-table td {
+  padding: 12px 16px; border: 1px solid var(--border);
+  color: var(--text-body); vertical-align: top; line-height: 1.6;
+}
+.compare-table tr:nth-child(even) td { background: rgba(255,255,255,.02); }
+.t-good { color: var(--emerald); font-weight: 600; }
+.t-bad  { color: #f87171; }
+.t-mid  { color: #fbbf24; }
+
+/* ── Storage bar visual ───────────────────────────────── */
+.storage-bar-wrap { margin: 28px 0 32px; }
+.storage-bar-track {
+  height: 14px; border-radius: 99px; overflow: hidden;
+  display: flex; gap: 2px; background: var(--surface-2);
+  border: 1px solid var(--border); padding: 2px;
+}
+.storage-bar-seg { border-radius: 99px; height: 100%; }
+.storage-legend {
+  display: flex; flex-wrap: wrap; gap: 14px; margin-top: 14px; font-size: .8rem;
+}
+.storage-legend-item { display: flex; align-items: center; gap: 6px; color: var(--text-body); }
+.storage-legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+
+/* ── Image figures ────────────────────────────────────── */
+.art-img {
+  width: 100%; border-radius: var(--r-panel);
+  overflow: hidden; margin: 28px 0; border: 1px solid var(--border);
+}
+.art-img img { width: 100%; height: auto; display: block; }
+.art-img-caption {
+  font-size: .78rem; color: var(--text-muted); text-align: center;
+  margin-top: -18px; margin-bottom: 28px; font-style: italic;
+}
+
+/* ── Related guides ───────────────────────────────────── */
+.related-section { padding: 60px 0; border-top: 1px solid var(--border); }
+.related-section h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: 28px; }
+.related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+@media(max-width:700px){ .related-grid { grid-template-columns: 1fr; } }
+.related-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--r-panel); padding: 22px; text-decoration: none;
+  display: flex; flex-direction: column; gap: 10px;
+  transition: border-color .2s, transform .2s;
+}
+.related-card:hover { border-color: var(--emerald); transform: translateY(-3px); }
+.related-card .rc-tag { font-family: var(--font-mono); font-size: .65rem; letter-spacing: .1em; text-transform: uppercase; color: var(--emerald); }
+.related-card h3 { font-size: .95rem; font-weight: 600; color: var(--text-heading); line-height: 1.45; }
+.related-card p { font-size: .82rem; color: var(--text-muted); line-height: 1.55; margin: 0; }
+.related-card .rc-arrow { margin-top: auto; color: var(--emerald); font-size: .82rem; }
+
+/* ── Article CTA strip ────────────────────────────────── */
+.art-cta {
+  background: var(--surface); border: 1px solid var(--border-2);
+  border-radius: var(--r-panel); padding: 36px; text-align: center;
+  margin: 48px 0;
+}
+.art-cta h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 10px; }
+.art-cta p { color: var(--text-body); font-size: .92rem; margin-bottom: 24px; max-width: 440px; margin-left: auto; margin-right: auto; line-height: 1.6; }
+.art-cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.art-cta .btn,
+.art-cta .btn * { -webkit-text-fill-color: currentColor; background-clip: unset; -webkit-background-clip: unset; }
+.art-cta .btn-primary { color: #fff !important; -webkit-text-fill-color: #fff !important; }
+.art-cta .btn-secondary { color: var(--emerald) !important; -webkit-text-fill-color: var(--emerald) !important; }
+
+/* ── Code blocks inline ──────────────────────────────── */
+.art-body code {
+  font-family: var(--font-mono); font-size: .85em;
+  background: var(--surface-2); border: 1px solid var(--border);
+  border-radius: 4px; padding: 2px 7px;
+}
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<!-- NAV -->
+<header class="nav-wrap" id="navbar">
+  <nav class="nav container" role="navigation" aria-label="Main">
+    <a href="index.html" class="brand" aria-label="deClusterize home">
+      <svg class="brand-mark-svg" width="32" height="32" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="bm-fill" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#10B981" stop-opacity=".18"/>
+            <stop offset="100%" stop-color="#0EA5E9" stop-opacity=".18"/>
+          </linearGradient>
+          <linearGradient id="bm-stroke" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#34D399"/>
+            <stop offset="100%" stop-color="#38BDF8"/>
+          </linearGradient>
+        </defs>
+        <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="url(#bm-fill)"/>
+        <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="none" stroke="url(#bm-stroke)" stroke-width="2"/>
+        <polyline points="14,25 21,32 34,17" stroke="url(#bm-stroke)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="38" cy="10" r="3" fill="#38BDF8" opacity=".9"/>
+      </svg>
+      <span class="brand-name">deClusterize</span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="how-it-works.html">How It Works</a></li>
+      <li><a href="guides.html" class="active">Guides</a></li>
+      <li><a href="community.html">Community</a></li>
+    </ul>
+    <div class="nav-actions">
+    </div>
+    <button class="nav-burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <ul role="list">
+      <li><a href="how-it-works.html">How It Works</a></li>
+      <li><a href="guides.html">Guides</a></li>
+      <li><a href="community.html">Community</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main-content">
+<div class="container">
+
+  <!-- BREADCRUMB -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="index.html">Home</a>
+    <span aria-hidden="true">›</span>
+    <a href="guides.html">Guides</a>
+    <span aria-hidden="true">›</span>
+    <a href="guides.html#hub-computer">Computer</a>
+    <span aria-hidden="true">›</span>
+    <span aria-current="page">Free Up Storage on Mac</span>
+  </nav>
+
+  <!-- HERO -->
+  <header class="art-hero">
+    <div class="art-eyebrow">
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="1" y="1" width="14" height="14" rx="3" stroke="#38BDF8" stroke-width="1.5"/><path d="M4 8h8M4 5h8M4 11h5" stroke="#38BDF8" stroke-width="1.5" stroke-linecap="round"/></svg>
+      macOS · Storage
+    </div>
+    <h1>How to <em>Free Up Storage</em> on a Mac</h1>
+    <p style="max-width:680px;color:var(--text-body);font-size:1.02rem;line-height:1.72;margin-bottom:20px">
+      A Mac with a full disk slows to a crawl — apps stall, updates refuse to install, and that spinning beach ball becomes a permanent companion. This guide walks you through every method to reclaim space, from the two-minute quick wins built into macOS to the deeper techniques that can free 30 GB or more. Every method here is free and uses tools already on your Mac.
+    </p>
+    <div class="art-meta">
+      <span class="art-meta-item">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.4"/><path d="M8 4.5V8l2.5 2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+        7 min read
+      </span>
+      <span class="art-meta-item">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 12L8 4l5 8H3z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+        Beginner-friendly
+      </span>
+      <span class="art-meta-item">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.4"/><path d="M5 1v4M11 1v4M2 7h12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+        Updated September 2026
+      </span>
+      <span class="art-badge">Free methods</span>
+      <span class="art-badge">macOS Sonoma + Sequoia</span>
+    </div>
+  </header>
+
+  <!-- LAYOUT -->
+  <div class="art-layout">
+
+    <!-- ── ARTICLE BODY ── -->
+    <article class="art-body">
+
+      <!-- METHOD 1 — CHECK STORAGE -->
+      <h2 id="check-storage">Step 1 — Check what's using your storage</h2>
+      <p>
+        Before deleting anything, you need to know where the space is going. macOS provides a built-in storage breakdown that shows exactly which categories are consuming your disk — and the answer is often surprising. Many people assume photos or music are the culprit, only to discover that System Data, caches, or old applications account for the majority of the usage.
+      </p>
+
+      <h3>How to view the storage breakdown</h3>
+      <p>
+        The path depends on your macOS version:
+      </p>
+      <ul>
+        <li><strong>macOS Ventura, Sonoma, and Sequoia:</strong> Open <em>System Settings → General → Storage</em>. Wait a few seconds for the colour-coded bar to finish calculating.</li>
+        <li><strong>macOS Monterey and earlier:</strong> Click the Apple menu → <em>About This Mac → Storage</em>. Click <em>Manage</em> for more detail.</li>
+      </ul>
+
+      <h3>Understanding the colour-coded bar</h3>
+      <p>
+        The horizontal bar divides your disk into categories. Each colour represents a different type of content:
+      </p>
+
+      <!-- Storage bar visual -->
+      <div class="storage-bar-wrap">
+        <div class="storage-bar-track">
+          <div class="storage-bar-seg" style="width:28%;background:#3B82F6" title="Applications"></div>
+          <div class="storage-bar-seg" style="width:18%;background:#8B5CF6" title="Documents"></div>
+          <div class="storage-bar-seg" style="width:12%;background:#F59E0B" title="Photos"></div>
+          <div class="storage-bar-seg" style="width:10%;background:#EF4444" title="Mail"></div>
+          <div class="storage-bar-seg" style="width:22%;background:#6B7280" title="System Data"></div>
+          <div class="storage-bar-seg" style="width:10%;background:var(--surface)" title="Available"></div>
+        </div>
+        <div class="storage-legend">
+          <span class="storage-legend-item"><span class="storage-legend-dot" style="background:#3B82F6"></span>Applications</span>
+          <span class="storage-legend-item"><span class="storage-legend-dot" style="background:#8B5CF6"></span>Documents</span>
+          <span class="storage-legend-item"><span class="storage-legend-dot" style="background:#F59E0B"></span>Photos</span>
+          <span class="storage-legend-item"><span class="storage-legend-dot" style="background:#EF4444"></span>Mail</span>
+          <span class="storage-legend-item"><span class="storage-legend-dot" style="background:#6B7280"></span>System Data</span>
+          <span class="storage-legend-item"><span class="storage-legend-dot" style="background:var(--surface)"></span>Available</span>
+        </div>
+      </div>
+
+      <p>
+        <strong>System Data</strong> (labelled "Other" on older macOS versions) is the most confusing category. It includes caches, logs, Time Machine local snapshots, Spotlight indexes, and temporary files. It's often the largest single category — and the hardest to shrink, because macOS doesn't give you a simple button to clear it. We'll tackle it in Step 3.
+      </p>
+
+      <div class="callout callout-info">
+        <span class="callout-icon">ℹ️</span>
+        <div class="callout-body">
+          <strong>Let the bar finish loading</strong>
+          <p>The storage bar can take 15–30 seconds to calculate, especially on a nearly full disk. Wait until the numbers stop changing before making decisions — the initial estimates are often inaccurate.</p>
+        </div>
+      </div>
+
+      <!-- IMAGE 1 -->
+      <figure class="art-img">
+        <img src="img-mac-storage-settings.webp" alt="macOS System Settings showing Storage breakdown with colour-coded bar and category list" loading="lazy" />
+      </figure>
+      <p class="art-img-caption">System Settings → General → Storage on macOS Sonoma. Hover over each colour segment for a precise size. Click any category for details.</p>
+
+
+      <!-- METHOD 2 — STORAGE MANAGEMENT -->
+      <h2 id="storage-management">Step 2 — Use macOS Storage Management recommendations</h2>
+      <p>
+        macOS has a built-in Storage Management tool with four automated recommendations that can collectively recover 5–20 GB with almost no effort. Most Mac users have never opened it.
+      </p>
+
+      <h3>How to open it</h3>
+      <p>
+        On macOS Ventura and later, go to <em>System Settings → General → Storage</em> and the recommendations appear right on that screen. On older versions, click <em>Apple menu → About This Mac → Storage → Manage</em> to open the dedicated Storage Management window.
+      </p>
+
+      <h3>The four recommendations</h3>
+      <ol class="steps" style="list-style:none;padding:0">
+        <li class="step-item">
+          <span class="step-num">1</span>
+          <div class="step-content">
+            <h4>Store in iCloud</h4>
+            <p>Moves Desktop, Documents, and Photos to iCloud, keeping only recently accessed files on your Mac. Originals download on demand. Requires an iCloud+ plan with enough space (50 GB starts at 99p/mo).</p>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-num">2</span>
+          <div class="step-content">
+            <h4>Optimise Storage</h4>
+            <p>Automatically removes iTunes films and TV shows you've already watched. The content stays in your iTunes purchase history and can be re-downloaded at any time. Particularly useful if you buy or rent films from the iTunes Store.</p>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-num">3</span>
+          <div class="step-content">
+            <h4>Empty Bin Automatically</h4>
+            <p>Permanently deletes items that have been in the Bin for more than 30 days. This alone can recover gigabytes if you regularly delete files but forget to empty the Bin.</p>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-num">4</span>
+          <div class="step-content">
+            <h4>Reduce Clutter</h4>
+            <p>Shows a list of large files, downloads, and unsupported apps so you can review and delete them. It's essentially a guided clean-up — macOS won't delete anything without your confirmation.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="callout callout-tip">
+        <span class="callout-icon">💡</span>
+        <div class="callout-body">
+          <strong>Enable "Empty Bin Automatically" first</strong>
+          <p>This is the single easiest win. Most people have months of deleted files sitting in the Bin. Enable this once, and it handles itself forever. Right-click the Bin in the Dock and choose <em>Empty Bin</em> now for an immediate clean.</p>
+        </div>
+      </div>
+
+
+      <!-- METHOD 3 — SYSTEM DATA & CACHES -->
+      <h2 id="system-data">Step 3 — Clear System Data and caches</h2>
+      <p>
+        System Data is the most frustrating storage category because macOS offers no one-click way to reduce it. It's a catch-all for caches, logs, temporary files, Spotlight indexes, and other system resources. On a Mac that's been running for a year or more, this category can easily reach 20–40 GB.
+      </p>
+      <p>
+        The good news: a significant portion of System Data is safe to delete manually.
+      </p>
+
+      <h3>Clear user-level caches</h3>
+      <ol class="steps" style="list-style:none;padding:0">
+        <li class="step-item">
+          <span class="step-num">1</span>
+          <div class="step-content">
+            <h4>Open Finder → Go → Go to Folder</h4>
+            <p>Press <code>Cmd + Shift + G</code> or use the <em>Go</em> menu. Type <code>~/Library/Caches</code> and press Return.</p>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-num">2</span>
+          <div class="step-content">
+            <h4>Review the folders inside</h4>
+            <p>Each folder corresponds to an app. You'll see folders like <code>com.apple.Safari</code>, <code>com.spotify.client</code>, and <code>com.google.Chrome</code>. The largest ones are your targets.</p>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-num">3</span>
+          <div class="step-content">
+            <h4>Delete the contents of large cache folders</h4>
+            <p>Open each large folder and delete the files <em>inside</em> it — don't delete the folder itself. The app will rebuild its cache as needed. Move files to the Bin, then empty the Bin.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="callout callout-warn">
+        <span class="callout-icon">⚠️</span>
+        <div class="callout-body">
+          <strong>Delete cache contents, not the cache folders</strong>
+          <p>Always delete the files <em>inside</em> a cache folder, never the folder itself. Some apps expect their cache directory to exist and may behave unpredictably if it's missing. When in doubt, restart the app after clearing its cache.</p>
+        </div>
+      </div>
+
+      <h3>Clear browser caches</h3>
+      <p>
+        Web browsers are among the largest cache consumers. Here's how to clear them directly:
+      </p>
+      <ul>
+        <li><strong>Safari:</strong> <em>Safari → Settings → Privacy → Manage Website Data → Remove All</em>. Also go to <em>Develop → Empty Caches</em> (enable the Develop menu in <em>Settings → Advanced</em>).</li>
+        <li><strong>Chrome:</strong> <em>Chrome → Settings → Privacy and Security → Clear Browsing Data</em>. Select <em>Cached images and files</em> and set the time range to <em>All time</em>.</li>
+        <li><strong>Firefox:</strong> <em>Firefox → Settings → Privacy &amp; Security → Cookies and Site Data → Clear Data</em>.</li>
+      </ul>
+
+      <h3>Clear Xcode derived data (developers only)</h3>
+      <p>
+        If you use Xcode, its derived data folder can grow to 10–50 GB or more. Navigate to <code>~/Library/Developer/Xcode/DerivedData</code> and delete everything inside. Xcode rebuilds it automatically when you next open a project. You can also delete old device support files in <code>~/Library/Developer/Xcode/iOS DeviceSupport</code> for devices you no longer test on.
+      </p>
+
+      <!-- IMAGE 2 -->
+      <figure class="art-img">
+        <img src="img-mac-system-data.webp" alt="macOS Finder window showing ~/Library/Caches folder with large cache directories highlighted" loading="lazy" />
+      </figure>
+      <p class="art-img-caption">The ~/Library/Caches folder often contains several gigabytes of temporary data that is safe to clear. Sort by size to find the biggest offenders.</p>
+
+
+      <!-- METHOD 4 — LARGE FILES -->
+      <h2 id="large-files">Step 4 — Find and remove large files</h2>
+      <p>
+        Sometimes the biggest storage wins come from finding a handful of forgotten files — an old virtual machine image, a video project export, a database dump from three years ago. macOS gives you two ways to hunt these down.
+      </p>
+
+      <h3>Use the Storage Management "Large Files" view</h3>
+      <p>
+        In the Storage Management window (or the storage screen in System Settings), click <em>Documents</em> in the sidebar and switch to the <em>Large Files</em> tab. macOS lists every file on your disk sorted by size, largest first. Scan through the list and delete anything you recognise as no longer needed.
+      </p>
+
+      <h3>Use Finder search</h3>
+      <ol class="steps" style="list-style:none;padding:0">
+        <li class="step-item">
+          <span class="step-num">1</span>
+          <div class="step-content">
+            <h4>Open a new Finder window and press Cmd + F</h4>
+            <p>Make sure the search scope is set to <em>This Mac</em> (not just the current folder).</p>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-num">2</span>
+          <div class="step-content">
+            <h4>Set the search criteria</h4>
+            <p>Click the <em>Kind</em> dropdown and change it to <em>File Size</em>. Set it to <em>is greater than</em> and enter <em>500 MB</em> (or <em>1 GB</em> for a broader sweep). Finder will list every file above that threshold.</p>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-num">3</span>
+          <div class="step-content">
+            <h4>Sort by size and review</h4>
+            <p>Click the <em>Size</em> column header to sort largest first. Move anything you don't need to the Bin.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="callout callout-tip">
+        <span class="callout-icon">💡</span>
+        <div class="callout-body">
+          <strong>Visual alternatives for power users</strong>
+          <p><strong>GrandPerspective</strong> (free, open-source) and <strong>DaisyDisk</strong> (paid, beautifully designed) both create visual treemaps of your disk, making it immediately obvious where the space is going. They're especially useful for finding large files buried deep in nested folders that Finder search might miss.</p>
+        </div>
+      </div>
+
+
+      <!-- METHOD 5 — TIME MACHINE SNAPSHOTS -->
+      <h2 id="time-machine">Step 5 — Delete old Time Machine snapshots</h2>
+      <p>
+        If you use Time Machine, macOS creates <strong>local snapshots</strong> — copies of changed files stored directly on your Mac's internal drive, not on the external backup disk. These are designed to protect you when your backup drive isn't connected, but they can accumulate quickly and consume tens of gigabytes.
+      </p>
+      <p>
+        This is especially common on MacBook users who only connect their backup drive at home: during a week of travel, daily local snapshots can pile up to 20–30 GB.
+      </p>
+
+      <h3>Check for local snapshots</h3>
+      <p>
+        Open Terminal (<em>Applications → Utilities → Terminal</em>) and run:
+      </p>
+      <p><code>tmutil listlocalsnapshots /</code></p>
+      <p>
+        This lists all local snapshots with their dates. If you see a long list spanning weeks or months, that's a significant chunk of your System Data category.
+      </p>
+
+      <h3>Delete specific snapshots</h3>
+      <p>
+        To delete a single snapshot, use:
+      </p>
+      <p><code>sudo tmutil deletelocalsnapshots 2026-09-01-120000</code></p>
+      <p>
+        Replace the date string with one from the list above. You'll be prompted for your admin password.
+      </p>
+
+      <div class="callout callout-info">
+        <span class="callout-icon">ℹ️</span>
+        <div class="callout-body">
+          <strong>macOS auto-manages snapshots when space is low</strong>
+          <p>macOS is designed to automatically delete old local snapshots when your disk runs low. However, it doesn't always act quickly enough — especially when you need space right now for a large download or software update. Manually deleting snapshots forces the reclamation immediately.</p>
+        </div>
+      </div>
+
+      <div class="callout callout-warn">
+        <span class="callout-icon">⚠️</span>
+        <div class="callout-body">
+          <strong>Don't disable Time Machine entirely</strong>
+          <p>Deleting local snapshots is safe — it doesn't affect your actual backups on the external drive. But don't turn Time Machine off altogether just to save space. Your backups are your safety net against hardware failure and accidental deletion. Delete snapshots; keep backups.</p>
+        </div>
+      </div>
+
+
+      <!-- METHOD 6 — UNINSTALL APPS -->
+      <h2 id="uninstall-apps">Step 6 — Uninstall apps properly</h2>
+      <p>
+        On macOS, dragging an app to the Bin removes the application bundle but leaves behind support files, preferences, caches, and login items scattered across your Library folder. Over years of installing and removing software, these orphaned files can add up to several gigabytes.
+      </p>
+
+      <h3>The manual clean-up method</h3>
+      <p>
+        After dragging an app to the Bin, check these three locations for leftover files (use <em>Go → Go to Folder</em> in Finder, or <code>Cmd + Shift + G</code>):
+      </p>
+      <ul>
+        <li><code>~/Library/Application Support/[App Name]</code> — saved data, configuration databases, plugins</li>
+        <li><code>~/Library/Preferences/com.developer.appname.plist</code> — preference files (small, but they accumulate)</li>
+        <li><code>~/Library/Caches/com.developer.appname</code> — cached data (often the largest leftover)</li>
+      </ul>
+      <p>
+        Delete the matching folders and files, then empty the Bin.
+      </p>
+
+      <h3>The easy alternative: AppCleaner</h3>
+      <p>
+        <strong>AppCleaner</strong> (free, by FreeMacSoft) does this automatically. Drag an app onto the AppCleaner window and it finds every associated file across your Library. Review the list, tick what you want to remove, and click <em>Remove</em>. It's one of the most trusted Mac utilities and has been around for over a decade.
+      </p>
+
+      <div class="callout callout-tip">
+        <span class="callout-icon">💡</span>
+        <div class="callout-body">
+          <strong>Use AppCleaner going forward, not just for old apps</strong>
+          <p>Get into the habit of uninstalling apps <em>through</em> AppCleaner rather than dragging them to the Bin directly. This prevents the gradual build-up of orphaned support files that contributes to System Data growth over time.</p>
+        </div>
+      </div>
+
+      <!-- IMAGE 3 -->
+      <figure class="art-img">
+        <img src="img-mac-apps-storage.webp" alt="macOS Applications folder showing apps sorted by size alongside AppCleaner window listing associated files for an app" loading="lazy" />
+      </figure>
+      <p class="art-img-caption">Dragging an app to the Bin leaves behind support files. AppCleaner (right) finds and removes them all in one step.</p>
+
+
+      <!-- METHOD 7 — MAIL DOWNLOADS -->
+      <h2 id="mail-downloads">Step 7 — Clear mail downloads and attachments</h2>
+      <p>
+        Every time you open or quick-look an email attachment in Apple Mail, macOS downloads a copy to a local cache folder. These cached attachments are never automatically cleaned up, and after years of email they can consume several gigabytes.
+      </p>
+
+      <h3>Where mail attachments are stored</h3>
+      <p>
+        There are two locations to check:
+      </p>
+      <ul>
+        <li><code>~/Library/Mail Downloads</code> — older macOS versions store previewed attachments here</li>
+        <li><code>~/Library/Containers/com.apple.mail/Data/Library/Mail Downloads</code> — the sandboxed location on newer macOS versions</li>
+      </ul>
+      <p>
+        Open each folder (using <em>Go → Go to Folder</em>) and delete everything inside. These are cached copies — the original attachments remain on the mail server and will be re-downloaded if you open them again.
+      </p>
+
+      <div class="callout callout-info">
+        <span class="callout-icon">ℹ️</span>
+        <div class="callout-body">
+          <strong>This is completely safe</strong>
+          <p>Clearing these folders does not delete any emails or remove attachments from your mail account. It only deletes the locally cached copies that macOS downloaded when you previewed them. Opening the same attachment later simply re-downloads it from the server.</p>
+        </div>
+      </div>
+
+
+      <!-- QUICK WINS TABLE -->
+      <h2 id="quick-wins">Quick wins — ranked by effort vs. reward</h2>
+      <table class="compare-table">
+        <thead>
+          <tr><th>Action</th><th>Time needed</th><th>Typical storage saved</th><th>Difficulty</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Empty the Bin</td><td>30 sec</td><td class="t-good">1 – 10 GB</td><td>Easy</td></tr>
+          <tr><td>Enable Empty Bin Automatically</td><td>1 min</td><td class="t-good">Prevents future build-up</td><td>Easy</td></tr>
+          <tr><td>Delete old Time Machine snapshots</td><td>3 min</td><td class="t-good">5 – 30 GB</td><td>Easy (Terminal)</td></tr>
+          <tr><td>Clear browser caches</td><td>2 min</td><td class="t-good">1 – 5 GB</td><td>Easy</td></tr>
+          <tr><td>Clear ~/Library/Caches</td><td>5 min</td><td class="t-good">2 – 10 GB</td><td>Easy</td></tr>
+          <tr><td>Find and delete large files (&gt;500 MB)</td><td>10 min</td><td class="t-good">5 – 50 GB</td><td>Medium</td></tr>
+          <tr><td>Uninstall unused apps with AppCleaner</td><td>10 min</td><td class="t-mid">2 – 15 GB</td><td>Easy</td></tr>
+          <tr><td>Clear mail downloads</td><td>3 min</td><td class="t-mid">500 MB – 3 GB</td><td>Easy</td></tr>
+          <tr><td>Clear Xcode derived data (developers)</td><td>2 min</td><td class="t-good">5 – 50 GB</td><td>Easy</td></tr>
+          <tr><td>Enable Store in iCloud</td><td>5 min</td><td class="t-good">10 – 50 GB</td><td>Easy</td></tr>
+        </tbody>
+      </table>
+
+
+      <!-- COMPARISON TABLE -->
+      <h2 id="space-wasters">Common space wasters and typical savings</h2>
+      <table class="compare-table">
+        <thead>
+          <tr><th>Category</th><th>What it contains</th><th>Typical size on a 2–3 year old Mac</th><th>Safe to delete?</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>System Data / Other</strong></td>
+            <td>Caches, logs, Time Machine snapshots, Spotlight index</td>
+            <td class="t-bad">15 – 60 GB</td>
+            <td>Caches and snapshots: yes. Logs: yes. Spotlight index: rebuilds itself.</td>
+          </tr>
+          <tr>
+            <td><strong>Application support files</strong></td>
+            <td>Orphaned data from deleted apps</td>
+            <td class="t-mid">2 – 10 GB</td>
+            <td>Yes, once you confirm the parent app is gone</td>
+          </tr>
+          <tr>
+            <td><strong>Xcode derived data</strong></td>
+            <td>Build artefacts, indexes, logs</td>
+            <td class="t-bad">10 – 50 GB</td>
+            <td>Yes — Xcode rebuilds it</td>
+          </tr>
+          <tr>
+            <td><strong>Browser caches</strong></td>
+            <td>Cached web pages, images, scripts</td>
+            <td class="t-mid">1 – 5 GB</td>
+            <td>Yes — browsers rebuild caches automatically</td>
+          </tr>
+          <tr>
+            <td><strong>Mail downloads</strong></td>
+            <td>Cached email attachments</td>
+            <td class="t-mid">500 MB – 3 GB</td>
+            <td>Yes — originals remain on the server</td>
+          </tr>
+          <tr>
+            <td><strong>Old downloads in ~/Downloads</strong></td>
+            <td>Installers, DMGs, ZIPs, PDFs</td>
+            <td class="t-mid">2 – 20 GB</td>
+            <td>Review first, then yes</td>
+          </tr>
+          <tr>
+            <td><strong>Time Machine local snapshots</strong></td>
+            <td>Incremental backup snapshots stored locally</td>
+            <td class="t-bad">5 – 30 GB</td>
+            <td>Yes — doesn't affect your actual backups</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <!-- PREVENTION -->
+      <h2 id="preventing-buildup">Keeping storage clear going forward</h2>
+      <p>
+        A thorough one-time clean is satisfying, but the real goal is to stop the build-up from happening again. These monthly habits take less than 10 minutes and keep your Mac running smoothly:
+      </p>
+      <ul>
+        <li><strong>Monthly storage check.</strong> Open <em>System Settings → General → Storage</em> on the first of each month. Glance at the bar, note any category that's grown unexpectedly, and address it before it becomes a crisis.</li>
+        <li><strong>Empty the Downloads folder.</strong> The Downloads folder is the single biggest source of forgotten clutter on most Macs. Sort by date, move anything you still need to a proper location, and delete the rest. Better yet, set a Finder Smart Folder or a Shortcuts automation to flag downloads older than 30 days.</li>
+        <li><strong>Uninstall through AppCleaner.</strong> Make it a habit: every time you decide you're done with an app, drag it to AppCleaner instead of the Bin. This prevents orphaned support files from accumulating in your Library.</li>
+        <li><strong>Keep "Empty Bin Automatically" enabled.</strong> One toggle in Storage Management that prevents the Bin from silently consuming 5–10 GB. Set it once and forget it.</li>
+        <li><strong>Connect your Time Machine drive weekly.</strong> Local snapshots only accumulate when your Mac can't offload them to the backup drive. Plugging in (or connecting over the network) at least once a week keeps snapshots from piling up.</li>
+      </ul>
+
+      <div class="callout callout-tip">
+        <span class="callout-icon">📅</span>
+        <div class="callout-body">
+          <strong>The deClusterize monthly Mac check-in</strong>
+          <p>First of the month: check System Settings → Storage (1 min), empty the Downloads folder (3 min), clear browser caches (2 min), empty the Bin (30 sec). That's under 7 minutes to keep your Mac healthy all month.</p>
+        </div>
+      </div>
+
+    </article>
+
+    <!-- ── SIDEBAR ── -->
+    <aside class="art-sidebar" aria-label="Table of contents">
+      <div class="toc-card">
+        <h3>// Contents</h3>
+        <ul class="toc-list" id="tocList">
+          <li><a href="#check-storage">Step 1 — Check storage</a></li>
+          <li><a href="#storage-management">Step 2 — Storage Management</a></li>
+          <li><a href="#system-data">Step 3 — System Data &amp; caches</a></li>
+          <li><a href="#large-files">Step 4 — Large files</a></li>
+          <li><a href="#time-machine">Step 5 — Time Machine snapshots</a></li>
+          <li><a href="#uninstall-apps">Step 6 — Uninstall apps</a></li>
+          <li><a href="#mail-downloads">Step 7 — Mail downloads</a></li>
+          <li><a href="#quick-wins">Quick wins ranked</a></li>
+          <li><a href="#space-wasters">Common space wasters</a></li>
+          <li><a href="#preventing-buildup">Prevent build-up</a></li>
+        </ul>
+      </div>
+    </aside>
+
+  </div><!-- end .art-layout -->
+
+</div><!-- end .container -->
+
+<!-- RELATED GUIDES -->
+<section class="related-section">
+  <div class="container">
+    <h2>More computer &amp; storage guides</h2>
+    <div class="related-grid">
+      <a href="free-up-disk-space-windows-11.html" class="related-card">
+        <span class="rc-tag">Windows</span>
+        <h3>How to Free Up Disk Space on Windows 11</h3>
+        <p>Storage Sense, Disk Cleanup, and manual methods to reclaim space on any Windows 11 PC.</p>
+        <span class="rc-arrow">Read now →</span>
+      </a>
+      <a href="clean-downloads-folder.html" class="related-card">
+        <span class="rc-tag">Cross-platform</span>
+        <h3>How to Clean Your Downloads Folder</h3>
+        <p>A system to tame the most cluttered folder on any computer — sort, archive, and automate in under 15 minutes.</p>
+        <span class="rc-arrow">Read now →</span>
+      </a>
+      <a href="#" class="related-card" onclick="event.preventDefault()">
+        <span class="rc-tag">Mac</span>
+        <h3>How to Find Large Files on Mac</h3>
+        <p>Finder tricks, Terminal commands, and visual tools to track down the files eating your disk space.</p>
+        <span class="rc-arrow">Coming soon →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand" aria-label="deClusterize home">
+          <svg class="brand-mark-svg" width="36" height="36" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="url(#bm-fill)"/>
+            <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="none" stroke="url(#bm-stroke)" stroke-width="2"/>
+            <polyline points="14,25 21,32 34,17" stroke="url(#bm-stroke)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="38" cy="10" r="3" fill="#38BDF8" opacity=".9"/>
+          </svg>
+          <span class="brand-name">deClusterize</span>
+        </a>
+        <p>Small tasks. Better systems. A clearer digital life.</p>
+      </div>
+      <nav class="footer-col" aria-label="Product">
+        <h4>Product</h4>
+        <ul><li><a href="how-it-works.html">How It Works</a></li><li><a href="guides.html">Guides</a></li><li><a href="guides.html#checklists">Templates</a></li></ul>
+      </nav>
+      <nav class="footer-col" aria-label="Resources">
+        <h4>Resources</h4>
+        <ul><li><a href="#" title="Coming soon">Blog</a></li><li><a href="help.html">Help Center</a></li><li><a href="community.html">Community</a></li></ul>
+      </nav>
+      <nav class="footer-col" aria-label="Company">
+        <h4>Company</h4>
+        <ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">© 2026 deClusterize. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="forms.js"></script>
+<script>
+/* TOC active state on scroll */
+(function () {
+  const headings = document.querySelectorAll('.art-body h2[id], .art-body h3[id]');
+  const tocLinks = document.querySelectorAll('#tocList a');
+  if (!headings.length) return;
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id));
+      }
+    });
+  }, { rootMargin: '-80px 0px -70% 0px' });
+  headings.forEach(h => obs.observe(h));
+})();
+</script>
+</body>
+</html>
