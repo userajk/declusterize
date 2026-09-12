@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Google Storage Full? Clean Up Gmail, Drive and Google Photos — deClusterize</title>
+<meta name="description" content="The complete guide to clearing your Google 15 GB quota — clean up Gmail, Google Drive and Google Photos to free gigabytes of cloud storage without paying for Google One." />
+<meta name="keywords" content="google storage full, google one storage full, clean up google storage, free up google drive space, gmail storage full, google photos storage, clear google storage, google 15gb full, google drive cleanup" />
+<link rel="canonical" href="https://declusterize.com/google-storage-full-clean-up.html" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://declusterize.com/google-storage-full-clean-up.html" />
+<meta property="og:title" content="Google Storage Full? Clean Up Gmail, Drive and Google Photos — deClusterize" />
+<meta property="og:description" content="Free up gigabytes of Google storage by cleaning Gmail, Drive and Photos. Step-by-step guide covering search operators, quota tools and prevention habits." />
+<meta property="og:image" content="https://declusterize.com/og-image.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://declusterize.com/og-image.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Google Storage Full? Clean Up Gmail, Drive and Google Photos",
+  "description": "Step-by-step guide to freeing up your shared 15 GB Google storage by cleaning Gmail attachments, Google Drive files and Google Photos — all free methods.",
+  "image": "https://declusterize.com/og-image.jpg",
+  "totalTime": "PT20M",
+  "estimatedCost": { "@type": "MonetaryAmount", "currency": "GBP", "value": "0" },
+  "step": [
+    { "@type": "HowToStep", "position": 1, "name": "Check what is using your 15 GB", "text": "Visit one.google.com/storage to see a breakdown of how much space Gmail, Google Drive and Google Photos are each consuming." },
+    { "@type": "HowToStep", "position": 2, "name": "Clean up Gmail", "text": "Use Gmail search operators like has:attachment larger:5M and category:promotions older_than:1y to find and delete large or old emails, then empty the Bin." },
+    { "@type": "HowToStep", "position": 3, "name": "Clean up Google Drive", "text": "Go to drive.google.com/drive/quota to see files sorted by size. Delete old backups, duplicates and large files, then empty the Drive Bin." },
+    { "@type": "HowToStep", "position": 4, "name": "Clean up Google Photos", "text": "Use photos.google.com/quotamanagement to review and delete blurry photos, screenshots and large videos. Consider switching to Storage saver quality." },
+    { "@type": "HowToStep", "position": 5, "name": "Empty all Bins", "text": "Items in Gmail Bin, Drive Bin and Google Photos Bin still count against your quota for up to 30 days. Empty them all to reclaim space immediately." }
+  ]
+}
+</script>
+
+<style>
+/* ══════════════════════════════════════════════════════
+   GUIDE ARTICLE PAGE STYLES
+   ══════════════════════════════════════════════════════ */
+
+/* ── Skip link (visually hidden until focused) ────────── */
+.skip-link {
+  position: absolute; top: -100%; left: 16px;
+  background: var(--emerald); color: #fff;
+  padding: 8px 16px; border-radius: 4px;
+  font-size: .85rem; font-weight: 600; z-index: 9999;
+  text-decoration: none; transition: top .15s;
+}
+.skip-link:focus { top: 8px; }
+
+.breadcrumb {
+  padding: 100px 0 0;
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  letter-spacing: .06em;
+  color: var(--text-muted);
+}
+.breadcrumb a { color: var(--text-muted); text-decoration: none; }
+.breadcrumb a:hover { color: var(--emerald); }
+.breadcrumb span { margin: 0 6px; }
+
+.art-hero { padding: 24px 0 48px; }
+.art-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--font-mono); font-size: .72rem; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--sky-bright);
+  background: rgba(14,165,233,.1); border: 1px solid rgba(14,165,233,.2);
+  border-radius: var(--r-pill); padding: 5px 14px; margin-bottom: 20px;
+}
+.art-hero h1 {
+  font-size: clamp(1.8rem, 4.5vw, 3rem);
+  font-weight: 700; line-height: 1.15; margin-bottom: 20px;
+  max-width: 820px;
+}
+.art-hero h1 em { font-style: normal; color: var(--emerald-bright); }
+.art-meta {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 20px;
+  color: var(--text-muted); font-size: .82rem;
+  border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+  padding: 16px 0; margin: 24px 0 0;
+}
+.art-meta-item { display: flex; align-items: center; gap: 7px; }
+.art-meta-item svg { opacity: .6; }
+.art-badge {
+  display: inline-block; font-family: var(--font-mono); font-size: .65rem;
+  letter-spacing: .1em; text-transform: uppercase; padding: 3px 10px;
+  border-radius: var(--r-pill); border: 1px solid rgba(16,185,129,.3);
+  background: rgba(16,185,129,.08); color: var(--emerald);
+}
+
+.art-layout {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 48px; align-items: start;
+  padding-bottom: 100px;
+}
+@media(max-width:900px){ .art-layout { grid-template-columns: 1fr; } .art-sidebar { display: none; } }
+
+.art-sidebar { position: sticky; top: 88px; }
+.toc-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--r-panel); padding: 24px;
+}
+.toc-card h3 {
+  font-family: var(--font-mono); font-size: .72rem; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--text-muted); margin-bottom: 16px;
+}
+.toc-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 4px; }
+.toc-list a {
+  display: block; font-size: .84rem; color: var(--text-body); text-decoration: none;
+  padding: 6px 10px; border-radius: 6px; border-left: 2px solid transparent;
+  transition: all .2s;
+}
+.toc-list a:hover, .toc-list a.active {
+  color: var(--emerald); border-left-color: var(--emerald);
+  background: rgba(16,185,129,.07);
+}
+.toc-cta {
+  margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--border);
+  text-align: center;
+}
+.toc-cta p { font-size: .8rem; color: var(--text-muted); margin-bottom: 12px; line-height: 1.5; }
+
+.art-body h2 {
+  font-size: clamp(1.25rem, 2.5vw, 1.6rem); font-weight: 700;
+  margin: 52px 0 18px; padding-top: 8px;
+  border-top: 1px solid var(--border);
+  scroll-margin-top: 88px;
+}
+.art-body h2:first-child { margin-top: 0; border-top: none; }
+.art-body h3 {
+  font-size: 1.05rem; font-weight: 600; margin: 30px 0 12px;
+  color: var(--text-heading); scroll-margin-top: 88px;
+}
+.art-body p { color: var(--text-body); line-height: 1.78; margin-bottom: 18px; font-size: .97rem; }
+.art-body a { color: var(--emerald); text-decoration: underline; text-underline-offset: 3px; }
+.art-body ul, .art-body ol {
+  padding-left: 24px; margin-bottom: 20px; display: flex; flex-direction: column; gap: 8px;
+}
+.art-body li { color: var(--text-body); line-height: 1.65; font-size: .97rem; }
+.art-body strong { color: var(--text-heading); }
+
+.steps { list-style: none; padding: 0; margin: 24px 0 32px; display: flex; flex-direction: column; gap: 16px; }
+.step-item {
+  display: flex; gap: 20px; align-items: flex-start;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--r-panel); padding: 20px 22px;
+}
+.step-num {
+  flex-shrink: 0; width: 34px; height: 34px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--emerald), var(--sky));
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-mono); font-size: .8rem; font-weight: 700; color: #fff;
+}
+.step-content h4 { font-size: .97rem; font-weight: 600; margin-bottom: 6px; color: var(--text-heading); }
+.step-content p { font-size: .88rem; color: var(--text-body); line-height: 1.65; margin: 0; }
+
+.callout {
+  border-radius: var(--r-panel); padding: 18px 22px;
+  margin: 28px 0; display: flex; gap: 16px; align-items: flex-start;
+}
+.callout-icon { font-size: 1.25rem; flex-shrink: 0; line-height: 1.6; }
+.callout-body { flex: 1; }
+.callout-body strong { display: block; margin-bottom: 5px; font-size: .92rem; }
+.callout-body p { font-size: .87rem; line-height: 1.65; margin: 0; }
+.callout-tip  { background: rgba(16,185,129,.08); border: 1px solid rgba(16,185,129,.25); }
+.callout-tip  .callout-body strong, .callout-tip  .callout-body p { color: var(--text-body); }
+.callout-warn { background: rgba(251,191,36,.07); border: 1px solid rgba(251,191,36,.25); }
+.callout-warn .callout-body strong { color: #fbbf24; }
+.callout-warn .callout-body p { color: var(--text-body); }
+.callout-info { background: rgba(14,165,233,.08); border: 1px solid rgba(14,165,233,.2); }
+.callout-info .callout-body strong { color: var(--sky-bright); }
+.callout-info .callout-body p { color: var(--text-body); }
+
+.compare-table { width: 100%; border-collapse: collapse; margin: 24px 0 32px; font-size: .88rem; }
+.compare-table th {
+  font-family: var(--font-mono); font-size: .7rem; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--text-muted);
+  padding: 10px 16px; background: var(--surface-2);
+  border: 1px solid var(--border); text-align: left;
+}
+.compare-table td {
+  padding: 12px 16px; border: 1px solid var(--border);
+  color: var(--text-body); vertical-align: top; line-height: 1.6;
+}
+.compare-table tr:nth-child(even) td { background: rgba(255,255,255,.02); }
+.t-good { color: var(--emerald); font-weight: 600; }
+.t-bad  { color: #f87171; }
+.t-mid  { color: #fbbf24; }
+
+/* ── Storage bar visual ───────────────────────────────── */
+.storage-bar-wrap { margin: 28px 0 32px; }
+.storage-bar-track {
+  height: 14px; border-radius: 99px; overflow: hidden;
+  display: flex; gap: 2px; background: var(--surface-2);
+  border: 1px solid var(--border); padding: 2px;
+}
+.storage-bar-seg { border-radius: 99px; height: 100%; }
+.storage-legend {
+  display: flex; flex-wrap: wrap; gap: 14px; margin-top: 14px; font-size: .8rem;
+}
+.storage-legend-item { display: flex; align-items: center; gap: 6px; color: var(--text-body); }
+.storage-legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+
+/* ── Image figures ────────────────────────────────────── */
+.art-img {
+  width: 100%; border-radius: var(--r-panel);
+  overflow: hidden; margin: 28px 0; border: 1px solid var(--border);
+}
+.art-img img { width: 100%; height: auto; display: block; }
+.art-img-caption {
+  font-size: .78rem; color: var(--text-muted); text-align: center;
+  margin-top: -18px; margin-bottom: 28px; font-style: italic;
+}
+
+/* ── Related guides ───────────────────────────────────── */
+.related-section { padding: 60px 0; border-top: 1px solid var(--border); }
+.related-section h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: 28px; }
+.related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+@media(max-width:700px){ .related-grid { grid-template-columns: 1fr; } }
+.related-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--r-panel); padding: 22px; text-decoration: none;
+  display: flex; flex-direction: column; gap: 10px;
+  transition: border-color .2s, transform .2s;
+}
+.related-card:hover { border-color: var(--emerald); transform: translateY(-3px); }
+.related-card .rc-tag { font-family: var(--font-mono); font-size: .65rem; letter-spacing: .1em; text-transform: uppercase; color: var(--emerald); }
+.related-card h3 { font-size: .95rem; font-weight: 600; color: var(--text-heading); line-height: 1.45; }
+.related-card p { font-size: .82rem; color: var(--text-muted); line-height: 1.55; margin: 0; }
+.related-card .rc-arrow { margin-top: auto; color: var(--emerald); font-size: .82rem; }
+
+/* ── Article CTA strip ────────────────────────────────── */
+.art-cta {
+  background: var(--surface); border: 1px solid var(--border-2);
+  border-radius: var(--r-panel); padding: 36px; text-align: center;
+  margin: 48px 0;
+}
+.art-cta h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 10px; }
+.art-cta p { color: var(--text-body); font-size: .92rem; margin-bottom: 24px; max-width: 440px; margin-left: auto; margin-right: auto; line-height: 1.6; }
+.art-cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.art-cta .btn,
+.art-cta .btn * { -webkit-text-fill-color: currentColor; background-clip: unset; -webkit-background-clip: unset; }
+.art-cta .btn-primary { color: #fff !important; -webkit-text-fill-color: #fff !important; }
+.art-cta .btn-secondary { color: var(--emerald) !important; -webkit-text-fill-color: var(--emerald) !important; }
+
+/* ── Inline code ──────────────────────────────────────── */
+.art-body code {
+  font-family: var(--font-mono); font-size: .82em;
+  background: var(--surface-2); border: 1px solid var(--border);
+  border-radius: 4px; padding: 2px 7px;
+  word-break: break-word;
+}
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<!-- NAV -->
+<header class="nav-wrap" id="navbar">
+  <nav class="nav container" role="navigation" aria-label="Main">
+    <a href="index.html" class="brand" aria-label="deClusterize home">
+      <svg class="brand-mark-svg" width="32" height="32" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="bm-fill" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#10B981" stop-opacity=".18"/>
+            <stop offset="100%" stop-color="#0EA5E9" stop-opacity=".18"/>
+          </linearGradient>
+          <linearGradient id="bm-stroke" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#34D399"/>
+            <stop offset="100%" stop-color="#38BDF8"/>
+          </linearGradient>
+        </defs>
+        <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="url(#bm-fill)"/>
+        <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="none" stroke="url(#bm-stroke)" stroke-width="2"/>
+        <polyline points="14,25 21,32 34,17" stroke="url(#bm-stroke)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="38" cy="10" r="3" fill="#38BDF8" opacity=".9"/>
+      </svg>
+      <span class="brand-name">deClusterize</span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="how-it-works.html">How It Works</a></li>
+      <li><a href="guides.html" class="active">Guides</a></li>
+      <li><a href="community.html">Community</a></li>
+    </ul>
+    <div class="nav-actions">
+    </div>
+    <button class="nav-burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <ul role="list">
+      <li><a href="how-it-works.html">How It Works</a></li>
+      <li><a href="guides.html">Guides</a></li>
+      <li><a href="community.html">Community</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main-content">
+<div class="container">
+
+  <!-- BREADCRUMB -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="index.html">Home</a>
+    <span aria-hidden="true">›</span>
+    <a href="guides.html">Guides</a>
+    <span aria-hidden="true">›</span>
+    <a href="guides.html#hub-cloud">Cloud Storage</a>
+    <span aria-hidden="true">›</span>
+    <span aria-current="page">Google Storage Full</span>
+  </nav>
+
+  <!-- HERO -->
+  <header class="art-hero">
+    <div class="art-eyebrow">
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="1" y="1" width="14" height="14" rx="3" stroke="#38BDF8" stroke-width="1.5"/><path d="M4 8h8M4 5h8M4 11h5" stroke="#38BDF8" stroke-width="1.5" stroke-linecap="round"/></svg>
+      Google · Storage
+    </div>
+    <h1><em>Google Storage Full?</em> Clean Up Gmail, Drive and Google Photos</h1>
+    <p style="max-width:680px;color:var(--text-body);font-size:1.02rem;line-height:1.72;margin-bottom:20px">
+      That "Google Account storage is full" warning doesn't mean you need to pay for a Google One plan straight away. Gmail, Google Drive and Google Photos all share one 15 GB pool — and most people are wasting gigabytes on old attachments, forgotten Drive files and blurry photo duplicates. This guide walks you through every free cleanup method, from the two-minute quick wins to the deeper sweep that reclaims 5 GB or more.
+    </p>
+    <div class="art-meta">
+      <span class="art-meta-item">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.4"/><path d="M8 4.5V8l2.5 2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+        8 min read
+      </span>
+      <span class="art-meta-item">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 12L8 4l5 8H3z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+        Beginner-friendly
+      </span>
+      <span class="art-meta-item">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.4"/><path d="M5 1v4M11 1v4M2 7h12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+        Updated September 2026
+      </span>
+      <span class="art-badge">Free methods</span>
+      <span class="art-badge">Gmail · Drive · Photos</span>
+    </div>
+  </header>
+
+  <!-- LAYOUT -->
+  <div class="art-layout">
+
+    <!-- ── ARTICLE BODY ── -->
+    <article class="art-body">
+
+      <!-- WHY STORAGE FILLS UP -->
+      <h2 id="why-storage-fills">Why your Google storage fills up</h2>
+      <p>
+        Every Google account comes with 15 GB of free storage — but most people don't realise that <strong>Gmail, Google Drive and Google Photos all share that single 15 GB pool</strong>. It isn't 15 GB each; it's 15 GB total. That changes the maths dramatically.
+      </p>
+      <p>
+        A busy Gmail account with years of attachments can easily consume 5–8 GB on its own. Google Drive accumulates old presentations, PDF scans, shared files and forgotten backups. And since June 2021, every photo and video uploaded to Google Photos in "Original quality" counts against the quota too — even if you uploaded them years earlier in what used to be free "High quality."
+      </p>
+      <p>
+        There are a few less obvious things that also eat into your 15 GB:
+      </p>
+      <ul>
+        <li><strong>Drive Bin items</strong> — deleted files sit in the Bin for 30 days and still count against your quota the entire time.</li>
+        <li><strong>Gmail Bin and Spam</strong> — same rule. Deleted emails and spam count until they're permanently removed (up to 30 days).</li>
+        <li><strong>Orphaned app data</strong> — some third-party apps store hidden data in your Drive. You can't see these files normally, but they still use space.</li>
+        <li><strong>Old Google Forms responses</strong> — if you've ever created a Google Form, the linked spreadsheet of responses lives in your Drive.</li>
+      </ul>
+
+      <div class="callout callout-info">
+        <span class="callout-icon">ℹ️</span>
+        <div class="callout-body">
+          <strong>Files that don't count against your quota</strong>
+          <p>Google Docs, Sheets and Slides created in Google's own formats use zero storage. Only uploaded files (PDFs, Word documents, images, videos) and files converted to non-Google formats count. So your 200-page Google Doc is free, but the 50 MB PDF you uploaded alongside it isn't.</p>
+        </div>
+      </div>
+
+      <!-- STORAGE BAR -->
+      <div class="storage-bar-wrap">
+        <div class="storage-bar-track">
+          <div class="storage-bar-seg" style="width:45%;background:#EA4335" title="Gmail"></div>
+          <div class="storage-bar-seg" style="width:30%;background:#4285F4" title="Google Drive"></div>
+          <div class="storage-bar-seg" style="width:18%;background:#34A853" title="Google Photos"></div>
+        </div>
+        <div class="storage-legend">
+          <span class="storage-legend-item"><span class="storage-legend-dot" style="background:#EA4335"></span>Gmail (typically 40–50%)</span>
+          <span class="storage-legend-item"><span class="storage-legend-dot" style="background:#4285F4"></span>Drive (typically 25–35%)</span>
+          <span class="storage-legend-item"><span class="storage-legend-dot" style="background:#34A853"></span>Photos (typically 15–25%)</span>
+        </div>
+      </div>
+
+
+      <!-- CHECK WHAT'S USING STORAGE -->
+      <h2 id="check-usage">Check what's using your 15 GB</h2>
+      <p>
+        Before cleaning anything, find out where your storage is actually going. Google makes this easy with a single dashboard.
+      </p>
+      <ol class="steps" style="list-style:none;padding:0">
+        <li class="step-item">
+          <span class="step-num">1</span>
+          <div class="step-content">
+            <h4>Visit one.google.com/storage</h4>
+            <p>Sign in if prompted. You'll see a colour-coded breakdown showing exactly how much Gmail, Drive and Photos are each consuming. This tells you where to focus your cleanup effort.</p>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-num">2</span>
+          <div class="step-content">
+            <h4>Note which service is the biggest culprit</h4>
+            <p>For most people, Gmail is the largest — often 40–50% of total usage. If your bar shows Drive or Photos dominating, skip ahead to that section first.</p>
+          </div>
+        </li>
+      </ol>
+
+      <figure class="art-img">
+        <img src="img-google-storage-breakdown.webp" alt="Google One storage management page showing a breakdown of storage usage across Gmail, Drive and Photos" loading="lazy" />
+      </figure>
+      <p class="art-img-caption">The Google One storage page shows your usage at a glance. Click any service to start cleaning it directly.</p>
+
+
+      <!-- CLEAN UP GMAIL -->
+      <h2 id="clean-gmail">Clean up Gmail (usually the biggest culprit)</h2>
+      <p>
+        Gmail is deceptive. Individual emails are small, but attachments — particularly photos, PDFs and spreadsheets people have sent you over the years — add up relentlessly. A single email thread with a 25 MB attachment is using the same space as 5,000 plain-text emails. The good news: Gmail's search operators make it remarkably easy to find and delete the worst offenders.
+      </p>
+
+      <h3>Find and delete large attachments</h3>
+      <ol class="steps" style="list-style:none;padding:0">
+        <li class="step-item">
+          <span class="step-num">1</span>
+          <div class="step-content">
+            <h4>Search for <code>has:attachment larger:10M</code></h4>
+            <p>This surfaces every email with an attachment larger than 10 MB. You'll typically find old file transfers, photo batches from family, and documents people emailed instead of sharing via Drive.</p>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-num">2</span>
+          <div class="step-content">
+            <h4>Select all → Delete</h4>
+            <p>Tick the select-all checkbox at the top. If there are more results than fit on the page, Gmail will show a banner saying "Select all conversations that match this search" — click it to catch everything. Then hit the delete button.</p>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-num">3</span>
+          <div class="step-content">
+            <h4>Repeat with <code>has:attachment larger:5M</code></h4>
+            <p>Cast a wider net. Emails between 5–10 MB don't feel large individually, but hundreds of them compound into gigabytes.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="callout callout-tip">
+        <span class="callout-icon">💡</span>
+        <div class="callout-body">
+          <strong>Save the attachment before deleting the email</strong>
+          <p>If an attachment is something you still need (a contract, a receipt, an important document), download it to your computer or save it to Google Drive first. Once you delete the email, the attachment is gone too.</p>
+        </div>
+      </div>
+
+      <h3>Delete old promotional emails in bulk</h3>
+      <p>
+        Promotional emails are the silent storage killer. Years of marketing newsletters, sale alerts and service notifications pile up unnoticed. Gmail categorises these automatically, making bulk deletion trivial.
+      </p>
+      <ol class="steps" style="list-style:none;padding:0">
+        <li class="step-item">
+          <span class="step-num">1</span>
+          <div class="step-content">
+            <h4>Search for <code>category:promotions older_than:1y</code></h4>
+            <p>This finds every promotional email older than one year. You almost certainly don't need last year's Black Friday alerts.</p>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-num">2</span>
+          <div class="step-content">
+            <h4>Select all matching conversations and delete</h4>
+            <p>Click the select-all checkbox, then "Select all conversations that match this search," then delete. This single action can free hundreds of megabytes.</p>
+          </div>
+        </li>
+      </ol>
+
+      <h3>Empty the Gmail Bin</h3>
+      <p>
+        This is the step most people forget. Deleted emails move to the Bin and <strong>continue counting against your quota for up to 30 days</strong>. To reclaim the space immediately:
+      </p>
+      <ol class="steps" style="list-style:none;padding:0">
+        <li class="step-item">
+          <span class="step-num">1</span>
+          <div class="step-content">
+            <h4>Go to Gmail → Bin (in the left sidebar, you may need to click "More")</h4>
+            <p>You'll see all recently deleted emails still taking up space.</p>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-num">2</span>
+          <div class="step-content">
+            <h4>Click "Empty Bin now"</h4>
+            <p>This permanently deletes everything in the Bin and immediately frees the storage. This action cannot be undone.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="callout callout-warn">
+        <span class="callout-icon">⚠️</span>
+        <div class="callout-body">
+          <strong>Emptying the Bin is permanent</strong>
+          <p>Once you empty the Bin, those emails are gone forever — Google cannot recover them. If you're unsure about anything you just deleted, check the Bin before emptying it. You can restore individual emails by opening them and clicking "Move to Inbox."</p>
+        </div>
+      </div>
+
+      <figure class="art-img">
+        <img src="img-gmail-large-attachments.webp" alt="Gmail search results showing emails filtered by has:attachment larger:5M, displaying large file attachments sorted for deletion" loading="lazy" />
+      </figure>
+      <p class="art-img-caption">Searching for <code>has:attachment larger:5M</code> surfaces the emails consuming the most storage. Select all and delete to reclaim space instantly.</p>
+
+      <!-- GMAIL SEARCH OPERATORS TABLE -->
+      <h3>Useful Gmail search operators for cleanup</h3>
+      <table class="compare-table">
+        <thead>
+          <tr><th>Search operator</th><th>What it finds</th><th>Example</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>has:attachment</code></td>
+            <td>All emails with any attachment</td>
+            <td><code>has:attachment</code></td>
+          </tr>
+          <tr>
+            <td><code>larger:</code></td>
+            <td>Emails larger than a specified size</td>
+            <td><code>larger:10M</code></td>
+          </tr>
+          <tr>
+            <td><code>older_than:</code></td>
+            <td>Emails older than a time period</td>
+            <td><code>older_than:2y</code></td>
+          </tr>
+          <tr>
+            <td><code>category:</code></td>
+            <td>Emails in a Gmail category tab</td>
+            <td><code>category:promotions</code></td>
+          </tr>
+          <tr>
+            <td><code>in:trash</code></td>
+            <td>Emails currently in the Bin</td>
+            <td><code>in:trash</code></td>
+          </tr>
+          <tr>
+            <td><code>in:spam</code></td>
+            <td>Emails in the Spam folder</td>
+            <td><code>in:spam</code></td>
+          </tr>
+          <tr>
+            <td><code>filename:</code></td>
+            <td>Emails with a specific file type attached</td>
+            <td><code>filename:zip</code> or <code>filename:mp4</code></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout callout-tip">
+        <span class="callout-icon">💡</span>
+        <div class="callout-body">
+          <strong>Combine operators for precision</strong>
+          <p>You can chain these together. For example, <code>has:attachment larger:5M older_than:2y</code> finds large attachments from emails more than two years old — almost always safe to delete. Or <code>category:social older_than:6m</code> targets old social media notification emails.</p>
+        </div>
+      </div>
+
+
+      <!-- CLEAN UP GOOGLE DRIVE -->
+      <h2 id="clean-drive">Clean up Google Drive</h2>
+      <p>
+        Google Drive is where forgotten files go to quietly consume your quota. Old backups, duplicate uploads, large video files you shared once two years ago — they all sit there indefinitely unless you actively remove them.
+      </p>
+
+      <h3>Find your largest files</h3>
+      <ol class="steps" style="list-style:none;padding:0">
+        <li class="step-item">
+          <span class="step-num">1</span>
+          <div class="step-content">
+            <h4>Go to drive.google.com/drive/quota</h4>
+            <p>This hidden page shows every file in your Drive sorted by size — largest first. It's the fastest way to identify what's eating your storage.</p>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-num">2</span>
+          <div class="step-content">
+            <h4>Review the top 20–30 files</h4>
+            <p>Look for old ZIP archives, video recordings, disk images, large PDFs, and backup files. These are almost always safe to delete if they're more than a few months old.</p>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-num">3</span>
+          <div class="step-content">
+            <h4>Right-click → Move to bin</h4>
+            <p>Select the files you no longer need and move them to the bin. Remember to empty the bin afterwards (next step).</p>
+          </div>
+        </li>
+      </ol>
+
+      <h3>Check "Shared with me" files</h3>
+      <p>
+        A common misconception: files shared with you don't count against your quota <em>unless</em> you add them to your own Drive. If you've ever clicked "Add shortcut to Drive" or "Make a copy" on someone else's shared file, that copy sits in your quota. Check your Drive for copies of shared documents you no longer need.
+      </p>
+
+      <h3>Empty the Drive Bin</h3>
+      <p>
+        Just like Gmail, deleted Drive files linger in the Bin for 30 days, still counting against your storage. Go to <strong>drive.google.com → Bin</strong> (in the left sidebar) and click <strong>"Empty bin"</strong> to reclaim the space immediately.
+      </p>
+
+      <figure class="art-img">
+        <img src="img-google-drive-storage.webp" alt="Google Drive quota page showing files sorted by size with the largest files at the top" loading="lazy" />
+      </figure>
+      <p class="art-img-caption">The Drive quota page (drive.google.com/drive/quota) sorts every file by size. The top 10 files often account for half your Drive usage.</p>
+
+      <div class="callout callout-info">
+        <span class="callout-icon">ℹ️</span>
+        <div class="callout-body">
+          <strong>Hidden app data in Drive</strong>
+          <p>Some third-party apps (WhatsApp backups, game saves, old phone backups) store data in a hidden Drive folder. To check: go to <em>drive.google.com → Settings (cog icon) → Manage Apps</em>. You can see how much data each app is using and delete it if the app is no longer relevant.</p>
+        </div>
+      </div>
+
+
+      <!-- CLEAN UP GOOGLE PHOTOS -->
+      <h2 id="clean-photos">Clean up Google Photos</h2>
+      <p>
+        Google Photos is often the sneakiest storage consumer. Before June 2021, "High quality" photos uploaded for free didn't count against your quota. Since then, every new photo and video counts — and if you have years of uploads, they compound quickly.
+      </p>
+
+      <h3>Use the built-in storage management tool</h3>
+      <ol class="steps" style="list-style:none;padding:0">
+        <li class="step-item">
+          <span class="step-num">1</span>
+          <div class="step-content">
+            <h4>Go to photos.google.com/quotamanagement</h4>
+            <p>Google's storage management tool automatically identifies blurry photos, screenshots, large videos and other items you might want to delete. It groups them into categories for easy review.</p>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-num">2</span>
+          <div class="step-content">
+            <h4>Review "Blurry photos" and "Screenshots"</h4>
+            <p>These are almost always safe to delete. Google identifies them with decent accuracy — but skim through before hitting delete, just in case it's flagged something you want to keep.</p>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-num">3</span>
+          <div class="step-content">
+            <h4>Review "Large photos and videos"</h4>
+            <p>Videos are the real storage hogs. A single 4K video can be 500 MB or more. If you've already backed it up elsewhere or don't need it, deleting a handful of large videos can free gigabytes.</p>
+          </div>
+        </li>
+      </ol>
+
+      <h3>Switch to "Storage saver" quality</h3>
+      <p>
+        If you don't need full-resolution originals stored in Google Photos, switching to <strong>Storage saver</strong> (previously called "High quality") compresses photos and videos slightly. Photos are reduced to 16 MP and videos to 1080p — the visual difference is negligible for all but professional photographers.
+      </p>
+      <ol class="steps" style="list-style:none;padding:0">
+        <li class="step-item">
+          <span class="step-num">1</span>
+          <div class="step-content">
+            <h4>Go to photos.google.com/settings</h4>
+            <p>Under "Upload size," select <strong>Storage saver</strong> instead of "Original quality."</p>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-num">2</span>
+          <div class="step-content">
+            <h4>Optionally, compress existing photos</h4>
+            <p>On the same settings page, you may see an option to <strong>"Recover storage"</strong> — this converts your existing original-quality photos to storage-saver quality. It can reclaim 20–40% of your Photos storage, but the compression is irreversible.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="callout callout-warn">
+        <span class="callout-icon">⚠️</span>
+        <div class="callout-body">
+          <strong>"Recover storage" compression is permanent</strong>
+          <p>Once you compress existing photos from Original to Storage saver quality, you cannot undo it. If you need full-resolution originals for printing or professional work, download them to your computer first. For everyday photos, the quality difference is imperceptible.</p>
+        </div>
+      </div>
+
+      <figure class="art-img">
+        <img src="img-google-photos-storage.webp" alt="Google Photos storage management page showing categories for blurry photos, screenshots and large videos" loading="lazy" />
+      </figure>
+      <p class="art-img-caption">Google Photos' quota management tool at photos.google.com/quotamanagement groups deletable items into easy categories — blurry shots, screenshots and large videos.</p>
+
+
+      <!-- GOOGLE ONE PLANS -->
+      <h2 id="google-one">The nuclear option: Google One storage plans</h2>
+      <p>
+        If you've done everything above and 15 GB still isn't enough — or if you simply don't want to spend time managing storage — Google One plans let you buy more space. The storage is shared across Gmail, Drive and Photos (and across up to five family members on the higher tiers).
+      </p>
+
+      <table class="compare-table">
+        <thead>
+          <tr><th>Plan</th><th>Storage</th><th>Monthly price</th><th>Best for</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Free</strong></td>
+            <td>15 GB</td>
+            <td>£0</td>
+            <td>Light users who keep on top of cleanup</td>
+          </tr>
+          <tr>
+            <td><strong>Basic</strong></td>
+            <td>100 GB</td>
+            <td>£1.49</td>
+            <td>Most people — comfortable headroom for years</td>
+          </tr>
+          <tr>
+            <td><strong>Standard</strong></td>
+            <td>200 GB</td>
+            <td>£2.49</td>
+            <td>Families or heavy photo/video users</td>
+          </tr>
+          <tr>
+            <td><strong>Premium</strong></td>
+            <td>2 TB</td>
+            <td>£7.99</td>
+            <td>Power users, photographers, full device backups</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout callout-tip">
+        <span class="callout-icon">💡</span>
+        <div class="callout-body">
+          <strong>Try the free cleanup first</strong>
+          <p>Most people can free 3–8 GB with 15 minutes of cleanup using the methods in this guide. That's often enough to postpone or avoid a paid plan entirely. Only upgrade if you genuinely need the space after cleaning up.</p>
+        </div>
+      </div>
+
+
+      <!-- QUICK WINS TABLE -->
+      <h2 id="quick-wins">Quick wins — ranked by effort vs. reward</h2>
+      <table class="compare-table">
+        <thead>
+          <tr><th>Action</th><th>Time needed</th><th>Typical storage saved</th><th>Difficulty</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Empty Gmail Bin</td><td>1 min</td><td class="t-good">500 MB – 2 GB</td><td>Easy</td></tr>
+          <tr><td>Delete Gmail large attachments (<code>has:attachment larger:5M</code>)</td><td>5 min</td><td class="t-good">1 – 4 GB</td><td>Easy</td></tr>
+          <tr><td>Empty Drive Bin</td><td>1 min</td><td class="t-mid">varies</td><td>Easy</td></tr>
+          <tr><td>Delete Drive large files (via quota page)</td><td>5 min</td><td class="t-good">1 – 5 GB</td><td>Easy</td></tr>
+          <tr><td>Delete old promotional emails (<code>category:promotions older_than:1y</code>)</td><td>3 min</td><td class="t-good">500 MB – 2 GB</td><td>Easy</td></tr>
+          <tr><td>Review Google Photos blurry/screenshots</td><td>5 min</td><td class="t-mid">200 MB – 1 GB</td><td>Easy</td></tr>
+          <tr><td>Switch Photos to Storage saver + recover storage</td><td>2 min</td><td class="t-good">20–40% reduction</td><td>Easy</td></tr>
+        </tbody>
+      </table>
+
+
+      <!-- PREVENTION -->
+      <h2 id="keeping-clear">Keeping Google storage clear</h2>
+      <p>
+        A one-time cleanup buys you breathing room, but without good habits the storage will fill up again within a year. These four practices keep your 15 GB (or your paid plan) healthy permanently:
+      </p>
+      <ul>
+        <li><strong>Monthly storage check.</strong> Bookmark <a href="https://one.google.com/storage" target="_blank" rel="noopener">one.google.com/storage</a> and glance at it on the first of each month. If any service is creeping upward, spend five minutes clearing the obvious items. Prevention is always easier than a crisis cleanup.</li>
+        <li><strong>Unsubscribe from email newsletters you don't read.</strong> Every marketing email with a banner image is 100–500 KB. Over a year, a single newsletter you never open can consume 50–200 MB. Unsubscribe ruthlessly — if you haven't opened a newsletter in three months, you won't miss it.</li>
+        <li><strong>Don't use Gmail as file storage.</strong> If someone emails you an important document, save it to Google Drive (or your computer) and then delete the email. Keeping the email "just in case" means the attachment lives in your quota forever.</li>
+        <li><strong>Use Storage saver in Google Photos by default.</strong> Unless you're a professional photographer who needs full-resolution originals in the cloud, Storage saver quality is visually identical and uses significantly less space. Set it once and forget it.</li>
+      </ul>
+
+      <div class="callout callout-tip">
+        <span class="callout-icon">📅</span>
+        <div class="callout-body">
+          <strong>The deClusterize monthly Google check-in</strong>
+          <p>First of the month: check one.google.com/storage (1 min), search Gmail for <code>has:attachment larger:10M</code> and delete anything stale (2 min), empty Gmail and Drive Bins (1 min), review Google Photos suggestions (2 min). Under six minutes to keep your Google account running smoothly all month.</p>
+        </div>
+      </div>
+
+    </article>
+
+    <!-- ── SIDEBAR ── -->
+    <aside class="art-sidebar" aria-label="Table of contents">
+      <div class="toc-card">
+        <h3>// Contents</h3>
+        <ul class="toc-list" id="tocList">
+          <li><a href="#why-storage-fills">Why storage fills up</a></li>
+          <li><a href="#check-usage">Check your usage</a></li>
+          <li><a href="#clean-gmail">Clean up Gmail</a></li>
+          <li><a href="#clean-drive">Clean up Google Drive</a></li>
+          <li><a href="#clean-photos">Clean up Google Photos</a></li>
+          <li><a href="#google-one">Google One plans</a></li>
+          <li><a href="#quick-wins">Quick wins ranked</a></li>
+          <li><a href="#keeping-clear">Keeping storage clear</a></li>
+        </ul>
+      </div>
+    </aside>
+
+  </div><!-- end .art-layout -->
+
+</div><!-- end .container -->
+
+<!-- RELATED GUIDES -->
+<section class="related-section">
+  <div class="container">
+    <h2>More cloud storage guides</h2>
+    <div class="related-grid">
+      <a href="#" class="related-card" onclick="event.preventDefault()">
+        <span class="rc-tag">Google Drive</span>
+        <h3>How to Free Up Google Drive Space</h3>
+        <p>A deep dive into Drive-specific cleanup — hidden app data, shared file copies, and organising what's left.</p>
+        <span class="rc-arrow">Coming soon →</span>
+      </a>
+      <a href="#" class="related-card" onclick="event.preventDefault()">
+        <span class="rc-tag">Gmail</span>
+        <h3>How to Organise Gmail</h3>
+        <p>Labels, filters and search operators to tame an overflowing inbox — and keep it tidy permanently.</p>
+        <span class="rc-arrow">Coming soon →</span>
+      </a>
+      <a href="#" class="related-card" onclick="event.preventDefault()">
+        <span class="rc-tag">Google Photos</span>
+        <h3>How to Organise Google Photos</h3>
+        <p>Albums, archive, favourites and face grouping — a simple system to make 10,000 photos findable.</p>
+        <span class="rc-arrow">Coming soon →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand" aria-label="deClusterize home">
+          <svg class="brand-mark-svg" width="36" height="36" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="url(#bm-fill)"/>
+            <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="none" stroke="url(#bm-stroke)" stroke-width="2"/>
+            <polyline points="14,25 21,32 34,17" stroke="url(#bm-stroke)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="38" cy="10" r="3" fill="#38BDF8" opacity=".9"/>
+          </svg>
+          <span class="brand-name">deClusterize</span>
+        </a>
+        <p>Small tasks. Better systems. A clearer digital life.</p>
+      </div>
+      <nav class="footer-col" aria-label="Product">
+        <h4>Product</h4>
+        <ul><li><a href="how-it-works.html">How It Works</a></li><li><a href="guides.html">Guides</a></li><li><a href="guides.html#checklists">Templates</a></li></ul>
+      </nav>
+      <nav class="footer-col" aria-label="Resources">
+        <h4>Resources</h4>
+        <ul><li><a href="#" title="Coming soon">Blog</a></li><li><a href="help.html">Help Center</a></li><li><a href="community.html">Community</a></li></ul>
+      </nav>
+      <nav class="footer-col" aria-label="Company">
+        <h4>Company</h4>
+        <ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">© 2026 deClusterize. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="forms.js"></script>
+<script>
+/* TOC active state on scroll */
+(function () {
+  const headings = document.querySelectorAll('.art-body h2[id], .art-body h3[id]');
+  const tocLinks = document.querySelectorAll('#tocList a');
+  if (!headings.length) return;
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id));
+      }
+    });
+  }, { rootMargin: '-80px 0px -70% 0px' });
+  headings.forEach(h => obs.observe(h));
+})();
+</script>
+</body>
+</html>
