@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /logo-concepts.html
+
+Sitemap: https://declusterize.com/sitemap.xml

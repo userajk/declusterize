@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>How deClusterize Works — The Digital Organisation Method</title>
+<meta name="description" content="Learn the 5-step deClusterize method for organising your files, email, photos, devices and cloud storage. 15-minute sessions. Real, lasting results. No tech expertise required." />
+<meta name="keywords" content="how digital organisation works, digital declutter method, organise digital files step by step, digital organisation system, how to organise digital life, digital minimalism method" />
+<link rel="canonical" href="https://declusterize.com/how-it-works" />
+<meta property="og:title" content="How deClusterize Works — The Digital Organisation Method" />
+<meta property="og:description" content="Five clear steps from digital chaos to lasting clarity. Discover the method used by 50,000+ people to finally get their digital life under control." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://declusterize.com/how-it-works" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://declusterize.com/how-it-works.html" />
+<meta property="og:title" content="How It Works — deClusterize" />
+<meta property="og:description" content="Learn the 5-step deClusterize method for organising your files, email, photos, devices and cloud storage. 15-minute sessions. Real, lasting results." />
+<meta property="og:image" content="https://declusterize.com/og-image.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://declusterize.com/og-image.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to organise your digital life with deClusterize",
+  "description": "A five-step method for organising files, email, photos, devices and cloud storage using 15-minute daily sessions.",
+  "totalTime": "P30D",
+  "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "value": "0" },
+  "step": [
+    { "@type": "HowToStep", "position": 1, "name": "Pick where to start", "text": "Browse guides across five areas — files, email, photos, devices, and cloud storage — and start with the one that feels most overwhelming." },
+    { "@type": "HowToStep", "position": 2, "name": "Choose your first guide", "text": "Each guide breaks the work into focused 15-minute tasks ordered by impact, so you get early wins that keep you motivated." },
+    { "@type": "HowToStep", "position": 3, "name": "Work in 15-minute sessions", "text": "Complete one focused task per session. Each task has a clear start, a clear end, and a measurable outcome." },
+    { "@type": "HowToStep", "position": 4, "name": "Track your progress", "text": "Watch your completion rate, streaks, and storage reclaimed grow session by session on your progress dashboard." },
+    { "@type": "HowToStep", "position": 5, "name": "Move into maintenance mode", "text": "Once your core goals are reached, a lightweight weekly routine keeps everything clear with under 5 minutes of effort." }
+  ]
+}
+</script>
+
+<style>
+/* ═══════════════════════════════════════════════════════
+   HOW IT WORKS PAGE STYLES
+   ═══════════════════════════════════════════════════════ */
+
+/* ── Page hero ─────────────────────────────────────────── */
+.hiw-hero{padding:114px 0 68px;text-align:center}
+.hiw-hero .eyebrow{font-family:var(--font-mono);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--emerald);margin-bottom:18px}
+.hiw-hero h1{font-size:clamp(2rem,5.5vw,3.2rem);font-weight:700;line-height:1.12;margin-bottom:20px}
+.hiw-hero .lead{max-width:620px;margin:0 auto 40px;color:var(--text-body);font-size:1.02rem;line-height:1.72}
+
+/* ── Promise band ──────────────────────────────────────── */
+.promise-band{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border-radius:var(--r-panel);overflow:hidden;margin-bottom:88px}
+@media(max-width:560px){.promise-band{grid-template-columns:1fr}}
+.promise-cell{background:var(--surface);padding:24px 20px;text-align:center}
+.promise-cell .val{font-family:var(--font-mono);font-size:1.7rem;font-weight:700;background:linear-gradient(135deg,var(--emerald-bright),var(--sky-bright));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:8px}
+.promise-cell p{font-size:.8rem;color:var(--text-body);line-height:1.5}
+
+/* ── Section chrome ─────────────────────────────────────── */
+.hiw-section{padding-bottom:80px}
+.hiw-divider{display:flex;align-items:center;gap:14px;margin-bottom:48px}
+.hiw-divider::before,.hiw-divider::after{content:'';flex:1;height:1px;background:var(--border)}
+.hiw-divider span{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-body);white-space:nowrap}
+.hiw-intro{max-width:620px;color:var(--text-body);font-size:.92rem;line-height:1.75;margin:-16px 0 40px}
+
+/* ── Vertical timeline ─────────────────────────────────── */
+.timeline{display:flex;flex-direction:column;gap:0;position:relative}
+.timeline::before{content:'';position:absolute;left:31px;top:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--emerald),var(--sky),var(--emerald));opacity:.25}
+@media(max-width:700px){.timeline::before{display:none}}
+.tl-item{display:grid;grid-template-columns:64px 1fr;gap:28px;padding-bottom:52px;position:relative}
+@media(max-width:700px){.tl-item{grid-template-columns:1fr;gap:16px;padding-bottom:40px}}
+.tl-node{display:flex;flex-direction:column;align-items:center;padding-top:4px}
+.tl-circle{width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:1.15rem;font-weight:700;flex-shrink:0;position:relative;z-index:1}
+.tl-circle.c1{background:rgba(16,185,129,.12);border:2px solid rgba(16,185,129,.4);color:var(--emerald-bright)}
+.tl-circle.c2{background:rgba(251,113,133,.1);border:2px solid rgba(251,113,133,.35);color:var(--rose)}
+.tl-circle.c3{background:rgba(14,165,233,.1);border:2px solid rgba(14,165,233,.35);color:var(--sky-bright)}
+.tl-circle.c4{background:rgba(245,158,11,.1);border:2px solid rgba(245,158,11,.35);color:var(--amber)}
+.tl-circle.c5{background:rgba(52,211,153,.12);border:2px solid rgba(52,211,153,.5);color:var(--emerald-bright);box-shadow:0 0 20px rgba(52,211,153,.2)}
+@media(max-width:700px){.tl-node{flex-direction:row;gap:14px;align-items:center}}
+.tl-content{padding-top:4px}
+.tl-label{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
+.tl-label.l1{color:var(--emerald)}
+.tl-label.l2{color:var(--rose)}
+.tl-label.l3{color:var(--sky)}
+.tl-label.l4{color:var(--amber)}
+.tl-label.l5{color:var(--emerald-bright)}
+.tl-content h3{font-size:clamp(1.1rem,2vw,1.35rem);font-weight:700;margin-bottom:12px}
+.tl-content p{color:var(--text-body);font-size:.9rem;line-height:1.78;margin-bottom:16px}
+.tl-content p:last-child{margin-bottom:0}
+.tl-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.tl-chip{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.06em;padding:5px 12px;border-radius:var(--r-pill);border:1px solid}
+.tl-chip.ec{color:var(--emerald);border-color:rgba(16,185,129,.3);background:rgba(16,185,129,.07)}
+.tl-chip.sc{color:var(--sky);border-color:rgba(14,165,233,.3);background:rgba(14,165,233,.07)}
+.tl-chip.rc{color:var(--rose);border-color:rgba(251,113,133,.3);background:rgba(251,113,133,.07)}
+.tl-chip.ac{color:var(--amber);border-color:rgba(245,158,11,.3);background:rgba(245,158,11,.07)}
+/* inline telemetry panel inside timeline */
+.tl-panel{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin-top:16px}
+.tl-panel-label{font-family:var(--font-mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--emerald);margin-bottom:14px}
+.tl-bar-row{display:flex;justify-content:space-between;font-size:.78rem;margin-bottom:6px}
+.tl-bar-row span:first-child{color:var(--text-body)}
+.tl-bar-row span:last-child{font-family:var(--font-mono);color:var(--emerald)}
+.tl-bar{height:4px;background:var(--border);border-radius:99px;margin-bottom:12px}
+.tl-bar-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--emerald),var(--sky))}
+
+/* ── Science section ────────────────────────────────────── */
+.science-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:80px}
+@media(max-width:680px){.science-grid{grid-template-columns:1fr}}
+.science-panel{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-panel);padding:32px}
+.science-panel h3{font-size:1.05rem;font-weight:700;margin-bottom:14px}
+.science-panel p{font-size:.88rem;color:var(--text-body);line-height:1.78;margin-bottom:14px}
+.science-panel p:last-child{margin-bottom:0}
+.science-stat{font-family:var(--font-mono);font-size:2rem;font-weight:700;background:linear-gradient(135deg,var(--emerald-bright),var(--sky-bright));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:8px}
+.science-cite{font-family:var(--font-mono);font-size:.66rem;color:var(--text-body);letter-spacing:.04em;margin-top:12px;opacity:.7}
+
+/* ── Organisation areas ─────────────────────────────────── */
+.areas-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-bottom:80px}
+.area-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-panel);padding:28px;transition:border-color .25s,transform .25s}
+.area-card:hover{border-color:var(--emerald);transform:translateY(-3px)}
+.area-icon{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.area-card h3{font-size:1rem;font-weight:700;margin-bottom:10px}
+.area-card p{font-size:.85rem;color:var(--text-body);line-height:1.72;margin-bottom:14px}
+.area-tasks{display:flex;flex-direction:column;gap:7px}
+.area-task{display:flex;align-items:center;gap:8px;font-size:.78rem;color:var(--text-body)}
+.area-task::before{content:'';width:5px;height:5px;border-radius:50%;flex-shrink:0}
+.area-task.tc::before{background:var(--emerald)}
+.area-task.sc::before{background:var(--sky)}
+.area-task.ac::before{background:var(--amber)}
+.area-task.rc::before{background:var(--rose)}
+
+/* ── Weekly rhythm ──────────────────────────────────────── */
+.week-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;margin-bottom:80px}
+@media(max-width:700px){.week-grid{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:400px){.week-grid{grid-template-columns:repeat(2,1fr)}}
+.day-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 10px;text-align:center}
+.day-card.active{border-color:var(--emerald);background:rgba(16,185,129,.06)}
+.day-card.rest{opacity:.5}
+.day-name{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-body);margin-bottom:10px}
+.day-task{font-size:.72rem;font-weight:600;line-height:1.4;margin-bottom:8px;color:var(--text-1,#fff)}
+.day-card.rest .day-task{color:var(--text-body)}
+.day-mins{font-family:var(--font-mono);font-size:.68rem;color:var(--emerald)}
+.day-card.rest .day-mins{color:var(--text-body)}
+
+/* ── Privacy trust ──────────────────────────────────────── */
+.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:80px}
+@media(max-width:640px){.trust-grid{grid-template-columns:1fr}}
+.trust-cell{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:24px 22px}
+.trust-cell .t-icon{font-size:1.5rem;margin-bottom:12px}
+.trust-cell h4{font-size:.9rem;font-weight:700;margin-bottom:8px}
+.trust-cell p{font-size:.8rem;color:var(--text-body);line-height:1.7}
+
+/* ── Comparison table ───────────────────────────────────── */
+.comp-table{width:100%;border-collapse:collapse;margin-bottom:80px;font-size:.85rem}
+.comp-table th{padding:14px 18px;text-align:left;font-size:.7rem;font-family:var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--text-body);border-bottom:1px solid var(--border)}
+.comp-table th.highlight{color:var(--emerald)}
+.comp-table td{padding:14px 18px;border-bottom:1px solid var(--border);color:var(--text-body);vertical-align:middle}
+.comp-table tr:last-child td{border-bottom:none}
+.comp-table td:first-child{font-weight:600;color:var(--text-1,#fff)}
+.comp-table .yes{color:var(--emerald);font-family:var(--font-mono);font-size:.8rem}
+.comp-table .no{color:var(--rose);font-family:var(--font-mono);font-size:.8rem}
+.comp-table .maybe{color:var(--amber);font-family:var(--font-mono);font-size:.8rem}
+.comp-table thead tr{background:var(--surface)}
+.comp-table tbody tr:hover td{background:rgba(16,185,129,.03)}
+.comp-table .col-highlight{background:rgba(16,185,129,.04)}
+@media(max-width:640px){.comp-table{font-size:.78rem}.comp-table th,.comp-table td{padding:10px 12px}}
+
+/* ── FAQ ────────────────────────────────────────────────── */
+.faq-section{margin-bottom:80px}
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-item:first-child{border-top:1px solid var(--border)}
+.faq-q{width:100%;background:none;border:none;color:var(--text-1,#fff);font-family:var(--font-ui);font-size:.93rem;font-weight:600;text-align:left;padding:20px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.faq-q:hover{color:var(--emerald)}
+.faq-chevron{flex-shrink:0;transition:transform .25s;color:var(--text-body)}
+.faq-item.open .faq-chevron{transform:rotate(90deg);color:var(--emerald)}
+.faq-a{display:none;padding:0 0 20px;color:var(--text-body);font-size:.88rem;line-height:1.8;max-width:700px}
+.faq-item.open .faq-a{display:block}
+
+/* ── Join CTA ────────────────────────────────────────────── */
+.hiw-cta{background:linear-gradient(135deg,rgba(16,185,129,.08),rgba(14,165,233,.08));border:1px solid var(--border-2);border-radius:var(--r-panel);padding:64px 40px;text-align:center;margin-bottom:80px}
+@media(max-width:640px){.hiw-cta{padding:40px 24px}}
+.hiw-cta h2{font-size:clamp(1.5rem,4vw,2.4rem);font-weight:700;margin-bottom:14px}
+.hiw-cta p{color:var(--text-body);font-size:.95rem;max-width:500px;margin:0 auto 32px;line-height:1.72}
+.cta-pair{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<!-- AMBIENT BACKGROUND -->
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<div class="fx fx-glow" aria-hidden="true"></div>
+<div class="fx fx-grid" aria-hidden="true"></div>
+<div class="fx fx-scan" aria-hidden="true"></div>
+<div class="fx fx-vignette" aria-hidden="true"></div>
+
+<!-- ICON SPRITE -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="bm-stroke" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#34D399"/><stop offset="1" stop-color="#0EA5E9"/>
+    </linearGradient>
+    <linearGradient id="bm-fill" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#34D399" stop-opacity=".18"/><stop offset="1" stop-color="#0EA5E9" stop-opacity=".10"/>
+    </linearGradient>
+  </defs>
+  <symbol id="ic-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="ic-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6 18 18M18 6 6 18"/></symbol>
+  <symbol id="ic-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></symbol>
+  <symbol id="ic-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></symbol>
+  <symbol id="ic-folder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2.5h8a2 2 0 0 1 2 2V18a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z"/></symbol>
+  <symbol id="ic-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></symbol>
+  <symbol id="ic-photo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="1.8"/><path d="m4 17 4.5-4.5a2 2 0 0 1 2.8 0L20 21"/></symbol>
+  <symbol id="ic-devices" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4" width="14" height="10" rx="2"/><path d="M2.5 18h11"/><rect x="16.5" y="9" width="5.5" height="11" rx="1.6"/></symbol>
+  <symbol id="ic-cloud" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a4 4 0 0 1-.5-7.97A5.5 5.5 0 0 1 17 9.5a3.75 3.75 0 0 1 .3 7.5H7Z"/></symbol>
+  <symbol id="ic-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v5c0 4.5 3 7.5 7 9 4-1.5 7-4.5 7-9V6l-7-3Z"/></symbol>
+  <symbol id="ic-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+</svg>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="container nav">
+    <a href="index.html" class="brand" aria-label="deClusterize home">
+      <svg class="brand-mark-svg" width="36" height="36" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="url(#bm-fill)"/>
+        <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="none" stroke="url(#bm-stroke)" stroke-width="2"/>
+        <polyline points="14,25 21,32 34,17" stroke="url(#bm-stroke)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="38" cy="10" r="3" fill="#38BDF8" opacity=".9"/>
+      </svg>
+      <span class="brand-name">deClusterize</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="how-it-works.html" aria-current="page">How It Works</a>
+      <a href="guides.html">Guides</a>
+      <a href="guides.html#checklists">Templates</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <svg class="ico"><use href="#ic-menu"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="how-it-works.html">How It Works</a>
+    <a href="guides.html">Guides</a>
+    <a href="guides.html#checklists">Templates</a>
+  </div>
+</header>
+
+<main>
+
+<!-- ══════════════════════════════════════════════════════
+     HERO
+     ══════════════════════════════════════════════════════ -->
+<section class="hiw-hero">
+  <div class="container">
+    <p class="eyebrow reveal">The deClusterize Method</p>
+    <h1 class="reveal">From digital chaos<br>to lasting <span class="text-teal">clarity.</span></h1>
+    <p class="lead reveal">Most people don't have an organisation problem — they have a system problem. deClusterize gives you a proven five-step method, a personalised plan, and the daily structure to make clarity stick. Here's exactly how it works.</p>
+    <div class="reveal" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <a href="index.html#cta" class="btn btn-primary">Start for free — no card needed</a>
+      <a href="community.html" class="btn btn-secondary">See community results</a>
+    </div>
+  </div>
+</section>
+
+<section class="hiw-section">
+  <div class="container">
+
+    <!-- ── Promise band ──────────────────────────────────── -->
+    <div class="promise-band reveal">
+      <div class="promise-cell">
+        <div class="val">15 min</div>
+        <p>Maximum session length — designed to fit into any schedule, no matter how busy</p>
+      </div>
+      <div class="promise-cell">
+        <div class="val">30 days</div>
+        <p>Average time to reach your core digital organisation goals from a standing start</p>
+      </div>
+      <div class="promise-cell">
+        <div class="val">94%</div>
+        <p>Of active users who stay organised 6 months after completing their first plan</p>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════
+         5-STEP PROCESS
+         ══════════════════════════════════════════════════ -->
+    <div class="hiw-divider reveal"><span>// the five-step method</span></div>
+    <p class="hiw-intro reveal">Every deClusterize journey follows the same five steps — but the tasks inside each step are personalised to your specific situation, goals, and the time you have available.</p>
+
+    <div class="timeline">
+
+      <!-- STEP 1 -->
+      <div class="tl-item reveal">
+        <div class="tl-node">
+          <div class="tl-circle c1">01</div>
+        </div>
+        <div class="tl-content">
+          <p class="tl-label l1">// assess — 5 minutes</p>
+          <h3>Pick where to start</h3>
+          <p>Browse our guides across the five core areas of your digital life — files and folders, email and inbox, photos and media, devices, and cloud storage. Pick the area that feels most overwhelming right now and dive into that guide first.</p>
+          <p>Every guide is designed to stand alone, so you don't need to work through all five areas. Start where it matters most to you and expand from there when you're ready.</p>
+          <div class="tl-chips">
+            <span class="tl-chip ec">Files</span>
+            <span class="tl-chip ec">Email</span>
+            <span class="tl-chip ec">Photos</span>
+            <span class="tl-chip ec">Devices</span>
+            <span class="tl-chip ec">Cloud</span>
+          </div>
+          <div class="tl-panel">
+            <p class="tl-panel-label">// what we're measuring</p>
+            <div class="tl-bar-row"><span>Files &amp; folder structure</span><span>Assessed</span></div>
+            <div class="tl-bar"><div class="tl-bar-fill" style="width:100%"></div></div>
+            <div class="tl-bar-row"><span>Inbox size &amp; noise level</span><span>Assessed</span></div>
+            <div class="tl-bar"><div class="tl-bar-fill" style="width:100%"></div></div>
+            <div class="tl-bar-row"><span>Photo library sprawl</span><span>Assessed</span></div>
+            <div class="tl-bar"><div class="tl-bar-fill" style="width:100%"></div></div>
+            <div class="tl-bar-row"><span>Device storage &amp; clutter</span><span>Assessed</span></div>
+            <div class="tl-bar"><div class="tl-bar-fill" style="width:100%"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="tl-item reveal">
+        <div class="tl-node">
+          <div class="tl-circle c2">02</div>
+        </div>
+        <div class="tl-content">
+          <p class="tl-label l2">// plan — pick your guide</p>
+          <h3>Follow a step-by-step guide</h3>
+          <p>Each guide is a prioritised, sequenced list of tasks ordered by impact — the things that will make the biggest visible difference come first, so you get early wins that keep you motivated.</p>
+          <p>Every task is scoped to take 15 minutes or less. Work through them at your own pace — first clearing the backlog, then building the structure, then establishing the lightweight habits that keep everything clear long-term. Skip tasks that don't apply and move on to the next.</p>
+          <div class="tl-chips">
+            <span class="tl-chip rc">Prioritised by impact</span>
+            <span class="tl-chip rc">Fully editable</span>
+            <span class="tl-chip rc">Weekly blocks</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 3 -->
+      <div class="tl-item reveal">
+        <div class="tl-node">
+          <div class="tl-circle c3">03</div>
+        </div>
+        <div class="tl-content">
+          <p class="tl-label l3">// execute — 15 min/session</p>
+          <h3>Work in focused 15-minute sessions</h3>
+          <p>This is where the real work happens — and it's simpler than you think. Open your plan, pick the next task, set a timer for 15 minutes, and follow the step-by-step instructions. Every task tells you exactly what to do, where to do it, and what "done" looks like. There's no ambiguity, no decision-making mid-session, and no rabbit holes.</p>
+          <p>The 15-minute constraint is intentional. Research consistently shows that short, frequent bursts of focused work are far more effective than infrequent long sessions for building lasting habits. You'll be surprised how much you can accomplish in 15 minutes when you're not also figuring out where to start.</p>
+          <p>Each session ends with a completion confirmation and a preview of the next task — a small moment of satisfaction that primes you to come back tomorrow.</p>
+          <div class="tl-chips">
+            <span class="tl-chip sc">Step-by-step guidance</span>
+            <span class="tl-chip sc">Clear "done" state</span>
+            <span class="tl-chip sc">Session timer</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 4 -->
+      <div class="tl-item reveal">
+        <div class="tl-node">
+          <div class="tl-circle c4">04</div>
+        </div>
+        <div class="tl-content">
+          <p class="tl-label l4">// track — ongoing</p>
+          <h3>Watch your progress compound</h3>
+          <p>Your progress dashboard tracks every session you complete, every gigabyte you free, every inbox you tame, and every streak you build. Week-by-week charts show you exactly how far you've come — turning invisible progress into visible proof that keeps you going.</p>
+          <p>At the end of each week, you receive a personalised Progress Digest: a summary of what you completed, what you freed up, which area improved most, and what's coming up next week. Small celebrations, earned milestones, and a growing streak counter are all deliberately included — because motivation matters and visible progress is one of the most powerful habit-formation tools available.</p>
+          <div class="tl-chips">
+            <span class="tl-chip ac">Streak tracking</span>
+            <span class="tl-chip ac">Weekly digest</span>
+            <span class="tl-chip ac">Progress charts</span>
+            <span class="tl-chip ac">Milestone badges</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 5 -->
+      <div class="tl-item reveal">
+        <div class="tl-node">
+          <div class="tl-circle c5">05</div>
+        </div>
+        <div class="tl-content">
+          <p class="tl-label l5">// maintain — 5 min/week</p>
+          <h3>Shift into maintenance mode</h3>
+          <p>Once you've completed your core plan — typically within 30 days — deClusterize automatically transitions you to Maintenance Mode. This is a lightweight weekly routine of two or three micro-tasks that takes under 5 minutes and keeps everything you built from sliding back into chaos.</p>
+          <p>Maintenance Mode tasks are gentle: a quick scan of your downloads folder, a glance at your inbox count, a prompt to back up your phone. They're reminders as much as tasks — small, consistent nudges that make digital tidiness a background habit rather than an active effort. Every quarter, your plan refreshes with a short re-assessment so it stays aligned with however your life has changed.</p>
+          <div class="tl-chips">
+            <span class="tl-chip ec">Auto-activated</span>
+            <span class="tl-chip ec">Under 5 min/week</span>
+            <span class="tl-chip ec">Quarterly refresh</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /timeline -->
+
+    <!-- ══════════════════════════════════════════════════
+         THE SCIENCE BEHIND 15 MINUTES
+         ══════════════════════════════════════════════════ -->
+    <div class="hiw-divider reveal"><span>// the science behind 15 minutes</span></div>
+    <p class="hiw-intro reveal">Short sessions aren't a compromise — they're the strategy. Here's why the 15-minute constraint produces better long-term results than marathon organising sessions.</p>
+
+    <div class="science-grid reveal">
+      <div class="science-panel">
+        <div class="science-stat">66 days</div>
+        <h3>How long habits actually take to form</h3>
+        <p>A landmark University College London study found the average time to form a new habit is 66 days — not the often-cited 21. But the study also found that missing an occasional session had no measurable impact on habit formation. What mattered was consistent repetition over time, not perfection.</p>
+        <p>A 15-minute daily session is easy enough to keep up even on busy days. A two-hour session is easy to skip. That's why our method prioritises frequency over intensity — you're not trying to organise everything at once, you're building the habit of organising regularly.</p>
+        <p class="science-cite">// Source: Lally et al. (2010), European Journal of Social Psychology</p>
+      </div>
+      <div class="science-panel">
+        <div class="science-stat">40%</div>
+        <h3>Decision fatigue kills organising sessions</h3>
+        <p>Research by Baumeister and colleagues found that decision-making depletes a finite cognitive resource — and that the quality of decisions deteriorates significantly after a long session of choices. Organising is full of micro-decisions: keep or delete? Move or rename? Archive or action?</p>
+        <p>By limiting sessions to 15 minutes and scoping each task so tightly that there are almost no decisions to make, deClusterize avoids the decision fatigue that causes most self-directed organising attempts to stall halfway through. You finish each session with energy left over — which means you come back tomorrow.</p>
+        <p class="science-cite">// Source: Baumeister et al. (1998), Journal of Personality and Social Psychology</p>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════
+         ORGANISATION AREAS
+         ══════════════════════════════════════════════════ -->
+    <div class="hiw-divider reveal"><span>// five areas, one plan</span></div>
+    <p class="hiw-intro reveal">deClusterize covers every corner of your digital life. Here's what each of the five areas involves — and the specific tasks your plan might include.</p>
+
+    <div class="areas-grid reveal">
+
+      <div class="area-card">
+        <div class="area-icon" style="background:rgba(16,185,129,.12);color:var(--emerald)">
+          <svg class="ico" width="22" height="22"><use href="#ic-folder"/></svg>
+        </div>
+        <h3>Files &amp; Folders</h3>
+        <p>Your file system is the foundation of your digital life. A clear folder structure means you spend less time searching and more time working. Tasks in this area build a folder hierarchy that's intuitive enough to maintain without effort.</p>
+        <div class="area-tasks">
+          <div class="area-task tc">Clear and organise your desktop</div>
+          <div class="area-task tc">Build a three-level folder structure</div>
+          <div class="area-task tc">Rename files with a consistent convention</div>
+          <div class="area-task tc">Find and remove duplicate files</div>
+          <div class="area-task tc">Archive old project folders</div>
+        </div>
+      </div>
+
+      <div class="area-card">
+        <div class="area-icon" style="background:rgba(251,113,133,.1);color:var(--rose)">
+          <svg class="ico" width="22" height="22"><use href="#ic-mail"/></svg>
+        </div>
+        <h3>Email &amp; Inbox</h3>
+        <p>The average person receives 121 emails per day and spends 2.6 hours managing them. deClusterize's inbox tasks are designed to cut that time to under 20 minutes — and keep it there.</p>
+        <div class="area-tasks">
+          <div class="area-task rc">Archive the existing backlog</div>
+          <div class="area-task rc">Set up a two-folder action system</div>
+          <div class="area-task rc">Create filters for repeat senders</div>
+          <div class="area-task rc">Mass-unsubscribe from newsletters</div>
+          <div class="area-task rc">Establish a daily email routine</div>
+        </div>
+      </div>
+
+      <div class="area-card">
+        <div class="area-icon" style="background:rgba(245,158,11,.1);color:var(--amber)">
+          <svg class="ico" width="22" height="22"><use href="#ic-photo"/></svg>
+        </div>
+        <h3>Photos &amp; Media</h3>
+        <p>Most people have thousands of photos scattered across multiple devices, apps, and backup drives. This area consolidates, cleans, and creates an album structure you'll actually use.</p>
+        <div class="area-tasks">
+          <div class="area-task ac">Consolidate photos from all devices</div>
+          <div class="area-task ac">Remove blurry duplicates and screenshots</div>
+          <div class="area-task ac">Build a year-based album structure</div>
+          <div class="area-task ac">Set up automatic cloud backup</div>
+          <div class="area-task ac">Organise shared family albums</div>
+        </div>
+      </div>
+
+      <div class="area-card">
+        <div class="area-icon" style="background:rgba(14,165,233,.1);color:var(--sky)">
+          <svg class="ico" width="22" height="22"><use href="#ic-devices"/></svg>
+        </div>
+        <h3>Devices &amp; Storage</h3>
+        <p>Slow devices full of apps you don't use and files you don't need are a daily drag on your productivity and mood. This area frees storage and keeps your devices running cleanly.</p>
+        <div class="area-tasks">
+          <div class="area-task sc">Audit and uninstall unused apps</div>
+          <div class="area-task sc">Clear app caches and temp files</div>
+          <div class="area-task sc">Offload photos and videos to cloud</div>
+          <div class="area-task sc">Review and remove large files</div>
+          <div class="area-task sc">Set up automatic device backup</div>
+        </div>
+      </div>
+
+      <div class="area-card" style="grid-column:auto">
+        <div class="area-icon" style="background:rgba(16,185,129,.1);color:var(--emerald)">
+          <svg class="ico" width="22" height="22"><use href="#ic-cloud"/></svg>
+        </div>
+        <h3>Cloud &amp; Backup</h3>
+        <p>Cloud storage is only useful when it's organised. This area consolidates your cloud accounts, removes redundant files, and makes sure the things that matter are actually backed up.</p>
+        <div class="area-tasks">
+          <div class="area-task tc">Audit all connected cloud accounts</div>
+          <div class="area-task tc">Remove duplicate cloud copies</div>
+          <div class="area-task tc">Organise shared Drive or Dropbox folders</div>
+          <div class="area-task tc">Set up a backup-of-backups system</div>
+          <div class="area-task tc">Revoke access for apps no longer used</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ══════════════════════════════════════════════════
+         SAMPLE WEEK
+         ══════════════════════════════════════════════════ -->
+    <div class="hiw-divider reveal"><span>// what a typical week looks like</span></div>
+    <p class="hiw-intro reveal">Here's a sample week from a new user's first plan — four 15-minute sessions spread across the week, with two rest days built in. Totally manageable alongside a full-time job and a busy life.</p>
+
+    <div class="week-grid reveal">
+      <div class="day-card active">
+        <div class="day-name">Mon</div>
+        <div class="day-task">Clear &amp; sort Desktop</div>
+        <div class="day-mins">15 min</div>
+      </div>
+      <div class="day-card rest">
+        <div class="day-name">Tue</div>
+        <div class="day-task">Rest day</div>
+        <div class="day-mins">—</div>
+      </div>
+      <div class="day-card active">
+        <div class="day-name">Wed</div>
+        <div class="day-task">Email backlog archive</div>
+        <div class="day-mins">15 min</div>
+      </div>
+      <div class="day-card active">
+        <div class="day-name">Thu</div>
+        <div class="day-task">Set up inbox filters</div>
+        <div class="day-mins">15 min</div>
+      </div>
+      <div class="day-card rest">
+        <div class="day-name">Fri</div>
+        <div class="day-task">Rest day</div>
+        <div class="day-mins">—</div>
+      </div>
+      <div class="day-card active">
+        <div class="day-name">Sat</div>
+        <div class="day-task">Sort Downloads folder</div>
+        <div class="day-mins">15 min</div>
+      </div>
+      <div class="day-card rest">
+        <div class="day-name">Sun</div>
+        <div class="day-task">Rest day</div>
+        <div class="day-mins">—</div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════
+         PRIVACY / WHAT WE ACCESS
+         ══════════════════════════════════════════════════ -->
+    <div class="hiw-divider reveal"><span>// privacy &amp; what we access</span></div>
+    <p class="hiw-intro reveal">We know you're trusting us with your digital life. Here's a clear, honest account of what we access, what we don't, and why.</p>
+
+    <div class="trust-grid reveal">
+      <div class="trust-cell">
+        <div class="t-icon">🔍</div>
+        <h4>Metadata only, by default</h4>
+        <p>By default, deClusterize reads only file and email metadata — names, sizes, dates, and folder structure. We never read the contents of your documents, photos, or messages unless you explicitly enable a feature that requires it. You can review all active permissions at any time in Account Settings.</p>
+      </div>
+      <div class="trust-cell">
+        <div class="t-icon">🔒</div>
+        <h4>Your data stays yours</h4>
+        <p>We do not sell, share, or train AI models on your personal data without your explicit consent. All integrations use secure OAuth — we never ask for your passwords. You can revoke any integration instantly from your settings, and your account data is deleted within 30 days of a deletion request.</p>
+      </div>
+      <div class="trust-cell">
+        <div class="t-icon">🛡️</div>
+        <h4>Enterprise-grade security</h4>
+        <p>All data in transit is protected by TLS 1.3. Sensitive fields are encrypted at rest with AES-256. We conduct regular third-party penetration tests and maintain a responsible disclosure programme. If you ever have a security concern, contact us directly at info@declusterize.com.</p>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════
+         COMPARISON TABLE
+         ══════════════════════════════════════════════════ -->
+    <div class="hiw-divider reveal"><span>// deClusterize vs. the alternatives</span></div>
+    <p class="hiw-intro reveal">How does deClusterize compare to doing it yourself or hiring a professional digital organiser? Here's an honest side-by-side.</p>
+
+    <div class="reveal" style="overflow-x:auto;margin-bottom:80px">
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th class="highlight">deClusterize</th>
+            <th>Do it yourself</th>
+            <th>Pro organiser</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Personalised plan</td>
+            <td class="col-highlight"><span class="yes">✓ Yes</span></td>
+            <td><span class="no">✗ No</span></td>
+            <td><span class="yes">✓ Yes</span></td>
+          </tr>
+          <tr>
+            <td>Step-by-step task guidance</td>
+            <td class="col-highlight"><span class="yes">✓ Yes</span></td>
+            <td><span class="no">✗ No</span></td>
+            <td><span class="maybe">~ Varies</span></td>
+          </tr>
+          <tr>
+            <td>Works in 15-minute sessions</td>
+            <td class="col-highlight"><span class="yes">✓ Yes</span></td>
+            <td><span class="no">✗ Rarely</span></td>
+            <td><span class="no">✗ No</span></td>
+          </tr>
+          <tr>
+            <td>Progress tracking &amp; streaks</td>
+            <td class="col-highlight"><span class="yes">✓ Yes</span></td>
+            <td><span class="no">✗ No</span></td>
+            <td><span class="no">✗ No</span></td>
+          </tr>
+          <tr>
+            <td>Covers all 5 digital areas</td>
+            <td class="col-highlight"><span class="yes">✓ Yes</span></td>
+            <td><span class="maybe">~ If you know how</span></td>
+            <td><span class="maybe">~ Depends on scope</span></td>
+          </tr>
+          <tr>
+            <td>Long-term maintenance plan</td>
+            <td class="col-highlight"><span class="yes">✓ Yes</span></td>
+            <td><span class="no">✗ No</span></td>
+            <td><span class="no">✗ Not included</span></td>
+          </tr>
+          <tr>
+            <td>Privacy — no file content access</td>
+            <td class="col-highlight"><span class="yes">✓ Yes</span></td>
+            <td><span class="yes">✓ Yes</span></td>
+            <td><span class="maybe">~ Depends</span></td>
+          </tr>
+          <tr>
+            <td>Cost</td>
+            <td class="col-highlight" style="color:var(--emerald);font-family:var(--font-mono);font-size:.8rem">Free / from $9/mo</td>
+            <td style="font-family:var(--font-mono);font-size:.8rem;color:var(--text-body)">Free</td>
+            <td style="font-family:var(--font-mono);font-size:.8rem;color:var(--text-body)">$80–$200/hr</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════
+         FAQ
+         ══════════════════════════════════════════════════ -->
+    <div class="hiw-divider reveal"><span>// frequently asked questions</span></div>
+
+    <div class="faq-section reveal">
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Do I need to be tech-savvy to use deClusterize?
+          <svg class="faq-chevron ico" width="18" height="18"><use href="#ic-chevron"/></svg>
+        </button>
+        <div class="faq-a">
+          Not at all. deClusterize is designed for people who consider themselves average or below-average with technology. Every task includes plain-English, step-by-step instructions with screenshots where relevant. If you can use a smartphone and browse the web, you have all the skills you need. Our most active users range from teenagers to retirees in their 70s.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          What if I only have one or two messy areas — do I have to do all five?
+          <svg class="faq-chevron ico" width="18" height="18"><use href="#ic-chevron"/></svg>
+        </button>
+        <div class="faq-a">
+          No — just pick the guide for the area that bothers you most. If your file system is fine but your inbox is a disaster, start with the email guide. Each guide is self-contained, so you only work on what matters to you. Skip any tasks that don't apply and move on.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          What happens if I miss a few days or fall behind on my plan?
+          <svg class="faq-chevron ico" width="18" height="18"><use href="#ic-chevron/></svg>
+        </button>
+        <div class="faq-a">
+          Life happens — missing sessions is normal and expected. deClusterize does not punish you for missing days. Your plan simply waits for you. Your streak resets (a minor motivation nudge, not a punishment), but your progress is fully preserved. If you've been away for more than two weeks, we'll offer a brief 3-question re-check to make sure your plan still reflects your current situation before you dive back in.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          How is deClusterize different from a to-do app or a filing guide I find online?
+          <svg class="faq-chevron ico" width="18" height="18"><use href="#ic-chevron"/></svg>
+        </button>
+        <div class="faq-a">
+          Generic to-do apps give you a blank canvas and expect you to know what to put in it. Filing guides give you advice but don't follow up, don't personalise, and don't track whether you've actually done anything. deClusterize combines a personalised plan generator, step-by-step task execution, progress tracking, habit-formation science, and a community of 50,000+ people — all focused on one outcome: a digital life you're in control of. It's the difference between a cookbook and a personal chef.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Can I use deClusterize for my whole household or just myself?
+          <svg class="faq-chevron ico" width="18" height="18"><use href="#ic-chevron"/></svg>
+        </button>
+        <div class="faq-a">
+          Individual accounts cover one person's digital environment — ideal for personal use. Our Team plan (coming soon) extends this to households and small teams, with shared workspaces, multi-user progress dashboards, and the ability to share templates and folder structures between members. If you'd like early access to the household plan, email us at info@declusterize.com and we'll add you to the waitlist.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ══════════════════════════════════════════════════
+         CTA
+         ══════════════════════════════════════════════════ -->
+
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand" aria-label="deClusterize home">
+          <svg class="brand-mark-svg" width="36" height="36" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="url(#bm-fill)"/>
+            <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="none" stroke="url(#bm-stroke)" stroke-width="2"/>
+            <polyline points="14,25 21,32 34,17" stroke="url(#bm-stroke)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="38" cy="10" r="3" fill="#38BDF8" opacity=".9"/>
+          </svg>
+          <span class="brand-name">deClusterize</span>
+        </a>
+        <p>Small tasks. Better systems. A clearer digital life.</p>
+      </div>
+      <nav class="footer-col" aria-label="Product">
+        <h4>Product</h4>
+        <ul><li><a href="how-it-works.html">How It Works</a></li><li><a href="guides.html">Guides</a></li><li><a href="guides.html#checklists">Templates</a></li></ul>
+      </nav>
+      <nav class="footer-col" aria-label="Resources">
+        <h4>Resources</h4>
+        <ul><li><a href="#">Blog</a></li><li><a href="help.html">Help Center</a></li><li><a href="community.html">Community</a></li></ul>
+      </nav>
+      <nav class="footer-col" aria-label="Company">
+        <h4>Company</h4>
+        <ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">© 2026 deClusterize. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="forms.js"></script>
+<script>
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(el => {
+      el.classList.remove('open');
+      el.querySelector('.faq-q').setAttribute('aria-expanded','false');
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded','true');
+    }
+  });
+});
+</script>
+</body>
+</html>

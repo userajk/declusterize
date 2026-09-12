@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Community — deClusterize | Join the Clarity Community</title>
+<meta name="description" content="Join 50,000+ people in the deClusterize Clarity Community. Share organizing wins, get expert advice, join live events, and build a digital life you're proud of — together." />
+<meta name="keywords" content="digital organization community, declutter community online, digital minimalism forum, file organization tips, inbox zero community, declusterize community" />
+<link rel="canonical" href="https://declusterize.com/community" />
+<meta property="og:title" content="Clarity Community — deClusterize" />
+<meta property="og:description" content="50,000+ people sharing wins, advice, and accountability on the path to a cleaner digital life." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://declusterize.com/community" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://declusterize.com/community.html" />
+<meta property="og:title" content="Clarity Community — deClusterize" />
+<meta property="og:description" content="Join 50,000+ people in the deClusterize Clarity Community. Share organizing wins, get expert advice, join live events, and build a digital life you're proud of — together." />
+<meta property="og:image" content="https://declusterize.com/og-image.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://declusterize.com/og-image.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+
+<!-- Schema: Community / Organization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "deClusterize Clarity Community",
+  "url": "https://declusterize.com/community",
+  "description": "A global community of 50,000+ people working to organize their digital lives one session at a time.",
+  "memberOf": { "@type": "OnlineCommunity", "name": "Clarity Community" },
+  "contactPoint": { "@type": "ContactPoint", "email": "info@declusterize.com", "contactType": "Community Support" }
+}
+</script>
+
+<style>
+/* ════════════════════════════════════════════════════════
+   COMMUNITY PAGE STYLES
+   ════════════════════════════════════════════════════════ */
+
+/* ── Hero ─────────────────────────────────────────────── */
+.cm-hero{padding:112px 0 72px;text-align:center;position:relative}
+.cm-hero .eyebrow{font-family:var(--font-mono);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--emerald);margin-bottom:18px}
+.cm-hero h1{font-size:clamp(2rem,5.5vw,3.4rem);font-weight:700;line-height:1.12;margin-bottom:20px}
+.cm-hero .lead{max-width:600px;margin:0 auto 36px;color:var(--text-2);font-size:1.02rem;line-height:1.72}
+.cm-hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:52px}
+/* live member badge */
+.member-badge{display:inline-flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--border-2);border-radius:var(--r-pill);padding:8px 18px;font-size:.82rem;color:var(--text-2);margin-bottom:28px}
+.member-badge .pulse{width:8px;height:8px;border-radius:50%;background:var(--emerald);box-shadow:0 0 0 2px rgba(16,185,129,.3);animation:pulse-ring 2s ease infinite}
+.member-badge strong{color:var(--emerald-bright);font-family:var(--font-mono)}
+
+/* ── Community stats band ─────────────────────────────── */
+.cm-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border-radius:var(--r-panel);overflow:hidden;margin-bottom:80px}
+@media(max-width:640px){.cm-stats{grid-template-columns:repeat(2,1fr)}}
+.cm-stat{background:var(--surface);padding:28px 20px;text-align:center}
+.cm-stat .big{font-family:var(--font-mono);font-size:2rem;font-weight:700;background:linear-gradient(135deg,var(--emerald-bright),var(--sky-bright));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1}
+.cm-stat p{font-size:.78rem;color:var(--text-2);margin-top:8px;letter-spacing:.02em}
+
+/* ── Section chrome ────────────────────────────────────── */
+.cm-section{padding-bottom:72px}
+.section-divider{display:flex;align-items:center;gap:14px;margin:0 0 36px}
+.section-divider::before,.section-divider::after{content:'';flex:1;height:1px;background:var(--border)}
+.section-divider span{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-2);white-space:nowrap}
+.cm-sub{color:var(--text-2);font-size:.88rem;margin-top:-20px;margin-bottom:32px}
+
+/* ── Discussion cards ─────────────────────────────────── */
+.disc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-bottom:72px}
+.disc-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-panel);padding:24px;display:flex;flex-direction:column;gap:14px;transition:border-color .25s var(--ease),transform .25s var(--ease);cursor:pointer}
+.disc-card:hover{border-color:var(--emerald);transform:translateY(-3px)}
+.disc-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.disc-category{font-family:var(--font-mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:var(--r-pill);border:1px solid}
+.disc-cat-wins{color:var(--emerald);border-color:rgba(16,185,129,.3);background:rgba(16,185,129,.07)}
+.disc-cat-tips{color:var(--sky);border-color:rgba(14,165,233,.3);background:rgba(14,165,233,.07)}
+.disc-cat-files{color:var(--amber);border-color:rgba(245,158,11,.3);background:rgba(245,158,11,.07)}
+.disc-cat-email{color:var(--rose);border-color:rgba(251,113,133,.3);background:rgba(251,113,133,.07)}
+.disc-hot{font-family:var(--font-mono);font-size:.66rem;color:var(--rose)}
+.disc-card h3{font-size:.95rem;font-weight:600;line-height:1.4}
+.disc-card p{font-size:.82rem;color:var(--text-2);line-height:1.65;flex:1}
+.disc-footer{display:flex;align-items:center;justify-content:space-between;gap:8px;padding-top:12px;border-top:1px solid var(--border)}
+.disc-avatars{display:flex}
+.disc-avatar{width:24px;height:24px;border-radius:50%;border:2px solid var(--bg-2,#0A0A0C);font-size:.6rem;font-weight:700;display:flex;align-items:center;justify-content:center;margin-left:-6px;flex-shrink:0}
+.disc-avatar:first-child{margin-left:0}
+.disc-meta{font-size:.74rem;color:var(--text-2);display:flex;gap:12px;font-family:var(--font-mono)}
+.disc-meta span{display:flex;align-items:center;gap:4px}
+
+/* ── Spaces / Channels ────────────────────────────────── */
+.spaces-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-bottom:72px}
+.space-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px 22px;display:flex;gap:14px;align-items:flex-start;transition:border-color .2s,transform .2s;cursor:pointer}
+.space-card:hover{border-color:var(--sky);transform:translateX(3px)}
+.space-emoji{font-size:1.4rem;line-height:1;flex-shrink:0;margin-top:2px}
+.space-info h4{font-size:.9rem;font-weight:600;margin-bottom:5px}
+.space-info p{font-size:.78rem;color:var(--text-2);line-height:1.55;margin-bottom:8px}
+.space-meta{font-family:var(--font-mono);font-size:.66rem;color:var(--text-2);letter-spacing:.04em}
+.space-card:hover .space-meta{color:var(--sky)}
+
+/* ── Challenge banner ─────────────────────────────────── */
+.challenge-banner{position:relative;background:linear-gradient(135deg,rgba(16,185,129,.08) 0%,rgba(14,165,233,.08) 100%);border:1px solid var(--border-2);border-radius:var(--r-panel);padding:44px 40px;margin-bottom:72px;overflow:hidden}
+@media(max-width:640px){.challenge-banner{padding:32px 24px}}
+.challenge-banner::before{content:'30';position:absolute;right:-10px;top:-20px;font-family:var(--font-mono);font-size:10rem;font-weight:700;color:rgba(16,185,129,.05);line-height:1;pointer-events:none}
+.ch-label{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--emerald);margin-bottom:12px}
+.challenge-banner h2{font-size:clamp(1.3rem,3vw,2rem);font-weight:700;margin-bottom:12px}
+.challenge-banner p{color:var(--text-2);font-size:.9rem;line-height:1.72;max-width:560px;margin-bottom:24px}
+.ch-progress-row{display:flex;align-items:center;gap:16px;margin-bottom:28px;flex-wrap:wrap}
+.ch-progress-bar{flex:1;min-width:160px;height:6px;background:var(--border);border-radius:99px;overflow:hidden}
+.ch-progress-fill{height:100%;background:linear-gradient(90deg,var(--emerald),var(--sky));border-radius:99px;width:47%}
+.ch-progress-label{font-family:var(--font-mono);font-size:.72rem;color:var(--emerald);white-space:nowrap}
+.ch-participants{display:flex;align-items:center;gap:10px}
+.ch-avatars{display:flex}
+.ch-av{width:28px;height:28px;border-radius:50%;border:2px solid rgba(16,185,129,.3);font-size:.62rem;font-weight:700;display:flex;align-items:center;justify-content:center;margin-left:-8px}
+.ch-av:first-child{margin-left:0}
+.ch-count{font-size:.8rem;color:var(--text-2)}
+.ch-count strong{color:var(--text-1,#fff)}
+
+/* ── Events ───────────────────────────────────────────── */
+.events-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-bottom:72px}
+.event-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-panel);overflow:hidden;transition:border-color .25s var(--ease),transform .25s var(--ease)}
+.event-card:hover{border-color:var(--emerald);transform:translateY(-3px)}
+.event-date-chip{background:linear-gradient(135deg,var(--emerald),var(--sky));padding:16px 22px;display:flex;gap:14px;align-items:center}
+.edc-day{font-family:var(--font-mono);font-size:2rem;font-weight:700;color:#fff;line-height:1}
+.edc-month{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.75);margin-top:2px}
+.event-type-pill{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;background:rgba(255,255,255,.2);color:#fff;border-radius:var(--r-pill);padding:3px 10px;align-self:flex-start;margin-top:4px}
+.event-body{padding:22px}
+.event-body h3{font-size:.95rem;font-weight:600;margin-bottom:8px}
+.event-body p{font-size:.82rem;color:var(--text-2);line-height:1.65;margin-bottom:16px}
+.event-body .btn{width:100%;justify-content:center;font-size:.82rem;padding:10px}
+
+/* ── Member spotlights ────────────────────────────────── */
+.spotlights-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-bottom:72px}
+.spotlight-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-panel);padding:28px;transition:border-color .25s var(--ease)}
+.spotlight-card:hover{border-color:var(--sky)}
+.spot-header{display:flex;align-items:center;gap:14px;margin-bottom:20px}
+.spot-avatar{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-weight:700;font-size:1.05rem;flex-shrink:0}
+.spot-info h4{font-size:.95rem;font-weight:600;margin-bottom:2px}
+.spot-info p{font-size:.76rem;color:var(--text-2)}
+.spot-badge{display:inline-block;font-family:var(--font-mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;border-radius:var(--r-pill);padding:3px 10px;margin-top:6px}
+.spot-quote{font-size:.88rem;color:var(--text-2);line-height:1.72;margin-bottom:20px;font-style:italic;border-left:3px solid var(--emerald);padding-left:14px}
+.spot-stats{display:flex;gap:16px}
+.spot-stat{flex:1;text-align:center;background:var(--bg,#050507);border-radius:10px;padding:12px 8px}
+.spot-stat strong{display:block;font-family:var(--font-mono);font-size:.9rem;color:var(--emerald-bright);margin-bottom:3px}
+.spot-stat span{font-size:.7rem;color:var(--text-2)}
+
+/* ── Community pledge ─────────────────────────────────── */
+.pledge-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-bottom:72px}
+.pledge-item{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:24px 22px}
+.pledge-num{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.1em;color:var(--emerald);margin-bottom:12px}
+.pledge-item h4{font-size:.9rem;font-weight:600;margin-bottom:8px}
+.pledge-item p{font-size:.8rem;color:var(--text-2);line-height:1.65}
+
+/* ── Ambassador band ──────────────────────────────────── */
+.ambassador-band{background:linear-gradient(135deg,rgba(14,165,233,.07),rgba(16,185,129,.07));border:1px solid var(--border-2);border-radius:var(--r-panel);padding:52px 40px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-bottom:72px}
+@media(max-width:680px){.ambassador-band{grid-template-columns:1fr;gap:28px;padding:32px 24px}}
+.amb-label{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--sky);margin-bottom:14px}
+.ambassador-band h2{font-size:clamp(1.4rem,3vw,2rem);font-weight:700;margin-bottom:14px}
+.ambassador-band p{color:var(--text-2);font-size:.9rem;line-height:1.72;margin-bottom:20px}
+.amb-perks{display:flex;flex-direction:column;gap:10px}
+.amb-perk{display:flex;align-items:flex-start;gap:10px;font-size:.85rem;color:var(--text-2)}
+.amb-perk::before{content:'✦';color:var(--sky);flex-shrink:0;font-size:.7rem;margin-top:3px}
+.amb-visual{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-panel);padding:28px;text-align:center}
+.amb-badge-icon{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,var(--sky),var(--emerald));margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font-size:2rem;box-shadow:0 0 32px rgba(14,165,233,.3)}
+.amb-visual h4{font-size:1rem;font-weight:700;margin-bottom:6px}
+.amb-visual p{font-size:.8rem;color:var(--text-2);margin-bottom:18px}
+
+/* ── Join CTA ─────────────────────────────────────────── */
+.cm-join{background:var(--surface);border:1px solid var(--border-2);border-radius:var(--r-panel);padding:64px 40px;text-align:center;margin-bottom:80px}
+@media(max-width:640px){.cm-join{padding:40px 24px}}
+.cm-join h2{font-size:clamp(1.5rem,4vw,2.4rem);font-weight:700;margin-bottom:14px}
+.cm-join p{color:var(--text-2);font-size:.95rem;max-width:480px;margin:0 auto 32px;line-height:1.72}
+.join-social-proof{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:28px;flex-wrap:wrap}
+.join-avatars{display:flex}
+.join-av{width:30px;height:30px;border-radius:50%;border:2px solid var(--surface);font-size:.62rem;font-weight:700;display:flex;align-items:center;justify-content:center;margin-left:-8px}
+.join-av:first-child{margin-left:0}
+.join-social-proof p{font-size:.82rem;color:var(--text-2);margin:0}
+.join-social-proof strong{color:var(--emerald-bright)}
+</style>
+</head>
+<body>
+
+<!-- AMBIENT BACKGROUND -->
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<div class="fx fx-glow" aria-hidden="true"></div>
+<div class="fx fx-grid" aria-hidden="true"></div>
+<div class="fx fx-scan" aria-hidden="true"></div>
+<div class="fx fx-vignette" aria-hidden="true"></div>
+
+<!-- ICON SPRITE -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="bm-stroke" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#34D399"/><stop offset="1" stop-color="#0EA5E9"/>
+    </linearGradient>
+    <linearGradient id="bm-fill" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#34D399" stop-opacity=".18"/><stop offset="1" stop-color="#0EA5E9" stop-opacity=".10"/>
+    </linearGradient>
+  </defs>
+  <symbol id="ic-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="ic-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6 18 18M18 6 6 18"/></symbol>
+  <symbol id="ic-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></symbol>
+  <symbol id="ic-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+</svg>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="container nav">
+    <a href="index.html" class="brand" aria-label="deClusterize home">
+      <svg class="brand-mark-svg" width="36" height="36" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="url(#bm-fill)"/>
+        <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="none" stroke="url(#bm-stroke)" stroke-width="2"/>
+        <polyline points="14,25 21,32 34,17" stroke="url(#bm-stroke)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="38" cy="10" r="3" fill="#38BDF8" opacity=".9"/>
+      </svg>
+      <span class="brand-name">deClusterize</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="how-it-works.html">How It Works</a>
+      <a href="guides.html">Guides</a>
+      <a href="guides.html#checklists">Templates</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <svg class="ico"><use href="#ic-menu"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="how-it-works.html">How It Works</a>
+    <a href="guides.html">Guides</a>
+    <a href="guides.html#checklists">Templates</a>
+  </div>
+</header>
+
+<main>
+
+<!-- ══════════════════════════════════════════════════════
+     HERO
+     ══════════════════════════════════════════════════════ -->
+<section class="cm-hero">
+  <div class="container">
+    <p class="eyebrow reveal">The Clarity Community</p>
+    <div class="member-badge reveal">
+      <span class="pulse"></span>
+      <strong>50,247</strong> members organizing right now
+    </div>
+    <h1 class="reveal">You're not doing this<br><span class="text-teal">alone.</span></h1>
+    <p class="lead reveal">Join tens of thousands of people who've traded digital chaos for calm — sharing real wins, honest struggles, expert tips, and the accountability that makes habits actually stick.</p>
+    <div class="cm-hero-actions reveal">
+      <a href="#join" class="btn btn-primary">
+        Join for free
+        <svg class="ico" width="16" height="16"><use href="#ic-arrow"/></svg>
+      </a>
+      <a href="#discussions" class="btn btn-secondary">Browse discussions</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     STATS BAND
+     ══════════════════════════════════════════════════════ -->
+<section>
+  <div class="container">
+    <div class="cm-stats reveal">
+      <div class="cm-stat">
+        <div class="big">50K+</div>
+        <p>Active members worldwide</p>
+      </div>
+      <div class="cm-stat">
+        <div class="big">120+</div>
+        <p>Countries represented</p>
+      </div>
+      <div class="cm-stat">
+        <div class="big">2.4K</div>
+        <p>Discussions this month</p>
+      </div>
+      <div class="cm-stat">
+        <div class="big">4.9★</div>
+        <p>Member satisfaction score</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     FEATURED DISCUSSIONS
+     ══════════════════════════════════════════════════════ -->
+<section class="cm-section" id="discussions">
+  <div class="container">
+    <div class="section-divider reveal"><span>// trending this week</span></div>
+    <p class="cm-sub reveal">The conversations people are learning from most right now — join in or start your own.</p>
+
+    <div class="disc-grid reveal">
+
+      <div class="disc-card">
+        <div class="disc-top">
+          <span class="disc-category disc-cat-wins">🏆 Wins</span>
+          <span class="disc-hot">🔥 Hot</span>
+        </div>
+        <h3>Finally hit inbox zero after 3 years and 4,200 unread emails — here's exactly what I did</h3>
+        <p>I'd tried GTD, I'd tried folders, I'd tried the nuclear archive option. Nothing stuck until I used the 5-step reset guide. This is my full breakdown of the two-hour session that changed everything, with screenshots of my before and after.</p>
+        <div class="disc-footer">
+          <div class="disc-avatars">
+            <div class="disc-avatar" style="background:linear-gradient(135deg,#10B981,#34D399)">JM</div>
+            <div class="disc-avatar" style="background:linear-gradient(135deg,#0EA5E9,#38BDF8)">SR</div>
+            <div class="disc-avatar" style="background:linear-gradient(135deg,#F59E0B,#FCD34D)">AP</div>
+            <div class="disc-avatar" style="background:linear-gradient(135deg,#FB7185,#F97316)">KL</div>
+          </div>
+          <div class="disc-meta">
+            <span>💬 247</span>
+            <span>👍 1.2K</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="disc-card">
+        <div class="disc-top">
+          <span class="disc-category disc-cat-files">📁 Files</span>
+        </div>
+        <h3>The folder naming system I've used for 4 years without ever losing a file</h3>
+        <p>Simple, boring, and bulletproof. I use a three-level hierarchy with ISO date prefixes and I can find anything in under 10 seconds. Posting my full template so others can copy it — it works on Windows, Mac, and every cloud service.</p>
+        <div class="disc-footer">
+          <div class="disc-avatars">
+            <div class="disc-avatar" style="background:linear-gradient(135deg,#F59E0B,#FCD34D)">TD</div>
+            <div class="disc-avatar" style="background:linear-gradient(135deg,#10B981,#34D399)">MK</div>
+            <div class="disc-avatar" style="background:linear-gradient(135deg,#FB7185,#F97316)">NC</div>
+          </div>
+          <div class="disc-meta">
+            <span>💬 183</span>
+            <span>👍 876</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="disc-card">
+        <div class="disc-top">
+          <span class="disc-category disc-cat-tips">💡 Tips</span>
+          <span class="disc-hot">📊 Poll</span>
+        </div>
+        <h3>Which cloud storage combo are you using in 2025? (Results are surprising)</h3>
+        <p>We're a surprisingly split community: 34% Google Drive only, 28% Google Drive + iCloud, 19% Dropbox devotees, and 11% using OneDrive. The remaining 8% said "too many to count, send help." What's your setup and why does it work for you?</p>
+        <div class="disc-footer">
+          <div class="disc-avatars">
+            <div class="disc-avatar" style="background:linear-gradient(135deg,#0EA5E9,#38BDF8)">PW</div>
+            <div class="disc-avatar" style="background:linear-gradient(135deg,#10B981,#34D399)">RL</div>
+            <div class="disc-avatar" style="background:linear-gradient(135deg,#F59E0B,#FCD34D)">SH</div>
+            <div class="disc-avatar" style="background:linear-gradient(135deg,#FB7185,#F97316)">BT</div>
+            <div class="disc-avatar" style="background:linear-gradient(135deg,#10B981,#0EA5E9)">YO</div>
+          </div>
+          <div class="disc-meta">
+            <span>🗳️ 412</span>
+            <span>👍 534</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="disc-card">
+        <div class="disc-top">
+          <span class="disc-category disc-cat-email">📧 Email</span>
+        </div>
+        <h3>The one rule that keeps my inbox clean every single day (no, it's not "check less often")</h3>
+        <p>Everyone says "batch your email" but nobody talks about the structural change that makes batching actually work. I made one rule six months ago and I've maintained inbox zero since then — no willpower required, just a small system change.</p>
+        <div class="disc-footer">
+          <div class="disc-avatars">
+            <div class="disc-avatar" style="background:linear-gradient(135deg,#FB7185,#F97316)">CG</div>
+            <div class="disc-avatar" style="background:linear-gradient(135deg,#0EA5E9,#38BDF8)">DV</div>
+            <div class="disc-avatar" style="background:linear-gradient(135deg,#10B981,#34D399)">FM</div>
+          </div>
+          <div class="disc-meta">
+            <span>💬 158</span>
+            <span>👍 703</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ══════════════════════════════════════════════════
+         COMMUNITY SPACES
+         ══════════════════════════════════════════════════ -->
+    <div class="section-divider reveal"><span>// community spaces</span></div>
+    <p class="cm-sub reveal">Eight focused spaces to find exactly the conversations that matter to you. Every space is moderated and beginner-friendly.</p>
+
+    <div class="spaces-grid reveal">
+      <div class="space-card">
+        <div class="space-emoji">🌱</div>
+        <div class="space-info">
+          <h4>Getting Organized</h4>
+          <p>The perfect starting point. Ask any question, share your first win, get a buddy, and learn from people who were exactly where you are a few weeks ago.</p>
+          <span class="space-meta">14,320 members · 380 posts/week</span>
+        </div>
+      </div>
+      <div class="space-card">
+        <div class="space-emoji">📁</div>
+        <div class="space-info">
+          <h4>Files &amp; Folders</h4>
+          <p>Folder structures, file naming conventions, bulk operations, and duplicate hunting. Share your system, steal ideas from others, and keep it all findable.</p>
+          <span class="space-meta">9,840 members · 240 posts/week</span>
+        </div>
+      </div>
+      <div class="space-card">
+        <div class="space-emoji">📧</div>
+        <div class="space-info">
+          <h4>Email Mastery</h4>
+          <p>Inbox zero journeys, filter setups, unsubscribe strategies, and the psychology of why email feels so hard — and how to make it feel easy again.</p>
+          <span class="space-meta">11,200 members · 310 posts/week</span>
+        </div>
+      </div>
+      <div class="space-card">
+        <div class="space-emoji">📸</div>
+        <div class="space-info">
+          <h4>Photos &amp; Memories</h4>
+          <p>Taming the camera roll, building album systems, cross-platform photo libraries, and the emotional side of sorting through years of memories.</p>
+          <span class="space-meta">7,650 members · 190 posts/week</span>
+        </div>
+      </div>
+      <div class="space-card">
+        <div class="space-emoji">☁️</div>
+        <div class="space-info">
+          <h4>Cloud &amp; Devices</h4>
+          <p>Multi-cloud strategies, cross-device sync, storage limits, and the eternal question of which combination of services actually makes sense for your life.</p>
+          <span class="space-meta">8,400 members · 210 posts/week</span>
+        </div>
+      </div>
+      <div class="space-card">
+        <div class="space-emoji">🏆</div>
+        <div class="space-info">
+          <h4>Wins &amp; Milestones</h4>
+          <p>Pure celebrations only. Post your wins — big or small. Hit inbox zero? Organized a decade of photos? Found a file you thought was gone? We want to hear it.</p>
+          <span class="space-meta">16,800 members · 520 posts/week</span>
+        </div>
+      </div>
+      <div class="space-card">
+        <div class="space-emoji">💡</div>
+        <div class="space-info">
+          <h4>Tips &amp; Discoveries</h4>
+          <p>Automation scripts, app recommendations, keyboard shortcuts, and the small workflow tricks that save hours per month. No tip is too niche to share here.</p>
+          <span class="space-meta">10,100 members · 275 posts/week</span>
+        </div>
+      </div>
+      <div class="space-card">
+        <div class="space-emoji">🛠️</div>
+        <div class="space-info">
+          <h4>Feedback &amp; Ideas</h4>
+          <p>Shape the product. Vote on feature requests, report issues, share what's missing from your plan, and talk directly with the deClusterize team. We read everything.</p>
+          <span class="space-meta">6,200 members · 140 posts/week</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════
+         30-DAY CHALLENGE
+         ══════════════════════════════════════════════════ -->
+    <div class="section-divider reveal"><span>// active challenge</span></div>
+
+    <div class="challenge-banner reveal">
+      <p class="ch-label">// June 2025 Challenge — Day 14 of 30</p>
+      <h2>30-Day Digital Declutter Challenge</h2>
+      <p>One small task per day. A completely transformed digital life by the end of the month. Our most popular recurring challenge runs every quarter and is completely free to join — all you need is a deClusterize account and 15 minutes a day. Past participants report an average of 23GB freed, 1,800 emails archived, and 6,400 files organized across 30 days.</p>
+      <div class="ch-progress-row">
+        <div class="ch-progress-bar"><div class="ch-progress-fill"></div></div>
+        <span class="ch-progress-label">47% complete — Day 14</span>
+      </div>
+      <div style="display:flex;gap:20px;flex-wrap:wrap;align-items:center">
+        <div class="ch-participants">
+          <div class="ch-avatars">
+            <div class="ch-av" style="background:linear-gradient(135deg,#10B981,#34D399)">SR</div>
+            <div class="ch-av" style="background:linear-gradient(135deg,#0EA5E9,#38BDF8)">JM</div>
+            <div class="ch-av" style="background:linear-gradient(135deg,#F59E0B,#FCD34D)">AP</div>
+            <div class="ch-av" style="background:linear-gradient(135deg,#FB7185,#F97316)">KL</div>
+            <div class="ch-av" style="background:linear-gradient(135deg,#10B981,#0EA5E9)">+</div>
+          </div>
+          <span class="ch-count"><strong>3,847</strong> people in this challenge</span>
+        </div>
+        <a href="#join" class="btn btn-primary">Join the challenge — it's free</a>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════
+         UPCOMING EVENTS
+         ══════════════════════════════════════════════════ -->
+    <div class="section-divider reveal"><span>// upcoming events</span></div>
+    <p class="cm-sub reveal">Free live sessions hosted by the deClusterize team and community experts. All events are recorded for members who can't attend live.</p>
+
+    <div class="events-grid reveal">
+
+      <div class="event-card">
+        <div class="event-date-chip">
+          <div>
+            <div class="edc-day">19</div>
+            <div class="edc-month">Jun 2025</div>
+          </div>
+          <span class="event-type-pill">Live Q&amp;A</span>
+        </div>
+        <div class="event-body">
+          <h3>Monthly Ask Me Anything — The deClusterize Team</h3>
+          <p>Bring your hardest organizing questions, integration issues, and feature requests directly to the team. No agenda, no slides — just honest answers in real time. Last session hit 1,200 live attendees.</p>
+          <a href="#join" class="btn btn-secondary" style="display:flex">RSVP — Free</a>
+        </div>
+      </div>
+
+      <div class="event-card">
+        <div class="event-date-chip" style="background:linear-gradient(135deg,#0EA5E9,#38BDF8)">
+          <div>
+            <div class="edc-day">24</div>
+            <div class="edc-month">Jun 2025</div>
+          </div>
+          <span class="event-type-pill">Workshop</span>
+        </div>
+        <div class="event-body">
+          <h3>Inbox Zero in One Session — Live Workshop</h3>
+          <p>Community expert Maya P. walks through the complete 5-step inbox reset in real time with her own inbox. Attend live to get your questions answered, or watch the recording at your own pace afterward.</p>
+          <a href="#join" class="btn btn-secondary" style="display:flex">RSVP — Free</a>
+        </div>
+      </div>
+
+      <div class="event-card">
+        <div class="event-date-chip" style="background:linear-gradient(135deg,#F59E0B,#FCD34D)">
+          <div>
+            <div class="edc-day">01</div>
+            <div class="edc-month">Jul 2025</div>
+          </div>
+          <span class="event-type-pill">Showcase</span>
+        </div>
+        <div class="event-body">
+          <h3>Community Showcase: Share Your Setup</h3>
+          <p>Our quarterly show-and-tell where members share their folder systems, email workflows, and photo libraries. Get inspired, give feedback, and vote for your favourite community setup of the quarter.</p>
+          <a href="#join" class="btn btn-secondary" style="display:flex">RSVP — Free</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ══════════════════════════════════════════════════
+         MEMBER SPOTLIGHTS
+         ══════════════════════════════════════════════════ -->
+    <div class="section-divider reveal"><span>// member spotlights</span></div>
+    <p class="cm-sub reveal">Real stories from real people in the Clarity Community. No polished PR — just honest accounts of what changed and why it mattered.</p>
+
+    <div class="spotlights-grid reveal">
+
+      <div class="spotlight-card">
+        <div class="spot-header">
+          <div class="spot-avatar" style="background:linear-gradient(135deg,#10B981,#34D399);color:#fff">SM</div>
+          <div class="spot-info">
+            <h4>Sarah M.</h4>
+            <p>Freelance designer, Bristol UK</p>
+            <span class="spot-badge" style="background:rgba(16,185,129,.12);color:var(--emerald)">📁 Files Champion</span>
+          </div>
+        </div>
+        <p class="spot-quote">"I had 50GB of project files with names like 'final_FINAL_v3_USE THIS ONE.psd'. Two weeks of 15-minute sessions and I can now find any asset in 8 seconds. It sounds small but it changed how I feel about my work every single day."</p>
+        <div class="spot-stats">
+          <div class="spot-stat"><strong>50 GB</strong><span>Organized</span></div>
+          <div class="spot-stat"><strong>14 days</strong><span>To complete</span></div>
+          <div class="spot-stat"><strong>4,200</strong><span>Files renamed</span></div>
+        </div>
+      </div>
+
+      <div class="spotlight-card">
+        <div class="spot-header">
+          <div class="spot-avatar" style="background:linear-gradient(135deg,#0EA5E9,#38BDF8);color:#fff">JK</div>
+          <div class="spot-info">
+            <h4>James K.</h4>
+            <p>Product manager, Toronto CA</p>
+            <span class="spot-badge" style="background:rgba(14,165,233,.12);color:var(--sky)">📧 Email Legend</span>
+          </div>
+        </div>
+        <p class="spot-quote">"I had 8,400 unread emails across two accounts and genuine anxiety opening my inbox every morning. The community kept me accountable through the 30-day challenge and I've been at inbox zero for four months straight. I didn't think that was actually possible for me."</p>
+        <div class="spot-stats">
+          <div class="spot-stat"><strong>8,400</strong><span>Emails cleared</span></div>
+          <div class="spot-stat"><strong>4 months</strong><span>Inbox zero streak</span></div>
+          <div class="spot-stat"><strong>0</strong><span>Anxiety level</span></div>
+        </div>
+      </div>
+
+      <div class="spotlight-card">
+        <div class="spot-header">
+          <div class="spot-avatar" style="background:linear-gradient(135deg,#F59E0B,#FCD34D);color:#fff">PS</div>
+          <div class="spot-info">
+            <h4>Priya S.</h4>
+            <p>Teacher &amp; mum of three, Sydney AU</p>
+            <span class="spot-badge" style="background:rgba(245,158,11,.12);color:var(--amber)">📸 Photo Hero</span>
+          </div>
+        </div>
+        <p class="spot-quote">"Twelve years of family photos were scattered across three phones, two laptops, and a hard drive I wasn't sure still worked. The community helped me build a system — and find photos I genuinely thought were gone forever. My daughter's first steps were in there."</p>
+        <div class="spot-stats">
+          <div class="spot-stat"><strong>12 yrs</strong><span>Photos sorted</span></div>
+          <div class="spot-stat"><strong>23 GB</strong><span>Duplicates removed</span></div>
+          <div class="spot-stat"><strong>1,800</strong><span>Memories recovered</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ══════════════════════════════════════════════════
+         COMMUNITY PLEDGE
+         ══════════════════════════════════════════════════ -->
+    <div class="section-divider reveal"><span>// how we treat each other</span></div>
+    <p class="cm-sub reveal">Four principles that make the Clarity Community a place people actually want to come back to.</p>
+
+    <div class="pledge-grid reveal">
+      <div class="pledge-item">
+        <p class="pledge-num">// 01</p>
+        <h4>Beginner questions are the best questions</h4>
+        <p>There are no stupid questions in the Clarity Community. Every expert here was once a beginner with a folder called "stuff". We celebrate curious newcomers and answer every question with patience and respect.</p>
+      </div>
+      <div class="pledge-item">
+        <p class="pledge-num">// 02</p>
+        <h4>Share what actually works, not what sounds impressive</h4>
+        <p>We prefer honest "here's what worked for me" over polished productivity flex. Real systems, real struggles, real progress — that's what helps people. Leave the performative productivity at the door.</p>
+      </div>
+      <div class="pledge-item">
+        <p class="pledge-num">// 03</p>
+        <h4>Lift people up, never put them down</h4>
+        <p>Digital disorganization is often tied to stress, grief, ADHD, or just a really busy life. We meet people where they are with empathy, encouragement, and zero judgment. This is a safe space to be honest about your mess.</p>
+      </div>
+      <div class="pledge-item">
+        <p class="pledge-num">// 04</p>
+        <h4>Celebrate every win, no matter how small</h4>
+        <p>Deleted one duplicate file? That counts. Archived 10 emails? That counts. Created your first proper folder? Absolutely counts. Progress is progress, and we celebrate all of it — loudly and sincerely.</p>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════
+         AMBASSADOR / CHAMPION PROGRAM
+         ══════════════════════════════════════════════════ -->
+    <div class="section-divider reveal"><span>// community champions</span></div>
+
+    <div class="ambassador-band reveal">
+      <div>
+        <p class="amb-label">// Champion Program</p>
+        <h2>Become a Clarity Champion</h2>
+        <p>Champions are our most engaged community members — people who share knowledge generously, welcome newcomers, and help shape the direction of deClusterize. It's a recognition program, not a job: no quotas, no pressure, just a closer seat at the table.</p>
+        <div class="amb-perks">
+          <div class="amb-perk">Early access to new features and beta releases before public launch</div>
+          <div class="amb-perk">Exclusive Champions-only forum channel with direct line to the product team</div>
+          <div class="amb-perk">Your name and story featured in Community Spotlights and the monthly newsletter</div>
+          <div class="amb-perk">Private quarterly video call with the founders to discuss roadmap priorities</div>
+          <div class="amb-perk">Official Champion badge on your profile and a thank-you gift from us</div>
+        </div>
+        <div style="margin-top:28px">
+          <a href="mailto:info@declusterize.com?subject=Champion Program Application" class="btn btn-primary">
+            Apply to become a Champion
+            <svg class="ico" width="16" height="16"><use href="#ic-arrow"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="amb-visual">
+        <div class="amb-badge-icon">🏅</div>
+        <h4>Clarity Champion</h4>
+        <p>Trusted voice. Community leader. Early insider.</p>
+        <div style="display:flex;flex-direction:column;gap:8px;text-align:left">
+          <div style="display:flex;align-items:center;gap:8px;font-size:.8rem;color:var(--text-2)">
+            <svg class="ico" width="14" height="14" style="color:var(--emerald)"><use href="#ic-check"/></svg>
+            Beta access
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:.8rem;color:var(--text-2)">
+            <svg class="ico" width="14" height="14" style="color:var(--emerald)"><use href="#ic-check"/></svg>
+            Champion badge
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:.8rem;color:var(--text-2)">
+            <svg class="ico" width="14" height="14" style="color:var(--emerald)"><use href="#ic-check"/></svg>
+            Private channel
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:.8rem;color:var(--text-2)">
+            <svg class="ico" width="14" height="14" style="color:var(--emerald)"><use href="#ic-check"/></svg>
+            Founder calls
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:.8rem;color:var(--text-2)">
+            <svg class="ico" width="14" height="14" style="color:var(--emerald)"><use href="#ic-check"/></svg>
+            Thank-you gift
+          </div>
+        </div>
+        <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--border);font-family:var(--font-mono);font-size:.7rem;color:var(--emerald);letter-spacing:.06em">
+          32 Champions worldwide
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════
+         JOIN CTA
+         ══════════════════════════════════════════════════ -->
+    <div class="cm-join reveal" id="join">
+      <h2>Your people are already here.<br><span class="text-teal">Come find them.</span></h2>
+      <p>It's free, it's welcoming, and the conversations inside will change how you think about your digital life. Create your free deClusterize account and you're in — no separate signup needed.</p>
+      <a href="index.html#cta" class="btn btn-primary" style="font-size:.95rem;padding:14px 32px">
+        Create your free account
+        <svg class="ico" width="16" height="16"><use href="#ic-arrow"/></svg>
+      </a>
+      <div class="join-social-proof">
+        <div class="join-avatars">
+          <div class="join-av" style="background:linear-gradient(135deg,#10B981,#34D399);color:#fff">JM</div>
+          <div class="join-av" style="background:linear-gradient(135deg,#0EA5E9,#38BDF8);color:#fff">SR</div>
+          <div class="join-av" style="background:linear-gradient(135deg,#F59E0B,#FCD34D);color:#fff">AP</div>
+          <div class="join-av" style="background:linear-gradient(135deg,#FB7185,#F97316);color:#fff">KL</div>
+          <div class="join-av" style="background:linear-gradient(135deg,#10B981,#0EA5E9);color:#fff">PS</div>
+        </div>
+        <p>Joined by <strong>50,247 members</strong> across 120+ countries</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand" aria-label="deClusterize home">
+          <svg class="brand-mark-svg" width="36" height="36" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="url(#bm-fill)"/>
+            <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="none" stroke="url(#bm-stroke)" stroke-width="2"/>
+            <polyline points="14,25 21,32 34,17" stroke="url(#bm-stroke)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="38" cy="10" r="3" fill="#38BDF8" opacity=".9"/>
+          </svg>
+          <span class="brand-name">deClusterize</span>
+        </a>
+        <p>Small tasks. Better systems. A clearer digital life.</p>
+      </div>
+      <nav class="footer-col" aria-label="Product">
+        <h4>Product</h4>
+        <ul><li><a href="how-it-works.html">How It Works</a></li><li><a href="guides.html">Guides</a></li><li><a href="guides.html#checklists">Templates</a></li></ul>
+      </nav>
+      <nav class="footer-col" aria-label="Resources">
+        <h4>Resources</h4>
+        <ul><li><a href="#">Blog</a></li><li><a href="help.html">Help Center</a></li><li><a href="community.html">Community</a></li></ul>
+      </nav>
+      <nav class="footer-col" aria-label="Company">
+        <h4>Company</h4>
+        <ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">© 2026 deClusterize. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="forms.js"></script>
+</body>
+</html>

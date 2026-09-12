@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "declusterize",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "-p", "3030", "."],
+      "port": 3030
+    }
+  ]
+}

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About — deClusterize</title>
+<meta name="description" content="Learn about deClusterize's mission to help people reclaim calm from digital chaos — one 15-minute task at a time." />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://declusterize.com/about.html" />
+<meta property="og:title" content="About — deClusterize" />
+<meta property="og:description" content="Learn about deClusterize's mission to help people reclaim calm from digital chaos — one 15-minute task at a time." />
+<meta property="og:image" content="https://declusterize.com/og-image.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://declusterize.com/og-image.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+/* ── Inner-page layout ─────────────────────────────────────── */
+.page-hero{padding:120px 0 72px;text-align:center}
+.page-hero .eyebrow{font-family:var(--font-mono);font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--emerald);margin-bottom:20px}
+.page-hero h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:700;line-height:1.15;margin-bottom:20px}
+.page-hero .lead{max-width:600px;margin:0 auto;color:var(--text-2);font-size:1.05rem;line-height:1.7}
+
+.page-body{padding-bottom:100px}
+
+/* values grid */
+.values-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin:56px 0}
+.val-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-panel);padding:32px 28px;transition:border-color .25s var(--ease),transform .25s var(--ease)}
+.val-card:hover{border-color:var(--emerald);transform:translateY(-3px)}
+.val-icon{width:44px;height:44px;border-radius:12px;background:rgba(16,185,129,.12);display:flex;align-items:center;justify-content:center;margin-bottom:20px;color:var(--emerald)}
+.val-card h3{font-size:1rem;font-weight:600;margin-bottom:10px}
+.val-card p{font-size:.88rem;color:var(--text-2);line-height:1.65}
+
+/* story section */
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin:72px 0}
+@media(max-width:700px){.story-grid{grid-template-columns:1fr;gap:40px}}
+.story-content h2{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:700;margin-bottom:20px}
+.story-content p{color:var(--text-2);line-height:1.75;margin-bottom:16px;font-size:.95rem}
+.story-content p:last-child{margin-bottom:0}
+
+/* bento panel */
+.bento-stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:72px 0}
+@media(max-width:600px){.bento-stat-row{grid-template-columns:1fr}}
+.bento-stat{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-panel);padding:32px 24px;text-align:center}
+.bento-stat .big-num{font-family:var(--font-mono);font-size:2.4rem;font-weight:700;background:linear-gradient(135deg,var(--emerald-bright),var(--sky-bright));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1}
+.bento-stat p{font-size:.82rem;color:var(--text-2);margin-top:10px;letter-spacing:.02em}
+
+/* team strip */
+.team-section{margin:72px 0}
+.team-section h2{font-size:1.5rem;font-weight:700;margin-bottom:40px;text-align:center}
+.team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
+.team-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-panel);padding:28px 24px;text-align:center;transition:border-color .25s var(--ease)}
+.team-card:hover{border-color:var(--sky)}
+.team-avatar{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--emerald),var(--sky));margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-weight:700;font-size:1.2rem;color:#fff}
+.team-card h4{font-size:.95rem;font-weight:600;margin-bottom:4px}
+.team-card p{font-size:.8rem;color:var(--text-2)}
+.team-card .role{font-family:var(--font-mono);font-size:.7rem;color:var(--emerald);letter-spacing:.08em;margin-top:6px}
+
+</style>
+</head>
+<body>
+
+<!-- AMBIENT BACKGROUND -->
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<div class="fx fx-glow" aria-hidden="true"></div>
+<div class="fx fx-grid" aria-hidden="true"></div>
+<div class="fx fx-scan" aria-hidden="true"></div>
+<div class="fx fx-vignette" aria-hidden="true"></div>
+
+<!-- ICON SPRITE -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="sparkStroke" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#10B981"/><stop offset="1" stop-color="#38BDF8"/>
+    </linearGradient>
+  </defs>
+  <symbol id="ic-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="ic-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6 18 18M18 6 6 18"/></symbol>
+  <symbol id="ic-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v5c0 4.5 3 7.5 7 9 4-1.5 7-4.5 7-9V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="ic-sparkle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c.4 4 1.8 5.6 5.5 6-3.7.4-5.1 2-5.5 6-.4-4-1.8-5.6-5.5-6 3.7-.4 5.1-2 5.5-6Z" fill="currentColor" fill-opacity=".15"/></symbol>
+  <symbol id="ic-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></symbol>
+  <symbol id="ic-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+  <symbol id="ic-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V4M4 20h16"/><path d="m7.5 15 3-3.5 3 2 4-5.5"/></symbol>
+  <symbol id="ic-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></symbol>
+</svg>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="container nav">
+    <a href="index.html" class="brand" aria-label="deClusterize home">
+      <svg class="brand-mark-svg" width="36" height="36" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="bm-stroke" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#34D399"/><stop offset="1" stop-color="#0EA5E9"/>
+          </linearGradient>
+          <linearGradient id="bm-fill" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#34D399" stop-opacity=".18"/><stop offset="1" stop-color="#0EA5E9" stop-opacity=".10"/>
+          </linearGradient>
+        </defs>
+        <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="url(#bm-fill)"/>
+        <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="none" stroke="url(#bm-stroke)" stroke-width="2"/>
+        <polyline points="14,25 21,32 34,17" stroke="url(#bm-stroke)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="38" cy="10" r="3" fill="#38BDF8" opacity=".9"/>
+      </svg>
+      <span class="brand-name">deClusterize</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="how-it-works.html">How It Works</a>
+      <a href="guides.html">Guides</a>
+      <a href="guides.html#checklists">Templates</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <svg class="ico"><use href="#ic-menu"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="how-it-works.html">How It Works</a>
+    <a href="guides.html">Guides</a>
+    <a href="guides.html#checklists">Templates</a>
+  </div>
+</header>
+
+<main>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow reveal">About deClusterize</p>
+    <h1 class="reveal">Built for the quietly<br><span class="text-teal">overwhelmed.</span></h1>
+    <p class="lead reveal">We started deClusterize because the problem wasn't a lack of tools — it was too many of them. We build calm, focused systems that cut through the noise so you can get back to living.</p>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="page-body">
+  <div class="container">
+
+    <div class="story-grid reveal">
+      <div class="story-content">
+        <h2>The problem we set out to solve</h2>
+        <p>The average person manages 3.2 devices, 2 cloud storage accounts, and 4,700 unread emails. Every new tool that promises to help adds another thing to maintain. Complexity compounds. Clarity vanishes.</p>
+        <p>deClusterize was founded on a single observation: people don't need another app — they need a guide. A system that meets them where they are, identifies what actually matters, and moves them forward in 15-minute sessions.</p>
+        <p>No dashboards to dread. No 40-step setups. Just progress, every day.</p>
+      </div>
+      <div>
+        <!-- Telemetry panel -->
+        <div class="card" style="padding:32px">
+          <p class="card-label" style="font-family:var(--font-mono);font-size:.7rem;letter-spacing:.1em;color:var(--emerald);text-transform:uppercase;margin-bottom:20px">// system telemetry</p>
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:.8rem;margin-bottom:6px"><span style="color:var(--text-2)">Digital clarity rate</span><span style="font-family:var(--font-mono);color:var(--emerald)">94%</span></div>
+              <div style="height:4px;background:var(--border);border-radius:99px"><div style="width:94%;height:100%;background:linear-gradient(90deg,var(--emerald),var(--sky));border-radius:99px"></div></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:.8rem;margin-bottom:6px"><span style="color:var(--text-2)">Task completion rate</span><span style="font-family:var(--font-mono);color:var(--sky-bright)">87%</span></div>
+              <div style="height:4px;background:var(--border);border-radius:99px"><div style="width:87%;height:100%;background:linear-gradient(90deg,var(--sky),var(--sky-bright));border-radius:99px"></div></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:.8rem;margin-bottom:6px"><span style="color:var(--text-2)">User satisfaction</span><span style="font-family:var(--font-mono);color:var(--emerald-bright)">4.9 / 5</span></div>
+              <div style="height:4px;background:var(--border);border-radius:99px"><div style="width:98%;height:100%;background:linear-gradient(90deg,var(--emerald-bright),var(--emerald));border-radius:99px"></div></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:.8rem;margin-bottom:6px"><span style="color:var(--text-2)">Files recovered / organized</span><span style="font-family:var(--font-mono);color:var(--amber)">2.1M+</span></div>
+              <div style="height:4px;background:var(--border);border-radius:99px"><div style="width:78%;height:100%;background:linear-gradient(90deg,var(--amber),#fbbf24);border-radius:99px"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STATS ROW -->
+    <div class="bento-stat-row reveal">
+      <div class="bento-stat">
+        <div class="big-num">50K+</div>
+        <p>People organized so far</p>
+      </div>
+      <div class="bento-stat">
+        <div class="big-num">15 min</div>
+        <p>Average session length</p>
+      </div>
+      <div class="bento-stat">
+        <div class="big-num">2.1M</div>
+        <p>Files organized or recovered</p>
+      </div>
+    </div>
+
+    <!-- VALUES -->
+    <p class="section-tag reveal" style="text-align:center">What we stand for</p>
+    <h2 class="section-title reveal" style="text-align:center">Our core values</h2>
+    <div class="values-grid reveal">
+      <div class="val-card">
+        <div class="val-icon"><svg class="ico" width="22" height="22"><use href="#ic-clock"/></svg></div>
+        <h3>Respect for your time</h3>
+        <p>Every feature we ship must earn its place by saving you more time than it takes to learn. If it doesn't, it doesn't ship.</p>
+      </div>
+      <div class="val-card">
+        <div class="val-icon" style="background:rgba(14,165,233,.12);color:var(--sky)"><svg class="ico" width="22" height="22"><use href="#ic-shield"/></svg></div>
+        <h3>Privacy by default</h3>
+        <p>Your data is yours. We don't sell it, we don't train on it without consent, and we store only what's needed to deliver the plan.</p>
+      </div>
+      <div class="val-card">
+        <div class="val-icon" style="background:rgba(245,158,11,.12);color:var(--amber)"><svg class="ico" width="22" height="22"><use href="#ic-target"/></svg></div>
+        <h3>Radical simplicity</h3>
+        <p>Complexity is the enemy of action. We obsessively strip away everything that isn't essential until what's left is obvious.</p>
+      </div>
+      <div class="val-card">
+        <div class="val-icon" style="background:rgba(251,113,133,.12);color:var(--rose)"><svg class="ico" width="22" height="22"><use href="#ic-chart"/></svg></div>
+        <h3>Progress over perfection</h3>
+        <p>An imperfect system you actually use beats a perfect one you don't. We meet you where you are and move forward from there.</p>
+      </div>
+    </div>
+
+    <!-- TEAM -->
+    <div class="team-section reveal">
+      <h2>The team behind it</h2>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-avatar">SA</div>
+          <h4>Sara A.</h4>
+          <p>Co-founder & CEO</p>
+          <p class="role">// product &amp; vision</p>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar" style="background:linear-gradient(135deg,var(--sky),var(--sky-bright))">JK</div>
+          <h4>James K.</h4>
+          <p>Co-founder & CTO</p>
+          <p class="role">// systems &amp; infra</p>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar" style="background:linear-gradient(135deg,var(--amber),#fbbf24)">MP</div>
+          <h4>Maya P.</h4>
+          <p>Head of Design</p>
+          <p class="role">// ux &amp; clarity</p>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar" style="background:linear-gradient(135deg,var(--rose),#fb923c)">RT</div>
+          <h4>Raj T.</h4>
+          <p>Lead Engineer</p>
+          <p class="role">// core &amp; integrations</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand" aria-label="deClusterize home">
+          <svg class="brand-mark-svg" width="36" height="36" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="url(#bm-fill)"/>
+            <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="none" stroke="url(#bm-stroke)" stroke-width="2"/>
+            <polyline points="14,25 21,32 34,17" stroke="url(#bm-stroke)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="38" cy="10" r="3" fill="#38BDF8" opacity=".9"/>
+          </svg>
+          <span class="brand-name">deClusterize</span>
+        </a>
+        <p>Small tasks. Better systems. A clearer digital life.</p>
+      </div>
+      <nav class="footer-col" aria-label="Product">
+        <h4>Product</h4>
+        <ul><li><a href="how-it-works.html">How It Works</a></li><li><a href="guides.html">Guides</a></li><li><a href="guides.html#checklists">Templates</a></li></ul>
+      </nav>
+      <nav class="footer-col" aria-label="Resources">
+        <h4>Resources</h4>
+        <ul><li><a href="#">Blog</a></li><li><a href="help.html">Help Center</a></li><li><a href="community.html">Community</a></li></ul>
+      </nav>
+      <nav class="footer-col" aria-label="Company">
+        <h4>Company</h4>
+        <ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">© 2026 deClusterize. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="forms.js"></script>
+</body>
+</html>

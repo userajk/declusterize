@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Privacy Policy — deClusterize</title>
+<meta name="description" content="deClusterize Privacy Policy — how we collect, use, and protect your data." />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://declusterize.com/privacy.html" />
+<meta property="og:title" content="Privacy Policy — deClusterize" />
+<meta property="og:description" content="deClusterize Privacy Policy — how we collect, use, and protect your data." />
+<meta property="og:image" content="https://declusterize.com/og-image.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://declusterize.com/og-image.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+/* ── Inner page ─────────────────────────────────── */
+.page-hero{padding:120px 0 56px;text-align:center}
+.page-hero .eyebrow{font-family:var(--font-mono);font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sky);margin-bottom:20px}
+.page-hero h1{font-size:clamp(2rem,5vw,3rem);font-weight:700;line-height:1.15;margin-bottom:20px}
+.page-hero .lead{max-width:580px;margin:0 auto;color:var(--text-2);font-size:.95rem;line-height:1.7}
+.last-updated{font-family:var(--font-mono);font-size:.72rem;color:var(--text-3,#52525B);margin-top:16px;letter-spacing:.06em}
+
+/* doc layout */
+.doc-body{padding-bottom:100px}
+.doc-grid{display:grid;grid-template-columns:220px 1fr;gap:48px;align-items:start}
+@media(max-width:800px){.doc-grid{grid-template-columns:1fr}}
+
+/* sticky sidebar toc */
+.doc-toc{position:sticky;top:100px}
+.doc-toc h5{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-2);margin-bottom:14px}
+.doc-toc ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:2px}
+.doc-toc li a{display:block;font-size:.82rem;color:var(--text-2);padding:6px 10px;border-radius:6px;border-left:2px solid transparent;text-decoration:none;transition:color .2s,border-color .2s,background .2s}
+.doc-toc li a:hover,.doc-toc li a.active{color:var(--sky);border-left-color:var(--sky);background:rgba(14,165,233,.07)}
+@media(max-width:800px){.doc-toc{display:none}}
+
+/* content */
+.doc-content{min-width:0}
+.doc-section{margin-bottom:52px;scroll-margin-top:90px}
+.doc-section h2{font-size:1.2rem;font-weight:700;color:var(--text-1,#fff);margin-bottom:18px;padding-bottom:12px;border-bottom:1px solid var(--border)}
+.doc-section p{color:var(--text-2);font-size:.9rem;line-height:1.8;margin-bottom:14px}
+.doc-section p:last-child{margin-bottom:0}
+.doc-section ul,.doc-section ol{color:var(--text-2);font-size:.9rem;line-height:1.8;padding-left:20px;margin-bottom:14px;display:flex;flex-direction:column;gap:6px}
+.doc-section li::marker{color:var(--sky)}
+.doc-section strong{color:var(--text-1,#f0f0f0);font-weight:600}
+
+/* highlight box */
+.doc-callout{background:rgba(14,165,233,.07);border:1px solid rgba(14,165,233,.2);border-radius:12px;padding:20px 22px;margin:20px 0}
+.doc-callout p{margin:0;font-size:.87rem}
+
+.doc-tag{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--sky);margin-bottom:8px;display:block}
+</style>
+</head>
+<body>
+
+<!-- AMBIENT BACKGROUND -->
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<div class="fx fx-glow" aria-hidden="true"></div>
+<div class="fx fx-grid" aria-hidden="true"></div>
+<div class="fx fx-scan" aria-hidden="true"></div>
+<div class="fx fx-vignette" aria-hidden="true"></div>
+
+<!-- ICON SPRITE (minimal) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="bm-stroke" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#34D399"/><stop offset="1" stop-color="#0EA5E9"/>
+    </linearGradient>
+    <linearGradient id="bm-fill" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#34D399" stop-opacity=".18"/><stop offset="1" stop-color="#0EA5E9" stop-opacity=".10"/>
+    </linearGradient>
+  </defs>
+  <symbol id="ic-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="ic-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6 18 18M18 6 6 18"/></symbol>
+</svg>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="container nav">
+    <a href="index.html" class="brand" aria-label="deClusterize home">
+      <svg class="brand-mark-svg" width="36" height="36" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="url(#bm-fill)"/>
+        <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="none" stroke="url(#bm-stroke)" stroke-width="2"/>
+        <polyline points="14,25 21,32 34,17" stroke="url(#bm-stroke)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="38" cy="10" r="3" fill="#38BDF8" opacity=".9"/>
+      </svg>
+      <span class="brand-name">deClusterize</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="how-it-works.html">How It Works</a>
+      <a href="guides.html">Guides</a>
+      <a href="guides.html#checklists">Templates</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <svg class="ico"><use href="#ic-menu"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="how-it-works.html">How It Works</a>
+    <a href="guides.html">Guides</a>
+    <a href="guides.html#checklists">Templates</a>
+  </div>
+</header>
+
+<main>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow reveal">Legal</p>
+    <h1 class="reveal">Privacy <span class="text-teal">Policy</span></h1>
+    <p class="lead reveal">We take your privacy seriously. This policy explains exactly what data we collect, why we collect it, and what rights you have over it.</p>
+    <p class="last-updated reveal">Last updated: 1 June 2025 &nbsp;·&nbsp; Effective: 1 June 2025</p>
+  </div>
+</section>
+
+<!-- DOCUMENT BODY -->
+<section class="doc-body">
+  <div class="container">
+    <div class="doc-grid">
+
+      <!-- SIDEBAR TOC -->
+      <aside class="doc-toc" aria-label="Table of contents">
+        <h5>Contents</h5>
+        <ul>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#what-we-collect">What We Collect</a></li>
+          <li><a href="#how-we-use">How We Use It</a></li>
+          <li><a href="#sharing">Data Sharing</a></li>
+          <li><a href="#retention">Data Retention</a></li>
+          <li><a href="#security">Security</a></li>
+          <li><a href="#cookies">Cookies</a></li>
+          <li><a href="#your-rights">Your Rights</a></li>
+          <li><a href="#children">Children</a></li>
+          <li><a href="#changes">Policy Changes</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <div class="doc-content">
+
+        <div class="doc-section reveal" id="overview">
+          <span class="doc-tag">// 01 — overview</span>
+          <h2>Overview</h2>
+          <p>deClusterize ("we", "us", "our") operates the deClusterize platform, which helps individuals organize their files, photos, email, devices, and cloud storage. This Privacy Policy describes how we handle personal information in connection with our website and services.</p>
+          <div class="doc-callout">
+            <p><strong>Plain-language summary:</strong> We collect the minimum data necessary to run the service. We do not sell your data. We do not train AI models on your personal content without explicit consent. You can request deletion of your data at any time.</p>
+          </div>
+        </div>
+
+        <div class="doc-section reveal" id="what-we-collect">
+          <span class="doc-tag">// 02 — data collection</span>
+          <h2>What We Collect</h2>
+          <p>We collect information in three ways: information you give us directly, information collected automatically, and information from third-party integrations you authorize.</p>
+          <p><strong>Information you provide:</strong></p>
+          <ul>
+            <li>Account details — name, email address, and password hash</li>
+            <li>Profile preferences — your organizing goals, focus areas (files, email, photos, etc.), and session cadence</li>
+            <li>Communications — support messages, survey responses, and feedback you send us</li>
+            <li>Payment information — processed by our payment provider (Stripe); we store only the last-four digits of your card and billing address</li>
+          </ul>
+          <p><strong>Information collected automatically:</strong></p>
+          <ul>
+            <li>Usage data — pages visited, features used, session duration, task completion events</li>
+            <li>Device data — browser type, OS, screen resolution, time zone, and language preference</li>
+            <li>Log data — IP address, access timestamps, HTTP referrer, and error logs</li>
+            <li>Cookies and similar tracking technologies (see the Cookies section below)</li>
+          </ul>
+          <p><strong>Information from integrations you authorize:</strong></p>
+          <ul>
+            <li>Cloud storage metadata (file names, sizes, dates — not file contents unless you explicitly request a scan)</li>
+            <li>Email header data (sender, subject, date — not message body) for inbox analysis features</li>
+          </ul>
+        </div>
+
+        <div class="doc-section reveal" id="how-we-use">
+          <span class="doc-tag">// 03 — use of data</span>
+          <h2>How We Use It</h2>
+          <p>We use personal information only for the following purposes:</p>
+          <ul>
+            <li><strong>Service delivery</strong> — to create and maintain your account, personalize your organizing plan, and track progress</li>
+            <li><strong>Communications</strong> — to send transactional emails (password resets, receipts), weekly progress digests (opt-out any time), and service announcements</li>
+            <li><strong>Product improvement</strong> — aggregated, anonymized usage analytics to understand which features work best and fix bugs</li>
+            <li><strong>Security</strong> — to detect and prevent fraud, abuse, and unauthorized access</li>
+            <li><strong>Legal compliance</strong> — to meet our obligations under applicable law</li>
+          </ul>
+          <div class="doc-callout">
+            <p>We <strong>do not</strong> use your data for behavioral advertising, profiling for third-party marketing, or automated decision-making that produces significant legal effects on you.</p>
+          </div>
+        </div>
+
+        <div class="doc-section reveal" id="sharing">
+          <span class="doc-tag">// 04 — data sharing</span>
+          <h2>Data Sharing</h2>
+          <p>We do not sell, rent, or trade your personal information. We share data only in the following limited circumstances:</p>
+          <ul>
+            <li><strong>Service providers</strong> — trusted vendors who process data on our behalf under strict data-processing agreements (e.g., Stripe for payments, AWS for hosting, Postmark for email delivery)</li>
+            <li><strong>Legal requirements</strong> — if required by law, court order, or governmental authority; we will notify you unless legally prohibited from doing so</li>
+            <li><strong>Business transfers</strong> — in the event of a merger, acquisition, or sale of assets, your data may transfer; we will notify you and you may delete your account before the transfer completes</li>
+            <li><strong>With your consent</strong> — for any purpose you explicitly authorize</li>
+          </ul>
+        </div>
+
+        <div class="doc-section reveal" id="retention">
+          <span class="doc-tag">// 05 — retention</span>
+          <h2>Data Retention</h2>
+          <p>We retain your personal data for as long as your account is active or as needed to provide services. Specific retention periods:</p>
+          <ul>
+            <li>Account data — retained until you delete your account, then purged within 30 days</li>
+            <li>Usage logs — retained for 12 months in aggregate, then anonymized</li>
+            <li>Support communications — retained for 24 months to allow follow-up</li>
+            <li>Payment records — retained for 7 years for tax and legal compliance</li>
+          </ul>
+        </div>
+
+        <div class="doc-section reveal" id="security">
+          <span class="doc-tag">// 06 — security</span>
+          <h2>Security</h2>
+          <p>We implement industry-standard safeguards to protect your information:</p>
+          <ul>
+            <li>TLS 1.3 encryption in transit on all connections</li>
+            <li>AES-256 encryption at rest for sensitive fields</li>
+            <li>Bcrypt password hashing with a per-user salt</li>
+            <li>Role-based access controls and least-privilege employee access</li>
+            <li>Regular third-party penetration testing and vulnerability scans</li>
+          </ul>
+          <p>No method of transmission over the internet is 100% secure. If we become aware of a breach that affects your personal data, we will notify you within 72 hours as required by applicable law.</p>
+        </div>
+
+        <div class="doc-section reveal" id="cookies">
+          <span class="doc-tag">// 07 — cookies</span>
+          <h2>Cookies</h2>
+          <p>We use cookies and similar technologies for the following purposes:</p>
+          <ul>
+            <li><strong>Essential cookies</strong> — required for authentication, session management, and security (cannot be disabled)</li>
+            <li><strong>Preference cookies</strong> — remember your settings and UI preferences (optional)</li>
+            <li><strong>Analytics cookies</strong> — anonymized usage tracking via a privacy-respecting analytics tool (optional; opt-out via cookie banner)</li>
+          </ul>
+          <p>We do not use third-party advertising cookies. You can manage your cookie preferences through the cookie banner shown on first visit, or through your browser settings.</p>
+        </div>
+
+        <div class="doc-section reveal" id="your-rights">
+          <span class="doc-tag">// 08 — your rights</span>
+          <h2>Your Rights</h2>
+          <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+          <ul>
+            <li><strong>Access</strong> — request a copy of the personal data we hold about you</li>
+            <li><strong>Correction</strong> — request that inaccurate or incomplete data be corrected</li>
+            <li><strong>Deletion</strong> — request deletion of your personal data ("right to be forgotten")</li>
+            <li><strong>Portability</strong> — receive your data in a machine-readable format</li>
+            <li><strong>Objection</strong> — object to processing based on legitimate interests</li>
+            <li><strong>Restriction</strong> — request that we limit how we process your data</li>
+            <li><strong>Withdrawal of consent</strong> — withdraw consent for processing at any time</li>
+          </ul>
+          <p>To exercise any of these rights, email us at <strong>info@declusterize.com</strong>. We will respond within 30 days. Where required, we may need to verify your identity before processing your request.</p>
+          <div class="doc-callout">
+            <p>You also have the right to lodge a complaint with your local data protection authority (e.g., ICO in the UK, CNIL in France, or your state Attorney General in the US).</p>
+          </div>
+        </div>
+
+        <div class="doc-section reveal" id="children">
+          <span class="doc-tag">// 09 — children</span>
+          <h2>Children</h2>
+          <p>deClusterize is not directed to children under the age of 16. We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us immediately and we will delete it.</p>
+        </div>
+
+        <div class="doc-section reveal" id="changes">
+          <span class="doc-tag">// 10 — policy changes</span>
+          <h2>Policy Changes</h2>
+          <p>We may update this Privacy Policy from time to time. When we make material changes, we will notify you by email (if you have an account) and by posting a prominent notice on our website at least 14 days before the change takes effect. Your continued use of deClusterize after the effective date constitutes acceptance of the updated policy.</p>
+          <p>The date at the top of this page always reflects the most recent revision.</p>
+        </div>
+
+        <div class="doc-section reveal" id="contact">
+          <span class="doc-tag">// 11 — contact</span>
+          <h2>Contact Us</h2>
+          <p>If you have questions or concerns about this Privacy Policy or our data practices, please reach out:</p>
+          <ul>
+            <li><strong>Email:</strong> info@declusterize.com</li>
+            <li><strong>Mail:</strong> deClusterize, 123 Clarity Lane, Suite 400, San Francisco, CA 94105</li>
+          </ul>
+          <p>For general support inquiries, visit our <a href="help.html" style="color:var(--sky)">Help Center</a>.</p>
+        </div>
+
+      </div><!-- /doc-content -->
+    </div><!-- /doc-grid -->
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand" aria-label="deClusterize home">
+          <svg class="brand-mark-svg" width="36" height="36" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="url(#bm-fill)"/>
+            <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="none" stroke="url(#bm-stroke)" stroke-width="2"/>
+            <polyline points="14,25 21,32 34,17" stroke="url(#bm-stroke)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="38" cy="10" r="3" fill="#38BDF8" opacity=".9"/>
+          </svg>
+          <span class="brand-name">deClusterize</span>
+        </a>
+        <p>Small tasks. Better systems. A clearer digital life.</p>
+      </div>
+      <nav class="footer-col" aria-label="Product">
+        <h4>Product</h4>
+        <ul><li><a href="how-it-works.html">How It Works</a></li><li><a href="guides.html">Guides</a></li><li><a href="guides.html#checklists">Templates</a></li></ul>
+      </nav>
+      <nav class="footer-col" aria-label="Resources">
+        <h4>Resources</h4>
+        <ul><li><a href="#">Blog</a></li><li><a href="help.html">Help Center</a></li><li><a href="community.html">Community</a></li></ul>
+      </nav>
+      <nav class="footer-col" aria-label="Company">
+        <h4>Company</h4>
+        <ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">© 2026 deClusterize. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="forms.js"></script>
+</body>
+</html>

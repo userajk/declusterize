@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Digital Organisation Guides — deClusterize | Free Step-by-Step Guides</title>
+<meta name="description" content="Free step-by-step guides for organising your phone, computer, email, photos, and cloud storage. Browse 40+ guides and checklists for a cleaner digital life — no tech expertise required." />
+<meta name="keywords" content="digital organisation guides, how to organise digital files, phone cleanup guide, free up phone storage, email inbox organisation, cloud storage cleanup, digital declutter checklist, organise computer files" />
+<link rel="canonical" href="https://declusterize.com/guides" />
+<meta property="og:title" content="Digital Organisation Guides — deClusterize" />
+<meta property="og:description" content="40+ free step-by-step guides for organising your phone, computer, email, photos, and cloud storage." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://declusterize.com/guides" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://declusterize.com/guides.html" />
+<meta property="og:title" content="Free Guides &amp; Checklists — deClusterize" />
+<meta property="og:description" content="Free step-by-step guides for organising your phone, computer, email, photos, and cloud storage. Browse 40+ guides and checklists." />
+<meta property="og:image" content="https://declusterize.com/og-image.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://declusterize.com/og-image.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Digital Organisation Guides — deClusterize",
+  "description": "Free step-by-step guides for organising your phone, computer, email, photos, and cloud storage.",
+  "url": "https://declusterize.com/guides",
+  "publisher": { "@type": "Organization", "name": "deClusterize", "url": "https://declusterize.com" }
+}
+</script>
+
+<style>
+/* ═══════════════════════════════════════════════════════
+   GUIDES PAGE
+   ═══════════════════════════════════════════════════════ */
+
+/* ── Hero ─────────────────────────────────────────────── */
+.g-hero { padding: 110px 0 56px; text-align: center; }
+.g-hero .eyebrow { font-family: var(--font-mono); font-size: .74rem; letter-spacing: .14em; text-transform: uppercase; color: var(--emerald); margin-bottom: 18px; }
+.g-hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 700; line-height: 1.13; margin-bottom: 18px; }
+.g-hero .lead { max-width: 580px; margin: 0 auto 32px; color: var(--text-body); font-size: 1rem; line-height: 1.72; }
+
+/* ── Guide search ─────────────────────────────────────── */
+.g-search-wrap { max-width: 540px; margin: 0 auto 16px; position: relative; }
+.g-search-wrap input { width: 100%; background: var(--surface); border: 1px solid var(--border-2); border-radius: var(--r-pill); padding: 14px 50px 14px 22px; font-family: var(--font-ui); font-size: .92rem; color: var(--text-1, #fff); outline: none; transition: border-color .2s, box-shadow .2s; }
+.g-search-wrap input::placeholder { color: var(--text-body); }
+.g-search-wrap input:focus { border-color: var(--emerald); box-shadow: 0 0 0 3px rgba(16,185,129,.15); }
+.g-search-btn { position: absolute; right: 6px; top: 50%; transform: translateY(-50%); width: 36px; height: 36px; border-radius: 50%; background: rgba(16,185,129,.15); border: 1px solid rgba(16,185,129,.3); color: var(--emerald); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background .2s; }
+.g-search-btn:hover { background: rgba(16,185,129,.28); }
+.g-search-btn svg { display: block; pointer-events: none; }
+
+/* ── Stats band ───────────────────────────────────────── */
+.g-stats { display: flex; gap: 32px; justify-content: center; flex-wrap: wrap; margin-bottom: 56px; }
+.g-stat { text-align: center; }
+.g-stat .val { font-family: var(--font-mono); font-size: 1.4rem; font-weight: 700; background: linear-gradient(135deg, var(--emerald-bright), var(--sky-bright)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.g-stat p { font-size: .75rem; color: var(--text-body); margin-top: 4px; }
+
+/* ── Filter tabs ──────────────────────────────────────── */
+.filter-bar { position: sticky; top: 68px; z-index: 90; background: rgba(5,5,7,.85); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); padding: 12px 0; margin-bottom: 48px; }
+.filter-tabs { display: flex; gap: 8px; overflow-x: auto; padding: 0 max(24px, calc((100vw - 1140px)/2)); scrollbar-width: none; }
+.filter-tabs::-webkit-scrollbar { display: none; }
+.f-tab { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .06em; padding: 7px 16px; border-radius: var(--r-pill); border: 1px solid var(--border); background: transparent; color: var(--text-body); cursor: pointer; white-space: nowrap; transition: all .18s; flex-shrink: 0; }
+.f-tab:hover { border-color: var(--emerald); color: var(--emerald); }
+.f-tab.active { background: rgba(16,185,129,.12); border-color: rgba(16,185,129,.5); color: var(--emerald-bright); }
+
+/* ── Featured guide ───────────────────────────────────── */
+.featured-guide { background: linear-gradient(135deg, rgba(16,185,129,.08) 0%, rgba(14,165,233,.08) 100%); border: 1px solid var(--border-2); border-radius: var(--r-panel); padding: 44px 40px; display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center; margin-bottom: 72px; position: relative; overflow: hidden; }
+.featured-guide::before { content: '★'; position: absolute; right: -10px; top: -24px; font-size: 9rem; color: rgba(16,185,129,.04); pointer-events: none; }
+@media(max-width:680px) { .featured-guide { grid-template-columns: 1fr; padding: 32px 24px; } }
+.fg-badge { font-family: var(--font-mono); font-size: .66rem; letter-spacing: .1em; text-transform: uppercase; color: var(--emerald); background: rgba(16,185,129,.1); border: 1px solid rgba(16,185,129,.25); border-radius: var(--r-pill); padding: 4px 12px; display: inline-block; margin-bottom: 14px; }
+.featured-guide h2 { font-size: clamp(1.2rem, 2.5vw, 1.7rem); font-weight: 700; margin-bottom: 12px; }
+.featured-guide p { color: var(--text-body); font-size: .9rem; line-height: 1.72; margin-bottom: 20px; max-width: 520px; }
+.fg-meta { display: flex; gap: 18px; margin-bottom: 22px; }
+.fg-meta span { font-family: var(--font-mono); font-size: .7rem; color: var(--text-body); }
+.fg-meta span strong { color: var(--emerald); }
+
+/* ── Hub sections ─────────────────────────────────────── */
+.guide-section { margin-bottom: 72px; }
+.hub-header { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
+.hub-emoji { font-size: 1.8rem; line-height: 1; }
+.hub-info h2 { font-size: 1.2rem; font-weight: 700; margin-bottom: 4px; }
+.hub-info p { font-size: .82rem; color: var(--text-body); line-height: 1.55; }
+.hub-count { margin-left: auto; font-family: var(--font-mono); font-size: .68rem; letter-spacing: .08em; color: var(--text-body); background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-pill); padding: 4px 12px; white-space: nowrap; flex-shrink: 0; }
+
+/* ── Guide card grid ──────────────────────────────────── */
+.guide-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 16px; }
+.guide-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 10px; transition: border-color .22s var(--ease), transform .22s var(--ease); }
+.guide-card:hover { border-color: var(--emerald); transform: translateY(-2px); }
+.guide-card.hidden { display: none; }
+.gc-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+/* category pills */
+.gc-cat { font-family: var(--font-mono); font-size: .62rem; letter-spacing: .08em; text-transform: uppercase; padding: 3px 10px; border-radius: var(--r-pill); border: 1px solid; flex-shrink: 0; }
+.gc-phone   { color: #A78BFA; border-color: rgba(167,139,250,.3); background: rgba(167,139,250,.08); }
+.gc-computer{ color: var(--sky-bright); border-color: rgba(56,189,248,.3); background: rgba(56,189,248,.08); }
+.gc-cloud   { color: var(--emerald); border-color: rgba(16,185,129,.3); background: rgba(16,185,129,.07); }
+.gc-email   { color: var(--rose); border-color: rgba(251,113,133,.3); background: rgba(251,113,133,.07); }
+.gc-photos  { color: var(--amber); border-color: rgba(245,158,11,.3); background: rgba(245,158,11,.08); }
+.gc-habits  { color: var(--sky); border-color: rgba(14,165,233,.3); background: rgba(14,165,233,.07); }
+.gc-checklist{ color: var(--emerald-bright); border-color: rgba(52,211,153,.3); background: rgba(52,211,153,.07); }
+/* badges */
+.gc-badge { font-family: var(--font-mono); font-size: .58rem; letter-spacing: .06em; padding: 2px 8px; border-radius: var(--r-pill); }
+.badge-new { background: rgba(16,185,129,.15); color: var(--emerald-bright); border: 1px solid rgba(16,185,129,.3); }
+.badge-hot { background: rgba(251,113,133,.12); color: var(--rose); border: 1px solid rgba(251,113,133,.3); }
+.badge-dl  { background: rgba(245,158,11,.12); color: var(--amber); border: 1px solid rgba(245,158,11,.3); }
+/* card content */
+.guide-card h3 { font-size: .9rem; font-weight: 600; line-height: 1.4; margin: 0; }
+.guide-card p { font-size: .8rem; color: var(--text-body); line-height: 1.65; flex: 1; margin: 0; }
+.gc-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 10px; border-top: 1px solid var(--border); margin-top: auto; }
+.gc-meta { font-family: var(--font-mono); font-size: .65rem; color: var(--text-body); display: flex; gap: 12px; }
+.gc-link { font-size: .78rem; font-weight: 600; color: var(--emerald); display: flex; align-items: center; gap: 5px; text-decoration: none; transition: gap .18s; }
+.gc-link:hover { gap: 8px; }
+
+/* ── Checklist section ────────────────────────────────── */
+.checklist-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
+.cl-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 22px; display: flex; gap: 16px; align-items: flex-start; transition: border-color .2s, transform .2s; }
+.cl-card:hover { border-color: var(--emerald-bright); transform: translateY(-2px); }
+.cl-card.hidden { display: none; }
+.cl-icon { width: 44px; height: 44px; border-radius: 10px; background: rgba(52,211,153,.1); border: 1px solid rgba(52,211,153,.25); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; }
+.cl-body h3 { font-size: .9rem; font-weight: 600; margin-bottom: 6px; line-height: 1.35; }
+.cl-body p { font-size: .78rem; color: var(--text-body); line-height: 1.6; margin-bottom: 12px; }
+.cl-dl { display: flex; align-items: center; gap: 6px; font-size: .75rem; font-weight: 600; color: var(--emerald-bright); text-decoration: none; transition: gap .15s; }
+.cl-dl:hover { gap: 9px; }
+
+/* ── No results ───────────────────────────────────────── */
+.no-results { display: none; text-align: center; padding: 60px 24px; color: var(--text-body); }
+.no-results.visible { display: block; }
+.no-results strong { display: block; font-size: 1.1rem; color: var(--text-1, #fff); margin-bottom: 8px; }
+
+/* ── Newsletter CTA ───────────────────────────────────── */
+.g-cta { background: var(--surface); border: 1px solid var(--border-2); border-radius: var(--r-panel); padding: 52px 40px; text-align: center; margin-bottom: 80px; }
+@media(max-width:640px) { .g-cta { padding: 36px 24px; } }
+.g-cta h2 { font-size: 1.6rem; font-weight: 700; margin-bottom: 10px; }
+.g-cta p { color: var(--text-body); font-size: .9rem; max-width: 440px; margin: 0 auto 28px; line-height: 1.7; }
+.g-cta-form { display: flex; gap: 10px; max-width: 420px; margin: 0 auto; flex-wrap: wrap; justify-content: center; }
+.g-cta-form input { flex: 1; min-width: 200px; background: var(--bg, #050507); border: 1px solid var(--border-2); border-radius: var(--r-pill); padding: 12px 20px; font-family: var(--font-ui); font-size: .88rem; color: var(--text-1, #fff); outline: none; transition: border-color .2s; }
+.g-cta-form input:focus { border-color: var(--emerald); }
+.g-cta-form input::placeholder { color: var(--text-body); }
+</style>
+</head>
+<body>
+
+<!-- AMBIENT BACKGROUND -->
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<div class="fx fx-glow" aria-hidden="true"></div>
+<div class="fx fx-grid" aria-hidden="true"></div>
+<div class="fx fx-scan" aria-hidden="true"></div>
+<div class="fx fx-vignette" aria-hidden="true"></div>
+
+<!-- ICON SPRITE -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="bm-stroke" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#34D399"/><stop offset="1" stop-color="#0EA5E9"/>
+    </linearGradient>
+    <linearGradient id="bm-fill" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#34D399" stop-opacity=".18"/><stop offset="1" stop-color="#0EA5E9" stop-opacity=".10"/>
+    </linearGradient>
+  </defs>
+  <symbol id="ic-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="ic-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6 18 18M18 6 6 18"/></symbol>
+  <symbol id="ic-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></symbol>
+  <symbol id="ic-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+  <symbol id="ic-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11"/><path d="m8 11 4 4 4-4"/><path d="M5 19h14"/></symbol>
+</svg>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="container nav">
+    <a href="index.html" class="brand" aria-label="deClusterize home">
+      <svg class="brand-mark-svg" width="36" height="36" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="url(#bm-fill)"/>
+        <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="none" stroke="url(#bm-stroke)" stroke-width="2"/>
+        <polyline points="14,25 21,32 34,17" stroke="url(#bm-stroke)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="38" cy="10" r="3" fill="#38BDF8" opacity=".9"/>
+      </svg>
+      <span class="brand-name">deClusterize</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="how-it-works.html">How It Works</a>
+      <a href="guides.html" aria-current="page">Guides</a>
+      <a href="guides.html#checklists">Templates</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <svg class="ico"><use href="#ic-menu"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="how-it-works.html">How It Works</a>
+    <a href="guides.html">Guides</a>
+    <a href="guides.html#checklists">Templates</a>
+  </div>
+</header>
+
+<main>
+
+<!-- ── HERO ──────────────────────────────────────────── -->
+<section class="g-hero">
+  <div class="container">
+    <p class="eyebrow reveal">Free Guides &amp; Resources</p>
+    <h1 class="reveal">Everything you need to<br><span class="text-teal">declutter your digital life.</span></h1>
+    <p class="lead reveal">Step-by-step guides for every platform, every device, and every area of digital chaos — written in plain English, free forever.</p>
+    <div class="g-search-wrap reveal">
+      <input type="search" id="guideSearch" placeholder="Search guides — e.g. "free up iPhone storage"" aria-label="Search guides" autocomplete="off" />
+      <button class="g-search-btn" id="guideSearchBtn" aria-label="Search" type="button">
+        <svg width="16" height="16"><use href="#ic-search"/></svg>
+      </button>
+    </div>
+    <div class="g-stats reveal">
+      <div class="g-stat"><div class="val">40+</div><p>Free guides</p></div>
+      <div class="g-stat"><div class="val">6</div><p>Topic hubs</p></div>
+      <div class="g-stat"><div class="val">5</div><p>Free checklists</p></div>
+      <div class="g-stat"><div class="val">0</div><p>Account needed</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FILTER BAR ─────────────────────────────────────── -->
+<div class="filter-bar" role="navigation" aria-label="Filter guides by category">
+  <div class="filter-tabs" role="tablist">
+    <button class="f-tab active" data-filter="all" role="tab" aria-selected="true">All guides</button>
+    <button class="f-tab" data-filter="phone" role="tab" aria-selected="false">📱 Phone</button>
+    <button class="f-tab" data-filter="computer" role="tab" aria-selected="false">💻 Computer</button>
+    <button class="f-tab" data-filter="cloud" role="tab" aria-selected="false">☁️ Cloud Storage</button>
+    <button class="f-tab" data-filter="email" role="tab" aria-selected="false">📧 Email</button>
+    <button class="f-tab" data-filter="photos" role="tab" aria-selected="false">📸 Photos</button>
+    <button class="f-tab" data-filter="habits" role="tab" aria-selected="false">🧘 Digital Habits</button>
+    <button class="f-tab" data-filter="checklist" role="tab" aria-selected="false">✅ Checklists</button>
+  </div>
+</div>
+
+<section id="guides-body">
+  <div class="container">
+
+    <!-- ── FEATURED GUIDE ─────────────────────────────── -->
+    <div class="featured-guide reveal" data-cat="all">
+      <div>
+        <span class="fg-badge">⭐ Featured guide</span>
+        <h2>The Complete Digital Declutter Checklist</h2>
+        <p>The master guide that started it all. A comprehensive, step-by-step checklist covering all five areas of your digital life — phone, computer, email, photos, and cloud storage — in one organised document. Used by over 50,000 people to get their digital life under control.</p>
+        <div class="fg-meta">
+          <span><strong>12 min</strong> read</span>
+          <span><strong>Beginner</strong> friendly</span>
+          <span><strong>All platforms</strong></span>
+        </div>
+        <a href="#" class="btn btn-primary" style="font-size:.85rem;padding:11px 24px">
+          Read the full guide <svg class="ico" width="15" height="15"><use href="#ic-arrow"/></svg>
+        </a>
+      </div>
+      <div style="text-align:center;padding:20px">
+        <div style="width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,var(--emerald),var(--sky));display:flex;align-items:center;justify-content:center;font-size:3rem;margin:0 auto 12px;box-shadow:0 0 40px rgba(16,185,129,.25)">✅</div>
+        <div style="font-family:var(--font-mono);font-size:.7rem;color:var(--emerald);letter-spacing:.08em">50,000+ reads</div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════
+         HUB 1: PHONE
+         ══════════════════════════════════════════════════ -->
+    <div class="guide-section" id="hub-phone">
+      <div class="hub-header reveal">
+        <div class="hub-emoji">📱</div>
+        <div class="hub-info">
+          <h2>Declutter Your Phone</h2>
+          <p>Free up storage, clear camera roll clutter, and remove apps you haven't touched in months — for iPhone and Android.</p>
+        </div>
+        <span class="hub-count">7 guides</span>
+      </div>
+      <div class="guide-grid reveal">
+
+        <article class="guide-card" data-cat="phone" data-title="how to free up storage on iphone without deleting important photos">
+          <div class="gc-top"><span class="gc-cat gc-phone">📱 iPhone</span><span class="gc-badge badge-hot">Popular</span></div>
+          <h3>How to Free Up Storage on iPhone Without Deleting Important Photos</h3>
+          <p>Step-by-step method to reclaim gigabytes on your iPhone — offloading apps, clearing caches, and optimising photo storage without losing a single memory.</p>
+          <div class="gc-footer">
+            <div class="gc-meta"><span>9 min</span><span>Beginner</span></div>
+            <a href="free-up-storage-on-iphone.html" class="gc-link">Read <svg class="ico" width="13" height="13"><use href="#ic-arrow"/></svg></a>
+          </div>
+        </article>
+
+        <article class="guide-card" data-cat="phone" data-title="how to delete duplicate photos on iphone">
+          <div class="gc-top"><span class="gc-cat gc-phone">📱 iPhone</span><span class="gc-badge badge-hot">Popular</span></div>
+          <h3>How to Delete Duplicate Photos on iPhone</h3>
+          <p>Find and remove duplicate, burst, and near-identical photos using the native iOS Duplicates album — and third-party tools for deeper cleaning.</p>
+          <div class="gc-footer">
+            <div class="gc-meta"><span>8 min</span><span>Beginner</span></div>
+            <a href="delete-duplicate-photos-iphone.html" class="gc-link">Read <svg class="ico" width="13" height="13"><use href="#ic-arrow"/></svg></a>
+          </div>
+        </article>
+
+        <article class="guide-card" data-cat="phone" data-title="how to clean up your camera roll without losing important photos">
+          <div class="gc-top"><span class="gc-cat gc-phone">📱 iPhone</span></div>
+          <h3>How to Clean Up Your Camera Roll Without Losing Important Photos</h3>
+          <p>A systematic method for sorting thousands of camera roll photos without the paralysis of "what if I need this later" — in 15-minute sessions.</p>
+          <div class="gc-footer">
+            <div class="gc-meta"><span>8 min</span><span>Beginner</span></div>
+            <a href="clean-up-camera-roll-iphone.html" class="gc-link">Read <svg class="ico" width="13" height="13"><use href="#ic-arrow"/></svg></a>
+          </div>
+        </article>
+
+        <article class="guide-card" data-cat="phone" data-title="phone storage full what to delete first">
+          <div class="gc-top"><span class="gc-cat gc-phone">📱 All Phones</span></div>
+          <h3>Phone Storage Full? What to Delete First</h3>
+          <p>A prioritised list of what to remove first when your phone hits its storage limit — ordered by typical file size so you get the most space back fastest.</p>
+          <div class="gc-footer">
+            <div class="gc-meta"><span>7 min</span><span>Beginner</span></div>
+            <a href="phone-storage-full-what-to-delete-first.html" class="gc-link">Read <svg class="ico" width="13" height="13"><use href="#ic-arrow"/></svg></a>
+          </div>
+        </article>
+
+        <article class="guide-card" data-cat="phone" data-title="how to delete unused apps on iphone safely">
+          <div class="gc-top"><span class="gc-cat gc-phone">📱 iPhone</span></div>
+          <h3>How to Delete Unused Apps on iPhone Safely</h3>
+          <p>Audit your app library, identify what you haven't opened in months, and remove it safely — without losing data from apps you'll want back later.</p>
+          <div class="gc-footer">
+            <div class="gc-meta"><span>7 min</span><span>Beginner</span></div>
+            <a href="delete-unused-apps-iphone.html" class="gc-link">Read <svg class="ico" width="13" height="13"><use href="#ic-arrow"/></svg></a>
+          </div>
+        </article>
+
+        <article class="guide-card" data-cat="phone" data-title="how to free up storage on android">
+          <div class="gc-top"><span class="gc-cat gc-phone">📱 Android</span></div>
+          <h3>How to Free Up Storage on Android</h3>
+          <p>The Android-specific approach to clearing storage — Gallery, Downloads, cached data, and app data — using built-in tools and one free app.</p>
+          <div class="gc-footer">
+            <div class="gc-meta"><span>9 min</span><span>Beginner</span></div>
+            <a href="free-up-storage-android.html" class="gc-link">Read <svg class="ico" width="13" height="13"><use href="#ic-arrow"/></svg></a>
+          </div>
+        </article>
+
+        <article class="guide-card" data-cat="phone" data-title="how to clear app cache on android safely">
+          <div class="gc-top"><span class="gc-cat gc-phone">📱 Android</span><span class="gc-badge badge-new">New</span></div>
+          <h3>How to Clear App Cache on Android Safely</h3>
+          <p>App caches silently consume gigabytes over time. Learn which caches to clear, which to leave alone, and whether clearing them affects your data.</p>
+          <div class="gc-footer">
+            <div class="gc-meta"><span>6 min</span><span>Beginner</span></div>
+            <a href="clear-app-cache-android.html" class="gc-link">Read <svg class="ico" width="13" height="13"><use href="#ic-arrow"/></svg></a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════
+         HUB 2: COMPUTER
+         ══════════════════════════════════════════════════ -->
+    <div class="guide-section" id="hub-computer">
+      <div class="hub-header reveal">
+        <div class="hub-emoji">💻</div>
+        <div class="hub-info">
+          <h2>Declutter Your Computer</h2>
+          <p>Free up disk space, remove temporary files, surface large files, and build a folder structure that makes every file findable in seconds.</p>
+        </div>
+        <span class="hub-count">7 guides</span>
+      </div>
+      <div class="guide-grid reveal">
+
+        <article class="guide-card" data-cat="computer" data-title="how to free up disk space on windows 11">
+          <div class="gc-top"><span class="gc-cat gc-computer">💻 Windows 11</span><span class="gc-badge badge-hot">Popular</span></div>
+          <h3>How to Free Up Disk Space on Windows 11</h3>
+          <p>Built-in tools, Storage Sense settings, and manual steps to recover significant disk space on Windows 11 — without paying for third-party software.</p>
+          <div class="gc-footer">
+            <div class="gc-meta"><span>6 min</span><span>Beginner</span></div>
+            <a href="#" class="gc-link">Read <svg class="ico" width="13" height="13"><use href="#ic-arrow"/></svg></a>
+          </div>
+        </article>
+
+        <article class="guide-card" data-cat="computer" data-title="how to delete temporary files in windows 11 safely">
+          <div class="gc-top"><span class="gc-cat gc-computer">💻 Windows 11</span></div>
+          <h3>How to Delete Temporary Files in Windows 11 Safely</h3>
+          <p>Safely remove temp files, prefetch data, and Windows Update leftovers that accumulate silently over time — with a clear guide to what's safe to delete.</p>
+          <div class="gc-footer">
+            <div class="gc-meta"><span>5 min</span><span>Beginner</span></div>
+            <a href="#" class="gc-link">Read <svg class="ico" width="13" height="13"><use href="#ic-arrow"/></svg></a>
+          </div>
+        </article>
+
+        <article class="guide-card" data-cat="computer" data-title="how to find large files in windows 11">
+          <div class="gc-top"><span class="gc-cat gc-computer">💻 Windows 11</span></div>
+          <h3>How to Find Large Files in Windows 11</h3>
+          <p>Use File Explorer, Storage Settings, and one free tool to surface the files consuming the most space — so you can decide what stays and what goes.</p>
+          <div class="gc-footer">
+            <div class="gc-meta"><span>4 min</span><span>Beginner</span></div>
+            <a href="#" class="gc-link">Read <svg class="ico" width="13" height="13"><use href="#ic-arrow"/></svg></a>
+          </div>
+        </article>
+
+        <article class="guide-card" data-cat="computer" data-title="how to find and delete large files on a mac">
+          <div class="gc-top"><span class="gc-cat gc-computer">💻 macOS</span><span class="gc-badge badge-hot">Popular</span></div>
+          <h3>How to Find and Delete Large Files on a Mac</h3>
+          <p>macOS-native methods — Storage Management, Finder, and the terminal — to surface, review, and remove the largest space consumers on your Mac.</p>
+          <div class="gc-footer">
+            <div class="gc-meta"><span>5 min</span><span>Beginner</span></div>
+            <a href="#" class="gc-link">Read <svg class="ico" width="13" height="13"><use href="#ic-arrow"/></svg></a>
+          </div>
+        </article>
+
+        <article class="guide-card" data-cat="computer" data-title="how to free up storage on a mac">
+          <div class="gc-top"><span class="gc-cat gc-computer">💻 macOS</span></div>
+          <h3>How to Free Up Storage on a Mac</h3>
+          <p>A complete Mac storage audit covering System Data, Applications, iCloud Desktop &amp; Documents, and hidden caches — with safe steps for each.</p>
+          <div class="gc-footer">
+            <div class="gc-meta"><span>7 min</span><span>Beginner</span></div>
+            <a href="#" class="gc-link">Read <svg class="ico" width="13" height="13"><use href="#ic-arrow"/></svg></a>
+          </div>
+        </article>
+
+        <article class="guide-card" data-cat="computer" data-title="how to clean up your downloads folder safely">
+          <div class="gc-top"><span class="gc-cat gc-computer">💻 All Platforms</span></div>
+          <h3>How to Clean Up Your Downloads Folder Safely</h3>
+          <p>The Downloads folder is where organisation goes to die. Here's a systematic 15-minute method to clear it — and keep it clear for good.</p>
+          <div class="gc-footer">
+            <div class="gc-meta"><span>4 min</span><span>Beginner</span></div>
+            <a href="#" class="gc-link">Read <svg class="ico" width="13" height="13"><use href="#ic-arrow"/></svg></a>
+          </div>
+        </article>
+
+        <article class="guide-card" data-cat="computer" data-title="how to organize computer files with a simple folder system">
+          <div class="gc-top"><span class="gc-cat gc-computer">💻 All Platforms</span><span class="gc-badge badge-new">New</span></div>
+          <h3>How to Organise Computer Files With a Simple Folder System</h3>
+          <p>Build a three-level folder hierarchy from scratch that makes every file findable in under 10 seconds — works on Windows, macOS, and every cloud drive.</p>
+          <div class="gc-footer">
+            <div class="gc-meta"><span>8 min</span><span>Intermediate</span></div>
+            <a href="#" class="gc-link">Read <svg class="ico" width="13" height="13"><use href="#ic-arrow"/></svg></a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════
+         HUB 3: CLOUD STORAGE
+         ══════════════════════════════════════════════════ -->
+    <div class="guide-section" id="hub-cloud">
+      <div class="hub-header reveal">
+        <div class="hub-emoji">☁️</div>
+        <div class="hub-info">
+          <h2>Declutter Cloud Storage</h2>
+          <p>Audit and organise Google Drive, iCloud, Dropbox, and OneDrive — stop paying for storage you don't need.</p>
+        </div>
+        <span class="hub-count">6 guides</span>
+      </div>
+      <div class="guide-grid reveal">
+
+        <article class="guide-card" data-cat="cloud" data-title="google storage full clean up gmail drive and google photos">
+          <div class="gc-top"><span class="gc-cat gc-cloud">☁️ Google</span><span class="gc-badge badge-hot">Popular</span></div>
+          <h3>Google Storage Full? Clean Up Gmail, Drive and Google Photos</h3>
+          <p>Your 15 GB Google account fills faster than you think. A complete audit of all three services — what's eating your quota and how to reclaim it fast.</p>
+          <div class="gc-footer">
+            <div class="gc-meta"><span>8 min</span><span>Beginner</span></div>
+            <a href="#" class="gc-link">Read <svg class="ico" width="13" height="13"><use href="#ic-arrow"/></svg></a>
+          </div>
+        </article>
+
+        <article class="guide-card" data-cat="cloud" data-title="how to free up google drive storage">
+          <div class="gc-top"><span class="gc-cat gc-cloud">☁️ Google Drive</span></div>
+          <h3>How to Free Up Google Drive Storage</h3>
+          <p>Identify large files, shared folder duplicates, and old backups consuming your Drive quota — and remove them safely without breaking shared links.</p>
+          <div class="gc-footer">
+            <div class="gc-meta"><span>5 min</span><span>Beginner</span></div>
+            <a href="#" class="gc-link">Read <svg class="ico" width="13" height="13"><use href="#ic-arrow"/></svg></a>
+          </div>
+        </article>
+
+        <article class="guide-card" data-cat="cloud" data-title="how to organize google drive files">
+          <div class="gc-top"><span class="gc-cat gc-cloud">☁️ Google Drive</span><span class="gc-badge badge-new">New</span></div>
+          <h3>How to Organise Google Drive Files</h3>
+          <p>Build a folder structure in Google Drive that survives real-world use — shared folders, colour-coded categories, and shortcuts that actually make sense.</p>
+          <div class="gc-footer">
+            <div class="gc-meta"><span>7 min</span><span>Intermediate</span></div>
+            <a href="#" class="gc-link">Read <svg class="ico" width="13" height="13"><use href="#ic-arrow"/></svg></a>
+          </div>
+        </article>
+
+        <article class="guide-card" data-cat="cloud" data-title="how to clean up icloud storage">
+          <div class="gc-top"><span class="gc-cat gc-cloud">☁️ iCloud</span><span class="gc-badge badge-hot">Popular</span></div>
+          <h3>How to Clean Up iCloud Storage</h3>
+          <p>Review and reclaim iCloud space across Photos, iCloud Drive, app backups, and Mail — with exact steps for each storage category on iPhone and Mac.</p>
+          <div class="gc-footer">
+            <div class="gc-meta"><span>6 min</span><span>Beginner</span></div>
+            <a href="#" class="gc-link">Read <svg class="ico" width="13" height="13"><use href="#ic-arrow"/></svg></a>
+          </div>
+        </article>
+
+        <article class="guide-card" data-cat="cloud" data-title="how to declutter dropbox storage">
+          <div class="gc-top"><span class="gc-cat gc-cloud">☁️ Dropbox</span></div>
+          <h3>How to Declutter Dropbox Storage</h3>
+          <p>Remove old sync conflicts, outdated shared folders, and redundant file versions accumulating in your Dropbox — and stop the storage creep for good.</p>
+          <div class="gc-footer">
+            <div class="gc-meta"><span>5 min</span><span>Beginner</span></div>
+            <a href="#" class="gc-link">Read <svg class="ico" width="13" height="13"><use href="#ic-arrow"/></svg></a>
+          </div>
+        </article>
+
+        <article class="guide-card" data-cat="cloud" data-title="how to clean up onedrive storage">
+          <div class="gc-top"><span class="gc-cat gc-cloud">☁️ OneDrive</span></div>
+          <h3>How to Clean Up OneDrive Storage</h3>
+          <p>Audit your OneDrive for duplicates, outdated files, and camera roll backups quietly consuming your Microsoft 365 storage allocation.</p>
+          <div class="gc-footer">
+            <div class="gc-meta"><span>5 min</span><span>Beginner</span></div>
+            <a href="#" class="gc-link">Read <svg class="ico" width="13" height="13"><use href="#ic-arrow"/></svg></a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════
+         HUB 4: EMAIL
+         ══════════════════════════════════════════════════ -->
+    <div class="guide-section" id="hub-email">
+      <div class="hub-header reveal">
+        <div class="hub-emoji">📧</div>
+        <div class="hub-info">
+          <h2>Declutter Your Email Inbox</h2>
+          <p>Reset your inbox, unsubscribe from noise, build filters that work, and maintain inbox zero without willpower.</p>
+        </div>
+        <span class="hub-count">5 guides</span>
+      </div>
+      <div class="guide-grid reveal">
+
+        <article class="guide-card" data-cat="email" data-title="how to clean up your gmail inbox">
+          <div class="gc-top"><span class="gc-cat gc-email">📧 Gmail</span><span class="gc-badge badge-hot">Popular</span></div>
+          <h3>How to Clean Up Your Gmail Inbox</h3>
+          <p>The 5-step Gmail reset: archive the backlog with one search, set up labels, create filters, unsubscribe from senders, and reach inbox zero in one session.</p>
+          <div class="gc-footer">
+            <div class="gc-meta"><span>7 min</span><span>Beginner</span></div>
+            <a href="#" class="gc-link">Read <svg class="ico" width="13" height="13"><use href="#ic-arrow"/></svg></a>
+          </div>
+        </article>
+
+        <article class="guide-card" data-cat="email" data-title="how to unsubscribe from unwanted emails efficiently">
+          <div class="gc-top"><span class="gc-cat gc-email">📧 All Inboxes</span></div>
+          <h3>How to Unsubscribe From Unwanted Emails Efficiently</h3>
+          <p>How to mass-unsubscribe efficiently without handing your inbox to third-party apps — using Gmail's native tools, search operators, and a 10-minute method.</p>
+          <div class="gc-footer">
+            <div class="gc-meta"><span>5 min</span><span>Beginner</span></div>
+            <a href="#" class="gc-link">Read <svg class="ico" width="13" height="13"><use href="#ic-arrow"/></svg></a>
+          </div>
+        </article>
+
+        <article class="guide-card" data-cat="email" data-title="how to find and delete large email attachments">
+          <div class="gc-top"><span class="gc-cat gc-email">📧 Gmail &amp; Outlook</span><span class="gc-badge badge-new">New</span></div>
+          <h3>How to Find and Delete Large Email Attachments</h3>
+          <p>Find and remove the attachments consuming storage in Gmail, Outlook, and Apple Mail — using search operators that surface the biggest offenders in seconds.</p>
+          <div class="gc-footer">
+            <div class="gc-meta"><span>4 min</span><span>Beginner</span></div>
+            <a href="#" class="gc-link">Read <svg class="ico" width="13" height="13"><use href="#ic-arrow"/></svg></a>
+          </div>
+        </article>
+
+        <article class="guide-card" data-cat="email" data-title="how to organize your email inbox">
+          <div class="gc-top"><span class="gc-cat gc-email">📧 All Inboxes</span></div>
+          <h3>How to Organise Your Email Inbox</h3>
+          <p>Build a simple two-folder email system (Action + Reference) that handles 95% of what arrives, replaces complex label trees, and requires zero maintenance.</p>
+          <div class="gc-footer">
+            <div class="gc-meta"><span>6 min</span><span>Intermediate</span></div>
+            <a href="#" class="gc-link">Read <svg class="ico" width="13" height="13"><use href="#ic-arrow"/></svg></a>
+          </div>
+        </article>
+
+        <article class="guide-card" data-cat="email" data-title="monthly email declutter checklist">
+          <div class="gc-top"><span class="gc-cat gc-email">📧 All Inboxes</span></div>
+          <h3>Monthly Email Declutter Checklist</h3>
+          <p>A repeatable 15-minute monthly email routine that keeps inbox zero sustainable long after the initial reset — no willpower required, just a short checklist.</p>
+          <div class="gc-footer">
+            <div class="gc-meta"><span>3 min</span><span>Beginner</span></div>
+            <a href="#" class="gc-link">Read <svg class="ico" width="13" height="13"><use href="#ic-arrow"/></svg></a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════
+         HUB 5: PHOTOS
+         ══════════════════════════════════════════════════ -->
+    <div class="guide-section" id="hub-photos">
+      <div class="hub-header reveal">
+        <div class="hub-emoji">📸</div>
+        <div class="hub-info">
+          <h2>Organise Digital Photos</h2>
+          <p>Stop scrolling through thousands of blurry duplicates. Build a photo system that makes memories findable — and keeps them safe.</p>
+        </div>
+        <span class="hub-count">5 guides</span>
+      </div>
+      <div class="guide-grid reveal">
+
+        <article class="guide-card" data-cat="photos" data-title="how to organize digital photos">
+          <div class="gc-top"><span class="gc-cat gc-photos">📸 All Platforms</span><span class="gc-badge badge-hot">Popular</span></div>
+          <h3>How to Organise Digital Photos</h3>
+          <p>A complete system for organising photos by year and event that works across Google Photos, iCloud, and local libraries — without starting over from scratch.</p>
+          <div class="gc-footer">
+            <div class="gc-meta"><span>9 min</span><span>Beginner</span></div>
+            <a href="#" class="gc-link">Read <svg class="ico" width="13" height="13"><use href="#ic-arrow"/></svg></a>
+          </div>
+        </article>
+
+        <article class="guide-card" data-cat="photos" data-title="how to remove duplicate photos safely">
+          <div class="gc-top"><span class="gc-cat gc-photos">📸 All Platforms</span></div>
+          <h3>How to Remove Duplicate Photos Safely</h3>
+          <p>How to find and safely delete duplicate, near-identical, and burst photos across your devices — with a review step to make sure you never lose the right version.</p>
+          <div class="gc-footer">
+            <div class="gc-meta"><span>6 min</span><span>Beginner</span></div>
+            <a href="#" class="gc-link">Read <svg class="ico" width="13" height="13"><use href="#ic-arrow"/></svg></a>
+          </div>
+        </article>
+
+        <article class="guide-card" data-cat="photos" data-title="how to organize photos on your phone">
+          <div class="gc-top"><span class="gc-cat gc-photos">📸 iPhone &amp; Android</span></div>
+          <h3>How to Organise Photos on Your Phone</h3>
+          <p>Sort and structure your camera roll using albums, favourites, and date-based organisation — so your phone's camera roll tells a coherent story instead of a wall of chaos.</p>
+          <div class="gc-footer">
+            <div class="gc-meta"><span>5 min</span><span>Beginner</span></div>
+            <a href="#" class="gc-link">Read <svg class="ico" width="13" height="13"><use href="#ic-arrow"/></svg></a>
+          </div>
+        </article>
+
+        <article class="guide-card" data-cat="photos" data-title="how to organize family photos">
+          <div class="gc-top"><span class="gc-cat gc-photos">📸 All Platforms</span><span class="gc-badge badge-new">New</span></div>
+          <h3>How to Organise Family Photos</h3>
+          <p>Consolidate, organise, and share a decade of family photos across multiple people's devices — including how to handle everyone having different apps and phones.</p>
+          <div class="gc-footer">
+            <div class="gc-meta"><span>8 min</span><span>Intermediate</span></div>
+            <a href="#" class="gc-link">Read <svg class="ico" width="13" height="13"><use href="#ic-arrow"/></svg></a>
+          </div>
+        </article>
+
+        <article class="guide-card" data-cat="photos" data-title="digital photo backup checklist">
+          <div class="gc-top"><span class="gc-cat gc-photos">📸 All Platforms</span></div>
+          <h3>Digital Photo Backup Checklist</h3>
+          <p>A complete checklist for ensuring your photos are backed up in at least two separate locations — the 3-2-1 backup rule explained in plain English.</p>
+          <div class="gc-footer">
+            <div class="gc-meta"><span>4 min</span><span>Beginner</span></div>
+            <a href="#" class="gc-link">Read <svg class="ico" width="13" height="13"><use href="#ic-arrow"/></svg></a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════
+         HUB 6: DIGITAL HABITS
+         ══════════════════════════════════════════════════ -->
+    <div class="guide-section" id="hub-habits">
+      <div class="hub-header reveal">
+        <div class="hub-emoji">🧘</div>
+        <div class="hub-info">
+          <h2>Digital Minimalism &amp; Habits</h2>
+          <p>Beyond the one-time cleanup — build the routines, mindset, and systems that keep your digital life clear long-term.</p>
+        </div>
+        <span class="hub-count">5 guides</span>
+      </div>
+      <div class="guide-grid reveal">
+
+        <article class="guide-card" data-cat="habits" data-title="digital minimalism checklist">
+          <div class="gc-top"><span class="gc-cat gc-habits">🧘 Mindset</span><span class="gc-badge badge-hot">Popular</span></div>
+          <h3>Digital Minimalism Checklist</h3>
+          <p>A practical checklist for auditing and intentionally reducing your digital footprint across apps, accounts, subscriptions, and notifications — without going off-grid.</p>
+          <div class="gc-footer">
+            <div class="gc-meta"><span>5 min</span><span>Beginner</span></div>
+            <a href="#" class="gc-link">Read <svg class="ico" width="13" height="13"><use href="#ic-arrow"/></svg></a>
+          </div>
+        </article>
+
+        <article class="guide-card" data-cat="habits" data-title="how to declutter social media accounts">
+          <div class="gc-top"><span class="gc-cat gc-habits">🧘 Social Media</span></div>
+          <h3>How to Declutter Social Media Accounts</h3>
+          <p>Audit, simplify, and clean up your social media presence — unfollow, archive, delete, and adjust settings — without quitting platforms entirely.</p>
+          <div class="gc-footer">
+            <div class="gc-meta"><span>6 min</span><span>Beginner</span></div>
+            <a href="#" class="gc-link">Read <svg class="ico" width="13" height="13"><use href="#ic-arrow"/></svg></a>
+          </div>
+        </article>
+
+        <article class="guide-card" data-cat="habits" data-title="how to organize browser bookmarks">
+          <div class="gc-top"><span class="gc-cat gc-habits">🧘 Browser</span><span class="gc-badge badge-new">New</span></div>
+          <h3>How to Organise Browser Bookmarks</h3>
+          <p>Clear years of bookmark chaos and build a simple folder system you'll actually use — with a rule for every new bookmark that stops the chaos from returning.</p>
+          <div class="gc-footer">
+            <div class="gc-meta"><span>5 min</span><span>Beginner</span></div>
+            <a href="#" class="gc-link">Read <svg class="ico" width="13" height="13"><use href="#ic-arrow"/></svg></a>
+          </div>
+        </article>
+
+        <article class="guide-card" data-cat="habits" data-title="browser tab cleanup guide">
+          <div class="gc-top"><span class="gc-cat gc-habits">🧘 Browser</span></div>
+          <h3>Browser Tab Cleanup Guide</h3>
+          <p>Handle tab overload — close, save, or action everything currently open in your browser. Includes the system that prevents 200-tab situations from ever returning.</p>
+          <div class="gc-footer">
+            <div class="gc-meta"><span>4 min</span><span>Beginner</span></div>
+            <a href="#" class="gc-link">Read <svg class="ico" width="13" height="13"><use href="#ic-arrow"/></svg></a>
+          </div>
+        </article>
+
+        <article class="guide-card" data-cat="habits" data-title="monthly digital declutter routine">
+          <div class="gc-top"><span class="gc-cat gc-habits">🧘 Routine</span></div>
+          <h3>Monthly Digital Declutter Routine</h3>
+          <p>A sustainable 30-minute monthly routine that keeps your entire digital life clear — across phone, computer, email, and cloud — without a major overhaul ever again.</p>
+          <div class="gc-footer">
+            <div class="gc-meta"><span>6 min</span><span>Beginner</span></div>
+            <a href="#" class="gc-link">Read <svg class="ico" width="13" height="13"><use href="#ic-arrow"/></svg></a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════
+         CHECKLIST LIBRARY
+         ══════════════════════════════════════════════════ -->
+    <div class="guide-section" id="checklists">
+      <div class="hub-header reveal">
+        <div class="hub-emoji">✅</div>
+        <div class="hub-info">
+          <h2>Free Checklist Library</h2>
+          <p>Printable and digital checklists for every area — save, share, or use inside your deClusterize plan. All free, no sign-up required.</p>
+        </div>
+        <span class="hub-count">5 checklists</span>
+      </div>
+      <div class="checklist-grid reveal">
+
+        <div class="cl-card" data-cat="checklist" data-title="the complete digital declutter checklist">
+          <div class="cl-icon">📋</div>
+          <div class="cl-body">
+            <h3>The Complete Digital Declutter Checklist</h3>
+            <p>The master checklist covering all five areas of your digital life in one comprehensive document. The most-shared resource on deClusterize.</p>
+            <a href="#" class="cl-dl">Download free <svg class="ico" width="13" height="13"><use href="#ic-download"/></svg></a>
+          </div>
+        </div>
+
+        <div class="cl-card" data-cat="checklist" data-title="phone declutter checklist">
+          <div class="cl-icon">📱</div>
+          <div class="cl-body">
+            <h3>Phone Declutter Checklist</h3>
+            <p>Everything to check, clear, and organise on your iPhone or Android in a single printable checklist — storage, apps, photos, and settings.</p>
+            <a href="#" class="cl-dl">Download free <svg class="ico" width="13" height="13"><use href="#ic-download"/></svg></a>
+          </div>
+        </div>
+
+        <div class="cl-card" data-cat="checklist" data-title="computer cleanup checklist windows mac">
+          <div class="cl-icon">💻</div>
+          <div class="cl-body">
+            <h3>Computer Cleanup Checklist</h3>
+            <p>A systematic computer cleanup checklist for both Windows and Mac — covering disk space, files, downloads, startup items, and browser cleanup.</p>
+            <a href="#" class="cl-dl">Download free <svg class="ico" width="13" height="13"><use href="#ic-download"/></svg></a>
+          </div>
+        </div>
+
+        <div class="cl-card" data-cat="checklist" data-title="email declutter checklist inbox zero">
+          <div class="cl-icon">📧</div>
+          <div class="cl-body">
+            <h3>Email Declutter Checklist</h3>
+            <p>Reset your inbox from zero with this step-by-step email cleanup checklist — archive, filter, unsubscribe, and organise in a single session.</p>
+            <a href="#" class="cl-dl">Download free <svg class="ico" width="13" height="13"><use href="#ic-download"/></svg></a>
+          </div>
+        </div>
+
+        <div class="cl-card" data-cat="checklist" data-title="cloud storage cleanup checklist google drive icloud dropbox onedrive">
+          <div class="cl-icon">☁️</div>
+          <div class="cl-body">
+            <h3>Cloud Storage Cleanup Checklist</h3>
+            <p>Audit and organise all your cloud storage accounts — Google Drive, iCloud, Dropbox, and OneDrive — with this comprehensive cross-platform checklist.</p>
+            <a href="#" class="cl-dl">Download free <svg class="ico" width="13" height="13"><use href="#ic-download"/></svg></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- No results state -->
+    <div class="no-results" id="noResults">
+      <strong>No guides found</strong>
+      Try a different search term, or <button onclick="resetFilter()" style="background:none;border:none;color:var(--emerald);cursor:pointer;font-size:inherit;padding:0">browse all guides</button>.
+    </div>
+
+
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand" aria-label="deClusterize home">
+          <svg class="brand-mark-svg" width="36" height="36" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="url(#bm-fill)"/>
+            <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="none" stroke="url(#bm-stroke)" stroke-width="2"/>
+            <polyline points="14,25 21,32 34,17" stroke="url(#bm-stroke)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="38" cy="10" r="3" fill="#38BDF8" opacity=".9"/>
+          </svg>
+          <span class="brand-name">deClusterize</span>
+        </a>
+        <p>Small tasks. Better systems. A clearer digital life.</p>
+      </div>
+      <nav class="footer-col" aria-label="Product">
+        <h4>Product</h4>
+        <ul><li><a href="how-it-works.html">How It Works</a></li><li><a href="guides.html">Guides</a></li><li><a href="guides.html#checklists">Templates</a></li></ul>
+      </nav>
+      <nav class="footer-col" aria-label="Resources">
+        <h4>Resources</h4>
+        <ul><li><a href="#">Blog</a></li><li><a href="help.html">Help Center</a></li><li><a href="community.html">Community</a></li></ul>
+      </nav>
+      <nav class="footer-col" aria-label="Company">
+        <h4>Company</h4>
+        <ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">© 2026 deClusterize. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="forms.js"></script>
+<script>
+/* Coming-soon toast for guide/checklist links not yet live */
+(function () {
+  // Toast element
+  const toast = document.createElement('div');
+  toast.setAttribute('role', 'status');
+  toast.setAttribute('aria-live', 'polite');
+  Object.assign(toast.style, {
+    position:'fixed', bottom:'28px', left:'50%', transform:'translateX(-50%) translateY(20px)',
+    background:'var(--surface)', border:'1px solid var(--border-2)', borderRadius:'var(--r-pill)',
+    padding:'12px 22px', fontFamily:'var(--font-mono)', fontSize:'.78rem', color:'var(--text-body)',
+    boxShadow:'0 8px 32px rgba(0,0,0,.4)', zIndex:'9999', opacity:'0',
+    transition:'opacity .25s, transform .25s', pointerEvents:'none', whiteSpace:'nowrap'
+  });
+  toast.textContent = '📖 This guide is coming soon — subscribe below to be notified';
+  document.body.appendChild(toast);
+
+  let hideTimer;
+  function showToast () {
+    clearTimeout(hideTimer);
+    toast.style.opacity = '1';
+    toast.style.transform = 'translateX(-50%) translateY(0)';
+    hideTimer = setTimeout(() => {
+      toast.style.opacity = '0';
+      toast.style.transform = 'translateX(-50%) translateY(20px)';
+    }, 3000);
+  }
+
+  // Intercept all dead # links inside guide/checklist cards
+  document.querySelectorAll('.guide-card a[href="#"], .cl-card a[href="#"], .featured-guide a[href="#"]').forEach(a => {
+    a.addEventListener('click', e => { e.preventDefault(); showToast(); });
+  });
+})();
+</script>
+<script>
+/* ═══════════════════════════════════════════════════════
+   GUIDE FILTER + SEARCH
+   ═══════════════════════════════════════════════════════ */
+(function () {
+  const tabs        = document.querySelectorAll('.f-tab');
+  const cards       = document.querySelectorAll('.guide-card, .cl-card');
+  const sections    = document.querySelectorAll('.guide-section');
+  const hubHeaders  = document.querySelectorAll('.hub-header');
+  const noResults   = document.getElementById('noResults');
+  const searchInput = document.getElementById('guideSearch');
+  const searchBtn   = document.getElementById('guideSearchBtn');
+  const featured    = document.querySelector('.featured-guide');
+  let activeFilter  = 'all';
+  let activeQuery   = '';
+
+  function applyFilters () {
+    let visible = 0;
+
+    cards.forEach(card => {
+      const cat   = card.dataset.cat || '';
+      const title = card.dataset.title || '';
+      const matchCat   = activeFilter === 'all' || cat === activeFilter;
+      const matchQuery = !activeQuery || title.includes(activeQuery.toLowerCase());
+      const show = matchCat && matchQuery;
+      card.classList.toggle('hidden', !show);
+      if (show) visible++;
+    });
+
+    // show/hide featured
+    if (featured) {
+      featured.style.display = (activeFilter === 'all' && !activeQuery) ? '' : 'none';
+    }
+
+    // show/hide hub headers + sections based on whether any card in them is visible
+    sections.forEach(sec => {
+      const anyVisible = [...sec.querySelectorAll('.guide-card, .cl-card')].some(c => !c.classList.contains('hidden'));
+      sec.style.display = anyVisible ? '' : 'none';
+    });
+
+    noResults.classList.toggle('visible', visible === 0);
+  }
+
+  // Tab clicks
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected','false'); });
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected','true');
+      activeFilter = tab.dataset.filter;
+      applyFilters();
+      // scroll to guides body
+      if (activeFilter !== 'all') {
+        document.getElementById('guides-body').scrollIntoView({ behavior:'smooth', block:'start' });
+      }
+    });
+  });
+
+  // Search input
+  searchInput.addEventListener('input', () => {
+    activeQuery = searchInput.value.trim();
+    applyFilters();
+  });
+  searchBtn.addEventListener('click', () => {
+    activeQuery = searchInput.value.trim();
+    applyFilters();
+    if (activeQuery) document.getElementById('guides-body').scrollIntoView({ behavior:'smooth' });
+    else searchInput.focus();
+  });
+  searchInput.addEventListener('keydown', e => {
+    if (e.key === 'Enter') { searchBtn.click(); }
+    if (e.key === 'Escape') { searchInput.value = ''; activeQuery = ''; applyFilters(); }
+  });
+
+  // Popular-tag style: allow URL hash to pre-select a filter
+  const hash = location.hash.replace('#','');
+  const matchTab = [...tabs].find(t => t.dataset.filter === hash || `hub-${t.dataset.filter}` === hash);
+  if (matchTab) matchTab.click();
+})();
+
+// exposed for "browse all" no-results button
+function resetFilter () {
+  document.querySelector('.f-tab[data-filter="all"]').click();
+  document.getElementById('guideSearch').value = '';
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact Us — deClusterize</title>
+<meta name="description" content="Get in touch with the deClusterize team. We reply within 1 business day. For quick answers, check our Help Center first." />
+<link rel="canonical" href="https://declusterize.com/contact" />
+<meta property="og:title" content="Contact — deClusterize" />
+<meta property="og:description" content="Get in touch with the deClusterize team. We reply within 1 business day." />
+<meta property="og:type" content="website" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://declusterize.com/contact.html" />
+<meta property="og:title" content="Contact Us — deClusterize" />
+<meta property="og:description" content="Get in touch with the deClusterize team. We reply within 1 business day." />
+<meta property="og:image" content="https://declusterize.com/og-image.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://declusterize.com/og-image.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+/* ── Contact page ──────────────────────────────────────── */
+.contact-hero { padding: 110px 0 56px; text-align: center; }
+.contact-hero .eyebrow { font-family: var(--font-mono); font-size: .74rem; letter-spacing: .14em; text-transform: uppercase; color: var(--emerald); margin-bottom: 18px; }
+.contact-hero h1 { font-size: clamp(1.9rem, 4.5vw, 3rem); font-weight: 700; line-height: 1.14; margin-bottom: 16px; }
+.contact-hero p { color: var(--text-body); font-size: .95rem; line-height: 1.72; max-width: 480px; margin: 0 auto; }
+
+/* ── Try first strip ───────────────────────────────────── */
+.try-first { background: rgba(16,185,129,.06); border: 1px solid rgba(16,185,129,.2); border-radius: var(--r-panel); padding: 24px 28px; margin-bottom: 48px; }
+.try-first p { font-size: .85rem; color: var(--text-body); margin: 0 0 16px; }
+.try-first strong { color: var(--emerald-bright); }
+.try-links { display: flex; gap: 12px; flex-wrap: wrap; }
+.try-link { display: inline-flex; align-items: center; gap: 7px; font-size: .82rem; font-weight: 600; color: var(--emerald); background: rgba(16,185,129,.08); border: 1px solid rgba(16,185,129,.25); border-radius: var(--r-pill); padding: 7px 16px; text-decoration: none; transition: background .18s, border-color .18s; }
+.try-link:hover { background: rgba(16,185,129,.16); border-color: rgba(16,185,129,.4); }
+
+/* ── Layout grid ───────────────────────────────────────── */
+.contact-grid { display: grid; grid-template-columns: 1fr 380px; gap: 40px; align-items: start; }
+@media(max-width:840px) { .contact-grid { grid-template-columns: 1fr; } }
+
+/* ── Form ──────────────────────────────────────────────── */
+.contact-form-wrap { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-panel); padding: 36px; }
+.contact-form-wrap h2 { font-size: 1.2rem; font-weight: 700; margin-bottom: 6px; }
+.contact-form-wrap > p { font-size: .84rem; color: var(--text-body); margin-bottom: 28px; line-height: 1.65; }
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+@media(max-width:560px) { .form-row { grid-template-columns: 1fr; } }
+
+.field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+.field label { font-size: .78rem; font-weight: 600; color: var(--text-body); letter-spacing: .02em; }
+.field label span { color: var(--rose); margin-left: 2px; }
+.field input,
+.field select,
+.field textarea { background: var(--bg, #050507); border: 1px solid var(--border-2); border-radius: 10px; padding: 12px 16px; font-family: var(--font-ui); font-size: .88rem; color: var(--text-1, #fff); outline: none; transition: border-color .2s, box-shadow .2s; width: 100%; }
+.field input::placeholder,
+.field textarea::placeholder { color: var(--text-body); }
+.field input:focus,
+.field select:focus,
+.field textarea:focus { border-color: var(--emerald); box-shadow: 0 0 0 3px rgba(16,185,129,.12); }
+.field select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 40px; cursor: pointer; }
+.field select option { background: #111; color: #fff; }
+.field textarea { resize: vertical; min-height: 130px; line-height: 1.65; }
+
+.form-privacy { font-size: .74rem; color: var(--text-body); margin-bottom: 20px; line-height: 1.6; }
+.form-privacy a { color: var(--emerald); text-decoration: none; }
+.form-privacy a:hover { text-decoration: underline; }
+
+.form-submit { width: 100%; justify-content: center; font-size: .9rem; padding: 14px 24px; }
+
+/* Success state */
+.form-success { display: none; text-align: center; padding: 40px 20px; }
+.form-success.visible { display: block; }
+.success-icon { width: 60px; height: 60px; border-radius: 50%; background: rgba(16,185,129,.15); border: 2px solid rgba(16,185,129,.4); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 1.6rem; }
+.form-success h3 { font-size: 1.1rem; margin-bottom: 8px; }
+.form-success p { font-size: .85rem; color: var(--text-body); line-height: 1.65; }
+
+/* ── Sidebar info ──────────────────────────────────────── */
+.contact-sidebar { display: flex; flex-direction: column; gap: 16px; }
+
+.info-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 24px; }
+.info-card h3 { font-size: .92rem; font-weight: 700; margin-bottom: 6px; display: flex; align-items: center; gap: 9px; }
+.info-card h3 span { font-size: 1.1rem; }
+.info-card p { font-size: .82rem; color: var(--text-body); line-height: 1.65; margin: 0; }
+.info-card a { color: var(--emerald); text-decoration: none; font-weight: 600; }
+.info-card a:hover { text-decoration: underline; }
+
+.response-band { background: rgba(16,185,129,.06); border: 1px solid rgba(16,185,129,.2); border-radius: 14px; padding: 20px 24px; display: flex; align-items: center; gap: 14px; }
+.response-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--emerald); flex-shrink: 0; box-shadow: 0 0 8px var(--emerald); animation: pulse 2s ease-in-out infinite; }
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.6;transform:scale(1.15)} }
+.response-text strong { display: block; font-size: .85rem; color: var(--emerald-bright); margin-bottom: 2px; }
+.response-text span { font-size: .76rem; color: var(--text-body); }
+
+.hours-grid { display: grid; grid-template-columns: 1fr auto; gap: 6px 16px; margin-top: 12px; }
+.hours-grid dt { font-size: .78rem; color: var(--text-body); }
+.hours-grid dd { font-size: .78rem; color: var(--text-1, #fff); font-family: var(--font-mono); margin: 0; }
+</style>
+</head>
+<body>
+
+<!-- AMBIENT BACKGROUND -->
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<div class="fx fx-glow" aria-hidden="true"></div>
+<div class="fx fx-grid" aria-hidden="true"></div>
+<div class="fx fx-scan" aria-hidden="true"></div>
+<div class="fx fx-vignette" aria-hidden="true"></div>
+
+<!-- ICON SPRITE -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="bm-stroke" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#34D399"/><stop offset="1" stop-color="#0EA5E9"/>
+    </linearGradient>
+    <linearGradient id="bm-fill" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#34D399" stop-opacity=".18"/><stop offset="1" stop-color="#0EA5E9" stop-opacity=".10"/>
+    </linearGradient>
+  </defs>
+  <symbol id="ic-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="ic-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6 18 18M18 6 6 18"/></symbol>
+  <symbol id="ic-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></symbol>
+  <symbol id="ic-check-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5 11 15l5-5.5"/></symbol>
+  <symbol id="ic-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+</svg>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="container nav">
+    <a href="index.html" class="brand" aria-label="deClusterize home">
+      <svg class="brand-mark-svg" width="36" height="36" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="url(#bm-fill)"/>
+        <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="none" stroke="url(#bm-stroke)" stroke-width="2"/>
+        <polyline points="14,25 21,32 34,17" stroke="url(#bm-stroke)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="38" cy="10" r="3" fill="#38BDF8" opacity=".9"/>
+      </svg>
+      <span class="brand-name">deClusterize</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="how-it-works.html">How It Works</a>
+      <a href="guides.html">Guides</a>
+      <a href="guides.html#checklists">Templates</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <svg class="ico"><use href="#ic-menu"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="how-it-works.html">How It Works</a>
+    <a href="guides.html">Guides</a>
+    <a href="guides.html#checklists">Templates</a>
+  </div>
+</header>
+
+<main>
+
+<!-- ── HERO ──────────────────────────────────────────── -->
+<section class="contact-hero">
+  <div class="container">
+    <p class="eyebrow reveal">Get In Touch</p>
+    <h1 class="reveal">We're here to help.</h1>
+    <p class="reveal">Have a question, a suggestion, or just want to say hello? Send us a message and we'll get back to you within one business day.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container" style="max-width:1000px">
+
+    <!-- Try first -->
+    <div class="try-first reveal">
+      <p><strong>Before you write to us</strong> — most questions are answered instantly in one of these:</p>
+      <div class="try-links">
+        <a href="help.html" class="try-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v1.5a2.5 2.5 0 0 1 0 5"/><path d="M12 17.5h.01"/></svg>
+          Help Center
+        </a>
+        <a href="community.html" class="try-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8a5 5 0 0 0-10 0c0 3 2 5 2 8h6c0-3 2-5 2-8Z"/><path d="M9 21h6"/></svg>
+          Community Forum
+        </a>
+        <a href="guides.html" class="try-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H19v15H6.5A2.5 2.5 0 0 0 4 20.5V5.5Z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H19v3H6.5A2.5 2.5 0 0 1 4 20.5Z"/></svg>
+          Free Guides
+        </a>
+      </div>
+    </div>
+
+    <!-- Main grid -->
+    <div class="contact-grid">
+
+      <!-- FORM -->
+      <div class="contact-form-wrap reveal">
+        <h2>Send us a message</h2>
+        <p>Fill in the form below and we'll reply to your email address. All fields marked <span style="color:var(--rose)">*</span> are required.</p>
+
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="cf-name">Full name <span>*</span></label>
+              <input type="text" id="cf-name" name="name" placeholder="Sarah Reynolds" autocomplete="name" required />
+            </div>
+            <div class="field">
+              <label for="cf-email">Email address <span>*</span></label>
+              <input type="email" id="cf-email" name="email" placeholder="sarah@example.com" autocomplete="email" required />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="cf-subject">Subject <span>*</span></label>
+            <select id="cf-subject" name="subject" required>
+              <option value="" disabled selected>Choose a topic…</option>
+              <option value="general">General question</option>
+              <option value="account">Account or billing</option>
+              <option value="bug">Something isn't working</option>
+              <option value="guide">Guide or content feedback</option>
+              <option value="feature">Feature suggestion</option>
+              <option value="partnership">Partnership or press</option>
+              <option value="other">Something else</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="cf-message">Message <span>*</span></label>
+            <textarea id="cf-message" name="message" placeholder="Tell us what's on your mind — the more detail, the faster we can help." required></textarea>
+          </div>
+
+          <p class="form-privacy">By submitting this form you agree to our <a href="privacy.html">Privacy Policy</a>. We'll only use your email to reply to this message and will never share it with third parties.</p>
+
+          <button type="submit" class="btn btn-primary form-submit">
+            Send message
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="margin-left:6px"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+          </button>
+        </form>
+
+        <!-- Success message (shown after submit) -->
+        <div class="form-success" id="formSuccess">
+          <div class="success-icon">✅</div>
+          <h3>Message sent!</h3>
+          <p>Thanks for reaching out. We've received your message and will reply to <strong id="successEmail"></strong> within one business day.</p>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <aside class="contact-sidebar reveal">
+
+        <div class="response-band">
+          <div class="response-dot"></div>
+          <div class="response-text">
+            <strong>Typically reply within 1 business day</strong>
+            <span>Monday – Friday, 9am – 6pm GMT</span>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h3><span>📧</span> Email us directly</h3>
+          <p>Prefer to write your own email? Reach us at<br><a href="mailto:info@declusterize.com">info@declusterize.com</a></p>
+        </div>
+
+        <div class="info-card">
+          <h3><span>🕐</span> Support hours</h3>
+          <dl class="hours-grid">
+            <dt>Monday – Friday</dt><dd>9am – 6pm GMT</dd>
+            <dt>Saturday</dt><dd>10am – 2pm GMT</dd>
+            <dt>Sunday</dt><dd>Closed</dd>
+          </dl>
+        </div>
+
+        <div class="info-card">
+          <h3><span>🤝</span> Partnerships &amp; press</h3>
+          <p>Writing about us, exploring a collaboration, or requesting a media kit? Use the form and select "Partnership or press" — or email us directly at <a href="mailto:info@declusterize.com">info@declusterize.com</a>.</p>
+        </div>
+
+        <div class="info-card">
+          <h3><span>🐛</span> Found a bug?</h3>
+          <p>Please use the form above and select "Something isn't working." Include your browser, device, and a brief description of what happened — it helps us fix it faster.</p>
+        </div>
+
+      </aside>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand" aria-label="deClusterize home">
+          <svg class="brand-mark-svg" width="36" height="36" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="url(#bm-fill)"/>
+            <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="none" stroke="url(#bm-stroke)" stroke-width="2"/>
+            <polyline points="14,25 21,32 34,17" stroke="url(#bm-stroke)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="38" cy="10" r="3" fill="#38BDF8" opacity=".9"/>
+          </svg>
+          <span class="brand-name">deClusterize</span>
+        </a>
+        <p>Small tasks. Better systems. A clearer digital life.</p>
+      </div>
+      <nav class="footer-col" aria-label="Product">
+        <h4>Product</h4>
+        <ul><li><a href="how-it-works.html">How It Works</a></li><li><a href="guides.html">Guides</a></li><li><a href="guides.html#checklists">Templates</a></li></ul>
+      </nav>
+      <nav class="footer-col" aria-label="Resources">
+        <h4>Resources</h4>
+        <ul><li><a href="#">Blog</a></li><li><a href="help.html">Help Center</a></li><li><a href="community.html">Community</a></li></ul>
+      </nav>
+      <nav class="footer-col" aria-label="Company">
+        <h4>Company</h4>
+        <ul><li><a href="about.html">About</a></li><li><a href="contact.html" aria-current="page">Contact</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">© 2026 deClusterize. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="forms.js"></script>
+<script>
+/* ── Contact form ─────────────────────────────────────── */
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  const email = document.getElementById('cf-email').value.trim();
+  const name  = document.getElementById('cf-name').value.trim();
+  const subj  = document.getElementById('cf-subject').value;
+  const msg   = document.getElementById('cf-message').value.trim();
+
+  // Basic validation
+  if (!name || !email || !subj || !msg) {
+    alert('Please fill in all required fields.');
+    return;
+  }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    alert('Please enter a valid email address.');
+    return;
+  }
+
+  // Hide form, show success
+  this.style.display = 'none';
+  document.getElementById('successEmail').textContent = email;
+  document.getElementById('formSuccess').classList.add('visible');
+
+  // Scroll success into view
+  document.getElementById('formSuccess').scrollIntoView({ behavior: 'smooth', block: 'center' });
+});
+</script>
+</body>
+</html>

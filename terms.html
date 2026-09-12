@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Terms of Service — deClusterize</title>
+<meta name="description" content="deClusterize Terms of Service — the rules, rights, and responsibilities for using the deClusterize platform." />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://declusterize.com/terms.html" />
+<meta property="og:title" content="Terms of Service — deClusterize" />
+<meta property="og:description" content="deClusterize Terms of Service — the rules, rights, and responsibilities for using the deClusterize platform." />
+<meta property="og:image" content="https://declusterize.com/og-image.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://declusterize.com/og-image.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+/* ── Inner page ─────────────────────────────────── */
+.page-hero{padding:120px 0 56px;text-align:center}
+.page-hero .eyebrow{font-family:var(--font-mono);font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--emerald);margin-bottom:20px}
+.page-hero h1{font-size:clamp(2rem,5vw,3rem);font-weight:700;line-height:1.15;margin-bottom:20px}
+.page-hero .lead{max-width:580px;margin:0 auto;color:var(--text-2);font-size:.95rem;line-height:1.7}
+.last-updated{font-family:var(--font-mono);font-size:.72rem;color:var(--text-3,#52525B);margin-top:16px;letter-spacing:.06em}
+
+.doc-body{padding-bottom:100px}
+.doc-grid{display:grid;grid-template-columns:220px 1fr;gap:48px;align-items:start}
+@media(max-width:800px){.doc-grid{grid-template-columns:1fr}}
+
+.doc-toc{position:sticky;top:100px}
+.doc-toc h5{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-2);margin-bottom:14px}
+.doc-toc ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:2px}
+.doc-toc li a{display:block;font-size:.82rem;color:var(--text-2);padding:6px 10px;border-radius:6px;border-left:2px solid transparent;text-decoration:none;transition:color .2s,border-color .2s,background .2s}
+.doc-toc li a:hover,.doc-toc li a.active{color:var(--emerald);border-left-color:var(--emerald);background:rgba(16,185,129,.07)}
+@media(max-width:800px){.doc-toc{display:none}}
+
+.doc-content{min-width:0}
+.doc-section{margin-bottom:52px;scroll-margin-top:90px}
+.doc-section h2{font-size:1.2rem;font-weight:700;color:var(--text-1,#fff);margin-bottom:18px;padding-bottom:12px;border-bottom:1px solid var(--border)}
+.doc-section p{color:var(--text-2);font-size:.9rem;line-height:1.8;margin-bottom:14px}
+.doc-section p:last-child{margin-bottom:0}
+.doc-section ul,.doc-section ol{color:var(--text-2);font-size:.9rem;line-height:1.8;padding-left:20px;margin-bottom:14px;display:flex;flex-direction:column;gap:6px}
+.doc-section li::marker{color:var(--emerald)}
+.doc-section strong{color:var(--text-1,#f0f0f0);font-weight:600}
+
+.doc-callout{background:rgba(16,185,129,.07);border:1px solid rgba(16,185,129,.2);border-radius:12px;padding:20px 22px;margin:20px 0}
+.doc-callout p{margin:0;font-size:.87rem}
+.doc-callout-warn{background:rgba(251,113,133,.06);border-color:rgba(251,113,133,.2)}
+.doc-callout-warn p{color:var(--rose)}
+
+.doc-tag{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--emerald);margin-bottom:8px;display:block}
+</style>
+</head>
+<body>
+
+<!-- AMBIENT BACKGROUND -->
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<div class="fx fx-glow" aria-hidden="true"></div>
+<div class="fx fx-grid" aria-hidden="true"></div>
+<div class="fx fx-scan" aria-hidden="true"></div>
+<div class="fx fx-vignette" aria-hidden="true"></div>
+
+<!-- ICON SPRITE (minimal) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="bm-stroke" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#34D399"/><stop offset="1" stop-color="#0EA5E9"/>
+    </linearGradient>
+    <linearGradient id="bm-fill" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#34D399" stop-opacity=".18"/><stop offset="1" stop-color="#0EA5E9" stop-opacity=".10"/>
+    </linearGradient>
+  </defs>
+  <symbol id="ic-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="ic-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6 18 18M18 6 6 18"/></symbol>
+</svg>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="container nav">
+    <a href="index.html" class="brand" aria-label="deClusterize home">
+      <svg class="brand-mark-svg" width="36" height="36" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="url(#bm-fill)"/>
+        <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="none" stroke="url(#bm-stroke)" stroke-width="2"/>
+        <polyline points="14,25 21,32 34,17" stroke="url(#bm-stroke)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="38" cy="10" r="3" fill="#38BDF8" opacity=".9"/>
+      </svg>
+      <span class="brand-name">deClusterize</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="how-it-works.html">How It Works</a>
+      <a href="guides.html">Guides</a>
+      <a href="guides.html#checklists">Templates</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <svg class="ico"><use href="#ic-menu"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="how-it-works.html">How It Works</a>
+    <a href="guides.html">Guides</a>
+    <a href="guides.html#checklists">Templates</a>
+  </div>
+</header>
+
+<main>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow reveal">Legal</p>
+    <h1 class="reveal">Terms of <span class="text-teal">Service</span></h1>
+    <p class="lead reveal">Please read these terms carefully before using deClusterize. By accessing or using our platform, you agree to be bound by what's written here.</p>
+    <p class="last-updated reveal">Last updated: 1 June 2025 &nbsp;·&nbsp; Effective: 1 June 2025</p>
+  </div>
+</section>
+
+<!-- DOCUMENT BODY -->
+<section class="doc-body">
+  <div class="container">
+    <div class="doc-grid">
+
+      <!-- SIDEBAR TOC -->
+      <aside class="doc-toc" aria-label="Table of contents">
+        <h5>Contents</h5>
+        <ul>
+          <li><a href="#acceptance">Acceptance</a></li>
+          <li><a href="#description">Service Description</a></li>
+          <li><a href="#accounts">Accounts</a></li>
+          <li><a href="#acceptable-use">Acceptable Use</a></li>
+          <li><a href="#content">Your Content</a></li>
+          <li><a href="#subscriptions">Subscriptions &amp; Billing</a></li>
+          <li><a href="#ip">Intellectual Property</a></li>
+          <li><a href="#third-party">Third-Party Services</a></li>
+          <li><a href="#disclaimers">Disclaimers</a></li>
+          <li><a href="#liability">Limitation of Liability</a></li>
+          <li><a href="#indemnification">Indemnification</a></li>
+          <li><a href="#termination">Termination</a></li>
+          <li><a href="#governing-law">Governing Law</a></li>
+          <li><a href="#changes">Changes to Terms</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <div class="doc-content">
+
+        <div class="doc-section reveal" id="acceptance">
+          <span class="doc-tag">// 01 — acceptance</span>
+          <h2>Acceptance of Terms</h2>
+          <p>By creating an account, accessing, or using any part of the deClusterize platform (the "Service"), you ("User", "you") agree to be bound by these Terms of Service ("Terms") and our Privacy Policy, which is incorporated by reference.</p>
+          <p>If you are using the Service on behalf of an organization, you represent that you have authority to bind that organization to these Terms, and references to "you" include both you personally and that organization.</p>
+          <div class="doc-callout">
+            <p>If you do not agree to these Terms, you must not use the Service. Continued use of deClusterize after any changes to these Terms constitutes acceptance of the revised Terms.</p>
+          </div>
+        </div>
+
+        <div class="doc-section reveal" id="description">
+          <span class="doc-tag">// 02 — service</span>
+          <h2>Service Description</h2>
+          <p>deClusterize provides a digital organization platform that helps individuals manage files, photos, email, devices, and cloud storage through guided, task-based sessions. The Service includes:</p>
+          <ul>
+            <li>Personalized digital organization plans generated via an onboarding assessment</li>
+            <li>Step-by-step guides and templates for common digital organization tasks</li>
+            <li>Progress tracking, habit-formation tools, and session scheduling</li>
+            <li>Optional integrations with third-party cloud storage, email, and device platforms (with your explicit authorization)</li>
+            <li>A community forum and Help Center (available on paid plans)</li>
+          </ul>
+          <p>We reserve the right to modify, suspend, or discontinue any aspect of the Service at any time with reasonable notice.</p>
+        </div>
+
+        <div class="doc-section reveal" id="accounts">
+          <span class="doc-tag">// 03 — accounts</span>
+          <h2>Accounts</h2>
+          <p>To access the full Service, you must create an account. You agree to:</p>
+          <ul>
+            <li>Provide accurate, current, and complete registration information</li>
+            <li>Maintain the security of your password and accept responsibility for all activity under your account</li>
+            <li>Notify us immediately at <strong>info@declusterize.com</strong> if you suspect unauthorized use of your account</li>
+            <li>Not share your account credentials or allow others to access the Service through your account</li>
+          </ul>
+          <p>You must be at least 16 years old to create an account. By registering, you represent that you meet this requirement.</p>
+        </div>
+
+        <div class="doc-section reveal" id="acceptable-use">
+          <span class="doc-tag">// 04 — acceptable use</span>
+          <h2>Acceptable Use</h2>
+          <p>You agree to use the Service only for lawful purposes and in accordance with these Terms. You must not:</p>
+          <ul>
+            <li>Use the Service to transmit or store unlawful, harmful, abusive, or infringing content</li>
+            <li>Attempt to gain unauthorized access to any part of the Service, servers, or connected systems</li>
+            <li>Use automated scripts, bots, scrapers, or crawlers against the Service without our written permission</li>
+            <li>Reverse-engineer, decompile, or disassemble any part of the Service</li>
+            <li>Resell, sublicense, or otherwise commercialize access to the Service without authorization</li>
+            <li>Interfere with or disrupt the integrity, performance, or availability of the Service</li>
+            <li>Impersonate any person or entity, or falsely represent your affiliation with any entity</li>
+          </ul>
+          <p>Violation of this section may result in immediate account termination and, where applicable, reporting to law enforcement authorities.</p>
+        </div>
+
+        <div class="doc-section reveal" id="content">
+          <span class="doc-tag">// 05 — your content</span>
+          <h2>Your Content</h2>
+          <p>You retain all ownership rights to content you create, upload, or connect to the Service ("User Content"). By using the Service, you grant deClusterize a limited, non-exclusive, royalty-free license to access, process, and display your User Content solely as necessary to provide and improve the Service.</p>
+          <p>You represent and warrant that:</p>
+          <ul>
+            <li>You own or have the necessary rights to your User Content</li>
+            <li>Your User Content does not infringe the rights of any third party</li>
+            <li>Your User Content does not violate any applicable law</li>
+          </ul>
+          <p>We do not claim ownership of your User Content. We will not use your content to train AI models without your explicit, separately obtained consent.</p>
+        </div>
+
+        <div class="doc-section reveal" id="subscriptions">
+          <span class="doc-tag">// 06 — billing</span>
+          <h2>Subscriptions &amp; Billing</h2>
+          <p>deClusterize offers both a free tier and paid subscription plans. Paid plans are billed on a monthly or annual basis as selected at checkout.</p>
+          <ul>
+            <li><strong>Free plan:</strong> Access to core organizing guides and one connected integration. No credit card required.</li>
+            <li><strong>Pro plan:</strong> Unlimited integrations, advanced progress tracking, templates library, and priority support. Billed monthly or annually.</li>
+            <li><strong>Team plan:</strong> Everything in Pro, plus shared workspaces and admin controls. Contact us for pricing.</li>
+          </ul>
+          <p>Payments are processed by Stripe. By subscribing, you authorize us to charge your payment method on a recurring basis until you cancel. Prices are in USD and exclusive of applicable taxes unless stated otherwise.</p>
+          <p><strong>Cancellation:</strong> You may cancel your subscription at any time. Cancellation takes effect at the end of the current billing period; no partial-period refunds are issued unless required by law.</p>
+          <p><strong>Refunds:</strong> If you are dissatisfied within the first 14 days of a paid subscription, contact us for a full refund — no questions asked.</p>
+          <div class="doc-callout doc-callout-warn">
+            <p>We reserve the right to change subscription prices with 30 days' advance notice. Continuing to use the Service after the price change constitutes acceptance of the new price.</p>
+          </div>
+        </div>
+
+        <div class="doc-section reveal" id="ip">
+          <span class="doc-tag">// 07 — intellectual property</span>
+          <h2>Intellectual Property</h2>
+          <p>The Service, including its software, design, text, graphics, icons, and methodology, is owned by deClusterize and protected by intellectual property laws. All rights not expressly granted to you are reserved.</p>
+          <p>You are granted a limited, non-exclusive, non-transferable, revocable license to use the Service for your personal, non-commercial purposes in accordance with these Terms.</p>
+          <p>The deClusterize name, logo, and marks are trademarks of deClusterize. You may not use our marks in any manner that could cause confusion, disparagement, or false endorsement without our prior written consent.</p>
+        </div>
+
+        <div class="doc-section reveal" id="third-party">
+          <span class="doc-tag">// 08 — third-party services</span>
+          <h2>Third-Party Services</h2>
+          <p>The Service integrates with third-party platforms such as Google Drive, Dropbox, Gmail, iCloud, and others (collectively, "Third-Party Services"). Your use of those integrations is subject to the respective third party's terms and privacy policies.</p>
+          <p>deClusterize is not responsible for the availability, accuracy, or content of Third-Party Services. We do not endorse, and are not liable for, any Third-Party Service. You connect Third-Party Services at your own risk and may revoke integrations at any time from your account settings.</p>
+        </div>
+
+        <div class="doc-section reveal" id="disclaimers">
+          <span class="doc-tag">// 09 — disclaimers</span>
+          <h2>Disclaimers</h2>
+          <p>THE SERVICE IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.</p>
+          <p>We do not warrant that the Service will be uninterrupted, error-free, or secure; that defects will be corrected; or that the Service or the server that makes it available are free of viruses or other harmful components.</p>
+          <p>deClusterize provides digital organizing guidance for informational purposes. We do not provide professional data recovery, legal, financial, or IT consulting services. Any action you take based on Service guidance is at your own risk.</p>
+        </div>
+
+        <div class="doc-section reveal" id="liability">
+          <span class="doc-tag">// 10 — limitation of liability</span>
+          <h2>Limitation of Liability</h2>
+          <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, CLEARDIGIT AND ITS OFFICERS, DIRECTORS, EMPLOYEES, AND AGENTS SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING LOSS OF PROFITS, DATA, GOODWILL, OR OTHER INTANGIBLE LOSSES, ARISING OUT OF OR IN CONNECTION WITH YOUR USE OF (OR INABILITY TO USE) THE SERVICE.</p>
+          <p>IN NO EVENT SHALL CLEARDIGIT'S TOTAL LIABILITY TO YOU FOR ALL CLAIMS EXCEED THE GREATER OF: (A) THE AMOUNT YOU PAID TO CLEARDIGIT IN THE 12 MONTHS PRECEDING THE CLAIM; OR (B) US $50.</p>
+          <p>Some jurisdictions do not allow the exclusion of certain warranties or limitation of liability, so the above limitations may not apply to you in full.</p>
+        </div>
+
+        <div class="doc-section reveal" id="indemnification">
+          <span class="doc-tag">// 11 — indemnification</span>
+          <h2>Indemnification</h2>
+          <p>You agree to defend, indemnify, and hold harmless deClusterize and its affiliates, officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, and expenses (including reasonable legal fees) arising out of or in any way connected with:</p>
+          <ul>
+            <li>Your access to or use of the Service</li>
+            <li>Your User Content</li>
+            <li>Your violation of these Terms</li>
+            <li>Your violation of any third-party right, including intellectual property rights or privacy rights</li>
+          </ul>
+        </div>
+
+        <div class="doc-section reveal" id="termination">
+          <span class="doc-tag">// 12 — termination</span>
+          <h2>Termination</h2>
+          <p>You may delete your account at any time from your account settings. Upon deletion, your personal data will be purged in accordance with our <a href="privacy.html" style="color:var(--emerald)">Privacy Policy</a>.</p>
+          <p>We may suspend or terminate your access to the Service immediately, without notice, if we reasonably believe you have violated these Terms or if your account poses a security or legal risk. Upon termination:</p>
+          <ul>
+            <li>All rights granted to you under these Terms immediately cease</li>
+            <li>We may (but are not obligated to) provide a data export within 30 days of request</li>
+            <li>Provisions that by their nature should survive termination will survive, including Intellectual Property, Disclaimers, Limitation of Liability, and Governing Law sections</li>
+          </ul>
+        </div>
+
+        <div class="doc-section reveal" id="governing-law">
+          <span class="doc-tag">// 13 — governing law</span>
+          <h2>Governing Law &amp; Disputes</h2>
+          <p>These Terms are governed by the laws of the State of California, United States, without regard to its conflict-of-law provisions. Any dispute arising from these Terms or the Service will first be subject to good-faith negotiation. If unresolved within 30 days, the dispute shall be submitted to binding arbitration administered by JAMS under its Streamlined Arbitration Rules, with proceedings in San Francisco, California.</p>
+          <p><strong>Class action waiver:</strong> You and deClusterize each agree that any dispute resolution proceedings will be conducted only on an individual basis and not in a class, consolidated, or representative action. If this waiver is found unenforceable for a particular claim, that claim must be brought in court; all other claims remain subject to arbitration.</p>
+          <p>If you are a consumer in the EU or UK, mandatory consumer protection laws of your country of residence may apply in addition to or instead of the above provisions.</p>
+        </div>
+
+        <div class="doc-section reveal" id="changes">
+          <span class="doc-tag">// 14 — changes to terms</span>
+          <h2>Changes to Terms</h2>
+          <p>We may revise these Terms from time to time. When we make material changes, we will notify you by email and by displaying a prominent notice in the Service at least 14 days before the changes take effect. The "Last updated" date at the top of this page reflects the most recent revision.</p>
+          <p>If you object to any changes, you must stop using the Service and may delete your account before the effective date. Continued use after the effective date constitutes your acceptance of the revised Terms.</p>
+        </div>
+
+        <div class="doc-section reveal" id="contact">
+          <span class="doc-tag">// 15 — contact</span>
+          <h2>Contact</h2>
+          <p>If you have questions about these Terms, please contact us:</p>
+          <ul>
+            <li><strong>Email:</strong> info@declusterize.com</li>
+            <li><strong>Mail:</strong> deClusterize, 123 Clarity Lane, Suite 400, San Francisco, CA 94105</li>
+          </ul>
+          <p>For general support, visit our <a href="help.html" style="color:var(--emerald)">Help Center</a> or email <strong>info@declusterize.com</strong>.</p>
+        </div>
+
+      </div><!-- /doc-content -->
+    </div><!-- /doc-grid -->
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand" aria-label="deClusterize home">
+          <svg class="brand-mark-svg" width="36" height="36" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="url(#bm-fill)"/>
+            <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="none" stroke="url(#bm-stroke)" stroke-width="2"/>
+            <polyline points="14,25 21,32 34,17" stroke="url(#bm-stroke)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="38" cy="10" r="3" fill="#38BDF8" opacity=".9"/>
+          </svg>
+          <span class="brand-name">deClusterize</span>
+        </a>
+        <p>Small tasks. Better systems. A clearer digital life.</p>
+      </div>
+      <nav class="footer-col" aria-label="Product">
+        <h4>Product</h4>
+        <ul><li><a href="how-it-works.html">How It Works</a></li><li><a href="guides.html">Guides</a></li><li><a href="guides.html#checklists">Templates</a></li></ul>
+      </nav>
+      <nav class="footer-col" aria-label="Resources">
+        <h4>Resources</h4>
+        <ul><li><a href="#">Blog</a></li><li><a href="help.html">Help Center</a></li><li><a href="community.html">Community</a></li></ul>
+      </nav>
+      <nav class="footer-col" aria-label="Company">
+        <h4>Company</h4>
+        <ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">© 2026 deClusterize. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="forms.js"></script>
+</body>
+</html>

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Phone Storage Full? What to Delete First — deClusterize</title>
+<meta name="description" content="Your phone storage is full and you don't know where to start. This priority-ordered guide tells you exactly what to delete first on iPhone and Android to reclaim the most space fastest." />
+<meta name="keywords" content="phone storage full what to delete, iphone storage full, android storage full, what to delete to free up phone storage, phone storage almost full, clear phone storage" />
+<link rel="canonical" href="https://declusterize.com/phone-storage-full-what-to-delete-first.html" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://declusterize.com/phone-storage-full-what-to-delete-first.html" />
+<meta property="og:title" content="Phone Storage Full? What to Delete First — deClusterize" />
+<meta property="og:description" content="Priority-ordered guide: the fastest way to reclaim storage on iPhone and Android, without deleting anything important." />
+<meta property="og:image" content="https://declusterize.com/og-image.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://declusterize.com/og-image.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Phone Storage Full? What to Delete First",
+  "description": "Priority-ordered guide to clearing phone storage on iPhone and Android — starting with the categories that free the most space with the least risk.",
+  "image": "https://declusterize.com/og-image.jpg",
+  "totalTime": "PT15M",
+  "estimatedCost": { "@type": "MonetaryAmount", "currency": "GBP", "value": "0" },
+  "step": [
+    { "@type": "HowToStep", "position": 1, "name": "Check your storage breakdown", "text": "iPhone: Settings → General → iPhone Storage. Android: Settings → Storage. Wait for the chart to fully load before acting." },
+    { "@type": "HowToStep", "position": 2, "name": "Delete downloaded streaming content", "text": "Open Netflix, Disney+, Spotify, and Podcasts and delete all offline downloads. These are safe to remove — everything can be streamed or re-downloaded." },
+    { "@type": "HowToStep", "position": 3, "name": "Clear screenshots and WhatsApp auto-saves", "text": "Delete the Screenshots album and the WhatsApp album in Photos. These accumulate without you noticing and are rarely worth keeping." },
+    { "@type": "HowToStep", "position": 4, "name": "Offload or delete large unused apps", "text": "iPhone Storage / Android Storage lists apps by size. Offload or delete the largest ones you rarely use." },
+    { "@type": "HowToStep", "position": 5, "name": "Clear app caches and message attachments", "text": "Clear Safari cache, clear individual app caches, and delete large attachments from Messages threads." }
+  ]
+}
+</script>
+
+<style>
+.skip-link { position: absolute; top: -100%; left: 16px; background: var(--emerald); color: #fff; padding: 8px 16px; border-radius: 4px; font-size: .85rem; font-weight: 600; z-index: 9999; text-decoration: none; transition: top .15s; }
+.skip-link:focus { top: 8px; }
+.breadcrumb { padding: 100px 0 0; font-family: var(--font-mono); font-size: .72rem; letter-spacing: .06em; color: var(--text-muted); }
+.breadcrumb a { color: var(--text-muted); text-decoration: none; }
+.breadcrumb a:hover { color: var(--emerald); }
+.breadcrumb span { margin: 0 6px; }
+.art-hero { padding: 24px 0 48px; }
+.art-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--sky-bright); background: rgba(14,165,233,.1); border: 1px solid rgba(14,165,233,.2); border-radius: var(--r-pill); padding: 5px 14px; margin-bottom: 20px; }
+.art-hero h1 { font-size: clamp(1.8rem, 4.5vw, 3rem); font-weight: 700; line-height: 1.15; margin-bottom: 20px; max-width: 820px; }
+.art-hero h1 em { font-style: normal; color: var(--emerald-bright); }
+.art-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 20px; color: var(--text-muted); font-size: .82rem; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 16px 0; margin: 24px 0 0; }
+.art-meta-item { display: flex; align-items: center; gap: 7px; }
+.art-meta-item svg { opacity: .6; }
+.art-badge { display: inline-block; font-family: var(--font-mono); font-size: .65rem; letter-spacing: .1em; text-transform: uppercase; padding: 3px 10px; border-radius: var(--r-pill); border: 1px solid rgba(16,185,129,.3); background: rgba(16,185,129,.08); color: var(--emerald); }
+.art-layout { display: grid; grid-template-columns: 1fr 280px; gap: 48px; align-items: start; padding-bottom: 100px; }
+@media(max-width:900px){ .art-layout { grid-template-columns: 1fr; } .art-sidebar { display: none; } }
+.art-sidebar { position: sticky; top: 88px; }
+.toc-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-panel); padding: 24px; }
+.toc-card h3 { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 16px; }
+.toc-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 4px; }
+.toc-list a { display: block; font-size: .84rem; color: var(--text-body); text-decoration: none; padding: 6px 10px; border-radius: 6px; border-left: 2px solid transparent; transition: all .2s; }
+.toc-list a:hover, .toc-list a.active { color: var(--emerald); border-left-color: var(--emerald); background: rgba(16,185,129,.07); }
+.toc-cta { margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; }
+.toc-cta p { font-size: .8rem; color: var(--text-muted); margin-bottom: 12px; line-height: 1.5; }
+.art-body h2 { font-size: clamp(1.25rem, 2.5vw, 1.6rem); font-weight: 700; margin: 52px 0 18px; padding-top: 8px; border-top: 1px solid var(--border); scroll-margin-top: 88px; }
+.art-body h2:first-child { margin-top: 0; border-top: none; }
+.art-body h3 { font-size: 1.05rem; font-weight: 600; margin: 30px 0 12px; color: var(--text-heading); scroll-margin-top: 88px; }
+.art-body p { color: var(--text-body); line-height: 1.78; margin-bottom: 18px; font-size: .97rem; }
+.art-body a { color: var(--emerald); text-decoration: underline; text-underline-offset: 3px; }
+.art-body ul, .art-body ol { padding-left: 24px; margin-bottom: 20px; display: flex; flex-direction: column; gap: 8px; }
+.art-body li { color: var(--text-body); line-height: 1.65; font-size: .97rem; }
+.art-body strong { color: var(--text-heading); }
+.steps { list-style: none; padding: 0; margin: 24px 0 32px; display: flex; flex-direction: column; gap: 16px; }
+.step-item { display: flex; gap: 20px; align-items: flex-start; background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-panel); padding: 20px 22px; }
+.step-num { flex-shrink: 0; width: 34px; height: 34px; border-radius: 50%; background: linear-gradient(135deg, var(--emerald), var(--sky)); display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: .8rem; font-weight: 700; color: #fff; }
+.step-content h4 { font-size: .97rem; font-weight: 600; margin-bottom: 6px; color: var(--text-heading); }
+.step-content p { font-size: .88rem; color: var(--text-body); line-height: 1.65; margin: 0; }
+.callout { border-radius: var(--r-panel); padding: 18px 22px; margin: 28px 0; display: flex; gap: 16px; align-items: flex-start; }
+.callout-icon { font-size: 1.25rem; flex-shrink: 0; line-height: 1.6; }
+.callout-body { flex: 1; }
+.callout-body strong { display: block; margin-bottom: 5px; font-size: .92rem; }
+.callout-body p { font-size: .87rem; line-height: 1.65; margin: 0; }
+.callout-tip { background: rgba(16,185,129,.08); border: 1px solid rgba(16,185,129,.25); }
+.callout-tip .callout-body strong, .callout-tip .callout-body p { color: var(--text-body); }
+.callout-warn { background: rgba(251,191,36,.07); border: 1px solid rgba(251,191,36,.25); }
+.callout-warn .callout-body strong { color: #fbbf24; }
+.callout-warn .callout-body p { color: var(--text-body); }
+.callout-info { background: rgba(14,165,233,.08); border: 1px solid rgba(14,165,233,.2); }
+.callout-info .callout-body strong { color: var(--sky-bright); }
+.callout-info .callout-body p { color: var(--text-body); }
+.compare-table { width: 100%; border-collapse: collapse; margin: 24px 0 32px; font-size: .88rem; }
+.compare-table th { font-family: var(--font-mono); font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; color: var(--text-muted); padding: 10px 16px; background: var(--surface-2); border: 1px solid var(--border); text-align: left; }
+.compare-table td { padding: 12px 16px; border: 1px solid var(--border); color: var(--text-body); vertical-align: top; line-height: 1.6; }
+.compare-table tr:nth-child(even) td { background: rgba(255,255,255,.02); }
+.t-good { color: var(--emerald); font-weight: 600; }
+.t-bad { color: #f87171; }
+.t-mid { color: #fbbf24; }
+.art-img { width: 100%; border-radius: var(--r-panel); overflow: hidden; margin: 28px 0; border: 1px solid var(--border); max-height: 500px; }
+.art-img img { width: 100%; height: auto; display: block; object-fit: contain; }
+.art-img-caption { font-size: .78rem; color: var(--text-muted); text-align: center; margin-top: -18px; margin-bottom: 28px; font-style: italic; }
+.related-section { padding: 60px 0; border-top: 1px solid var(--border); }
+.related-section h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: 28px; }
+.related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+@media(max-width:700px){ .related-grid { grid-template-columns: 1fr; } }
+.related-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-panel); padding: 22px; text-decoration: none; display: flex; flex-direction: column; gap: 10px; transition: border-color .2s, transform .2s; }
+.related-card:hover { border-color: var(--emerald); transform: translateY(-3px); }
+.related-card .rc-tag { font-family: var(--font-mono); font-size: .65rem; letter-spacing: .1em; text-transform: uppercase; color: var(--emerald); }
+.related-card h3 { font-size: .95rem; font-weight: 600; color: var(--text-heading); line-height: 1.45; }
+.related-card p { font-size: .82rem; color: var(--text-muted); line-height: 1.55; margin: 0; }
+.related-card .rc-arrow { margin-top: auto; color: var(--emerald); font-size: .82rem; }
+.art-cta { background: var(--surface); border: 1px solid var(--border-2); border-radius: var(--r-panel); padding: 36px; text-align: center; margin: 48px 0; }
+.art-cta h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 10px; }
+.art-cta p { color: var(--text-body); font-size: .92rem; margin-bottom: 24px; max-width: 440px; margin-left: auto; margin-right: auto; line-height: 1.6; }
+.art-cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.art-cta .btn, .art-cta .btn * { -webkit-text-fill-color: currentColor; background-clip: unset; -webkit-background-clip: unset; }
+.art-cta .btn-primary { color: #fff !important; -webkit-text-fill-color: #fff !important; }
+.art-cta .btn-secondary { color: var(--emerald) !important; -webkit-text-fill-color: var(--emerald) !important; }
+
+/* Priority badges */
+.priority-badge { display: inline-block; font-family: var(--font-mono); font-size: .62rem; letter-spacing: .1em; text-transform: uppercase; padding: 3px 10px; border-radius: var(--r-pill); font-weight: 700; margin-bottom: 12px; }
+.priority-1 { background: rgba(16,185,129,.15); border: 1px solid rgba(16,185,129,.35); color: #34D399; }
+.priority-2 { background: rgba(251,191,36,.1); border: 1px solid rgba(251,191,36,.3); color: #fbbf24; }
+.priority-3 { background: rgba(14,165,233,.1); border: 1px solid rgba(14,165,233,.25); color: var(--sky-bright); }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<header class="nav-wrap" id="navbar">
+  <nav class="nav container" role="navigation" aria-label="Main">
+    <a href="index.html" class="brand" aria-label="deClusterize home">
+      <svg class="brand-mark-svg" width="32" height="32" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="bm-fill" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#10B981" stop-opacity=".18"/><stop offset="100%" stop-color="#0EA5E9" stop-opacity=".18"/></linearGradient>
+          <linearGradient id="bm-stroke" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#34D399"/><stop offset="100%" stop-color="#38BDF8"/></linearGradient>
+        </defs>
+        <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="url(#bm-fill)"/>
+        <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="none" stroke="url(#bm-stroke)" stroke-width="2"/>
+        <polyline points="14,25 21,32 34,17" stroke="url(#bm-stroke)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="38" cy="10" r="3" fill="#38BDF8" opacity=".9"/>
+      </svg>
+      <span class="brand-name">deClusterize</span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="how-it-works.html">How It Works</a></li>
+      <li><a href="guides.html" class="active">Guides</a></li>
+      <li><a href="community.html">Community</a></li>
+    </ul>
+    <div class="nav-actions">
+    </div>
+    <button class="nav-burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <ul role="list">
+      <li><a href="how-it-works.html">How It Works</a></li>
+      <li><a href="guides.html">Guides</a></li>
+      <li><a href="community.html">Community</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main-content">
+<div class="container">
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="index.html">Home</a>
+    <span aria-hidden="true">›</span>
+    <a href="guides.html">Guides</a>
+    <span aria-hidden="true">›</span>
+    <a href="guides.html#hub-phone">Phone &amp; Devices</a>
+    <span aria-hidden="true">›</span>
+    <span aria-current="page">Phone Storage Full? What to Delete First</span>
+  </nav>
+
+  <header class="art-hero">
+    <div class="art-eyebrow">
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="1" y="1" width="14" height="14" rx="3" stroke="#38BDF8" stroke-width="1.5"/><path d="M4 8h8M4 5h8M4 11h5" stroke="#38BDF8" stroke-width="1.5" stroke-linecap="round"/></svg>
+      iPhone &amp; Android · Storage
+    </div>
+    <h1><em>Phone Storage Full?</em> What to Delete First</h1>
+    <p style="max-width:680px;color:var(--text-body);font-size:1.02rem;line-height:1.72;margin-bottom:20px">
+      That "Storage Almost Full" warning is stressful — especially when you're trying to take a photo or install an update and suddenly nothing works. But before you panic-delete anything important, read this. Most phones are full of invisible junk that is completely safe to remove. This guide tells you exactly what to delete first, in priority order, for the biggest gains with the least risk. Works on both iPhone and Android.
+    </p>
+    <div class="art-meta">
+      <span class="art-meta-item"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.4"/><path d="M8 4.5V8l2.5 2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg> 7 min read</span>
+      <span class="art-meta-item"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 12L8 4l5 8H3z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg> Beginner-friendly</span>
+      <span class="art-meta-item"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.4"/><path d="M5 1v4M11 1v4M2 7h12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg> Updated June 2026</span>
+      <span class="art-badge">iPhone &amp; Android</span>
+      <span class="art-badge">Free methods</span>
+    </div>
+  </header>
+
+  <div class="art-layout">
+    <article class="art-body">
+
+      <h2 id="check-storage">Before anything — check your storage breakdown</h2>
+      <p>The biggest mistake people make when storage is full is deleting things randomly and ending up no better off. One minute spent looking at your storage breakdown tells you exactly which category is the problem — and which methods below will help you most.</p>
+
+      <h3>iPhone</h3>
+      <p>Go to <em>Settings → General → iPhone Storage</em>. Wait 15 seconds for the bar to fully load. You'll see a colour-coded chart — Photos, Apps, Media, Messages, System — with the size of each. The largest category is where to start.</p>
+
+      <h3>Android</h3>
+      <p>Go to <em>Settings → Storage</em> (exact path varies by manufacturer). You'll see a breakdown by category: Images, Videos, Audio, Apps, Other. Tap any category to drill into what's using the space.</p>
+
+      <figure class="art-img">
+        <img src="img-phone-storage-full-bar.png" alt="iPhone Storage settings screen showing a nearly full storage bar with colour-coded segments for Photos, Apps, and Media" loading="lazy" />
+      </figure>
+      <p class="art-img-caption">The storage breakdown tells you exactly where to look. Photos and Apps are almost always the biggest categories — but it's often streaming downloads hiding inside "Media" that are the fastest win.</p>
+
+      <div class="callout callout-info">
+        <span class="callout-icon">ℹ️</span>
+        <div class="callout-body">
+          <strong>What "System Data" or "Other" means</strong>
+          <p>On iPhone, the grey "System Data" or "Other" category in the storage bar covers caches, logs, and temporary files. It can appear huge (10–20 GB) but shrinks on its own over time as iOS clears it. You can accelerate this by restarting your phone — iOS aggressively reclaims system caches after a restart.</p>
+        </div>
+      </div>
+
+      <h2 id="priority-1-streaming">Priority 1 — Streaming downloads (easiest, biggest gain)</h2>
+      <span class="priority-badge priority-1">Start here · 5 min · 2–10 GB typical saving</span>
+      <p>
+        Downloaded films, episodes, podcasts, and offline music playlists are the single safest category to delete. Everything is still accessible to stream — nothing is gone permanently. Yet most people have gigabytes of downloaded content they finished weeks ago and completely forgot about.
+      </p>
+      <ul>
+        <li><strong>Netflix:</strong> App → Downloads → tap the download icon on each title to remove it</li>
+        <li><strong>Disney+ / Apple TV+:</strong> My Library → Downloads → delete watched content</li>
+        <li><strong>Spotify:</strong> Settings → Storage → Delete Cache; then Your Library → remove offline playlists you don't need</li>
+        <li><strong>Apple Music:</strong> Library → Downloaded Music → Edit → Delete All, or remove individual albums</li>
+        <li><strong>Podcasts (Apple):</strong> Library → Downloaded Episodes → Edit → Delete</li>
+        <li><strong>Audible:</strong> Library → swipe on title → Remove Download (keeps it in your library)</li>
+        <li><strong>YouTube Premium:</strong> Library → Downloads → tap each video to remove</li>
+      </ul>
+
+      <h2 id="priority-2-photos">Priority 2 — Screenshots and auto-saved photos</h2>
+      <span class="priority-badge priority-1">High impact · 5–10 min · 500 MB – 5 GB typical</span>
+      <p>
+        Screenshots are almost never memories — they're instructions, QR codes, memes, and delivery confirmations. They accumulate invisibly and are completely safe to delete in bulk. WhatsApp and Instagram auto-saves pile up in the background too.
+      </p>
+
+      <h3>iPhone</h3>
+      <ul>
+        <li>Photos → Albums → <strong>Screenshots</strong> → Select → drag to select all → Delete</li>
+        <li>Photos → Albums → <strong>WhatsApp</strong> → Select → Delete All</li>
+        <li>Photos → Albums → <strong>Duplicates</strong> (iOS 16+) → Select All → Merge</li>
+      </ul>
+
+      <h3>Android</h3>
+      <ul>
+        <li>Google Photos → Library → <strong>Screenshots</strong> folder → Select All → Delete</li>
+        <li>Google Photos → Library → <strong>WhatsApp Images</strong> and <strong>WhatsApp Video</strong> folders → delete accumulated auto-saves</li>
+        <li>Google Photos → <em>Manage Storage</em> → Blurry photos / Backed up screenshots → Delete</li>
+      </ul>
+
+      <figure class="art-img">
+        <img src="img-phone-storage-app-detail.png" alt="iPhone Storage screen showing an individual app detail with App Size and Documents and Data storage breakdown" loading="lazy" />
+      </figure>
+      <p class="art-img-caption">Tapping an app in iPhone Storage reveals the split between the app itself and its cached Documents & Data — a large Documents & Data figure means there's cache to clear.</p>
+
+      <h2 id="priority-3-apps">Priority 3 — Large unused apps</h2>
+      <span class="priority-badge priority-2">Medium effort · 5 min · 1–8 GB typical</span>
+      <p>
+        The apps list in your storage settings is sorted by size — the biggest are at the top. Work through that list and ask yourself: when did I last use this? For anything you haven't opened in months, you have two options:
+      </p>
+      <ul>
+        <li><strong>Offload (iPhone only):</strong> Removes the app but keeps its data. The icon stays on your Home Screen. Tap it to re-download instantly. Best for apps you might use again.</li>
+        <li><strong>Delete:</strong> Removes the app and all its data permanently. Use this for apps you genuinely no longer need — old games, holiday apps, tools from a previous job.</li>
+      </ul>
+
+      <div class="callout callout-warn">
+        <span class="callout-icon">⚠️</span>
+        <div class="callout-body">
+          <strong>Don't delete apps with irreplaceable data</strong>
+          <p>Some apps store data locally that isn't backed up to a cloud service — certain games with local save files, note-taking apps you haven't synced, or health tracking apps. Before deleting, check whether the app's data is backed up to iCloud, Google Drive, or the app's own cloud service.</p>
+        </div>
+      </div>
+
+      <h2 id="priority-4-messages">Priority 4 — Messages and their attachments</h2>
+      <span class="priority-badge priority-2">Medium effort · 5–10 min · 1–6 GB typical</span>
+      <p>
+        Years of group chat photos, voice notes, and shared videos accumulate silently in Messages. A busy group chat over three years can easily consume 4–6 GB — all hidden from the main storage chart.
+      </p>
+
+      <h3>iPhone</h3>
+      <ol class="steps" style="list-style:none;padding:0">
+        <li class="step-item">
+          <span class="step-num">1</span>
+          <div class="step-content">
+            <h4>Settings → General → iPhone Storage → Messages</h4>
+            <p>Tap <em>Review Large Attachments</em> to see photos, videos, and files sorted by size.</p>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-num">2</span>
+          <div class="step-content">
+            <h4>Edit → select large items → Delete</h4>
+            <p>Focus on videos and large photos. These are rarely worth keeping in a messages thread once the conversation is over.</p>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-num">3</span>
+          <div class="step-content">
+            <h4>Set auto-delete: Settings → Messages → Keep Messages → 1 Year</h4>
+            <p>Prevents the backlog rebuilding. iOS will ask to delete older messages immediately when you change this setting.</p>
+          </div>
+        </li>
+      </ol>
+
+      <h3>Android</h3>
+      <p>Open <em>Google Messages → three-dot menu → Storage usage</em>. You'll see conversations sorted by size. Tap the largest ones and delete threads or media you no longer need.</p>
+
+      <h2 id="priority-5-caches">Priority 5 — App caches and browser data</h2>
+      <span class="priority-badge priority-3">Quick wins · 3 min · 500 MB – 2 GB typical</span>
+      <p>
+        Caches are temporary files that apps store to load faster — but they accumulate indefinitely and can be cleared safely. Your apps re-build caches the next time you use them.
+      </p>
+      <ul>
+        <li><strong>Safari (iPhone):</strong> Settings → Safari → Clear History and Website Data</li>
+        <li><strong>Chrome (iPhone or Android):</strong> Three-dot menu → Settings → Privacy → Clear Browsing Data → Cached images and files</li>
+        <li><strong>Instagram:</strong> iPhone Storage → Instagram → Offload, then reinstall from App Store</li>
+        <li><strong>TikTok:</strong> TikTok app → Profile → three lines → Settings → Clear Cache</li>
+        <li><strong>Android (any app):</strong> Settings → Apps → select app → Storage → Clear Cache</li>
+      </ul>
+
+      <h2 id="do-not-delete">What NOT to delete</h2>
+      <p>Some things look like clutter but aren't:</p>
+      <ul>
+        <li><strong>System files and OS data:</strong> Never delete anything in the "System" category — these are required for iOS/Android to function.</li>
+        <li><strong>App "Documents &amp; Data" before checking what it is:</strong> Some apps store important local data here (health records, fitness history, offline maps). Tap the app first to understand what's inside.</li>
+        <li><strong>Photos without first backing them up:</strong> If you haven't set up iCloud Photos or Google Photos, make sure your photos are backed up before deleting anything from your camera roll.</li>
+        <li><strong>WhatsApp backups:</strong> Settings → General → iPhone Storage → WhatsApp → check the backup size. These can be large, but deleting them means losing your chat history if you ever re-install or change phones.</li>
+      </ul>
+
+      <h2 id="quick-reference">Quick reference — ranked by impact</h2>
+      <table class="compare-table">
+        <thead>
+          <tr><th>Action</th><th>Time</th><th>Typical saving</th><th>Risk</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Delete streaming downloads (Netflix, Spotify, etc.)</td><td>5 min</td><td class="t-good">2 – 10 GB</td><td class="t-good">None</td></tr>
+          <tr><td>Delete Screenshots album</td><td>3 min</td><td class="t-good">500 MB – 3 GB</td><td class="t-good">None</td></tr>
+          <tr><td>Merge iOS Duplicates album</td><td>5 min</td><td class="t-good">1 – 6 GB</td><td class="t-good">None</td></tr>
+          <tr><td>Offload/delete large unused apps</td><td>5 min</td><td class="t-good">1 – 8 GB</td><td class="t-good">Very low</td></tr>
+          <tr><td>Delete Messages large attachments</td><td>5 min</td><td class="t-mid">1 – 5 GB</td><td class="t-mid">Low (irreversible)</td></tr>
+          <tr><td>Clear Safari / Chrome cache</td><td>1 min</td><td class="t-mid">200 MB – 2 GB</td><td class="t-good">None</td></tr>
+          <tr><td>Clear individual app caches</td><td>5 min</td><td class="t-mid">500 MB – 3 GB</td><td class="t-good">None</td></tr>
+          <tr><td>Enable Optimise iPhone Storage</td><td>2 min</td><td class="t-good">5 – 15 GB</td><td class="t-good">None</td></tr>
+        </tbody>
+      </table>
+
+
+    </article>
+
+    <aside class="art-sidebar" aria-label="Table of contents">
+      <div class="toc-card">
+        <h3>// Contents</h3>
+        <ul class="toc-list" id="tocList">
+          <li><a href="#check-storage">Check storage first</a></li>
+          <li><a href="#priority-1-streaming">Priority 1 — Streaming downloads</a></li>
+          <li><a href="#priority-2-photos">Priority 2 — Screenshots &amp; photos</a></li>
+          <li><a href="#priority-3-apps">Priority 3 — Large unused apps</a></li>
+          <li><a href="#priority-4-messages">Priority 4 — Messages</a></li>
+          <li><a href="#priority-5-caches">Priority 5 — App caches</a></li>
+          <li><a href="#do-not-delete">What NOT to delete</a></li>
+          <li><a href="#quick-reference">Quick reference table</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+</div>
+
+<section class="related-section">
+  <div class="container">
+    <h2>More storage guides</h2>
+    <div class="related-grid">
+      <a href="free-up-storage-on-iphone.html" class="related-card">
+        <span class="rc-tag">iPhone</span>
+        <h3>How to Free Up Storage on iPhone Without Deleting Photos</h3>
+        <p>Six methods to reclaim gigabytes — from offloading apps to optimising iCloud Photos.</p>
+        <span class="rc-arrow">Read now →</span>
+      </a>
+      <a href="free-up-storage-android.html" class="related-card">
+        <span class="rc-tag">Android</span>
+        <h3>How to Free Up Storage on Android</h3>
+        <p>Google Files, Smart Storage, and manual steps to clear space on any Android phone.</p>
+        <span class="rc-arrow">Read now →</span>
+      </a>
+      <a href="delete-unused-apps-iphone.html" class="related-card">
+        <span class="rc-tag">iPhone</span>
+        <h3>How to Delete Unused Apps on iPhone Safely</h3>
+        <p>Offload vs Delete — and how to make the right call for every app on your phone.</p>
+        <span class="rc-arrow">Read now →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand" aria-label="deClusterize home">
+          <svg class="brand-mark-svg" width="36" height="36" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="url(#bm-fill)"/>
+            <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="none" stroke="url(#bm-stroke)" stroke-width="2"/>
+            <polyline points="14,25 21,32 34,17" stroke="url(#bm-stroke)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="38" cy="10" r="3" fill="#38BDF8" opacity=".9"/>
+          </svg>
+          <span class="brand-name">deClusterize</span>
+        </a>
+        <p>Small tasks. Better systems. A clearer digital life.</p>
+      </div>
+      <nav class="footer-col" aria-label="Product"><h4>Product</h4><ul><li><a href="how-it-works.html">How It Works</a></li><li><a href="guides.html">Guides</a></li><li><a href="guides.html#checklists">Templates</a></li></ul></nav>
+      <nav class="footer-col" aria-label="Resources"><h4>Resources</h4><ul><li><a href="#" title="Coming soon">Blog</a></li><li><a href="help.html">Help Center</a></li><li><a href="community.html">Community</a></li></ul></nav>
+      <nav class="footer-col" aria-label="Company"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul></nav>
+    </div>
+    <div class="footer-bottom">© 2026 deClusterize. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="forms.js"></script>
+<script>
+(function () {
+  const headings = document.querySelectorAll('.art-body h2[id], .art-body h3[id]');
+  const tocLinks = document.querySelectorAll('#tocList a');
+  if (!headings.length) return;
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id));
+      }
+    });
+  }, { rootMargin: '-80px 0px -70% 0px' });
+  headings.forEach(h => obs.observe(h));
+})();
+</script>
+</body>
+</html>

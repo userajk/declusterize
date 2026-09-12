@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>How to Clean Up Your Camera Roll Without Losing Important Photos — deClusterize</title>
+<meta name="description" content="A practical guide to decluttering your iPhone Camera Roll — delete screenshots, duplicates, and large videos without losing a single memory you actually care about." />
+<meta name="keywords" content="clean up camera roll iphone, declutter iphone photos, too many photos iphone, organise camera roll, delete screenshots iphone, iphone photo cleanup" />
+<link rel="canonical" href="https://declusterize.com/clean-up-camera-roll-iphone.html" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://declusterize.com/clean-up-camera-roll-iphone.html" />
+<meta property="og:title" content="How to Clean Up Your Camera Roll Without Losing Important Photos — deClusterize" />
+<meta property="og:description" content="Delete screenshots, duplicates, and large videos from your iPhone Camera Roll — step by step, without losing anything you care about." />
+<meta property="og:image" content="https://declusterize.com/og-image.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://declusterize.com/og-image.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Clean Up Your Camera Roll Without Losing Important Photos",
+  "description": "Step-by-step guide to decluttering your iPhone Camera Roll by removing screenshots, duplicates, and large videos while keeping every memory that matters.",
+  "image": "https://declusterize.com/og-image.jpg",
+  "totalTime": "PT30M",
+  "estimatedCost": { "@type": "MonetaryAmount", "currency": "GBP", "value": "0" },
+  "step": [
+    { "@type": "HowToStep", "position": 1, "name": "Delete screenshots first", "text": "Open the Photos app, go to Albums → Screenshots, tap Select, select all, and delete. Screenshots are the fastest category to clear — they're rarely memories." },
+    { "@type": "HowToStep", "position": 2, "name": "Use the iOS Duplicates album", "text": "Go to Albums → Duplicates (iOS 16+) and merge all groups. iOS keeps the best-quality version and deletes the rest." },
+    { "@type": "HowToStep", "position": 3, "name": "Find and delete large videos", "text": "Go to Photos → Albums → Videos, sort by largest. Delete videos you don't need — each 4K minute is 350–400 MB." },
+    { "@type": "HowToStep", "position": 4, "name": "Create albums for important photos", "text": "Organise your keepers into named albums by year or event so the Camera Roll becomes a temporary inbox, not a permanent archive." },
+    { "@type": "HowToStep", "position": 5, "name": "Archive older photos to iCloud", "text": "Enable Optimise iPhone Storage so photos older than a few months move to iCloud automatically, keeping your device storage clear." }
+  ]
+}
+</script>
+
+<style>
+.skip-link {
+  position: absolute; top: -100%; left: 16px;
+  background: var(--emerald); color: #fff;
+  padding: 8px 16px; border-radius: 4px;
+  font-size: .85rem; font-weight: 600; z-index: 9999;
+  text-decoration: none; transition: top .15s;
+}
+.skip-link:focus { top: 8px; }
+
+.breadcrumb {
+  padding: 100px 0 0;
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  letter-spacing: .06em;
+  color: var(--text-muted);
+}
+.breadcrumb a { color: var(--text-muted); text-decoration: none; }
+.breadcrumb a:hover { color: var(--emerald); }
+.breadcrumb span { margin: 0 6px; }
+
+.art-hero { padding: 24px 0 48px; }
+.art-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--font-mono); font-size: .72rem; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--sky-bright);
+  background: rgba(14,165,233,.1); border: 1px solid rgba(14,165,233,.2);
+  border-radius: var(--r-pill); padding: 5px 14px; margin-bottom: 20px;
+}
+.art-hero h1 {
+  font-size: clamp(1.8rem, 4.5vw, 3rem);
+  font-weight: 700; line-height: 1.15; margin-bottom: 20px;
+  max-width: 820px;
+}
+.art-hero h1 em { font-style: normal; color: var(--emerald-bright); }
+.art-meta {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 20px;
+  color: var(--text-muted); font-size: .82rem;
+  border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+  padding: 16px 0; margin: 24px 0 0;
+}
+.art-meta-item { display: flex; align-items: center; gap: 7px; }
+.art-meta-item svg { opacity: .6; }
+.art-badge {
+  display: inline-block; font-family: var(--font-mono); font-size: .65rem;
+  letter-spacing: .1em; text-transform: uppercase; padding: 3px 10px;
+  border-radius: var(--r-pill); border: 1px solid rgba(16,185,129,.3);
+  background: rgba(16,185,129,.08); color: var(--emerald);
+}
+
+.art-layout {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 48px; align-items: start;
+  padding-bottom: 100px;
+}
+@media(max-width:900px){ .art-layout { grid-template-columns: 1fr; } .art-sidebar { display: none; } }
+
+.art-sidebar { position: sticky; top: 88px; }
+.toc-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--r-panel); padding: 24px;
+}
+.toc-card h3 {
+  font-family: var(--font-mono); font-size: .72rem; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--text-muted); margin-bottom: 16px;
+}
+.toc-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 4px; }
+.toc-list a {
+  display: block; font-size: .84rem; color: var(--text-body); text-decoration: none;
+  padding: 6px 10px; border-radius: 6px; border-left: 2px solid transparent;
+  transition: all .2s;
+}
+.toc-list a:hover, .toc-list a.active {
+  color: var(--emerald); border-left-color: var(--emerald);
+  background: rgba(16,185,129,.07);
+}
+.toc-cta {
+  margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--border);
+  text-align: center;
+}
+.toc-cta p { font-size: .8rem; color: var(--text-muted); margin-bottom: 12px; line-height: 1.5; }
+
+.art-body h2 {
+  font-size: clamp(1.25rem, 2.5vw, 1.6rem); font-weight: 700;
+  margin: 52px 0 18px; padding-top: 8px;
+  border-top: 1px solid var(--border);
+  scroll-margin-top: 88px;
+}
+.art-body h2:first-child { margin-top: 0; border-top: none; }
+.art-body h3 {
+  font-size: 1.05rem; font-weight: 600; margin: 30px 0 12px;
+  color: var(--text-heading); scroll-margin-top: 88px;
+}
+.art-body p { color: var(--text-body); line-height: 1.78; margin-bottom: 18px; font-size: .97rem; }
+.art-body a { color: var(--emerald); text-decoration: underline; text-underline-offset: 3px; }
+.art-body ul, .art-body ol {
+  padding-left: 24px; margin-bottom: 20px; display: flex; flex-direction: column; gap: 8px;
+}
+.art-body li { color: var(--text-body); line-height: 1.65; font-size: .97rem; }
+.art-body strong { color: var(--text-heading); }
+
+.steps { list-style: none; padding: 0; margin: 24px 0 32px; display: flex; flex-direction: column; gap: 16px; }
+.step-item {
+  display: flex; gap: 20px; align-items: flex-start;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--r-panel); padding: 20px 22px;
+}
+.step-num {
+  flex-shrink: 0; width: 34px; height: 34px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--emerald), var(--sky));
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-mono); font-size: .8rem; font-weight: 700; color: #fff;
+}
+.step-content h4 { font-size: .97rem; font-weight: 600; margin-bottom: 6px; color: var(--text-heading); }
+.step-content p { font-size: .88rem; color: var(--text-body); line-height: 1.65; margin: 0; }
+
+.callout {
+  border-radius: var(--r-panel); padding: 18px 22px;
+  margin: 28px 0; display: flex; gap: 16px; align-items: flex-start;
+}
+.callout-icon { font-size: 1.25rem; flex-shrink: 0; line-height: 1.6; }
+.callout-body { flex: 1; }
+.callout-body strong { display: block; margin-bottom: 5px; font-size: .92rem; }
+.callout-body p { font-size: .87rem; line-height: 1.65; margin: 0; }
+.callout-tip  { background: rgba(16,185,129,.08); border: 1px solid rgba(16,185,129,.25); }
+.callout-tip  .callout-body strong, .callout-tip  .callout-body p { color: var(--text-body); }
+.callout-warn { background: rgba(251,191,36,.07); border: 1px solid rgba(251,191,36,.25); }
+.callout-warn .callout-body strong { color: #fbbf24; }
+.callout-warn .callout-body p { color: var(--text-body); }
+.callout-info { background: rgba(14,165,233,.08); border: 1px solid rgba(14,165,233,.2); }
+.callout-info .callout-body strong { color: var(--sky-bright); }
+.callout-info .callout-body p { color: var(--text-body); }
+
+.compare-table { width: 100%; border-collapse: collapse; margin: 24px 0 32px; font-size: .88rem; }
+.compare-table th {
+  font-family: var(--font-mono); font-size: .7rem; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--text-muted);
+  padding: 10px 16px; background: var(--surface-2);
+  border: 1px solid var(--border); text-align: left;
+}
+.compare-table td {
+  padding: 12px 16px; border: 1px solid var(--border);
+  color: var(--text-body); vertical-align: top; line-height: 1.6;
+}
+.compare-table tr:nth-child(even) td { background: rgba(255,255,255,.02); }
+.t-good { color: var(--emerald); font-weight: 600; }
+.t-bad  { color: #f87171; }
+.t-mid  { color: #fbbf24; }
+
+.art-img {
+  width: 100%; border-radius: var(--r-panel);
+  overflow: hidden; margin: 28px 0; border: 1px solid var(--border);
+  max-height: 500px;
+}
+.art-img img { width: 100%; height: auto; display: block; object-fit: contain; }
+.art-img-caption {
+  font-size: .78rem; color: var(--text-muted); text-align: center;
+  margin-top: -18px; margin-bottom: 28px; font-style: italic;
+}
+
+.related-section { padding: 60px 0; border-top: 1px solid var(--border); }
+.related-section h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: 28px; }
+.related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+@media(max-width:700px){ .related-grid { grid-template-columns: 1fr; } }
+.related-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--r-panel); padding: 22px; text-decoration: none;
+  display: flex; flex-direction: column; gap: 10px;
+  transition: border-color .2s, transform .2s;
+}
+.related-card:hover { border-color: var(--emerald); transform: translateY(-3px); }
+.related-card .rc-tag { font-family: var(--font-mono); font-size: .65rem; letter-spacing: .1em; text-transform: uppercase; color: var(--emerald); }
+.related-card h3 { font-size: .95rem; font-weight: 600; color: var(--text-heading); line-height: 1.45; }
+.related-card p { font-size: .82rem; color: var(--text-muted); line-height: 1.55; margin: 0; }
+.related-card .rc-arrow { margin-top: auto; color: var(--emerald); font-size: .82rem; }
+
+.art-cta {
+  background: var(--surface); border: 1px solid var(--border-2);
+  border-radius: var(--r-panel); padding: 36px; text-align: center;
+  margin: 48px 0;
+}
+.art-cta h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 10px; }
+.art-cta p { color: var(--text-body); font-size: .92rem; margin-bottom: 24px; max-width: 440px; margin-left: auto; margin-right: auto; line-height: 1.6; }
+.art-cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.art-cta .btn,
+.art-cta .btn * { -webkit-text-fill-color: currentColor; background-clip: unset; -webkit-background-clip: unset; }
+.art-cta .btn-primary { color: #fff !important; -webkit-text-fill-color: #fff !important; }
+.art-cta .btn-secondary { color: var(--emerald) !important; -webkit-text-fill-color: var(--emerald) !important; }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<header class="nav-wrap" id="navbar">
+  <nav class="nav container" role="navigation" aria-label="Main">
+    <a href="index.html" class="brand" aria-label="deClusterize home">
+      <svg class="brand-mark-svg" width="32" height="32" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="bm-fill" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#10B981" stop-opacity=".18"/>
+            <stop offset="100%" stop-color="#0EA5E9" stop-opacity=".18"/>
+          </linearGradient>
+          <linearGradient id="bm-stroke" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#34D399"/>
+            <stop offset="100%" stop-color="#38BDF8"/>
+          </linearGradient>
+        </defs>
+        <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="url(#bm-fill)"/>
+        <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="none" stroke="url(#bm-stroke)" stroke-width="2"/>
+        <polyline points="14,25 21,32 34,17" stroke="url(#bm-stroke)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="38" cy="10" r="3" fill="#38BDF8" opacity=".9"/>
+      </svg>
+      <span class="brand-name">deClusterize</span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="how-it-works.html">How It Works</a></li>
+      <li><a href="guides.html" class="active">Guides</a></li>
+      <li><a href="community.html">Community</a></li>
+    </ul>
+    <div class="nav-actions">
+    </div>
+    <button class="nav-burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <ul role="list">
+      <li><a href="how-it-works.html">How It Works</a></li>
+      <li><a href="guides.html">Guides</a></li>
+      <li><a href="community.html">Community</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main-content">
+<div class="container">
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="index.html">Home</a>
+    <span aria-hidden="true">›</span>
+    <a href="guides.html">Guides</a>
+    <span aria-hidden="true">›</span>
+    <a href="guides.html#hub-phone">Phone &amp; Devices</a>
+    <span aria-hidden="true">›</span>
+    <span aria-current="page">Clean Up Camera Roll</span>
+  </nav>
+
+  <header class="art-hero">
+    <div class="art-eyebrow">
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="1" y="1" width="14" height="14" rx="3" stroke="#38BDF8" stroke-width="1.5"/><path d="M4 8h8M4 5h8M4 11h5" stroke="#38BDF8" stroke-width="1.5" stroke-linecap="round"/></svg>
+      iPhone · Photos
+    </div>
+    <h1>How to <em>Clean Up Your Camera Roll</em> Without Losing Important Photos</h1>
+    <p style="max-width:680px;color:var(--text-body);font-size:1.02rem;line-height:1.72;margin-bottom:20px">
+      A Camera Roll with 15,000 photos isn't a memory bank — it's a digital landfill. Screenshots you'll never look at, duplicate shots from the same sunset, blurry burst photos, and auto-saved WhatsApp images pile up until finding anything meaningful feels impossible. This guide walks you through clearing the clutter systematically, starting with the categories that free up the most space fastest, without touching a single photo that matters.
+    </p>
+    <div class="art-meta">
+      <span class="art-meta-item">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.4"/><path d="M8 4.5V8l2.5 2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+        8 min read
+      </span>
+      <span class="art-meta-item">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 12L8 4l5 8H3z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+        Beginner-friendly
+      </span>
+      <span class="art-meta-item">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.4"/><path d="M5 1v4M11 1v4M2 7h12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+        Updated June 2026
+      </span>
+      <span class="art-badge">Free methods</span>
+      <span class="art-badge">iOS 16 + iOS 17</span>
+    </div>
+  </header>
+
+  <div class="art-layout">
+    <article class="art-body">
+
+      <h2 id="why-camera-roll-grows">Why your Camera Roll grows out of control</h2>
+      <p>
+        The average iPhone user gains roughly <strong>2,000–4,000 photos per year</strong> — and that number is accelerating. Modern iPhones capture Live Photos (each one stored as both a photo and a video), burst mode fires 10 shots in a single second, and every app that touches media leaves copies behind. WhatsApp saves every received image automatically. Screenshots pile up from articles you meant to read, QR codes you scanned once, and delivery confirmations you'll never need again.
+      </p>
+      <p>
+        The result isn't just a storage problem — it's a searchability problem. When you want to find a specific photo from a holiday two years ago, you're scrolling past thousands of screenshots, duplicates, and blurry test shots to find it. The clean-up process below changes that permanently.
+      </p>
+
+      <div class="callout callout-info">
+        <span class="callout-icon">ℹ️</span>
+        <div class="callout-body">
+          <strong>Where to start: check your photo count</strong>
+          <p>Open the Photos app, tap <em>Library</em>, scroll to the very bottom. You'll see your total photo and video count. If it's above 5,000, screenshots and duplicates are almost certainly a major contributor. Above 10,000 and large videos are likely adding significant storage too.</p>
+        </div>
+      </div>
+
+      <figure class="art-img">
+        <img src="img-camera-roll-iphone.png" alt="iPhone Photos app showing Camera Roll with thousands of photos including screenshots and duplicates mixed in" loading="lazy" />
+      </figure>
+      <p class="art-img-caption">A typical over-full Camera Roll — a mix of memories, screenshots, duplicates, and WhatsApp auto-saves. The methods below clear all four categories systematically.</p>
+
+      <h2 id="delete-screenshots">Step 1 — Delete screenshots (the fastest win)</h2>
+      <p>
+        Screenshots are almost never memories. They're instructions you followed, QR codes you scanned, memes you saved, receipts you photographed, and articles you meant to read. On a typical iPhone, screenshots account for <strong>500 MB to 3 GB</strong> of storage — and can be deleted en masse without a second thought.
+      </p>
+
+      <ol class="steps" style="list-style:none;padding:0">
+        <li class="step-item">
+          <span class="step-num">1</span>
+          <div class="step-content">
+            <h4>Open Photos → Albums → Screenshots</h4>
+            <p>iOS automatically sorts screenshots into their own album. Tap it to see everything at once.</p>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-num">2</span>
+          <div class="step-content">
+            <h4>Tap Select → tap the first screenshot → swipe down</h4>
+            <p>Tap <em>Select</em> in the top-right, then tap the first screenshot and drag your finger down the grid to select all. For very large albums, you can also tap <em>Select All</em> if it appears.</p>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-num">3</span>
+          <div class="step-content">
+            <h4>Scan quickly for anything worth keeping</h4>
+            <p>Scroll through the selected items. If you spot something to keep, tap it to deselect. Most screenshots are safe to delete in bulk.</p>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-num">4</span>
+          <div class="step-content">
+            <h4>Tap the bin icon → Delete [X] Photos</h4>
+            <p>Deleted screenshots go to <em>Recently Deleted</em> for 30 days, so nothing is permanently gone immediately.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="callout callout-tip">
+        <span class="callout-icon">💡</span>
+        <div class="callout-body">
+          <strong>Stop screenshots accumulating again</strong>
+          <p>The two biggest sources of unwanted screenshots are articles saved for later (use Safari Reading List instead: tap Share → Add to Reading List) and QR codes (iOS now lets you scan QR codes directly from the camera without capturing a screenshot). Breaking these two habits alone halves the screenshot pile-up rate.</p>
+        </div>
+      </div>
+
+      <h2 id="delete-duplicates">Step 2 — Merge duplicates with the iOS Duplicates album</h2>
+      <p>
+        If your iPhone runs iOS 16 or later, Apple's built-in Duplicates feature does the hard work for you. It scans your entire library, groups identical and near-identical photos together, and lets you merge each group in a single tap — keeping the highest-quality version and discarding the rest, while preserving any edits or metadata.
+      </p>
+
+      <ol class="steps" style="list-style:none;padding:0">
+        <li class="step-item">
+          <span class="step-num">1</span>
+          <div class="step-content">
+            <h4>Go to Photos → Albums → Duplicates</h4>
+            <p>This album appears under <em>Utilities</em> near the bottom of the Albums list. If you don't see it, iOS is still scanning — plug in and leave the Photos app open for a few minutes.</p>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-num">2</span>
+          <div class="step-content">
+            <h4>Tap Merge next to each group — or merge all at once</h4>
+            <p>To clear everything in one go: tap <em>Select</em> (top-right) → <em>Select All</em> → <em>Merge</em>. iOS handles the rest automatically.</p>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-num">3</span>
+          <div class="step-content">
+            <h4>Empty Recently Deleted to reclaim the space</h4>
+            <p>Go to Albums → Recently Deleted → tap <em>Select</em> → <em>Delete All</em> to immediately free up the storage.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="callout callout-info">
+        <span class="callout-icon">ℹ️</span>
+        <div class="callout-body">
+          <strong>On iOS 15 or earlier?</strong>
+          <p>The built-in Duplicates album isn't available. Your best free alternative is to update to iOS 16+ (strongly recommended for security reasons too). If you can't update, apps like <em>Gemini Photos</em> offer a similar duplicate-detection feature — the first scan is free, but bulk deletion requires a subscription.</p>
+        </div>
+      </div>
+
+      <h2 id="large-videos">Step 3 — Find and delete large videos</h2>
+      <p>
+        A single 4K video recorded at 60 fps takes up roughly <strong>400 MB per minute</strong>. A 5-minute clip of your dog playing in the park is 2 GB. Most people have dozens of these — clips they recorded once, watched once, and never reviewed again. The Videos album is the highest-impact category after screenshots and duplicates.
+      </p>
+
+      <ol class="steps" style="list-style:none;padding:0">
+        <li class="step-item">
+          <span class="step-num">1</span>
+          <div class="step-content">
+            <h4>Go to Photos → Albums → Videos</h4>
+            <p>All videos are collected here, separate from photos.</p>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-num">2</span>
+          <div class="step-content">
+            <h4>Sort by largest first</h4>
+            <p>Tap the filter icon (three lines) → Sort → File Size. The biggest videos surface to the top.</p>
+          </div>
+        </li>
+        <li class="step-item">
+          <span class="step-num">3</span>
+          <div class="step-content">
+            <h4>Review and delete anything you don't need</h4>
+            <p>Watch the first few seconds of each large video. If it's a random clip you recorded without thinking, delete it. Keep only videos that document a real memory — holidays, milestones, events.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="callout callout-warn">
+        <span class="callout-icon">⚠️</span>
+        <div class="callout-body">
+          <strong>Export before you delete anything irreplaceable</strong>
+          <p>Before bulk-deleting, AirDrop or upload any video you're unsure about to iCloud Drive, Google Photos, or your Mac. Once deleted from Recently Deleted, videos are gone permanently. When in doubt, archive first, delete later.</p>
+        </div>
+      </div>
+
+      <h2 id="whatsapp-auto-saves">Step 4 — Stop WhatsApp and Instagram from auto-saving</h2>
+      <p>
+        These two apps are responsible for the majority of unexpected Camera Roll growth in most people's libraries. Every photo and video someone sends you in WhatsApp — every group chat meme, every shared screenshot, every forwarded video — saves directly to your Camera Roll unless you turn it off.
+      </p>
+      <ul>
+        <li><strong>WhatsApp:</strong> Settings → Chats → Save to Camera Roll → Off. Then go to Albums → WhatsApp and delete everything that accumulated before you turned it off.</li>
+        <li><strong>Instagram:</strong> Settings → Original Photos → Off (stops saving posted photos to Camera Roll). Story photos: Settings → Story → Save to Camera Roll → Off.</li>
+        <li><strong>Telegram:</strong> Settings → Data and Storage → Save to Gallery → Off.</li>
+        <li><strong>Snapchat:</strong> Settings → Memories → Auto-Save to Camera Roll → Off.</li>
+      </ul>
+
+      <figure class="art-img">
+        <img src="img-iphone-albums-organized.png" alt="iPhone Albums view showing organised photo albums including Screenshots, Duplicates, Videos, and WhatsApp sections" loading="lazy" />
+      </figure>
+      <p class="art-img-caption">The Albums view gives you targeted access to each clutter category — tackle Screenshots and Duplicates first, then Videos and WhatsApp for the biggest impact.</p>
+
+      <h2 id="organise-into-albums">Step 5 — Organise keepers into albums</h2>
+      <p>
+        Once you've cleared the junk, the goal is to make your Camera Roll a temporary inbox — a place photos land when first taken, not where they live permanently. Creating named albums for your keepers transforms an overwhelming scroll into a browsable library.
+      </p>
+
+      <h3>A simple album structure that works</h3>
+      <ul>
+        <li><strong>By year:</strong> 2024, 2025, 2026 — move photos as you go. Simple and scalable.</li>
+        <li><strong>By category:</strong> Family, Travel, Food, Work — useful if you photograph similar things often.</li>
+        <li><strong>By event:</strong> Edinburgh March 2025, Tom's Birthday — good for big occasions you'll want to revisit.</li>
+      </ul>
+      <p>
+        To create an album: <em>Photos → Albums → + (top-left) → New Album</em>. Then select photos from your Camera Roll and add them. This doesn't move or duplicate them — the original stays in your Camera Roll, and the album is just a pointer.
+      </p>
+
+      <div class="callout callout-tip">
+        <span class="callout-icon">💡</span>
+        <div class="callout-body">
+          <strong>Use Favourites as a fast "keep" signal</strong>
+          <p>As you scroll your Camera Roll, tap the heart icon on any photo worth keeping. Your Favourites album then becomes a curated highlight reel — and when you're doing future clean-ups, anything not in Favourites is a candidate for deletion. It takes 2 seconds per photo and creates a valuable filter over time.</p>
+        </div>
+      </div>
+
+      <h2 id="archive-to-icloud">Step 6 — Archive older photos to iCloud</h2>
+      <p>
+        Once your library is organised, the final step is to stop carrying all of it on your device. The <strong>Optimise iPhone Storage</strong> setting in iCloud Photos keeps full-resolution originals safely in iCloud and stores smaller previews on your phone — freeing 5–15 GB or more for most people, with no photos lost.
+      </p>
+      <p>
+        Enable it at: <em>Settings → [Your Name] → iCloud → Photos → Optimise iPhone Storage</em>. The photos remain fully accessible — tapping any thumbnail downloads the full version over Wi-Fi in seconds.
+      </p>
+
+      <h2 id="quick-wins">Quick wins — ranked by effort vs. reward</h2>
+      <table class="compare-table">
+        <thead>
+          <tr><th>Action</th><th>Time needed</th><th>Typical photos removed</th><th>Storage saved</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Delete all screenshots</td><td>5 min</td><td class="t-good">100–2,000+</td><td class="t-good">500 MB – 3 GB</td></tr>
+          <tr><td>Merge duplicates (iOS Duplicates album)</td><td>5 min</td><td class="t-good">500–3,000+</td><td class="t-good">1 – 6 GB</td></tr>
+          <tr><td>Delete large videos</td><td>10 min</td><td class="t-mid">10–50 videos</td><td class="t-good">2 – 10 GB</td></tr>
+          <tr><td>Turn off WhatsApp auto-save + delete accumulated</td><td>10 min</td><td class="t-good">500–5,000+</td><td class="t-mid">500 MB – 4 GB</td></tr>
+          <tr><td>Enable Optimise iPhone Storage</td><td>2 min</td><td>0 deleted</td><td class="t-good">5 – 15 GB on-device</td></tr>
+          <tr><td>Create albums + mark Favourites</td><td>20–30 min</td><td>0 deleted</td><td>Ongoing clarity</td></tr>
+        </tbody>
+      </table>
+
+
+    </article>
+
+    <aside class="art-sidebar" aria-label="Table of contents">
+      <div class="toc-card">
+        <h3>// Contents</h3>
+        <ul class="toc-list" id="tocList">
+          <li><a href="#why-camera-roll-grows">Why Camera Rolls grow</a></li>
+          <li><a href="#delete-screenshots">Step 1 — Delete screenshots</a></li>
+          <li><a href="#delete-duplicates">Step 2 — Merge duplicates</a></li>
+          <li><a href="#large-videos">Step 3 — Large videos</a></li>
+          <li><a href="#whatsapp-auto-saves">Step 4 — Stop auto-saves</a></li>
+          <li><a href="#organise-into-albums">Step 5 — Organise into albums</a></li>
+          <li><a href="#archive-to-icloud">Step 6 — Archive to iCloud</a></li>
+          <li><a href="#quick-wins">Quick wins ranked</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+</div>
+
+<section class="related-section">
+  <div class="container">
+    <h2>More iPhone &amp; photo guides</h2>
+    <div class="related-grid">
+      <a href="delete-duplicate-photos-iphone.html" class="related-card">
+        <span class="rc-tag">iPhone</span>
+        <h3>How to Delete Duplicate Photos on iPhone</h3>
+        <p>Use the iOS 16 Duplicates album, iCloud, and third-party apps to clear copies in minutes.</p>
+        <span class="rc-arrow">Read now →</span>
+      </a>
+      <a href="free-up-storage-on-iphone.html" class="related-card">
+        <span class="rc-tag">iPhone</span>
+        <h3>How to Free Up Storage on iPhone Without Deleting Photos</h3>
+        <p>Offload apps, clear caches, and reclaim gigabytes — all without losing a single memory.</p>
+        <span class="rc-arrow">Read now →</span>
+      </a>
+      <a href="phone-storage-full-what-to-delete-first.html" class="related-card">
+        <span class="rc-tag">iPhone &amp; Android</span>
+        <h3>Phone Storage Full? What to Delete First</h3>
+        <p>A priority-ordered guide to reclaiming space fast, without deleting anything important.</p>
+        <span class="rc-arrow">Read now →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand" aria-label="deClusterize home">
+          <svg class="brand-mark-svg" width="36" height="36" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="url(#bm-fill)"/>
+            <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="none" stroke="url(#bm-stroke)" stroke-width="2"/>
+            <polyline points="14,25 21,32 34,17" stroke="url(#bm-stroke)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="38" cy="10" r="3" fill="#38BDF8" opacity=".9"/>
+          </svg>
+          <span class="brand-name">deClusterize</span>
+        </a>
+        <p>Small tasks. Better systems. A clearer digital life.</p>
+      </div>
+      <nav class="footer-col" aria-label="Product">
+        <h4>Product</h4>
+        <ul><li><a href="how-it-works.html">How It Works</a></li><li><a href="guides.html">Guides</a></li><li><a href="guides.html#checklists">Templates</a></li></ul>
+      </nav>
+      <nav class="footer-col" aria-label="Resources">
+        <h4>Resources</h4>
+        <ul><li><a href="#" title="Coming soon">Blog</a></li><li><a href="help.html">Help Center</a></li><li><a href="community.html">Community</a></li></ul>
+      </nav>
+      <nav class="footer-col" aria-label="Company">
+        <h4>Company</h4>
+        <ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">© 2026 deClusterize. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="forms.js"></script>
+<script>
+(function () {
+  const headings = document.querySelectorAll('.art-body h2[id], .art-body h3[id]');
+  const tocLinks = document.querySelectorAll('#tocList a');
+  if (!headings.length) return;
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id));
+      }
+    });
+  }, { rootMargin: '-80px 0px -70% 0px' });
+  headings.forEach(h => obs.observe(h));
+})();
+</script>
+</body>
+</html>
