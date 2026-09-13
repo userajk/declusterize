@@ -326,15 +326,15 @@ h1, h2, h3, h4 { color: var(--text-heading); font-weight: 600; line-height: 1.1;
    HERO + BENTO DASHBOARD
    ============================================================ */
 .hero { padding-block: clamp(56px, 8vw, 104px); position: relative; }
-.hero-grid { display: grid; grid-template-columns: 1fr 1.02fr; gap: clamp(36px, 5vw, 72px); align-items: center; }
+.hero-grid { display: flex; flex-direction: column; align-items: center; text-align: center; }
 .hero h1 {
   font-size: clamp(40px, 6vw, 64px); line-height: 1.04; letter-spacing: -0.035em;
   font-weight: 600; margin: 22px 0 22px; color: #fff;
 }
-.hero-lead { font-size: clamp(16px, 1.3vw, 18px); max-width: 500px; color: var(--text-body); }
+.hero-lead { font-size: clamp(16px, 1.3vw, 18px); max-width: 600px; color: var(--text-body); margin-inline: auto; }
 .hero-tagline { font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--emerald-bright); margin-top: 16px; }
-.hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; margin: 30px 0 26px; }
-.trust-row { display: flex; flex-wrap: wrap; gap: 14px 24px; }
+.hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; margin: 30px 0 26px; justify-content: center; }
+.trust-row { display: flex; flex-wrap: wrap; gap: 14px 24px; justify-content: center; }
 .trust-item {
   display: inline-flex; align-items: center; gap: 9px;
   font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase;
@@ -793,7 +793,7 @@ h1, h2, h3, h4 { color: var(--text-heading); font-weight: 600; line-height: 1.1;
 @media (max-width: 920px) {
   .nav-links, .nav-actions .nav-login, .nav-actions .btn { display: none; }
   .hamburger { display: inline-flex; }
-  .hero-grid { grid-template-columns: 1fr; }
+  .hero-grid { text-align: center; }
   .dash-wrap { order: 2; }
   .hero-content { order: 1; }
   .problem-grid { grid-template-columns: 1fr; }
