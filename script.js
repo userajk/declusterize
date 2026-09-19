@@ -68,21 +68,32 @@
   })();
 
   /* ---------- Sticky header shadow ---------- */
-  const header = $('#header');
-  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 8);
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
+  // Homepage uses #header; article/guide pages use #navbar.
+  const header = $('#header') || $('#navbar');
+  if (header) {
+    const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 8);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
 
   /* ---------- Mobile menu ---------- */
-  const hamburger = $('#hamburger');
-  const mobileMenu = $('#mobileMenu');
-  const toggleMenu = (force) => {
-    const open = force !== undefined ? force : !mobileMenu.classList.contains('open');
-    mobileMenu.classList.toggle('open', open);
-    hamburger.setAttribute('aria-expanded', String(open));
-  };
-  hamburger.addEventListener('click', () => toggleMenu());
-  $$('#mobileMenu a').forEach(a => a.addEventListener('click', () => toggleMenu(false)));
+  // Homepage: #hamburger / #mobileMenu (shown via .open class).
+  // Guide pages: .nav-burger / #mobile-menu (shown by removing [hidden]).
+  const hamburger = $('#hamburger') || $('.nav-burger');
+  const mobileMenu = $('#mobileMenu') || $('#mobile-menu');
+  if (hamburger && mobileMenu) {
+    const toggleMenu = (force) => {
+      const open = force !== undefined
+        ? force
+        : (mobileMenu.hasAttribute('hidden') || !mobileMenu.classList.contains('open'));
+      mobileMenu.classList.toggle('open', open);
+      if (open) mobileMenu.removeAttribute('hidden');
+      else mobileMenu.setAttribute('hidden', '');
+      hamburger.setAttribute('aria-expanded', String(open));
+    };
+    hamburger.addEventListener('click', () => toggleMenu());
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => toggleMenu(false)));
+  }
 
   /* ---------- Reveal on scroll ---------- */
   const reveals = $$('.reveal');
@@ -215,6 +226,7 @@
      ONBOARDING QUIZ
      ============================================================ */
   const overlay = $('#quizModal');
+  if (!overlay) return; // quiz modal not present on this page — skip setup
   const steps = $$('.quiz-step', overlay);
   const segs = $$('.quiz-progress .seg', overlay);
   let current = 0;
