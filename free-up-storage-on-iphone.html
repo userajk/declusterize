@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Free Up Storage on iPhone — deClusterize</title>
-<meta name="description" content="The complete guide to freeing up storage on iPhone — offload apps, clear caches, optimise photos, and reclaim gigabytes without losing a single memory." />
-<meta name="keywords" content="how to free up storage on iphone, free up iphone storage, iphone storage full, clear iphone storage, iphone running out of space, offload apps iphone, optimise iphone storage" />
+<title>How to Free Up Storage on iPhone — deClusterize</title>
+<meta name="description" content="How to free up storage on iPhone without deleting photos — clear system data, offload apps, clear caches, and reclaim gigabytes in minutes." />
+<meta name="keywords" content="how to free up storage on iphone, clear storage on iphone, clean up iphone storage, how to reduce system data on iphone, iphone storage full what to do, clean iphone memory, offload apps iphone" />
 <link rel="canonical" href="https://declusterize.com/free-up-storage-on-iphone.html" />
 <link rel="icon" href="favicon.svg?v=2" type="image/svg+xml" />
 <meta property="og:type" content="article" />
@@ -352,7 +352,7 @@
         iPhones are built to make capturing life effortless — and that's exactly the problem. Every WhatsApp photo gets auto-saved to your Camera Roll. Every video you shoot is shot in 4K at 60fps, eating 400 MB per minute. Apps accumulate gigabytes of cached data invisibly in the background. Streaming apps download episodes you finished watching months ago.
       </p>
       <p>
-        The result: a typical 128 GB iPhone fills up within 2–3 years of normal use, and a 64 GB model often within 12 months. But here's what most guides don't tell you — <strong>less than half of that consumed storage is usually photos and videos</strong>. The rest is apps, caches, system data, and media downloads that are completely safe to remove. You can also <a href="clean-up-camera-roll-iphone.html">clean up your Camera Roll</a> separately for an even deeper photo clean.
+        The result: a typical 128 GB iPhone fills up within 2–3 years of normal use, and a 64 GB model often within 12 months. But here's what most guides don't tell you — <strong>less than half of that consumed storage is usually photos and videos</strong>. The rest is apps, caches, system data, and media downloads that are completely safe to remove, a point echoed by storage teardowns from <a href="https://www.wideanglesoftware.com/blog/how-to-free-up-space-on-iphone.php" target="_blank" rel="noopener">Wide Angle Software</a> and <a href="https://smarty.co.uk/blog/iphone-storage" target="_blank" rel="noopener">Smarty</a>. So the goal isn't to delete memories — it's to clean up iPhone storage strategically. You can also <a href="clean-up-camera-roll-iphone.html">clean up your Camera Roll</a> separately for an even deeper photo clean.
       </p>
 
       <div class="callout callout-info">
@@ -464,7 +464,7 @@
         <span class="callout-icon">⚠️</span>
         <div class="callout-body">
           <strong>You need enough iCloud storage</strong>
-          <p>The free iCloud plan is only 5 GB — almost certainly not enough for your photo library. Apple's <a href="https://support.apple.com" target="_blank" rel="noopener">iCloud+</a> plans start at £0.99/mo for 50 GB and £2.99/mo for 200 GB. If you'd rather not pay Apple, Google Photos offers 15 GB free (with slightly compressed storage on the free tier).</p>
+          <p>The free iCloud plan is only 5 GB — almost certainly not enough for your photo library. iCloud+ plans start at £0.99/mo for 50 GB and £2.99/mo for 200 GB. If your iCloud account itself is full, that's a separate job from freeing on-device space. Prefer not to pay Apple? Google Photos offers 15 GB free.</p>
         </div>
       </div>
 
@@ -537,6 +537,30 @@
         <div class="callout-body">
           <strong>The "offload and reinstall" trick for apps with no clear-cache button</strong>
           <p>iOS doesn't expose a universal "clear cache" button. For apps that don't have their own cache-clearing option (Instagram, TikTok, many games), go to <em>Settings → General → iPhone Storage</em>, tap the app, tap <em>Offload App</em>, then reinstall it from the App Store. This clears all cached data while preserving your login and settings.</p>
+        </div>
+      </div>
+
+      <!-- SYSTEM DATA -->
+      <h2 id="system-data">How to reduce System Data on iPhone (the grey bar)</h2>
+      <p>
+        If your storage breakdown shows a large grey <strong>System Data</strong> section — sometimes 10 GB or more — you've found the most misunderstood category in iOS. System Data (labelled "Other" before iOS 15) is a catch-all for caches, logs, Siri voices, downloaded fonts, streaming buffers, and temporary files iOS hasn't cleared yet. It isn't a bug, but it does grow unchecked, and it's a common reason your iPhone storage stays full even after you delete apps and photos.
+      </p>
+      <p>
+        You can't tap System Data to clear it directly, so you reduce it indirectly:
+      </p>
+      <ul>
+        <li><strong>Restart your iPhone.</strong> A simple restart lets iOS flush temporary caches it was holding. This alone often trims 1–3 GB of System Data.</li>
+        <li><strong>Clear Safari website data.</strong> <em>Settings → Apps → Safari → Clear History and Website Data.</em> Safari's cache is one of the largest contributors to System Data.</li>
+        <li><strong>Offload and reinstall your heaviest apps.</strong> Streaming and social apps dump buffered video into System Data. Offloading them (Method 3 above) forces iOS to discard that hidden cache.</li>
+        <li><strong>Shorten your Messages history.</strong> Old attachment thumbnails and caches count as System Data — setting Messages to auto-delete after 1 year (Method 4 below) shrinks it over the following days.</li>
+        <li><strong>Last resort — back up and restore.</strong> If System Data has ballooned past 15–20 GB and won't come down, a full <a href="https://support.apple.com/en-ae/guide/iphone/iph47c931112/ios" target="_blank" rel="noopener">backup and restore</a> rebuilds iOS from clean, usually reclaiming the lot.</li>
+      </ul>
+
+      <div class="callout callout-info">
+        <span class="callout-icon">ℹ️</span>
+        <div class="callout-body">
+          <strong>Give it a day before you worry</strong>
+          <p>System Data fluctuates constantly. If it spikes after streaming a film or updating iOS, leave it 24–48 hours on Wi-Fi — iOS clears its own temporary files on a schedule. Only chase it manually if it stays high for several days.</p>
         </div>
       </div>
 
@@ -678,6 +702,7 @@
           <li><a href="#offload-apps">Method 1 — Offload apps</a></li>
           <li><a href="#optimise-photos">Method 2 — Optimise Photos</a></li>
           <li><a href="#clear-caches">Method 3 — Clear app caches</a></li>
+          <li><a href="#system-data">Reduce System Data</a></li>
           <li><a href="#messages-storage">Method 4 — Messages &amp; attachments</a></li>
           <li><a href="#downloads-media">Method 5 — Downloads &amp; media</a></li>
           <li><a href="#files-cloud">Method 6 — Move files to cloud</a></li>
