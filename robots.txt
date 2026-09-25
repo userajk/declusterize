@@ -1,4 +1,4 @@
 User-agent: *
-Disallow: /logo-concepts.html
+Allow: /
 
 Sitemap: https://declusterize.com/sitemap.xml
