@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Complete Digital Declutter Checklist — deClusterize</title>
     <meta name="description" content="The master digital declutter checklist covering phone, computer, email, photos, and cloud storage. 44 actionable tasks to reclaim your digital space.">
     <link rel="canonical" href="https://declusterize.com/checklist-complete-digital-declutter">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" /></noscript>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -38,6 +41,12 @@
 
         /* Header */
         .header {
+        .header a { text-decoration: none; }
+        .site-nav { display: flex; flex-wrap: wrap; gap: 1.25rem; font-size: 0.85rem; margin-bottom: 1rem; }
+        .site-nav a { color: var(--text-muted); text-decoration: none; }
+        .site-nav a:hover { color: var(--accent); }
+        .footer a { color: var(--text-muted); }
+        .footer-links { margin-top: 0.75rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
             display: flex;
             align-items: center;
             gap: 0.75rem;
@@ -330,7 +339,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <svg width="36" height="36" viewBox="0 0 48 48" fill="none">
+            <a href="/" aria-label="deClusterize home"><svg width="36" height="36" viewBox="0 0 48 48" fill="none">
                 <defs>
                     <linearGradient id="bm-stroke" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
                         <stop offset="0" stop-color="#34D399"/>
@@ -345,9 +354,15 @@
                 <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="none" stroke="url(#bm-stroke)" stroke-width="2"/>
                 <polyline points="14,25 21,32 34,17" stroke="url(#bm-stroke)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                 <circle cx="38" cy="10" r="3" fill="#38BDF8" opacity=".9"/>
-            </svg>
-            <div class="brand"><span class="brand-de">de</span><span class="brand-main">Clusterize</span></div>
+            </svg></a>
+            <a href="/"><div class="brand"><span class="brand-de">de</span><span class="brand-main">Clusterize</span></div></a>
         </div>
+        <nav class="site-nav" aria-label="Main">
+            <a href="/">Home</a>
+            <a href="guides">All guides</a>
+            <a href="guides#checklists">Checklists</a>
+            <a href="how-it-works">How it works</a>
+        </nav>
 
         <h1>Complete Digital Declutter Checklist</h1>
         <p class="subtitle">The master checklist — 44 tasks across all 5 areas of your digital life.</p>
@@ -462,7 +477,13 @@
         </div>
 
         <footer class="footer">
-            declusterize.com — Your digital life, perfectly clear.
+            <a href="/">declusterize.com</a> — Your digital life, perfectly clear.
+            <div class="footer-links">
+                <a href="checklist-cloud-storage-cleanup">Cloud Storage Cleanup Checklist</a>
+                <a href="checklist-computer-cleanup">Computer Cleanup Checklist</a>
+                <a href="checklist-email-declutter">Email Declutter Checklist</a>
+                <a href="checklist-phone-declutter">Phone Declutter Checklist</a>
+            </div>
         </footer>
     </div>
 

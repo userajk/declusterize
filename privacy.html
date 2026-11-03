@@ -17,7 +17,8 @@
 <meta name="twitter:image" content="https://declusterize.com/og-image.jpg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" /></noscript>
 <link rel="stylesheet" href="styles.css" />
 <style>
 /* ── Inner page ─────────────────────────────────── */
@@ -138,8 +139,8 @@
   <div class="container">
     <p class="eyebrow reveal">Legal</p>
     <h1 class="reveal">Privacy <span class="text-teal">Policy</span></h1>
-    <p class="lead reveal">We take your privacy seriously. This policy explains exactly what data we collect, why we collect it, and what rights you have over it.</p>
-    <p class="last-updated reveal">Last updated: 1 June 2025 &nbsp;·&nbsp; Effective: 1 June 2025</p>
+    <p class="lead reveal">deClusterize is a static website with no accounts. This policy explains the little data the Site does handle — analytics, the optional newsletter and the contact form — and what rights you have over it.</p>
+    <p class="last-updated reveal">Last updated: 3 November 2026 &nbsp;·&nbsp; Effective: 3 November 2026</p>
   </div>
 </section>
 
@@ -155,10 +156,9 @@
           <li><a href="#overview">Overview</a></li>
           <li><a href="#what-we-collect">What We Collect</a></li>
           <li><a href="#how-we-use">How We Use It</a></li>
-          <li><a href="#sharing">Data Sharing</a></li>
-          <li><a href="#retention">Data Retention</a></li>
-          <li><a href="#security">Security</a></li>
-          <li><a href="#cookies">Cookies</a></li>
+          <li><a href="#sharing">Who Receives It</a></li>
+          <li><a href="#retention">Retention</a></li>
+          <li><a href="#cookies">Cookies & Local Storage</a></li>
           <li><a href="#your-rights">Your Rights</a></li>
           <li><a href="#children">Children</a></li>
           <li><a href="#changes">Policy Changes</a></li>
@@ -167,151 +167,79 @@
       </aside>
 
       <!-- MAIN CONTENT -->
-      <div class="doc-content">
-
+            <div class="doc-content">
         <div class="doc-section reveal" id="overview">
           <span class="doc-tag">// 01 — overview</span>
           <h2>Overview</h2>
-          <p>deClusterize ("we", "us", "our") operates the deClusterize platform, which helps individuals organize their files, photos, email, devices, and cloud storage. This Privacy Policy describes how we handle personal information in connection with our website and services.</p>
+          <p>deClusterize ("we", "us") publishes free guides and checklists at declusterize.com (the "Site"). There are no user accounts, no app and no connection to your devices or online services, so we hold very little personal data.</p>
           <div class="doc-callout">
-            <p><strong>Plain-language summary:</strong> We collect the minimum data necessary to run the service. We do not sell your data. We do not train AI models on your personal content without explicit consent. You can request deletion of your data at any time.</p>
+            <p><strong>Plain-language summary:</strong> We never see your files, photos or email. Checklist ticks stay in your browser. We only hold an email address if you subscribe to the newsletter or write to us, and we never sell or share it for marketing.</p>
           </div>
         </div>
-
         <div class="doc-section reveal" id="what-we-collect">
           <span class="doc-tag">// 02 — data collection</span>
           <h2>What We Collect</h2>
-          <p>We collect information in three ways: information you give us directly, information collected automatically, and information from third-party integrations you authorize.</p>
-          <p><strong>Information you provide:</strong></p>
-          <ul>
-            <li>Account details — name, email address, and password hash</li>
-            <li>Profile preferences — your organizing goals, focus areas (files, email, photos, etc.), and session cadence</li>
-            <li>Communications — support messages, survey responses, and feedback you send us</li>
-            <li>Payment information — processed by our payment provider (Stripe); we store only the last-four digits of your card and billing address</li>
-          </ul>
-          <p><strong>Information collected automatically:</strong></p>
-          <ul>
-            <li>Usage data — pages visited, features used, session duration, task completion events</li>
-            <li>Device data — browser type, OS, screen resolution, time zone, and language preference</li>
-            <li>Log data — IP address, access timestamps, HTTP referrer, and error logs</li>
-            <li>Cookies and similar tracking technologies (see the Cookies section below)</li>
-          </ul>
-          <p><strong>Information from integrations you authorize:</strong></p>
-          <ul>
-            <li>Cloud storage metadata (file names, sizes, dates — not file contents unless you explicitly request a scan)</li>
-            <li>Email header data (sender, subject, date — not message body) for inbox analysis features</li>
-          </ul>
+          <p><strong>Nothing from the guides themselves.</strong> Reading a guide or ticking a checklist sends no personal data to us. Checklist progress is saved in your browser's local storage on your device only.</p>
+          <p><strong>Newsletter (optional):</strong> your email address, the date you subscribed and the page you subscribed from, if you fill in a newsletter form.</p>
+          <p><strong>Contact (optional):</strong> whatever you choose to include when you email us. The contact form opens your own email app; nothing is submitted to a server on the Site.</p>
+          <p><strong>Analytics:</strong> the Site uses Cloudflare Web Analytics, which records aggregate page views, referrers, country and device type without cookies, without fingerprinting and without tracking individuals across sites.</p>
         </div>
-
         <div class="doc-section reveal" id="how-we-use">
           <span class="doc-tag">// 03 — use of data</span>
           <h2>How We Use It</h2>
-          <p>We use personal information only for the following purposes:</p>
           <ul>
-            <li><strong>Service delivery</strong> — to create and maintain your account, personalize your organizing plan, and track progress</li>
-            <li><strong>Communications</strong> — to send transactional emails (password resets, receipts), weekly progress digests (opt-out any time), and service announcements</li>
-            <li><strong>Product improvement</strong> — aggregated, anonymized usage analytics to understand which features work best and fix bugs</li>
-            <li><strong>Security</strong> — to detect and prevent fraud, abuse, and unauthorized access</li>
-            <li><strong>Legal compliance</strong> — to meet our obligations under applicable law</li>
+            <li>To send the newsletter you asked for, and to let you unsubscribe from it</li>
+            <li>To reply to messages you send us</li>
+            <li>To see which guides are read, so we know what to improve or write next</li>
           </ul>
-          <div class="doc-callout">
-            <p>We <strong>do not</strong> use your data for behavioral advertising, profiling for third-party marketing, or automated decision-making that produces significant legal effects on you.</p>
-          </div>
+          <p>We do not profile you, do not sell personal data, and do not use it for advertising.</p>
         </div>
-
         <div class="doc-section reveal" id="sharing">
-          <span class="doc-tag">// 04 — data sharing</span>
-          <h2>Data Sharing</h2>
-          <p>We do not sell, rent, or trade your personal information. We share data only in the following limited circumstances:</p>
+          <span class="doc-tag">// 04 — who receives it</span>
+          <h2>Who Receives It</h2>
           <ul>
-            <li><strong>Service providers</strong> — trusted vendors who process data on our behalf under strict data-processing agreements (e.g., Stripe for payments, AWS for hosting, Postmark for email delivery)</li>
-            <li><strong>Legal requirements</strong> — if required by law, court order, or governmental authority; we will notify you unless legally prohibited from doing so</li>
-            <li><strong>Business transfers</strong> — in the event of a merger, acquisition, or sale of assets, your data may transfer; we will notify you and you may delete your account before the transfer completes</li>
-            <li><strong>With your consent</strong> — for any purpose you explicitly authorize</li>
+            <li><strong>Kit (ConvertKit)</strong> — stores newsletter subscriptions and sends the emails on our behalf</li>
+            <li><strong>Cloudflare</strong> — hosts the Site and provides the cookie-free analytics described above</li>
+            <li><strong>Google Fonts</strong> — the Site's typefaces are loaded from Google's servers, which receive your IP address as part of that request</li>
           </ul>
+          <p>Each provider processes data under its own privacy policy. We do not share personal data with anyone else unless required by law.</p>
         </div>
-
         <div class="doc-section reveal" id="retention">
           <span class="doc-tag">// 05 — retention</span>
-          <h2>Data Retention</h2>
-          <p>We retain your personal data for as long as your account is active or as needed to provide services. Specific retention periods:</p>
+          <h2>Retention</h2>
           <ul>
-            <li>Account data — retained until you delete your account, then purged within 30 days</li>
-            <li>Usage logs — retained for 12 months in aggregate, then anonymized</li>
-            <li>Support communications — retained for 24 months to allow follow-up</li>
-            <li>Payment records — retained for 7 years for tax and legal compliance</li>
+            <li>Newsletter subscriptions — until you unsubscribe, after which the address is removed from the active list</li>
+            <li>Email correspondence — kept as long as needed to deal with your message, then deleted</li>
+            <li>Analytics — held by Cloudflare in aggregate form only</li>
           </ul>
         </div>
-
-        <div class="doc-section reveal" id="security">
-          <span class="doc-tag">// 06 — security</span>
-          <h2>Security</h2>
-          <p>We implement industry-standard safeguards to protect your information:</p>
-          <ul>
-            <li>TLS 1.3 encryption in transit on all connections</li>
-            <li>AES-256 encryption at rest for sensitive fields</li>
-            <li>Bcrypt password hashing with a per-user salt</li>
-            <li>Role-based access controls and least-privilege employee access</li>
-            <li>Regular third-party penetration testing and vulnerability scans</li>
-          </ul>
-          <p>No method of transmission over the internet is 100% secure. If we become aware of a breach that affects your personal data, we will notify you within 72 hours as required by applicable law.</p>
-        </div>
-
         <div class="doc-section reveal" id="cookies">
-          <span class="doc-tag">// 07 — cookies</span>
-          <h2>Cookies</h2>
-          <p>We use cookies and similar technologies for the following purposes:</p>
-          <ul>
-            <li><strong>Essential cookies</strong> — required for authentication, session management, and security (cannot be disabled)</li>
-            <li><strong>Preference cookies</strong> — remember your settings and UI preferences (optional)</li>
-            <li><strong>Analytics cookies</strong> — anonymized usage tracking via a privacy-respecting analytics tool (optional; opt-out via cookie banner)</li>
-          </ul>
-          <p>We do not use third-party advertising cookies. You can manage your cookie preferences through the cookie banner shown on first visit, or through your browser settings.</p>
+          <span class="doc-tag">// 06 — cookies & local storage</span>
+          <h2>Cookies &amp; Local Storage</h2>
+          <p>The Site sets no cookies of its own, and Cloudflare Web Analytics does not use cookies.</p>
+          <p>Checklist pages use your browser's <em>local storage</em> to remember which tasks you have ticked. That data never leaves your device; clearing your browser's site data removes it.</p>
         </div>
-
         <div class="doc-section reveal" id="your-rights">
-          <span class="doc-tag">// 08 — your rights</span>
+          <span class="doc-tag">// 07 — your rights</span>
           <h2>Your Rights</h2>
-          <p>Depending on your location, you may have the following rights regarding your personal data:</p>
-          <ul>
-            <li><strong>Access</strong> — request a copy of the personal data we hold about you</li>
-            <li><strong>Correction</strong> — request that inaccurate or incomplete data be corrected</li>
-            <li><strong>Deletion</strong> — request deletion of your personal data ("right to be forgotten")</li>
-            <li><strong>Portability</strong> — receive your data in a machine-readable format</li>
-            <li><strong>Objection</strong> — object to processing based on legitimate interests</li>
-            <li><strong>Restriction</strong> — request that we limit how we process your data</li>
-            <li><strong>Withdrawal of consent</strong> — withdraw consent for processing at any time</li>
-          </ul>
-          <p>To exercise any of these rights, email us at <strong>info@declusterize.com</strong>. We will respond within 30 days. Where required, we may need to verify your identity before processing your request.</p>
-          <div class="doc-callout">
-            <p>You also have the right to lodge a complaint with your local data protection authority (e.g., ICO in the UK, CNIL in France, or your state Attorney General in the US).</p>
-          </div>
+          <p>Depending on where you live (including under UK and EU GDPR) you may have the right to access, correct, delete or export personal data we hold about you, and to object to its processing. Because we hold so little, this usually means a newsletter address — use the unsubscribe link in any email, or write to us and we will remove it.</p>
+          <p>You can also complain to your local data-protection authority.</p>
         </div>
-
         <div class="doc-section reveal" id="children">
-          <span class="doc-tag">// 09 — children</span>
+          <span class="doc-tag">// 08 — children</span>
           <h2>Children</h2>
-          <p>deClusterize is not directed to children under the age of 16. We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us immediately and we will delete it.</p>
+          <p>The Site is general-audience content and does not knowingly collect personal data from children under 13. If you believe a child has subscribed to the newsletter, contact us and we will remove the address.</p>
         </div>
-
         <div class="doc-section reveal" id="changes">
-          <span class="doc-tag">// 10 — policy changes</span>
+          <span class="doc-tag">// 09 — policy changes</span>
           <h2>Policy Changes</h2>
-          <p>We may update this Privacy Policy from time to time. When we make material changes, we will notify you by email (if you have an account) and by posting a prominent notice on our website at least 14 days before the change takes effect. Your continued use of deClusterize after the effective date constitutes acceptance of the updated policy.</p>
-          <p>The date at the top of this page always reflects the most recent revision.</p>
+          <p>If this policy changes materially, the date at the top of this page will be updated. Newsletter subscribers will be told in the next email if the change affects them.</p>
         </div>
-
         <div class="doc-section reveal" id="contact">
-          <span class="doc-tag">// 11 — contact</span>
+          <span class="doc-tag">// 10 — contact</span>
           <h2>Contact Us</h2>
-          <p>If you have questions or concerns about this Privacy Policy or our data practices, please reach out:</p>
-          <ul>
-            <li><strong>Email:</strong> info@declusterize.com</li>
-            <li><strong>Mail:</strong> deClusterize, 123 Clarity Lane, Suite 400, San Francisco, CA 94105</li>
-          </ul>
-          <p>For general support inquiries, visit our <a href="help" style="color:var(--sky)">Help Center</a>.</p>
+          <p>Privacy questions or requests: <a href="mailto:info@declusterize.com">info@declusterize.com</a>.</p>
         </div>
-
       </div><!-- /doc-content -->
     </div><!-- /doc-grid -->
   </div>
@@ -341,7 +269,7 @@
       </nav>
       <nav class="footer-col" aria-label="Resources">
         <h4>Resources</h4>
-        <ul><li><a href="#" rel="nofollow">Blog</a></li><li><a href="help">Help Center</a></li><li><a href="community">Community</a></li></ul>
+        <ul><li><a href="help">Help Center</a></li><li><a href="community">Community</a></li></ul>
       </nav>
       <nav class="footer-col" aria-label="Company">
         <h4>Company</h4>

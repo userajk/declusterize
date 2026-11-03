@@ -17,7 +17,8 @@
 <meta name="twitter:image" content="https://declusterize.com/og-image.jpg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" /></noscript>
 <link rel="stylesheet" href="styles.css" />
 <style>
 /* ── Inner-page layout ─────────────────────────────────────── */
@@ -155,7 +156,7 @@
   <div class="container">
     <p class="eyebrow reveal">About deClusterize</p>
     <h1 class="reveal">Built for the quietly<br><span class="text-teal">overwhelmed.</span></h1>
-    <p class="lead reveal">We started deClusterize because the problem wasn't a lack of tools — it was too many of them. We build calm, focused systems that cut through the noise so you can get back to living.</p>
+    <p class="lead reveal">We started deClusterize because the problem wasn't a lack of tools — it was too many of them. We write calm, focused, step-by-step guides that cut through the noise so you can get back to living.</p>
   </div>
 </section>
 
@@ -166,31 +167,19 @@
     <div class="story-grid reveal">
       <div class="story-content">
         <h2>The problem we set out to solve</h2>
-        <p>The average person manages 3.2 devices, 2 cloud storage accounts, and 4,700 unread emails. Every new tool that promises to help adds another thing to maintain. Complexity compounds. Clarity vanishes.</p>
-        <p>deClusterize was founded on a single observation: people don't need another app — they need a guide. A system that meets them where they are, identifies what actually matters, and moves them forward in 15-minute sessions.</p>
+        <p>Most of us juggle several devices, a couple of cloud accounts and an inbox that never quite empties. Every new tool that promises to help adds another thing to maintain. Complexity compounds. Clarity vanishes.</p>
+        <p>deClusterize was founded on a single observation: people don't need another app — they need a guide. Plain-English instructions that meet them where they are, say exactly what to tap or click, and move them forward in 15-minute sessions.</p>
         <p>No dashboards to dread. No 40-step setups. Just progress, every day.</p>
       </div>
       <div>
         <!-- Telemetry panel -->
         <div class="card" style="padding:32px">
-          <p class="card-label" style="font-family:var(--font-mono);font-size:.7rem;letter-spacing:.1em;color:var(--emerald);text-transform:uppercase;margin-bottom:20px">// system telemetry</p>
-          <div style="display:flex;flex-direction:column;gap:14px">
-            <div>
-              <div style="display:flex;justify-content:space-between;font-size:.8rem;margin-bottom:6px"><span style="color:var(--text-2)">Digital clarity rate</span><span style="font-family:var(--font-mono);color:var(--emerald)">94%</span></div>
-              <div style="height:4px;background:var(--border);border-radius:99px"><div style="width:94%;height:100%;background:linear-gradient(90deg,var(--emerald),var(--sky));border-radius:99px"></div></div>
-            </div>
-            <div>
-              <div style="display:flex;justify-content:space-between;font-size:.8rem;margin-bottom:6px"><span style="color:var(--text-2)">Task completion rate</span><span style="font-family:var(--font-mono);color:var(--sky-bright)">87%</span></div>
-              <div style="height:4px;background:var(--border);border-radius:99px"><div style="width:87%;height:100%;background:linear-gradient(90deg,var(--sky),var(--sky-bright));border-radius:99px"></div></div>
-            </div>
-            <div>
-              <div style="display:flex;justify-content:space-between;font-size:.8rem;margin-bottom:6px"><span style="color:var(--text-2)">User satisfaction</span><span style="font-family:var(--font-mono);color:var(--emerald-bright)">4.9 / 5</span></div>
-              <div style="height:4px;background:var(--border);border-radius:99px"><div style="width:98%;height:100%;background:linear-gradient(90deg,var(--emerald-bright),var(--emerald));border-radius:99px"></div></div>
-            </div>
-            <div>
-              <div style="display:flex;justify-content:space-between;font-size:.8rem;margin-bottom:6px"><span style="color:var(--text-2)">Files recovered / organized</span><span style="font-family:var(--font-mono);color:var(--amber)">2.1M+</span></div>
-              <div style="height:4px;background:var(--border);border-radius:99px"><div style="width:78%;height:100%;background:linear-gradient(90deg,var(--amber),#fbbf24);border-radius:99px"></div></div>
-            </div>
+          <p class="card-label" style="font-family:var(--font-mono);font-size:.7rem;letter-spacing:.1em;color:var(--emerald);text-transform:uppercase;margin-bottom:20px">// what you'll find here</p>
+            <div style="display:flex;flex-direction:column;gap:14px">
+              <div style="display:flex;justify-content:space-between;font-size:.85rem;border-bottom:1px solid var(--border);padding-bottom:10px"><span style="color:var(--text-2)">Step-by-step guides</span><span style="font-family:var(--font-mono);color:var(--emerald)">12</span></div>
+              <div style="display:flex;justify-content:space-between;font-size:.85rem;border-bottom:1px solid var(--border);padding-bottom:10px"><span style="color:var(--text-2)">Printable checklists</span><span style="font-family:var(--font-mono);color:var(--emerald)">5</span></div>
+              <div style="display:flex;justify-content:space-between;font-size:.85rem;border-bottom:1px solid var(--border);padding-bottom:10px"><span style="color:var(--text-2)">Accounts, apps or sign-ups</span><span style="font-family:var(--font-mono);color:var(--emerald)">0</span></div>
+              <div style="display:flex;justify-content:space-between;font-size:.85rem"><span style="color:var(--text-2)">Cost</span><span style="font-family:var(--font-mono);color:var(--emerald)">Free</span></div>
           </div>
         </div>
       </div>
@@ -199,16 +188,16 @@
     <!-- STATS ROW -->
     <div class="bento-stat-row reveal">
       <div class="bento-stat">
-        <div class="big-num">50K+</div>
-        <p>People organized so far</p>
+        <div class="big-num">12</div>
+            <p>Free step-by-step guides</p>
       </div>
       <div class="bento-stat">
         <div class="big-num">15 min</div>
-        <p>Average session length</p>
+        <p>Per task, never longer</p>
       </div>
       <div class="bento-stat">
-        <div class="big-num">2.1M</div>
-        <p>Files organized or recovered</p>
+        <div class="big-num">5</div>
+            <p>Printable checklists</p>
       </div>
     </div>
 
@@ -219,12 +208,12 @@
       <div class="val-card">
         <div class="val-icon"><svg class="ico" width="22" height="22"><use href="#ic-clock"/></svg></div>
         <h3>Respect for your time</h3>
-        <p>Every feature we ship must earn its place by saving you more time than it takes to learn. If it doesn't, it doesn't ship.</p>
+        <p>Every guide must earn its place by saving you more time than it takes to read. If it doesn't, it doesn't get published.</p>
       </div>
       <div class="val-card">
         <div class="val-icon" style="background:rgba(14,165,233,.12);color:var(--sky)"><svg class="ico" width="22" height="22"><use href="#ic-shield"/></svg></div>
         <h3>Privacy by default</h3>
-        <p>Your data is yours. We don't sell it, we don't train on it without consent, and we store only what's needed to deliver the plan.</p>
+        <p>There's nothing to sign up for and nothing to install. The guides run in your browser, checklist progress stays on your device, and we never see your files, photos or inbox.</p>
       </div>
       <div class="val-card">
         <div class="val-icon" style="background:rgba(245,158,11,.12);color:var(--amber)"><svg class="ico" width="22" height="22"><use href="#ic-target"/></svg></div>
@@ -240,33 +229,8 @@
 
     <!-- TEAM -->
     <div class="team-section reveal">
-      <h2>The team behind it</h2>
-      <div class="team-grid">
-        <div class="team-card">
-          <div class="team-avatar">SA</div>
-          <h4>Sara A.</h4>
-          <p>Co-founder & CEO</p>
-          <p class="role">// product &amp; vision</p>
-        </div>
-        <div class="team-card">
-          <div class="team-avatar" style="background:linear-gradient(135deg,var(--sky),var(--sky-bright))">JK</div>
-          <h4>James K.</h4>
-          <p>Co-founder & CTO</p>
-          <p class="role">// systems &amp; infra</p>
-        </div>
-        <div class="team-card">
-          <div class="team-avatar" style="background:linear-gradient(135deg,var(--amber),#fbbf24)">MP</div>
-          <h4>Maya P.</h4>
-          <p>Head of Design</p>
-          <p class="role">// ux &amp; clarity</p>
-        </div>
-        <div class="team-card">
-          <div class="team-avatar" style="background:linear-gradient(135deg,var(--rose),#fb923c)">RT</div>
-          <h4>Raj T.</h4>
-          <p>Lead Engineer</p>
-          <p class="role">// core &amp; integrations</p>
-        </div>
-      </div>
+      <h2>Who's behind it</h2>
+          <p style="max-width:640px;margin:0 auto;color:var(--text-body);line-height:1.75">deClusterize is a small, independent project — not a company with a product team. Every guide is written by hand, walked through on a real device, and links to the original Apple, Google or Microsoft documentation it draws on. Spotted something that's out of date? <a href="contact">Tell us</a> and it gets fixed.</p>
     </div>
 
     <!-- CTA -->
@@ -298,7 +262,7 @@
       </nav>
       <nav class="footer-col" aria-label="Resources">
         <h4>Resources</h4>
-        <ul><li><a href="#" rel="nofollow">Blog</a></li><li><a href="help">Help Center</a></li><li><a href="community">Community</a></li></ul>
+        <ul><li><a href="help">Help Center</a></li><li><a href="community">Community</a></li></ul>
       </nav>
       <nav class="footer-col" aria-label="Company">
         <h4>Company</h4>

@@ -17,7 +17,8 @@
 <meta name="twitter:image" content="https://declusterize.com/og-image.jpg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" /></noscript>
 <link rel="stylesheet" href="styles.css" />
 <style>
 /* ── Before / After ──────────────────────────────────── */
@@ -93,11 +94,18 @@
   "name": "deClusterize",
   "url": "https://declusterize.com/",
   "description": "deClusterize helps you organise your files, photos, email, devices, and cloud storage — one 15-minute task at a time.",
-  "publisher": {
-    "@type": "Organization",
-    "name": "deClusterize",
-    "url": "https://declusterize.com/"
-  }
+  "publisher": { "@id": "https://declusterize.com/#organization" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://declusterize.com/#organization",
+  "name": "deClusterize",
+  "url": "https://declusterize.com/",
+  "logo": { "@type": "ImageObject", "url": "https://declusterize.com/logo-256.png", "width": 256, "height": 256 },
+  "contactPoint": { "@type": "ContactPoint", "email": "info@declusterize.com", "contactType": "customer support" }
 }
 </script>
 </head>
@@ -218,9 +226,9 @@
   <div class="container">
     <div class="hero-grid">
       <div class="hero-content reveal">
-        <span class="status"><span class="pulse"></span> Core telemetry active</span>
+        <span class="status"><span class="pulse"></span> Free guides &amp; checklists — no account needed</span>
         <h1>Your digital life,<br><span class="text-teal">perfectly clear.</span></h1>
-        <p class="hero-lead">deClusterize orchestrates your files, photos, email, devices, and cloud storage into one calm, real-time plan — one 15-minute task at a time.</p>
+        <p class="hero-lead">Free, step-by-step guides to organise your files, photos, email, devices and cloud storage — one 15-minute task at a time.</p>
         <p class="hero-tagline">Small steps. Big clarity.</p>
         <div class="hero-ctas">
           <a href="#how" class="btn btn-primary btn-lg">
@@ -228,7 +236,7 @@
           </a>
         </div>
         <ul class="trust-row">
-          <li class="trust-item"><span class="icon-chip sm chip-teal"><svg class="ico"><use href="#ic-target"/></svg></span> Personalized</li>
+          <li class="trust-item"><span class="icon-chip sm chip-teal"><svg class="ico"><use href="#ic-target"/></svg></span> No sign-up</li>
           <li class="trust-item"><span class="icon-chip sm chip-blue"><svg class="ico"><use href="#ic-clock"/></svg></span> 15-minute tasks</li>
           <li class="trust-item"><span class="icon-chip sm chip-yellow"><svg class="ico"><use href="#ic-shield"/></svg></span> Private &amp; secure</li>
         </ul>
@@ -241,22 +249,22 @@
 <div class="ticker" aria-hidden="true">
   <div class="ticker-track">
     <span class="ticker-group">
-      <span class="item"><i class="tk-dot"></i> System nominal</span>
-      <span class="item"><i class="tk-dot sky"></i> 14,302 photos scanned</span>
-      <span class="item"><i class="tk-dot"></i> 9,128 emails triaged</span>
-      <span class="item"><i class="tk-dot sky"></i> 4.2 GB reclaimed</span>
-      <span class="item"><i class="tk-dot"></i> 38 duplicates resolved</span>
-      <span class="item"><i class="tk-dot sky"></i> Backups verified</span>
-      <span class="item"><i class="tk-dot"></i> Uptime 99.98%</span>
+      <span class="item"><i class="tk-dot"></i> 12 free guides</span>
+      <span class="item"><i class="tk-dot sky"></i> 5 printable checklists</span>
+      <span class="item"><i class="tk-dot"></i> No account needed</span>
+      <span class="item"><i class="tk-dot sky"></i> 15-minute tasks</span>
+      <span class="item"><i class="tk-dot"></i> iPhone · Android · Windows · Mac</span>
+      <span class="item"><i class="tk-dot sky"></i> Gmail · Google Drive · iCloud</span>
+      <span class="item"><i class="tk-dot"></i> Updated October 2026</span>
     </span>
     <span class="ticker-group">
-      <span class="item"><i class="tk-dot"></i> System nominal</span>
-      <span class="item"><i class="tk-dot sky"></i> 14,302 photos scanned</span>
-      <span class="item"><i class="tk-dot"></i> 9,128 emails triaged</span>
-      <span class="item"><i class="tk-dot sky"></i> 4.2 GB reclaimed</span>
-      <span class="item"><i class="tk-dot"></i> 38 duplicates resolved</span>
-      <span class="item"><i class="tk-dot sky"></i> Backups verified</span>
-      <span class="item"><i class="tk-dot"></i> Uptime 99.98%</span>
+      <span class="item"><i class="tk-dot"></i> 12 free guides</span>
+      <span class="item"><i class="tk-dot sky"></i> 5 printable checklists</span>
+      <span class="item"><i class="tk-dot"></i> No account needed</span>
+      <span class="item"><i class="tk-dot sky"></i> 15-minute tasks</span>
+      <span class="item"><i class="tk-dot"></i> iPhone · Android · Windows · Mac</span>
+      <span class="item"><i class="tk-dot sky"></i> Gmail · Google Drive · iCloud</span>
+      <span class="item"><i class="tk-dot"></i> Updated October 2026</span>
     </span>
   </div>
 </div>
@@ -295,20 +303,20 @@
   <div class="container">
     <div class="stats reveal">
       <div class="stat">
-        <span class="stat-num"><span data-count="2.4" data-suffix="M">0</span></span>
-        <span class="stat-label">Tasks completed</span>
+        <span class="stat-num"><span data-count="12">0</span></span>
+        <span class="stat-label">Free guides</span>
       </div>
       <div class="stat">
-        <span class="stat-num"><span data-count="180" data-suffix="K">0</span></span>
-        <span class="stat-label">Inboxes cleared</span>
+        <span class="stat-num"><span data-count="5">0</span></span>
+        <span class="stat-label">Printable checklists</span>
       </div>
       <div class="stat">
         <span class="stat-num"><span data-count="15" data-suffix=" min">0</span></span>
         <span class="stat-label">Avg task length</span>
       </div>
       <div class="stat">
-        <span class="stat-num"><span data-count="99.9" data-suffix="%">0</span></span>
-        <span class="stat-label">Stay-organized rate</span>
+        <span class="stat-num"><span data-count="0">0</span></span>
+        <span class="stat-label">Accounts needed</span>
       </div>
     </div>
   </div>
@@ -320,7 +328,7 @@
     <div class="section-head center reveal">
       <span class="eyebrow">How deClusterize Works</span>
       <h2 class="section-title">Simple steps to lasting clarity.</h2>
-      <p class="section-sub">No complicated setups. No all-day sessions. Just a clear, personalised process that fits into the time you already have.</p>
+      <p class="section-sub">No complicated setups. No all-day sessions. Just a clear process that fits into the time you already have.</p>
     </div>
     <div class="steps">
       <article class="card step reveal">
@@ -330,7 +338,7 @@
         <p>Browse our guides across five key areas — files, email, photos, devices, and cloud storage. Each guide breaks the work into focused 15-minute tasks so you tackle the messiest area first without feeling overwhelmed.</p>
         <div style="display:flex;gap:16px;margin-top:16px;padding-top:16px;border-top:1px solid var(--border)">
           <div style="flex:1;text-align:center">
-            <div style="font-family:var(--font-mono);font-size:.85rem;color:var(--emerald-bright);font-weight:700">40+</div>
+            <div style="font-family:var(--font-mono);font-size:.85rem;color:var(--emerald-bright);font-weight:700">12</div>
             <div style="font-size:.72rem;color:var(--text-body);margin-top:3px">guides</div>
           </div>
           <div style="width:1px;background:var(--border)"></div>
@@ -349,7 +357,7 @@
         <span class="num">2</span>
         <span class="icon-chip chip-coral"><svg class="ico"><use href="#ic-tasklist"/></svg></span>
         <h3>Follow one small task at a time</h3>
-        <p>Your personalised plan breaks everything down into focused 15-minute sessions — one clear task, one clear outcome, every time you sit down. No decision fatigue, no wondering where to start. Just open the app and do the next thing.</p>
+        <p>Each guide breaks the job into focused 15-minute steps — one clear task, one clear outcome, every time you sit down. No decision fatigue, no wondering where to start. Open the guide, do the next step, tick it off the checklist.</p>
         <div style="display:flex;gap:16px;margin-top:16px;padding-top:16px;border-top:1px solid var(--border)">
           <div style="flex:1;text-align:center">
             <div style="font-family:var(--font-mono);font-size:.85rem;color:var(--rose);font-weight:700">15 min</div>
@@ -362,8 +370,8 @@
           </div>
           <div style="width:1px;background:var(--border)"></div>
           <div style="flex:1;text-align:center">
-            <div style="font-family:var(--font-mono);font-size:.85rem;color:var(--rose);font-weight:700">87%</div>
-            <div style="font-size:.72rem;color:var(--text-body);margin-top:3px">completion rate</div>
+            <div style="font-family:var(--font-mono);font-size:.85rem;color:var(--rose);font-weight:700">0</div>
+            <div style="font-size:.72rem;color:var(--text-body);margin-top:3px">accounts needed</div>
           </div>
         </div>
       </article>
@@ -371,11 +379,11 @@
         <span class="num">3</span>
         <span class="icon-chip chip-yellow"><svg class="ico"><use href="#ic-chart"/></svg></span>
         <h3>Build a system that stays organised</h3>
-        <p>As you complete sessions, deClusterize tracks your progress, celebrates milestones, and gradually shifts you from active decluttering to a light maintenance routine. Most users reach their core goals in 30 days and spend under 5 minutes a week keeping them.</p>
+        <p>Every guide ends with a short maintenance routine, and every checklist has a "keep it clean" section. Once the backlog is gone, a few minutes a week is enough to stop the clutter creeping back.</p>
         <div style="display:flex;gap:16px;margin-top:16px;padding-top:16px;border-top:1px solid var(--border)">
           <div style="flex:1;text-align:center">
-            <div style="font-family:var(--font-mono);font-size:.85rem;color:var(--amber);font-weight:700">30 days</div>
-            <div style="font-size:.72rem;color:var(--text-body);margin-top:3px">avg. to goal</div>
+            <div style="font-family:var(--font-mono);font-size:.85rem;color:var(--amber);font-weight:700">Monthly</div>
+            <div style="font-size:.72rem;color:var(--text-body);margin-top:3px">check-in</div>
           </div>
           <div style="width:1px;background:var(--border)"></div>
           <div style="flex:1;text-align:center">
@@ -384,8 +392,8 @@
           </div>
           <div style="width:1px;background:var(--border)"></div>
           <div style="flex:1;text-align:center">
-            <div style="font-family:var(--font-mono);font-size:.85rem;color:var(--amber);font-weight:700">94%</div>
-            <div style="font-size:.72rem;color:var(--text-body);margin-top:3px">stay organised</div>
+            <div style="font-family:var(--font-mono);font-size:.85rem;color:var(--amber);font-weight:700">Free</div>
+            <div style="font-size:.72rem;color:var(--text-body);margin-top:3px">always</div>
           </div>
         </div>
       </article>
@@ -497,24 +505,24 @@
   </div>
 </section>
 
-<!-- ============================================================ PERSONALIZED PLAN PREVIEW ============================================================ -->
+<!-- ============================================================ CHECKLISTS PREVIEW ============================================================ -->
 <section class="section">
   <div class="container">
     <div class="plan-panel reveal">
       <div class="plan-grid">
         <div class="plan-intro">
-          <h2>A plan built<br>just for you.</h2>
-          <p>deClusterize creates a custom checklist based on your goals, so you always know what to tackle next.</p>
-          <a href="#" rel="nofollow" class="link-arrow"><svg class="ico"><use href="#ic-edit"/></svg> Edit goals</a>
+          <h2>Checklists that<br>remember your progress.</h2>
+          <p>Tick tasks off as you go — your progress is saved in your browser, no account needed. Print them or save as PDF to work offline.</p>
+          <a href="guides#checklists" class="link-arrow"><svg class="ico"><use href="#ic-check-circle"/></svg> Browse the checklists</a>
         </div>
 
         <div class="plan-card">
-          <span class="week-tag">WEEK 1</span>
-          <h4>Get a fresh start</h4>
-          <div class="plan-task"><svg class="ico-sm"><use href="#ic-check-circle"/></svg><span class="t-name">Organize your desktop</span><span class="t-time">15 min</span></div>
-          <div class="plan-task"><svg class="ico-sm"><use href="#ic-check-circle"/></svg><span class="t-name">Sort important documents</span><span class="t-time">15 min</span></div>
-          <div class="plan-task"><svg class="ico-sm"><use href="#ic-check-circle"/></svg><span class="t-name">Clear old email</span><span class="t-time">10 min</span></div>
-          <div class="plan-task"><svg class="ico-sm" style="color:var(--border)"><use href="#ic-check-circle"/></svg><span class="t-name">Back up your phone</span><span class="t-time">15 min</span></div>
+          <span class="week-tag">EXAMPLE</span>
+          <h4>Phone declutter checklist</h4>
+          <div class="plan-task"><svg class="ico-sm"><use href="#ic-check-circle"/></svg><span class="t-name">Note current storage used</span><span class="t-time">15 min</span></div>
+          <div class="plan-task"><svg class="ico-sm"><use href="#ic-check-circle"/></svg><span class="t-name">Back up your phone</span><span class="t-time">15 min</span></div>
+          <div class="plan-task"><svg class="ico-sm"><use href="#ic-check-circle"/></svg><span class="t-name">Check storage breakdown in Settings</span><span class="t-time">5 min</span></div>
+          <div class="plan-task"><svg class="ico-sm" style="color:var(--border)"><use href="#ic-check-circle"/></svg><span class="t-name">Delete apps not opened in 30+ days</span><span class="t-time">15 min</span></div>
         </div>
 
         <div class="ring-card">
@@ -541,7 +549,7 @@
     <div class="section-head center reveal">
       <span class="eyebrow">The Transformation</span>
       <h2 class="section-title">Before &amp; after deClusterize.</h2>
-      <p class="section-sub">The same digital life — one month apart.</p>
+      <p class="section-sub">An illustrative before and after — the kind of mess the guides fix, and what "done" looks like.</p>
     </div>
     <div class="ba-grid reveal">
       <div class="ba-panel ba-before">
@@ -557,15 +565,10 @@
           <li><span class="ba-dot bad"></span>Spend 20 min searching for any file</li>
           <li><span class="ba-dot bad"></span>No system — cleaned up, then chaos returned</li>
         </ul>
-        <div class="ba-score">
-          <span class="ba-score-label">Clarity score</span>
-          <div class="ba-bar-wrap"><div class="ba-bar" style="width:12%;background:var(--rose)"></div></div>
-          <span class="ba-pct" style="color:var(--rose)">12%</span>
-        </div>
       </div>
       <div class="ba-divider" aria-hidden="true">
         <span class="ba-arrow">→</span>
-        <span class="ba-days">30 days</span>
+        <span class="ba-days">the guides</span>
       </div>
       <div class="ba-panel ba-after">
         <div class="ba-label" style="color:var(--emerald-bright);border-color:rgba(52,211,153,.25);background:rgba(52,211,153,.08)">
@@ -580,11 +583,6 @@
           <li><span class="ba-dot good"></span>Any file found in under 10 seconds</li>
           <li><span class="ba-dot good"></span>15-min monthly check keeps chaos from returning</li>
         </ul>
-        <div class="ba-score">
-          <span class="ba-score-label">Clarity score</span>
-          <div class="ba-bar-wrap"><div class="ba-bar ba-bar-anim" style="width:94%;background:var(--emerald)"></div></div>
-          <span class="ba-pct" style="color:var(--emerald-bright)">94%</span>
-        </div>
       </div>
     </div>
     <div class="reveal" style="text-align:center;margin-top:36px">
@@ -593,67 +591,6 @@
   </div>
 </section>
 
-<!-- ============================================================ TESTIMONIALS ============================================================ -->
-<section class="section" id="testimonials">
-  <div class="container">
-    <div class="section-head center reveal">
-      <span class="eyebrow">Real People, Real Results</span>
-      <h2 class="section-title">What people are saying.</h2>
-    </div>
-    <div class="testi-grid reveal">
-
-      <figure class="testi-card">
-        <div class="testi-stars" aria-label="5 out of 5 stars">★★★★★</div>
-        <blockquote>"I had 11,000 unread emails and a phone with zero storage. Two weeks with deClusterize and both problems are completely gone. The 15-minute tasks made it feel manageable instead of overwhelming."</blockquote>
-        <figcaption>
-          <div class="testi-avatar" style="background:linear-gradient(135deg,#10B981,#0EA5E9)">SR</div>
-          <div>
-            <strong>Sarah R.</strong>
-            <span>Freelance designer, London</span>
-          </div>
-        </figcaption>
-      </figure>
-
-      <figure class="testi-card testi-featured">
-        <div class="testi-stars" aria-label="5 out of 5 stars">★★★★★</div>
-        <blockquote>"I've tried every productivity app and always gave up after a week. deClusterize is different — it breaks everything into such small tasks that there's no excuse not to do them. My Google Drive is actually organised for the first time in five years."</blockquote>
-        <figcaption>
-          <div class="testi-avatar" style="background:linear-gradient(135deg,#8B5CF6,#EC4899)">MK</div>
-          <div>
-            <strong>Marcus K.</strong>
-            <span>Small business owner, Toronto</span>
-          </div>
-        </figcaption>
-        <div class="testi-badge">Most helpful</div>
-      </figure>
-
-      <figure class="testi-card">
-        <div class="testi-stars" aria-label="5 out of 5 stars">★★★★★</div>
-        <blockquote>"The before/after difference is insane. I freed up 18 GB on my laptop, deleted 3,000 duplicate photos, and actually reached inbox zero. Took about 3 weeks of 15-min sessions."</blockquote>
-        <figcaption>
-          <div class="testi-avatar" style="background:linear-gradient(135deg,#F59E0B,#EF4444)">JP</div>
-          <div>
-            <strong>Jamie P.</strong>
-            <span>Teacher, Melbourne</span>
-          </div>
-        </figcaption>
-      </figure>
-
-      <figure class="testi-card">
-        <div class="testi-stars" aria-label="4 out of 5 stars">★★★★★</div>
-        <blockquote>"I was paying for extra iCloud storage every month. deClusterize showed me exactly what was eating it. Cleared it, downgraded my plan, saved £32/month. The app paid for itself in day one."</blockquote>
-        <figcaption>
-          <div class="testi-avatar" style="background:linear-gradient(135deg,#0EA5E9,#6366F1)">AL</div>
-          <div>
-            <strong>Anna L.</strong>
-            <span>NHS nurse, Manchester</span>
-          </div>
-        </figcaption>
-      </figure>
-
-    </div>
-  </div>
-</section>
 
 
 <!-- ============================================================ FAQ ============================================================ -->
@@ -727,7 +664,7 @@
       </nav>
       <nav class="footer-col" aria-label="Resources">
         <h4>Resources</h4>
-        <ul><li><a href="#" rel="nofollow" title="Coming soon">Blog</a></li><li><a href="help">Help Center</a></li><li><a href="community">Community</a></li></ul>
+        <ul><li><a href="help">Help Center</a></li><li><a href="community">Community</a></li></ul>
       </nav>
       <nav class="footer-col" aria-label="Company">
         <h4>Company</h4>
